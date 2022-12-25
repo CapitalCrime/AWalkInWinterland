@@ -41,7 +41,7 @@ public abstract class Snowman : MonoBehaviour
         Quaternion forceAngle = Quaternion.Euler(0, Random.Range(0, 360), 0);
         Vector3 forceDirection = forceAngle * Vector3.right * forceAmount;
         snowmanRigidbody.AddForce(forceDirection);
-        snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude / 10 * Mathf.Sign(Vector3.Dot(forceDirection.normalized, Vector3.right)));
+        snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude / 10 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x));
     }
 
     protected virtual void Update()
