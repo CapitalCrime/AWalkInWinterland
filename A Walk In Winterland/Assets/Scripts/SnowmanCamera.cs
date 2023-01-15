@@ -9,8 +9,11 @@ public class SnowmanCamera : MonoBehaviour
     [SerializeField] private CameraControls playerCamera;
     [SerializeField] private Cinemachine.CinemachineFreeLook cinemachineFreeLook;
     [SerializeField] private CinemachineCameraOffset cameraOffset;
-    [SerializeField] private InputActionReference performAction;
     [SerializeField] private InputActionReference snowmanZoom;
+    [SerializeField] private InputActionReference cycleSnowmanView;
+    private Cinemachine.CinemachineVirtualCamera currentFPSCam;
+    Snowman currentSnowmanTarget;
+    bool firstPerson = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +21,69 @@ public class SnowmanCamera : MonoBehaviour
         
     }
 
-    public void ActivateCamera(Transform snowman)
+    public void SetSnowmanTarget(Snowman snowman)
     {
-        cinemachineFreeLook.Follow = snowman;
-        cinemachineFreeLook.LookAt = snowman;
-        gameObject.SetActive(true);
-        playerCamera.gameObject.SetActive(false);
+        currentSnowmanTarget = snowman;
     }
 
-    void DeactivateCamera()
+    public void ActivateCamera()
     {
-        playerCamera.gameObject.SetActive(true);
-        gameObject.SetActive(false);
+        if (firstPerson)
+        {
+            ActivateFirstPersonCam();
+        } else
+        {
+            ActivateThirdPersonCam();
+        }
+    }
+
+    public void ActivateThirdPersonCam()
+    {
+        if (currentSnowmanTarget == null)
+        {
+            SnowmanManager.instance.ActivatePlayerCamera();
+            return;
+        }
+        firstPerson = false;
+        cinemachineFreeLook.Follow = currentSnowmanTarget.transform;
+        cinemachineFreeLook.LookAt = currentSnowmanTarget.transform;
+        cinemachineFreeLook.gameObject.SetActive(true);
+        if(currentFPSCam != null)
+        {
+            currentFPSCam.gameObject.SetActive(false);
+        }
+    }
+
+    public void ActivateFirstPersonCam()
+    {
+        if (currentSnowmanTarget == null)
+        {
+            SnowmanManager.instance.ActivatePlayerCamera();
+            return;
+        }
+        if (currentFPSCam != null)
+        {
+            currentFPSCam.gameObject.SetActive(false);
+        }
+        currentFPSCam = currentSnowmanTarget.GetSnowmanFPSCam();
+        if(currentFPSCam == null)
+        {
+            ActivateThirdPersonCam();
+            return;
+        }
+        firstPerson = true;
+        currentFPSCam.Follow = currentSnowmanTarget.transform;
+        currentFPSCam.gameObject.SetActive(true);
+        cinemachineFreeLook.gameObject.SetActive(false);
+    }
+
+    public void DeactivateCameras()
+    {
+        if (currentFPSCam != null)
+        {
+            currentFPSCam.gameObject.SetActive(false);
+        }
+        cinemachineFreeLook.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -39,11 +93,17 @@ public class SnowmanCamera : MonoBehaviour
         if(zoomAmount != 0)
         {
             zoomAmount /= Mathf.Abs(zoomAmount);
-            cameraOffset.m_Offset = new Vector3(0, 0, Mathf.Clamp(cameraOffset.m_Offset.z + zoomAmount/2, -10, 5));
+            cameraOffset.m_Offset = new Vector3(0, 0, Mathf.Clamp(cameraOffset.m_Offset.z + zoomAmount/2, -10, 6));
         }
-        if (performAction.action.triggered && !EventSystem.current.IsPointerOverGameObject())
+        if (cycleSnowmanView.action.WasPerformedThisFrame())
         {
-            DeactivateCamera();
+            if (firstPerson)
+            {
+                ActivateThirdPersonCam();
+            } else
+            {
+                ActivateFirstPersonCam();
+            }
         }
     }
 }

@@ -2,6 +2,207 @@ Base path: 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data', plugins p
 Cmd: initializeCompiler
 
 Cmd: compileSnippet
-  insize=7108 file=Assets/TextMesh Pro/Shaders/TextMeshPro/Distance Field pass=<Unnamed Pass 0> cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW= dKW=BEVEL_ON UNDERLAY_ON UNDERLAY_INNER GLOW_ON UNITY_UI_CLIP_RECT UNITY_UI_ALPHACLIP UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=0 type=Fragment platform=d3d11 reqs=227 mask=6 start=114 ok=1 outsize=1594
+  insize=668 file=Assets/BruteForce/Extra/BloomKino/Hidden/Kino/BloomKino pass=<Unnamed Pass 1> cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW= dKW=UNITY_COLORSPACE_GAMMA UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=0 type=Fragment platform=d3d11 reqs=227 mask=6 start=49 ok=1 outsize=1694
+
+Cmd: compileSnippet
+  insize=53316 file=Assets/BruteForce/Shaders/SnowIce/URP/BruteForce/URP/SnowIceNoTessellationURP pass=<Unnamed Pass 0> cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW= dKW=IS_T IS_ICE USE_VR LOD_FADE_CROSSFADE USE_AL USE_RT IS_ADD USE_INTER USE_WC USE_LS _MAIN_LIGHT_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT _MIXED_LIGHTING_SUBTRACTIVE LIGHTMAP_ON FOG_LINEAR FOG_EXP FOG_EXP2 UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=3 type=Vertex platform=d3d11 reqs=227 mask=6 start=272  error: 1 plat 4 at (468): implicit truncation of vector type
+  error: 1 plat 4 at (576): implicit truncation of vector type
+  error: 1 plat 4 at (611): implicit truncation of vector type
+  error: 1 plat 4 at (612): implicit truncation of vector type
+  error: 1 plat 4 at (613): implicit truncation of vector type
+  error: 1 plat 4 at (615): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (629): 'GetVertexPositionInputs': implicit truncation of vector type
+  error: 1 plat 4 at (663): implicit truncation of vector type
+  error: 1 plat 4 at (736): 'InitializeStandardLitSurfaceData': implicit truncation of vector type
+  error: 1 plat 4 at (761): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (838): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (839): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (886): implicit truncation of vector type
+  error: 1 plat 4 at (898): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (902): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (902): implicit truncation of vector type
+  error: 1 plat 4 at (910): implicit truncation of vector type
+  error: 1 plat 4 at (911): implicit truncation of vector type
+  error: 1 plat 4 at (925): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (925): implicit truncation of vector type
+  error: 1 plat 4 at (936): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (944): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (992): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (992): implicit truncation of vector type
+  error: 1 plat 4 at (995): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (995): implicit truncation of vector type
+  error: 1 plat 4 at (998): implicit truncation of vector type
+  error: 1 plat 4 at (1025): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1025): implicit truncation of vector type
+  error: 1 plat 4 at (1028): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1028): implicit truncation of vector type
+  error: 1 plat 4 at (1031): implicit truncation of vector type
+  error: 1 plat 4 at (1058): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1058): implicit truncation of vector type
+  error: 1 plat 4 at (1061): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1061): implicit truncation of vector type
+  error: 1 plat 4 at (1064): implicit truncation of vector type
+  error: 1 plat 4 at (1106): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (1130): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1220): implicit truncation of vector type
+  error: 1 plat 4 at (1227): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1228): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1246): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1264): implicit truncation of vector type
+  error: 1 plat 4 at (1277): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1277): implicit truncation of vector type
+  error: 1 plat 4 at (1313): implicit truncation of vector type
+  error: 1 plat 4 at (1317): implicit truncation of vector type
+ ok=1 outsize=3890
+
+Cmd: compileSnippet
+  insize=19647 file=Assets/BruteForce/Shaders/SnowIce/URP/BruteForce/URP/SnowIceURP pass=<Unnamed Pass 1> cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_SHADOWCASTER uKW=DIRECTIONAL dKW=IS_T IS_ICE USE_VR _TESSELLATION_EDGE LOD_FADE_CROSSFADE USE_AL USE_RT IS_ADD USE_INTER USE_WC FOG_LINEAR FOG_EXP FOG_EXP2 LIGHTPROBE_SH SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=3 type=Fragment platform=d3d11 reqs=1249259 mask=54 start=1561  error: 1 plat 4 at (1669): implicit truncation of vector type
+  error: 1 plat 4 at (1766): implicit truncation of vector type
+  error: 1 plat 4 at (1784): implicit truncation of vector type
+  error: 1 plat 4 at (1785): implicit truncation of vector type
+  error: 1 plat 4 at (1786): implicit truncation of vector type
+  error: 1 plat 4 at (1788): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (1797): 'GetVertexPositionInputs': implicit truncation of vector type
+  error: 1 plat 4 at (1828): implicit truncation of vector type
+ ok=1 outsize=478
+
+Cmd: compileSnippet
+  insize=58681 file=Assets/BruteForce/Shaders/SnowIce/URP/BruteForce/URP/SnowIceURP pass=<Unnamed Pass 0> cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=_TESSELLATION_EDGE USE_AL USE_WC USE_LS _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT dKW=IS_T IS_ICE USE_VR LOD_FADE_CROSSFADE USE_RT IS_ADD USE_INTER _MAIN_LIGHT_SHADOWS_CASCADE _MIXED_LIGHTING_SUBTRACTIVE LIGHTMAP_ON FOG_LINEAR FOG_EXP FOG_EXP2 UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=3 type=Hull platform=d3d11 reqs=1249259 mask=54 start=409  error: 1 plat 4 at (609): implicit truncation of vector type
+  error: 1 plat 4 at (717): implicit truncation of vector type
+  error: 1 plat 4 at (752): implicit truncation of vector type
+  error: 1 plat 4 at (753): implicit truncation of vector type
+  error: 1 plat 4 at (754): implicit truncation of vector type
+  error: 1 plat 4 at (756): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (770): 'GetVertexPositionInputs': implicit truncation of vector type
+  error: 1 plat 4 at (804): implicit truncation of vector type
+  error: 1 plat 4 at (877): 'InitializeStandardLitSurfaceData': implicit truncation of vector type
+  error: 1 plat 4 at (902): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (979): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (980): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1027): implicit truncation of vector type
+  error: 1 plat 4 at (1039): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1043): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1043): implicit truncation of vector type
+  error: 1 plat 4 at (1051): implicit truncation of vector type
+  error: 1 plat 4 at (1052): implicit truncation of vector type
+  error: 1 plat 4 at (1066): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1066): implicit truncation of vector type
+  error: 1 plat 4 at (1077): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1085): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1133): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1133): implicit truncation of vector type
+  error: 1 plat 4 at (1136): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1136): implicit truncation of vector type
+  error: 1 plat 4 at (1139): implicit truncation of vector type
+  error: 1 plat 4 at (1166): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1166): implicit truncation of vector type
+  error: 1 plat 4 at (1169): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1169): implicit truncation of vector type
+  error: 1 plat 4 at (1172): implicit truncation of vector type
+  error: 1 plat 4 at (1199): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1199): implicit truncation of vector type
+  error: 1 plat 4 at (1202): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1202): implicit truncation of vector type
+  error: 1 plat 4 at (1205): implicit truncation of vector type
+  error: 1 plat 4 at (1247): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (1271): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1361): implicit truncation of vector type
+  error: 1 plat 4 at (1368): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1369): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1387): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1405): implicit truncation of vector type
+  error: 1 plat 4 at (1418): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1418): implicit truncation of vector type
+  error: 1 plat 4 at (1441): 'SampleSH': implicit truncation of vector type
+  error: 1 plat 4 at (1454): implicit truncation of vector type
+  error: 1 plat 4 at (1458): implicit truncation of vector type
+ ok=1 outsize=2662
+
+Cmd: compileSnippet
+  insize=58681 file=Assets/BruteForce/Shaders/SnowIce/URP/BruteForce/URP/SnowIceURP pass=<Unnamed Pass 0> cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR uKW=IS_T _TESSELLATION_EDGE USE_AL USE_RT USE_WC USE_LS _MAIN_LIGHT_SHADOWS _SHADOWS_SOFT dKW=IS_ICE USE_VR LOD_FADE_CROSSFADE IS_ADD USE_INTER _MAIN_LIGHT_SHADOWS_CASCADE _MIXED_LIGHTING_SUBTRACTIVE LIGHTMAP_ON FOG_LINEAR FOG_EXP FOG_EXP2 UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=3 type=Domain platform=d3d11 reqs=1249259 mask=54 start=409  error: 1 plat 4 at (609): implicit truncation of vector type
+  error: 1 plat 4 at (634): implicit truncation of vector type
+  error: 1 plat 4 at (635): implicit truncation of vector type
+  error: 1 plat 4 at (717): implicit truncation of vector type
+  error: 1 plat 4 at (752): implicit truncation of vector type
+  error: 1 plat 4 at (753): implicit truncation of vector type
+  error: 1 plat 4 at (754): implicit truncation of vector type
+  error: 1 plat 4 at (756): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (770): 'GetVertexPositionInputs': implicit truncation of vector type
+  error: 1 plat 4 at (791): implicit truncation of vector type
+  error: 1 plat 4 at (877): 'InitializeStandardLitSurfaceData': implicit truncation of vector type
+  error: 1 plat 4 at (902): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (916): implicit truncation of vector type
+  error: 1 plat 4 at (917): implicit truncation of vector type
+  error: 1 plat 4 at (929): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (930): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (944): implicit truncation of vector type
+  error: 1 plat 4 at (945): implicit truncation of vector type
+  error: 1 plat 4 at (946): implicit truncation of vector type
+  error: 1 plat 4 at (947): implicit truncation of vector type
+  error: 1 plat 4 at (948): implicit truncation of vector type
+  error: 1 plat 4 at (949): implicit truncation of vector type
+  error: 1 plat 4 at (950): implicit truncation of vector type
+  error: 1 plat 4 at (951): implicit truncation of vector type
+  error: 1 plat 4 at (953): implicit truncation of vector type
+  error: 1 plat 4 at (955): implicit truncation of vector type
+  error: 1 plat 4 at (957): implicit truncation of vector type
+  error: 1 plat 4 at (959): implicit truncation of vector type
+  error: 1 plat 4 at (971): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1023): implicit truncation of vector type
+  error: 1 plat 4 at (1027): implicit truncation of vector type
+  error: 1 plat 4 at (1043): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1043): implicit truncation of vector type
+  error: 1 plat 4 at (1051): implicit truncation of vector type
+  error: 1 plat 4 at (1052): implicit truncation of vector type
+  error: 1 plat 4 at (1062): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (1063): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (1064): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (1085): 'tex2D': implicit truncation of vector type
+  error: 1 plat 4 at (1117): implicit truncation of vector type
+  error: 1 plat 4 at (1118): implicit truncation of vector type
+  error: 1 plat 4 at (1119): implicit truncation of vector type
+  error: 1 plat 4 at (1120): implicit truncation of vector type
+  error: 1 plat 4 at (1124): implicit truncation of vector type
+  error: 1 plat 4 at (1150): implicit truncation of vector type
+  error: 1 plat 4 at (1151): implicit truncation of vector type
+  error: 1 plat 4 at (1152): implicit truncation of vector type
+  error: 1 plat 4 at (1153): implicit truncation of vector type
+  error: 1 plat 4 at (1157): implicit truncation of vector type
+  error: 1 plat 4 at (1183): implicit truncation of vector type
+  error: 1 plat 4 at (1184): implicit truncation of vector type
+  error: 1 plat 4 at (1185): implicit truncation of vector type
+  error: 1 plat 4 at (1186): implicit truncation of vector type
+  error: 1 plat 4 at (1190): implicit truncation of vector type
+  error: 1 plat 4 at (1247): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (1271): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1361): implicit truncation of vector type
+  error: 1 plat 4 at (1365): implicit truncation of vector type
+  error: 1 plat 4 at (1366): implicit truncation of vector type
+  error: 1 plat 4 at (1373): implicit truncation of vector type
+  error: 1 plat 4 at (1374): implicit truncation of vector type
+  error: 1 plat 4 at (1375): implicit truncation of vector type
+  error: 1 plat 4 at (1376): implicit truncation of vector type
+  error: 1 plat 4 at (1397): implicit truncation of vector type
+  error: 1 plat 4 at (1398): implicit truncation of vector type
+  error: 1 plat 4 at (1402): implicit truncation of vector type
+  error: 1 plat 4 at (1418): 'Sample': implicit truncation of vector type
+  error: 1 plat 4 at (1418): implicit truncation of vector type
+  error: 1 plat 4 at (1441): 'SampleSH': implicit truncation of vector type
+  error: 1 plat 4 at (1454): implicit truncation of vector type
+  error: 1 plat 4 at (1458): implicit truncation of vector type
+ ok=1 outsize=8390
+
+Cmd: compileSnippet
+  insize=19647 file=Assets/BruteForce/Shaders/SnowIce/URP/BruteForce/URP/SnowIceURP pass=<Unnamed Pass 1> cachingPP=1 ppOnly=0 stripLineD=0 buildPlatform=19 rsLen=0 pKW=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR UNITY_PASS_SHADOWCASTER uKW=IS_T _TESSELLATION_EDGE USE_RT USE_WC DIRECTIONAL dKW=IS_ICE USE_VR LOD_FADE_CROSSFADE USE_AL IS_ADD USE_INTER FOG_LINEAR FOG_EXP FOG_EXP2 LIGHTPROBE_SH SHADOWS_SHADOWMASK DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING DIRLIGHTMAP_COMBINED SHADOWS_SCREEN UNITY_NO_DXT5nm UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_ENABLE_NATIVE_SHADOW_LOOKUPS UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_VIRTUAL_TEXTURING UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_ASTC_NORMALMAP_ENCODING SHADER_API_GLES30 UNITY_UNIFIED_SHADER_PRECISION_MODEL flags=0 lang=3 type=Fragment platform=d3d11 reqs=1249259 mask=54 start=1561  error: 1 plat 4 at (1669): implicit truncation of vector type
+  error: 1 plat 4 at (1694): implicit truncation of vector type
+  error: 1 plat 4 at (1695): implicit truncation of vector type
+  error: 1 plat 4 at (1766): implicit truncation of vector type
+  error: 1 plat 4 at (1784): implicit truncation of vector type
+  error: 1 plat 4 at (1785): implicit truncation of vector type
+  error: 1 plat 4 at (1786): implicit truncation of vector type
+  error: 1 plat 4 at (1788): 'lerp': implicit truncation of vector type
+  error: 1 plat 4 at (1797): 'GetVertexPositionInputs': implicit truncation of vector type
+  error: 1 plat 4 at (1815): implicit truncation of vector type
+ ok=1 outsize=478
 
 Cmd: shutdown
