@@ -20,6 +20,7 @@ public class SnowmanDescription : ScriptableObject
     public string snowmanName;
     public Sprite image;
     public bool unlocked = false;
+    public bool randomUnlock = true;
     public MinMax randomUniqueActionTimeSeconds;
     public MinMax randomWalkTimeSeconds = new MinMax(5, 10);
 }

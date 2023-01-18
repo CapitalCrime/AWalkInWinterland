@@ -20,4 +20,9 @@ public class SnowmanUIButton : MonoBehaviour
             LeanTween.moveX(imageHolder, 0, 0.5f).setIgnoreTimeScale(true);
         }
     }
+
+    private void Update()
+    {
+        
+    }
 }

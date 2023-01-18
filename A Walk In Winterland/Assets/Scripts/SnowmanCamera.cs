@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class SnowmanCamera : MonoBehaviour
 {
-    [SerializeField] private CameraControls playerCamera;
     [SerializeField] private Cinemachine.CinemachineFreeLook cinemachineFreeLook;
     [SerializeField] private CinemachineCameraOffset cameraOffset;
     [SerializeField] private InputActionReference snowmanZoom;

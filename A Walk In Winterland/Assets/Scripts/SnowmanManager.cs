@@ -13,22 +13,47 @@ public class SnowmanManager : MonoBehaviour
     [SerializeField] private CameraControls playerCamera;
     [SerializeField] private InputActionReference performAction;
     [SerializeField] private InputActionReference changeSnowmanCam;
+    public Transform dropPoints;
     public LayerMask snowmanMask;
+    float _snowmanDropTime = 10;
+    public float snowmanDropTime { get => _snowmanDropTime; private set { _snowmanDropTime = value; } }
+    public float lastDroppedTime { get; private set; }
 
     public static SnowmanManager instance;
     List<Snowman> snowmen;
+    List<Snowman> randomUnlockSnowmen;
     int index = 0;
     Snowman currentViewSnowman;
     void Awake()
     {
+        lastDroppedTime = Time.time;
         Snowman.snowmanCreatedEvent += AddSnowman;
         snowmen = new List<Snowman>();
+        randomUnlockSnowmen = new List<Snowman>(Resources.LoadAll<Snowman>("Prefabs/SnowmanPrefabs"));
+        foreach(Snowman snowman in randomUnlockSnowmen)
+        {
+            if (!snowman.description.randomUnlock)
+            {
+                randomUnlockSnowmen.Remove(snowman);
+            }
+        }
         instance = this;
     }
 
     public void AddSnowman(Snowman snowman)
     {
         snowmen.Add(snowman);
+        Snowman randomSnowmanByDescription = randomUnlockSnowmen.Find(x => x.description == snowman.description);
+        randomUnlockSnowmen.Remove(randomSnowmanByDescription);
+    }
+
+    public Snowman GetRandomSnowmanUnlock()
+    {
+        if (randomUnlockSnowmen.Count == 0) return null;
+        int randomIndex = Random.Range(0, randomUnlockSnowmen.Count - 1);
+        Snowman pulledSnowman = randomUnlockSnowmen[randomIndex];
+        randomUnlockSnowmen.RemoveAt(randomIndex);
+        return pulledSnowman;
     }
 
     public void setCurrentLookIndex(int index)
@@ -75,6 +100,7 @@ public class SnowmanManager : MonoBehaviour
 
     void HoverSnowman()
     {
+        if (PauseScript.isPaused()) return;
         if (EventSystem.current.IsPointerOverGameObject()) { RemoveOutline(); return; }
         RaycastHit info;
         Vector3 mousePos = Mouse.current.position.ReadValue();
@@ -161,12 +187,39 @@ public class SnowmanManager : MonoBehaviour
         ActivateSnowmanCamera(GetCurrentSnowman());
     }
 
+    public float TimeSinceDrop()
+    {
+        if(randomUnlockSnowmen.Count == 0)
+        {
+            return 0;
+        } else
+        {
+            return Time.time - lastDroppedTime;
+        }
+    }
+
+    void CheckForSnowmanDrop()
+    {
+        if(TimeSinceDrop() > snowmanDropTime)
+        {
+            Instantiate(GetRandomSnowmanUnlock(), dropPoints.GetChild(Random.Range(0, dropPoints.childCount)).position, Quaternion.identity);
+            if(randomUnlockSnowmen.Count == 0)
+            {
+                lastDroppedTime = 0;
+            } else
+            {
+                lastDroppedTime = Time.time;
+            }
+        }
+    }
+
     // Update is called once per frame
     float changeSnowmanIndex;
     void Update()
     {
         changeSnowmanIndex = changeSnowmanCam.action.ReadValue<float>();
 
+        CheckForSnowmanDrop();
         HoverSnowman();
         if (performAction.action.triggered)
         {

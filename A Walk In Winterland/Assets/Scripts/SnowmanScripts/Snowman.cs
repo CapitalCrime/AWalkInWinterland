@@ -40,6 +40,7 @@ public abstract class Snowman : MonoBehaviour
         {
             Debug.LogError("Snowman description missing on snowman: " + transform.name);
         }
+        description.unlocked = true;
 
         if(description.randomWalkTimeSeconds.min == 0 && description.randomWalkTimeSeconds.max == 0)
         {
