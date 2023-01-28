@@ -8,6 +8,7 @@ public abstract class Snowman : MonoBehaviour
     public delegate void SnowmanDelegate(Snowman snowman);
     [HideInInspector] public static event SnowmanDelegate snowmanCreatedEvent;
     [SerializeField] Cinemachine.CinemachineVirtualCamera fpsCam;
+    public Cinemachine.CinemachineFreeLook thirdPersonCam;
     public SnowmanDescription description;
     protected Rigidbody snowmanRigidbody;
     float uniqueActionSeconds;
@@ -25,6 +26,11 @@ public abstract class Snowman : MonoBehaviour
     public Cinemachine.CinemachineVirtualCamera GetSnowmanFPSCam()
     {
         return fpsCam;
+    }
+
+    public Cinemachine.CinemachineFreeLook GetSnowmanThirdCam()
+    {
+        return thirdPersonCam;
     }
     void SetWalkActivationTime()
     {

@@ -21,4 +21,10 @@ public class RacerSnowman : Snowman
         base.Start();
         walkSpeeds = new MinMax(300, 450);
     }
+
+    protected override void Update()
+    {
+        base.Update();
+        transform.eulerAngles = Vector3.up * transform.eulerAngles.y;
+    }
 }

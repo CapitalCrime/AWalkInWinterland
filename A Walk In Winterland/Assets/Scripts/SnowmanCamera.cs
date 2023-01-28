@@ -11,6 +11,7 @@ public class SnowmanCamera : MonoBehaviour
     [SerializeField] private InputActionReference snowmanZoom;
     [SerializeField] private InputActionReference cycleSnowmanView;
     private Cinemachine.CinemachineVirtualCamera currentFPSCam;
+    private Cinemachine.CinemachineFreeLook currentThirdPersonCam;
     Snowman currentSnowmanTarget;
     bool firstPerson = false;
 
@@ -43,11 +44,25 @@ public class SnowmanCamera : MonoBehaviour
             SnowmanManager.instance.ActivatePlayerCamera();
             return;
         }
+        if(currentThirdPersonCam != null)
+        {
+            currentThirdPersonCam.gameObject.SetActive(false);
+        }
+        if(currentSnowmanTarget.thirdPersonCam == null)
+        {
+            Cinemachine.CinemachineFreeLook camCopy = Instantiate(cinemachineFreeLook.gameObject, currentSnowmanTarget.transform).GetComponent<Cinemachine.CinemachineFreeLook>();
+            currentSnowmanTarget.thirdPersonCam = camCopy;
+        }
+        currentThirdPersonCam = currentSnowmanTarget.thirdPersonCam;
+        cameraOffset = currentThirdPersonCam.GetComponent<CinemachineCameraOffset>();
         firstPerson = false;
-        cinemachineFreeLook.Follow = currentSnowmanTarget.transform;
-        cinemachineFreeLook.LookAt = currentSnowmanTarget.transform;
-        cinemachineFreeLook.gameObject.SetActive(true);
-        if(currentFPSCam != null)
+        currentThirdPersonCam.Follow = currentSnowmanTarget.transform;
+        currentThirdPersonCam.LookAt = currentSnowmanTarget.transform;
+        currentThirdPersonCam.gameObject.SetActive(true);
+        //cinemachineFreeLook.Follow = currentSnowmanTarget.transform;
+        //cinemachineFreeLook.LookAt = currentSnowmanTarget.transform;
+        //cinemachineFreeLook.gameObject.SetActive(true);
+        if (currentFPSCam != null)
         {
             currentFPSCam.gameObject.SetActive(false);
         }
@@ -73,7 +88,11 @@ public class SnowmanCamera : MonoBehaviour
         firstPerson = true;
         currentFPSCam.Follow = currentSnowmanTarget.transform;
         currentFPSCam.gameObject.SetActive(true);
-        cinemachineFreeLook.gameObject.SetActive(false);
+        if(currentThirdPersonCam != null)
+        {
+            currentThirdPersonCam.gameObject.SetActive(false);
+        }
+        //cinemachineFreeLook.gameObject.SetActive(false);
     }
 
     public void DeactivateCameras()
@@ -82,7 +101,11 @@ public class SnowmanCamera : MonoBehaviour
         {
             currentFPSCam.gameObject.SetActive(false);
         }
-        cinemachineFreeLook.gameObject.SetActive(false);
+        if(currentThirdPersonCam != null)
+        {
+            currentThirdPersonCam.gameObject.SetActive(false);
+        }
+        //cinemachineFreeLook.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
