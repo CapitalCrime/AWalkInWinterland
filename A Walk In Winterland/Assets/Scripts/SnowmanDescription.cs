@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[Serializable]
+public struct MinMax
+{
+    public MinMax(float min, float max)
+    {
+        this.min = min;
+        this.max = max;
+    }
+    [Min(0)] public float min;
+    [Min(0)] public float max;
+}
+
 [CreateAssetMenu(fileName = "Description", menuName = "ScriptableObjects/SnowmanDescription")]
 public class SnowmanDescription : ScriptableObject
 {
-    [Serializable]
-    public struct MinMax
-    {
-        public MinMax(float min, float max)
-        {
-            this.min = min;
-            this.max = max;
-        }
-        [Min(0)]public float min;
-        [Min(0)]public float max;
-    }
     public string snowmanName;
     public Sprite image;
     public bool unlocked = false;

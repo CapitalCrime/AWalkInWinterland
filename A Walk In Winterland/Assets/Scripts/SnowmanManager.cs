@@ -15,7 +15,7 @@ public class SnowmanManager : MonoBehaviour
     [SerializeField] private InputActionReference changeSnowmanCam;
     public Transform dropPoints;
     public LayerMask snowmanMask;
-    float _snowmanDropTime = 10;
+    float _snowmanDropTime = 1;
     public float snowmanDropTime { get => _snowmanDropTime; private set { _snowmanDropTime = value; } }
     public float lastDroppedTime { get; private set; }
 
@@ -50,7 +50,7 @@ public class SnowmanManager : MonoBehaviour
     public Snowman GetRandomSnowmanUnlock()
     {
         if (randomUnlockSnowmen.Count == 0) return null;
-        int randomIndex = Random.Range(0, randomUnlockSnowmen.Count - 1);
+        int randomIndex = Random.Range(0, randomUnlockSnowmen.Count);
         Snowman pulledSnowman = randomUnlockSnowmen[randomIndex];
         randomUnlockSnowmen.RemoveAt(randomIndex);
         return pulledSnowman;
@@ -202,7 +202,8 @@ public class SnowmanManager : MonoBehaviour
     {
         if(TimeSinceDrop() > snowmanDropTime)
         {
-            Instantiate(GetRandomSnowmanUnlock(), dropPoints.GetChild(Random.Range(0, dropPoints.childCount)).position, Quaternion.identity);
+            Vector3 randomOffset = new Vector3((Random.value * 2) - 1, 0, (Random.value * 2) - 1);
+            Instantiate(GetRandomSnowmanUnlock(), dropPoints.GetChild(Random.Range(0, dropPoints.childCount)).position + randomOffset, Quaternion.identity);
             if(randomUnlockSnowmen.Count == 0)
             {
                 lastDroppedTime = 0;

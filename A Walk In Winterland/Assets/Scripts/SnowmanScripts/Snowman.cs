@@ -9,12 +9,14 @@ public abstract class Snowman : MonoBehaviour
     [HideInInspector] public static event SnowmanDelegate snowmanCreatedEvent;
     [SerializeField] Cinemachine.CinemachineVirtualCamera fpsCam;
     public SnowmanDescription description;
-    Rigidbody snowmanRigidbody;
+    protected Rigidbody snowmanRigidbody;
     float uniqueActionSeconds;
     float walkSeconds;
     float lastActivedUniqueActionSeconds;
     float lastWalkedSeconds;
     bool walkingEnabled = true;
+    bool walkingStartEnabled = true;
+    protected MinMax walkSpeeds = new MinMax(200, 350);
     public abstract void NightArriveAction();
     public abstract void DayArriveAction();
 
@@ -62,6 +64,17 @@ public abstract class Snowman : MonoBehaviour
 
         DayCycle.nightActions += NightArriveAction;
         DayCycle.dayActions += DayArriveAction;
+        walkingStartEnabled = walkingEnabled;
+    }
+
+    public void EnableWalking(bool value)
+    {
+        if (!walkingStartEnabled) return;
+        if(walkingEnabled == false && value == true)
+        {
+            lastWalkedSeconds = Time.time;
+        }
+        walkingEnabled = value;
     }
 
     protected virtual void Start()
@@ -69,30 +82,42 @@ public abstract class Snowman : MonoBehaviour
         snowmanCreatedEvent?.Invoke(this);
     }
 
-    void PushRandomDirection()
+    public void AddForce(Vector3 amount)
     {
-        float forceAmount = Random.Range(200, 350);
-        Quaternion forceAngle = Quaternion.Euler(0, Random.Range(0, 360), 0);
-        Vector3 forceDirection = forceAngle * Vector3.right * forceAmount;
-        snowmanRigidbody.AddForce(forceDirection);
-        snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude / 10 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x));
+        snowmanRigidbody.AddForce(amount, ForceMode.Acceleration);
     }
 
-    protected virtual void Update()
+    void PushRandomDirection()
     {
-        if(Time.time-lastActivedUniqueActionSeconds >= uniqueActionSeconds)
+        float forceAmount = Random.Range(walkSpeeds.min, walkSpeeds.max);
+        Quaternion forceAngle = Quaternion.Euler(0, Random.Range(0, 360), 0);
+        Vector3 forceDirection = forceAngle * Vector3.right * forceAmount;
+        snowmanRigidbody.AddForce(forceDirection, ForceMode.Acceleration);
+        snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude/3 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x), ForceMode.Acceleration);
+    }
+
+    void PerformActions()
+    {
+        if (!DayCycle.IsSunUp()) return;
+
+        if (Time.time - lastActivedUniqueActionSeconds >= uniqueActionSeconds)
         {
             SetUniqueActionActivationTime();
             lastActivedUniqueActionSeconds = Time.time;
             UniqueAction();
         }
 
-        if(walkingEnabled && Time.time-lastWalkedSeconds >= walkSeconds)
+        if (walkingEnabled && Time.time - lastWalkedSeconds >= walkSeconds)
         {
             SetWalkActivationTime();
             lastWalkedSeconds = Time.time;
             PushRandomDirection();
         }
+    }
+
+    protected virtual void Update()
+    {
+        PerformActions();
     }
 
     private void OnDestroy()

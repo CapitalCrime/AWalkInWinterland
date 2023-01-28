@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: YellowSnowman
   m_EditorClassIdentifier: 
   snowmanName: Yellow Snowman
-  image: {fileID: 21300000, guid: 9082e51101c90f543a0de5c19b25e6e5, type: 3}
+  image: {fileID: 21300000, guid: 5051d576e9dd06c4c888b9995f223713, type: 3}
+  unlocked: 1
+  randomUnlock: 1
   randomUniqueActionTimeSeconds:
     min: 100
     max: 150
