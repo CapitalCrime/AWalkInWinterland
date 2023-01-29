@@ -40,6 +40,16 @@ public class SnowmanManager : MonoBehaviour
         instance = this;
     }
 
+    public void SubscribePerformFunction(System.Action<InputAction.CallbackContext> action)
+    {
+        performAction.action.performed += action;
+    }
+
+    public void UnsubscribePerformFunction(System.Action<InputAction.CallbackContext> action)
+    {
+        performAction.action.performed += action;
+    }
+
     public void AddSnowman(Snowman snowman)
     {
         snowmen.Add(snowman);
@@ -81,6 +91,17 @@ public class SnowmanManager : MonoBehaviour
         } else
         {
             return null;
+        }
+    }
+
+    public bool CheckCurrentSnowman(Snowman snowman)
+    {
+        if(snowman.TryGetComponent(out Outline outline))
+        {
+            return outline == currentOutline;
+        } else
+        {
+            return false;
         }
     }
 

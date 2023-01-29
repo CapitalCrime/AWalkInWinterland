@@ -70,6 +70,7 @@ public abstract class Snowman : MonoBehaviour
 
         DayCycle.nightActions += NightArriveAction;
         DayCycle.dayActions += DayArriveAction;
+        DayCycle.dayActions += ResetActionTimes;
         walkingStartEnabled = walkingEnabled;
     }
 
@@ -102,23 +103,38 @@ public abstract class Snowman : MonoBehaviour
         snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude/3 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x), ForceMode.Acceleration);
     }
 
-    void PerformActions()
+    void ResetActionTimes()
     {
-        if (!DayCycle.IsSunUp()) return;
+        lastWalkedSeconds = Time.time;
+        lastActivedUniqueActionSeconds = Time.time;
+    }
 
+    protected void UniqueCheck()
+    {
         if (Time.time - lastActivedUniqueActionSeconds >= uniqueActionSeconds)
         {
             SetUniqueActionActivationTime();
             lastActivedUniqueActionSeconds = Time.time;
             UniqueAction();
         }
+    }
 
+    protected void WalkCheck()
+    {
         if (walkingEnabled && Time.time - lastWalkedSeconds >= walkSeconds)
         {
             SetWalkActivationTime();
             lastWalkedSeconds = Time.time;
             PushRandomDirection();
         }
+    }
+
+    void PerformActions()
+    {
+        if (!DayCycle.IsSunUp()) return;
+
+        UniqueCheck();
+        WalkCheck();
     }
 
     protected virtual void Update()
@@ -130,5 +146,6 @@ public abstract class Snowman : MonoBehaviour
     {
         DayCycle.nightActions -= NightArriveAction;
         DayCycle.dayActions -= DayArriveAction;
+        DayCycle.dayActions -= ResetActionTimes;
     }
 }
