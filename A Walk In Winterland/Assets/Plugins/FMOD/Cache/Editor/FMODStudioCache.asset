@@ -24,7 +24,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
+  MinDistance: 0
   MaxDistance: 20
   Length: 2600
 --- !u!114 &-5082213400612829643
@@ -42,11 +42,38 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638105495753012780
+  lastModified: 638111483360706201
   FileSizes:
   - Name: Desktop
-    Value: 908
+    Value: 956
   Exists: 1
+--- !u!114 &-4831214777332310060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cat Purr
+  m_EditorClassIdentifier: 
+  Path: event:/Cat Purr
+  Guid:
+    Data1: 1098365331
+    Data2: 1338542256
+    Data3: 748468896
+    Data4: 539413581
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 4
+  Length: 4200
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,12 +93,13 @@ MonoBehaviour:
   - {fileID: -7401460815522780700}
   - {fileID: 3368097348445334994}
   - {fileID: 7739666981757021231}
+  - {fileID: -4831214777332310060}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3490342174954165286}
   StringsBanks:
   - {fileID: -5082213400612829643}
-  cacheTime: 638105495753012780
+  cacheTime: 638111483360706201
   cacheVersion: 131593
 --- !u!114 &2251118214362955823
 MonoBehaviour:
@@ -139,10 +167,10 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638105495753012780
+  lastModified: 638111483360706201
   FileSizes:
   - Name: Desktop
-    Value: 6808224
+    Value: 7074528
   Exists: 1
 --- !u!114 &7739666981757021231
 MonoBehaviour:

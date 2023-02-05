@@ -40,14 +40,9 @@ public class SnowmanManager : MonoBehaviour
         instance = this;
     }
 
-    public void SubscribePerformFunction(System.Action<InputAction.CallbackContext> action)
+    public bool PlayerCameraActive()
     {
-        performAction.action.performed += action;
-    }
-
-    public void UnsubscribePerformFunction(System.Action<InputAction.CallbackContext> action)
-    {
-        performAction.action.performed += action;
+        return playerCamera.gameObject.activeSelf;
     }
 
     public void AddSnowman(Snowman snowman)
@@ -182,6 +177,7 @@ public class SnowmanManager : MonoBehaviour
         currentViewSnowman = snowman;
         snowmanCamera.SetSnowmanTarget(snowman);
         snowmanCamera.ActivateCamera();
+        snowman.OnViewEvent();
         playerCamera.gameObject.SetActive(false);
     }
 

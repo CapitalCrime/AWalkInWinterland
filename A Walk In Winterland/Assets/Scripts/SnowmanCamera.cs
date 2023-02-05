@@ -117,7 +117,7 @@ public class SnowmanCamera : MonoBehaviour
             zoomAmount /= Mathf.Abs(zoomAmount);
             cameraOffset.m_Offset = new Vector3(0, 0, Mathf.Clamp(cameraOffset.m_Offset.z + zoomAmount/2, -10, 6));
         }
-        if (cycleSnowmanView.action.WasPerformedThisFrame())
+        if (cycleSnowmanView.action.WasPerformedThisFrame() && !SnowmanManager.instance.PlayerCameraActive())
         {
             if (firstPerson)
             {

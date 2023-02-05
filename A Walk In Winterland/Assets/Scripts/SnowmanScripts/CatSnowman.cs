@@ -6,26 +6,24 @@ using UnityEngine.InputSystem;
 public class CatSnowman : Snowman
 {
     [SerializeField] private FMODUnity.EmitterRef catSoundRef;
+    [SerializeField] private FMODUnity.EmitterRef purrSoundRef;
     protected override void Start()
     {
         base.Start();
-        SnowmanManager.instance.SubscribePerformFunction(ClickCat);
+        snowmanViewedEvent += ClickCat;
     }
 
-    void ClickCat(InputAction.CallbackContext context)
+    void ClickCat()
     {
-        if (SnowmanManager.instance.CheckCurrentSnowman(this))
+        if (catSoundRef.Target != null)
         {
-            if(catSoundRef.Target != null)
-            {
-                catSoundRef.Target.Play();
-            }
+            catSoundRef.Target.Play();
         }
     }
 
     private void OnDestroy()
     {
-        SnowmanManager.instance.UnsubscribePerformFunction(ClickCat);
+        snowmanViewedEvent -= ClickCat;
     }
 
     public override void NightArriveAction()
@@ -38,5 +36,9 @@ public class CatSnowman : Snowman
 
     protected override void UniqueAction()
     {
+        if(purrSoundRef.Target != null)
+        {
+            purrSoundRef.Target.Play();
+        }
     }
 }

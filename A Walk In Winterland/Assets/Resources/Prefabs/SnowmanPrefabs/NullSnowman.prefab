@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 192500073744731336}
   - component: {fileID: 1726041202352544222}
   - component: {fileID: 8919837975212768543}
+  - component: {fileID: 1998826555372067862}
   m_Layer: 0
   m_Name: SnowmanCamFirstPerson
   m_TagString: Untagged
@@ -132,6 +133,23 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 7779854033430971729}
+--- !u!114 &1998826555372067862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8293867045098397409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449ef5ebbe24720439ec31d15f7b6f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FocusTracksTarget: 0
+  m_FocusTracking: 0
+  m_FocusTarget: {fileID: 0}
+  m_FocusOffset: 0
+  m_Profile: {fileID: 11400000, guid: 29ec1daaafbc83147bb17730333aeca3, type: 2}
 --- !u!1 &9220554830369808438
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsCam: {fileID: 8919837975212768543}
+  thirdPersonCam: {fileID: 0}
   description: {fileID: 11400000, guid: 94fc8ce0f27020a4d839370afe73faaf, type: 2}
 --- !u!114 &8301422834894855532
 MonoBehaviour:

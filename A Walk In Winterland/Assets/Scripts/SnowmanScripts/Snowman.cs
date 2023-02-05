@@ -7,6 +7,7 @@ public abstract class Snowman : MonoBehaviour
 {
     public delegate void SnowmanDelegate(Snowman snowman);
     [HideInInspector] public static event SnowmanDelegate snowmanCreatedEvent;
+    [HideInInspector] protected event UnityAction snowmanViewedEvent;
     [SerializeField] Cinemachine.CinemachineVirtualCamera fpsCam;
     public Cinemachine.CinemachineFreeLook thirdPersonCam;
     public SnowmanDescription description;
@@ -92,6 +93,11 @@ public abstract class Snowman : MonoBehaviour
     public void AddForce(Vector3 amount)
     {
         snowmanRigidbody.AddForce(amount, ForceMode.Acceleration);
+    }
+
+    public void OnViewEvent()
+    {
+        snowmanViewedEvent?.Invoke();
     }
 
     void PushRandomDirection()

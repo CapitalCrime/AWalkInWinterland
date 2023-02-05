@@ -52,6 +52,8 @@ public class RacerSnowman : Snowman
         {
             carSongRef.Target.SetParameter("FinishLoop", 1);
             snowmanRigidbody.velocity = snowmanRigidbody.velocity.normalized * 4;
+            float turnDirection = turnRight ? 150f : -150f;
+            snowmanRigidbody.AddRelativeTorque(Vector3.up * turnDirection, ForceMode.Acceleration);
         }
         yield return null;
     }
