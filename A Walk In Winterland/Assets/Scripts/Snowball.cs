@@ -19,7 +19,7 @@ public class Snowball : MonoBehaviour
         {
             if(other.TryGetComponent(out Snowman snowman))
             {
-                snowman.AddForce(transform.forward * 350);
+                snowman.AddForce(transform.forward * 400);
             }
         }
         Destroy(gameObject);

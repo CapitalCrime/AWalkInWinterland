@@ -32,10 +32,11 @@ public class RacerSnowman : Snowman
         if (carSongRef.Target != null)
         {
             carSongRef.Target.SetParameter("FinishLoop", 0);
+            carSongRef.Target.Stop();
             carSongRef.Target.Play();
         }
 
-        while (driftingTime < 15 && DayCycle.IsSunUp())
+        while (driftingTime < 15)
         {
             if(timeSinceChangeDriftDirection > 2.5f)
             {
@@ -48,12 +49,13 @@ public class RacerSnowman : Snowman
         }
 
         racerState = RacerState.Relaxing;
+        ResetActionTimes();
+        snowmanRigidbody.velocity = snowmanRigidbody.velocity.normalized * 4;
+        float turnDirection = turnRight ? 150f : -150f;
+        snowmanRigidbody.AddRelativeTorque(Vector3.up * turnDirection, ForceMode.Acceleration);
         if (carSongRef.Target != null)
         {
             carSongRef.Target.SetParameter("FinishLoop", 1);
-            snowmanRigidbody.velocity = snowmanRigidbody.velocity.normalized * 4;
-            float turnDirection = turnRight ? 150f : -150f;
-            snowmanRigidbody.AddRelativeTorque(Vector3.up * turnDirection, ForceMode.Acceleration);
         }
         yield return null;
     }
@@ -84,9 +86,6 @@ public class RacerSnowman : Snowman
         base.Start();
         walkSpeeds = new MinMax(300, 450);
     }
-
-
-    Vector3 driveDirection = Vector3.forward;
 
     protected override void Update()
     {

@@ -22,7 +22,7 @@ public class DayCycle : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(Vector3.right * Time.deltaTime * (IsSunUp() ? 1 : 2));
+        transform.Rotate(Vector3.right * Time.deltaTime * (IsSunUp() ? 0.5f : 2));
         if(IsSunUp() && !currentlyDay)
         {
             currentlyDay = true;

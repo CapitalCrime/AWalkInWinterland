@@ -9,6 +9,7 @@ public abstract class Snowman : MonoBehaviour
     [HideInInspector] public static event SnowmanDelegate snowmanCreatedEvent;
     [HideInInspector] protected event UnityAction snowmanViewedEvent;
     [SerializeField] Cinemachine.CinemachineVirtualCamera fpsCam;
+    [SerializeField] private FMODUnity.EmitterRef clickSoundRef;
     public Cinemachine.CinemachineFreeLook thirdPersonCam;
     public SnowmanDescription description;
     protected Rigidbody snowmanRigidbody;
@@ -43,6 +44,14 @@ public abstract class Snowman : MonoBehaviour
         uniqueActionSeconds = Random.Range(description.randomUniqueActionTimeSeconds.min, description.randomUniqueActionTimeSeconds.max);
     }
 
+    private void ClickSoundPlay()
+    {
+        if(clickSoundRef.Target != null)
+        {
+            clickSoundRef.Target.Play();
+        }
+    }
+
     private void Awake()
     {
         if(description == null)
@@ -73,6 +82,11 @@ public abstract class Snowman : MonoBehaviour
         DayCycle.dayActions += DayArriveAction;
         DayCycle.dayActions += ResetActionTimes;
         walkingStartEnabled = walkingEnabled;
+
+        if(clickSoundRef.Target != null)
+        {
+            snowmanViewedEvent += ClickSoundPlay;
+        }
     }
 
     public void EnableWalking(bool value)
@@ -109,7 +123,7 @@ public abstract class Snowman : MonoBehaviour
         snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude/3 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x), ForceMode.Acceleration);
     }
 
-    void ResetActionTimes()
+    protected void ResetActionTimes()
     {
         lastWalkedSeconds = Time.time;
         lastActivedUniqueActionSeconds = Time.time;
@@ -148,10 +162,11 @@ public abstract class Snowman : MonoBehaviour
         PerformActions();
     }
 
-    private void OnDestroy()
+    protected virtual void OnDestroy()
     {
         DayCycle.nightActions -= NightArriveAction;
         DayCycle.dayActions -= DayArriveAction;
         DayCycle.dayActions -= ResetActionTimes;
+        snowmanViewedEvent -= ClickSoundPlay;
     }
 }

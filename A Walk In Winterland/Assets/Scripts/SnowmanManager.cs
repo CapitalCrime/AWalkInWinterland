@@ -32,6 +32,7 @@ public class SnowmanManager : MonoBehaviour
         randomUnlockSnowmen = new List<Snowman>(Resources.LoadAll<Snowman>("Prefabs/SnowmanPrefabs"));
         foreach(Snowman snowman in randomUnlockSnowmen)
         {
+            snowman.description.unlocked = false;
             if (!snowman.description.randomUnlock)
             {
                 randomUnlockSnowmen.Remove(snowman);
