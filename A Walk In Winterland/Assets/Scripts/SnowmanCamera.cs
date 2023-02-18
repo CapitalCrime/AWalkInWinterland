@@ -23,6 +23,7 @@ public class SnowmanCamera : MonoBehaviour
 
     public void SetSnowmanTarget(Snowman snowman)
     {
+        EnableFPSCam(false);
         currentSnowmanTarget = snowman;
     }
 
@@ -34,6 +35,26 @@ public class SnowmanCamera : MonoBehaviour
         } else
         {
             ActivateThirdPersonCam();
+        }
+    }
+
+    void EnableFPSCam(bool value)
+    {
+        if(currentFPSCam != null)
+        {
+            currentFPSCam.gameObject.SetActive(value);
+        }
+
+        if (currentSnowmanTarget != null)
+        {
+            if (value)
+            {
+                currentSnowmanTarget.OnViewFPSEvent();
+            }
+            else
+            {
+                currentSnowmanTarget.OnLeaveFPSEvent();
+            }
         }
     }
 
@@ -62,10 +83,7 @@ public class SnowmanCamera : MonoBehaviour
         //cinemachineFreeLook.Follow = currentSnowmanTarget.transform;
         //cinemachineFreeLook.LookAt = currentSnowmanTarget.transform;
         //cinemachineFreeLook.gameObject.SetActive(true);
-        if (currentFPSCam != null)
-        {
-            currentFPSCam.gameObject.SetActive(false);
-        }
+        EnableFPSCam(false);
     }
 
     public void ActivateFirstPersonCam()
@@ -75,10 +93,7 @@ public class SnowmanCamera : MonoBehaviour
             SnowmanManager.instance.ActivatePlayerCamera();
             return;
         }
-        if (currentFPSCam != null)
-        {
-            currentFPSCam.gameObject.SetActive(false);
-        }
+        EnableFPSCam(false);
         currentFPSCam = currentSnowmanTarget.GetSnowmanFPSCam();
         if(currentFPSCam == null)
         {
@@ -87,8 +102,8 @@ public class SnowmanCamera : MonoBehaviour
         }
         firstPerson = true;
         currentFPSCam.Follow = currentSnowmanTarget.transform;
-        currentFPSCam.gameObject.SetActive(true);
-        if(currentThirdPersonCam != null)
+        EnableFPSCam(true);
+        if (currentThirdPersonCam != null)
         {
             currentThirdPersonCam.gameObject.SetActive(false);
         }
@@ -97,10 +112,7 @@ public class SnowmanCamera : MonoBehaviour
 
     public void DeactivateCameras()
     {
-        if (currentFPSCam != null)
-        {
-            currentFPSCam.gameObject.SetActive(false);
-        }
+        EnableFPSCam(false);
         if(currentThirdPersonCam != null)
         {
             currentThirdPersonCam.gameObject.SetActive(false);

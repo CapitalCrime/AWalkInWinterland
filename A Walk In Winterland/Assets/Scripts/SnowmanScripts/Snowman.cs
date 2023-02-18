@@ -8,6 +8,8 @@ public abstract class Snowman : MonoBehaviour
     public delegate void SnowmanDelegate(Snowman snowman);
     [HideInInspector] public static event SnowmanDelegate snowmanCreatedEvent;
     [HideInInspector] protected event UnityAction snowmanViewedEvent;
+    [HideInInspector] protected event UnityAction snowmanFPSEvent;
+    [HideInInspector] protected event UnityAction snowmanLeaveFPSEvent;
     [SerializeField] Cinemachine.CinemachineVirtualCamera fpsCam;
     [SerializeField] private FMODUnity.EmitterRef clickSoundRef;
     public Cinemachine.CinemachineFreeLook thirdPersonCam;
@@ -107,6 +109,16 @@ public abstract class Snowman : MonoBehaviour
     public void AddForce(Vector3 amount)
     {
         snowmanRigidbody.AddForce(amount, ForceMode.Acceleration);
+    }
+
+    public void OnViewFPSEvent()
+    {
+        snowmanFPSEvent?.Invoke();
+    }
+
+    public void OnLeaveFPSEvent()
+    {
+        snowmanLeaveFPSEvent?.Invoke();
     }
 
     public void OnViewEvent()
