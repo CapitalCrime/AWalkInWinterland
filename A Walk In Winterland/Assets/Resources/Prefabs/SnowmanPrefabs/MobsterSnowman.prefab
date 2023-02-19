@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7205295731891822976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 1.2783, z: 0.33641446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -221,6 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsCam: {fileID: 7723188517299077758}
+  clickSoundRef:
+    Target: {fileID: 0}
+    Params: []
   thirdPersonCam: {fileID: 0}
   description: {fileID: 11400000, guid: 68fe463be9a560548b11afc739e43c0f, type: 2}
   cannonFirePoint: {fileID: 3198945840953395774}
