@@ -171,6 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsCam: {fileID: 7723188517299077758}
+  clickSoundRef:
+    Target: {fileID: 0}
+    Params: []
   thirdPersonCam: {fileID: 0}
   description: {fileID: 11400000, guid: 0d5343435a384aa40a5a63458d81b8ef, type: 2}
 --- !u!114 &7193218912654008845
@@ -480,12 +483,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fb983b1e277a6d7489899668b92ad7ea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.051
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb983b1e277a6d7489899668b92ad7ea,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fb983b1e277a6d7489899668b92ad7ea,
         type: 3}

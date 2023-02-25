@@ -15,7 +15,6 @@ public class RacerSnowman : Snowman
     float driftingTime = 0;
     float timeSinceChangeDriftDirection = 0;
     bool turnRight = true;
-    [SerializeField] private FMOD.Studio.EventInstance carSoundInstance;
     [SerializeField] private FMODUnity.EmitterRef carSoundRef;
     [SerializeField] private FMODUnity.EmitterRef carSongRef;
 

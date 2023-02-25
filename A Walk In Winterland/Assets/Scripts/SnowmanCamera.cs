@@ -15,12 +15,6 @@ public class SnowmanCamera : MonoBehaviour
     Snowman currentSnowmanTarget;
     bool firstPerson = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public void SetSnowmanTarget(Snowman snowman)
     {
         EnableFPSCam(false);
@@ -110,6 +104,18 @@ public class SnowmanCamera : MonoBehaviour
         //cinemachineFreeLook.gameObject.SetActive(false);
     }
 
+    public void SwapCam()
+    {
+        if (firstPerson)
+        {
+            ActivateThirdPersonCam();
+        }
+        else
+        {
+            ActivateFirstPersonCam();
+        }
+    }
+
     public void DeactivateCameras()
     {
         EnableFPSCam(false);
@@ -131,13 +137,7 @@ public class SnowmanCamera : MonoBehaviour
         }
         if (cycleSnowmanView.action.WasPerformedThisFrame() && !SnowmanManager.instance.PlayerCameraActive())
         {
-            if (firstPerson)
-            {
-                ActivateThirdPersonCam();
-            } else
-            {
-                ActivateFirstPersonCam();
-            }
+            SwapCam();
         }
     }
 }

@@ -6,6 +6,7 @@ public class MobsterSnowman : Snowman
 {
     public Transform cannonFirePoint;
     public GameObject snowballPrefab;
+    [SerializeField] private FMODUnity.EmitterRef snowcannonSoundRef;
     Coroutine shootRoutine;
     public LayerMask snowmanMask;
 
@@ -43,10 +44,10 @@ public class MobsterSnowman : Snowman
             while (timer < 1)
             {
                 snowmanRigidbody.angularVelocity = Vector3.zero;
-                endDirection = (closestSnowman.position - cannonFirePoint.position);
+                endDirection = (closestSnowman.position - (cannonFirePoint.position-cannonFirePoint.transform.forward)).normalized;
                 endDirection.y = 0;
                 endRotation = Quaternion.LookRotation(endDirection);
-                snowmanRigidbody.rotation = Quaternion.Slerp(startRotation, endRotation, timer);
+                snowmanRigidbody.rotation = Quaternion.Lerp(startRotation, endRotation, timer);
                 timer += Time.deltaTime*1.25f;
                 yield return null;
             }
@@ -55,6 +56,10 @@ public class MobsterSnowman : Snowman
         }
         snowmanRigidbody.AddForce(-cannonFirePoint.forward * 150);
         Instantiate(snowballPrefab, cannonFirePoint.position, cannonFirePoint.rotation);
+        if (snowcannonSoundRef.Target != null)
+        {
+            snowcannonSoundRef.Target.Play();
+        }
         EnableWalking(true);
         yield return null;
     }

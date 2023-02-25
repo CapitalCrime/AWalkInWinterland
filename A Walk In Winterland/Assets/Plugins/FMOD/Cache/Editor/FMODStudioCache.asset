@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638124424830160694
+  lastModified: 638128520477782837
   FileSizes:
   - Name: Desktop
-    Value: 1038
+    Value: 1136
   Exists: 1
 --- !u!114 &-4831214777332310060
 MonoBehaviour:
@@ -95,12 +95,14 @@ MonoBehaviour:
   - {fileID: 7739666981757021231}
   - {fileID: -4831214777332310060}
   - {fileID: 3367002805512894025}
+  - {fileID: 5694644536009449672}
+  - {fileID: 7254776412058897860}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3490342174954165286}
   StringsBanks:
   - {fileID: -5082213400612829643}
-  cacheTime: 638124424830160694
+  cacheTime: 638128520477782837
   cacheVersion: 131593
 --- !u!114 &2251118214362955823
 MonoBehaviour:
@@ -195,11 +197,65 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638124424830150726
+  lastModified: 638128520477772869
   FileSizes:
   - Name: Desktop
-    Value: 7083552
+    Value: 7111808
   Exists: 1
+--- !u!114 &5694644536009449672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SnowCannon
+  m_EditorClassIdentifier: 
+  Path: event:/SnowCannon
+  Guid:
+    Data1: 1535765984
+    Data2: 1181596768
+    Data3: 1102889656
+    Data4: -1279715884
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 672
+--- !u!114 &7254776412058897860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Snowball
+  m_EditorClassIdentifier: 
+  Path: event:/Snowball
+  Guid:
+    Data1: 285480232
+    Data2: 1165016146
+    Data3: -189390204
+    Data4: -766511621
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 648
 --- !u!114 &7739666981757021231
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class SnowmanManager : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
+    public UnityEvent<bool> snowmanCameraActivateEvent;
     Outline currentOutline;
     [SerializeField] private Cinemachine.CinemachineFreeLook cinemachineFreeLook;
     [SerializeField] private SnowmanCamera snowmanCamera;
@@ -179,6 +181,7 @@ public class SnowmanManager : MonoBehaviour
         snowmanCamera.SetSnowmanTarget(snowman);
         snowmanCamera.ActivateCamera();
         snowman.OnViewEvent();
+        snowmanCameraActivateEvent?.Invoke(true);
         playerCamera.gameObject.SetActive(false);
     }
 
@@ -187,6 +190,7 @@ public class SnowmanManager : MonoBehaviour
         if (playerCamera.gameObject.activeSelf) return;
         currentViewSnowman = null;
         playerCamera.transform.position = _camera.transform.position - _camera.transform.forward*2 + Vector3.up;
+        snowmanCameraActivateEvent?.Invoke(false);
         playerCamera.gameObject.SetActive(true);
         snowmanCamera.DeactivateCameras();
     }
