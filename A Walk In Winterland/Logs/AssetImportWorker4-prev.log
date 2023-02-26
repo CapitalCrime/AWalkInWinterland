@@ -15,7 +15,7 @@ C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-64902
+57002
 Successfully changed project path to: C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 199.78 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 195.57 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,54 +63,54 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56672
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56920
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010809 seconds.
+Registered in 0.012771 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
+Native extension for iOS target not found
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 167.76 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 239.43 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.827 seconds
+- Completed reload, in  1.184 seconds
 Domain Reload Profiling:
-	ReloadAssembly (828ms)
-		BeginReloadAssembly (76ms)
+	ReloadAssembly (1185ms)
+		BeginReloadAssembly (92ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (624ms)
-			LoadAssemblies (78ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (936ms)
+			LoadAssemblies (91ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (121ms)
+			SetupTypeCache (158ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (407ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (639ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (81ms)
+				InitializePlatformSupportModulesInManaged (139ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (168ms)
+				RefreshPlugins (240ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (108ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
+				ProcessInitializeOnLoadAttributes (166ms)
+				ProcessInitializeOnLoadMethodAttributes (89ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (3ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013289 seconds.
+Registered in 0.014850 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
@@ -118,117 +118,46 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 160.58 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 277.03 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.873 seconds
+- Completed reload, in  2.581 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1874ms)
-		BeginReloadAssembly (214ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (132ms)
-		EndReloadAssembly (1523ms)
-			LoadAssemblies (97ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (376ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (87ms)
-			SetupLoadedEditorAssemblies (878ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (29ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (161ms)
-				BeforeProcessingInitializeOnLoad (163ms)
-				ProcessInitializeOnLoadAttributes (404ms)
-				ProcessInitializeOnLoadMethodAttributes (112ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.34 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6232 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 110 unused Assets / (389.3 KB). Loaded Objects now: 6646.
-Memory consumption went from 244.7 MB to 244.3 MB.
-Total: 4.999900 ms (FindLiveObjects: 0.813000 ms CreateObjectMapping: 0.274600 ms MarkObjects: 3.812300 ms  DeleteObjects: 0.098500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 6328596.374680 seconds.
-  path: Assets/SnowmanImages/SnowmanRainbow.png
-  artifactKey: Guid(1ff15f019ab80c347bd2c8d4266afb26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SnowmanImages/SnowmanRainbow.png using Guid(1ff15f019ab80c347bd2c8d4266afb26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0923c99d731836aeb9b6f61dce7748f7') in 0.196134 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.668139 seconds.
-  path: Assets/Resources/SnowmanDescriptions/RainbowSnowman.asset
-  artifactKey: Guid(08741bae9e25f9046978d5d1ef697802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/SnowmanDescriptions/RainbowSnowman.asset using Guid(08741bae9e25f9046978d5d1ef697802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '140dc318e06376d25f457993915c2a1a') in 0.006632 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012707 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.75 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.286 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2286ms)
-		BeginReloadAssembly (196ms)
+	ReloadAssembly (2582ms)
+		BeginReloadAssembly (224ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (61ms)
-		EndReloadAssembly (1948ms)
-			LoadAssemblies (168ms)
+			CreateAndSetChildDomain (123ms)
+		EndReloadAssembly (2178ms)
+			LoadAssemblies (104ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (580ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (88ms)
-			SetupLoadedEditorAssemblies (983ms)
+			SetupTypeCache (486ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (99ms)
+			SetupLoadedEditorAssemblies (1373ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (46ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (174ms)
-				ProcessInitializeOnLoadAttributes (590ms)
-				ProcessInitializeOnLoadMethodAttributes (158ms)
-				AfterProcessingInitializeOnLoad (12ms)
+				InitializePlatformSupportModulesInManaged (54ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (277ms)
+				BeforeProcessingInitializeOnLoad (232ms)
+				ProcessInitializeOnLoadAttributes (591ms)
+				ProcessInitializeOnLoadMethodAttributes (193ms)
+				AfterProcessingInitializeOnLoad (26ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 14.78 ms, found 6 plugins.
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.41 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6077 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 84 unused Assets / (381.7 KB). Loaded Objects now: 6667.
-Memory consumption went from 239.6 MB to 239.2 MB.
-Total: 5.337400 ms (FindLiveObjects: 1.319500 ms CreateObjectMapping: 0.283000 ms MarkObjects: 3.627900 ms  DeleteObjects: 0.105600 ms)
+Unloading 6232 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 110 unused Assets / (389.3 KB). Loaded Objects now: 6646.
+Memory consumption went from 244.7 MB to 244.3 MB.
+Total: 5.623900 ms (FindLiveObjects: 1.094900 ms CreateObjectMapping: 0.279800 ms MarkObjects: 4.100000 ms  DeleteObjects: 0.147800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -242,589 +171,16 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 40.494799 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/RainbowSnowman.prefab
-  artifactKey: Guid(bcfa749414604f442871bdf92c6ac2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/RainbowSnowman.prefab using Guid(bcfa749414604f442871bdf92c6ac2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef545377e9d51688c1dc1c1afa99edce') in 0.269411 seconds 
+  Time since last request: 6331118.034789 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/CatSnowman.prefab
+  artifactKey: Guid(94a3fdc5a2d44a84f9db3b8b46081cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/CatSnowman.prefab using Guid(94a3fdc5a2d44a84f9db3b8b46081cc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c90cf0f390e66126b2ac9dce3f2db06') in 0.463467 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 16.019105 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat
-  artifactKey: Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat using Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81bcb2710463597345e464f3d15fd3cd') in 0.037981 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.132443 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/BasicSnowman.prefab
-  artifactKey: Guid(43d887eb10fdbd14f941c16b1b4389a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/BasicSnowman.prefab using Guid(43d887eb10fdbd14f941c16b1b4389a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7d21e58e95bccae555d40f5aafd373') in 0.039330 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/FishingSnowman.prefab
-  artifactKey: Guid(c2b7a2337f2e8a947bc090df3fded7ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/FishingSnowman.prefab using Guid(c2b7a2337f2e8a947bc090df3fded7ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e44b87b92567aae796996f24161c3394') in 0.048599 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/YellowSnowman.prefab
-  artifactKey: Guid(8177b5bddb02c2e4b86f6ddb83c2eee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/YellowSnowman.prefab using Guid(8177b5bddb02c2e4b86f6ddb83c2eee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f43c9399d150d697cdcb21386157ded') in 0.034732 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/NullSnowman.prefab
-  artifactKey: Guid(5266a4cf89874cb4fbd2e9eb067dfd1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/NullSnowman.prefab using Guid(5266a4cf89874cb4fbd2e9eb067dfd1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da78af6b973d9988e5e2e521e28ef8c6') in 0.052341 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000126 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/MobsterSnowman.prefab
-  artifactKey: Guid(19c8cd1cc06938c43a66b5002d47e1d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/MobsterSnowman.prefab using Guid(19c8cd1cc06938c43a66b5002d47e1d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a3b7beb3a6b0fe662f2d5e9bd9cb38e') in 0.047824 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
+  Time since last request: 0.000051 seconds.
   path: Assets/Resources/Prefabs/SnowmanPrefabs/SantaSnowman.prefab
   artifactKey: Guid(27115028171c0324db4a0bc3a559e2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/SantaSnowman.prefab using Guid(27115028171c0324db4a0bc3a559e2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9cf142e61008039191e1751aacdfffe') in 0.037727 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/RacerSnowman.prefab
-  artifactKey: Guid(b62b37ceb8fba7d44a1e66e888a54f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/RacerSnowman.prefab using Guid(b62b37ceb8fba7d44a1e66e888a54f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1809c5a0fea37882327bfff132475eb5') in 0.038554 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/RainbowSnowman.prefab
-  artifactKey: Guid(bcfa749414604f442871bdf92c6ac2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/RainbowSnowman.prefab using Guid(bcfa749414604f442871bdf92c6ac2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9096430b5c8aaaadab04117af892eb3') in 0.030489 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/ClassicSnowman.prefab
-  artifactKey: Guid(9847363ad90da024d95b2e24e076a5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/ClassicSnowman.prefab using Guid(9847363ad90da024d95b2e24e076a5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a149c6624ebba839b208986d972f7838') in 0.043922 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/PaperSnowman.prefab
-  artifactKey: Guid(d8453f546e16e784982267b040f2f096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/PaperSnowman.prefab using Guid(d8453f546e16e784982267b040f2f096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9541ea6d7913ccefa2074a73de186d3b') in 0.038878 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000079 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/IceSnowman.prefab
-  artifactKey: Guid(31857441e69fc6e49964e59af60e242c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/IceSnowman.prefab using Guid(31857441e69fc6e49964e59af60e242c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a7d071219bd1709e89650c47ae96cf') in 0.049993 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.525983 seconds.
-  path: Assets/Snowmen/SnowmanArms.obj
-  artifactKey: Guid(43f435025dced5d4584b90c7f6a80b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanArms.obj using Guid(43f435025dced5d4584b90c7f6a80b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b81c0168f73c688274519834a43572f') in 0.050264 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Snowmen/SnowmanNoArms.obj
-  artifactKey: Guid(ae022d8ad220ead488c2fc3e5a406bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanNoArms.obj using Guid(ae022d8ad220ead488c2fc3e5a406bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f452a990f4f6b352e6305e4ba1e6655') in 0.045431 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Snowmen/SnowmanMeltFace.obj
-  artifactKey: Guid(411b7d45589df174cbac9d97b0988bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMeltFace.obj using Guid(411b7d45589df174cbac9d97b0988bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fd66056b90e44e3bdd45b9b5da57c74') in 0.064566 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Snowmen/SnowmanBody.obj
-  artifactKey: Guid(6716244ba7084e34c918b1b90cfb26f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanBody.obj using Guid(6716244ba7084e34c918b1b90cfb26f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f45da5042d8448446e2c6cb99ba6e735') in 0.059383 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 28.249108 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat
-  artifactKey: Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat using Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58176d5e2552c6eed450b5965c68e9c8') in 0.016516 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 35.174203 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/BasicSnowman.prefab
-  artifactKey: Guid(43d887eb10fdbd14f941c16b1b4389a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/BasicSnowman.prefab using Guid(43d887eb10fdbd14f941c16b1b4389a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f3314a429a1e044ad6d25e8c8b8d8fb') in 0.041639 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/FishingSnowman.prefab
-  artifactKey: Guid(c2b7a2337f2e8a947bc090df3fded7ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/FishingSnowman.prefab using Guid(c2b7a2337f2e8a947bc090df3fded7ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eea2571fa4e6f20e478e5498c1d7df5') in 0.042313 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/MobsterSnowman.prefab
-  artifactKey: Guid(19c8cd1cc06938c43a66b5002d47e1d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/MobsterSnowman.prefab using Guid(19c8cd1cc06938c43a66b5002d47e1d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd44f9a4fb39697a4599365ef3517cd89') in 0.053150 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000067 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/SantaSnowman.prefab
-  artifactKey: Guid(27115028171c0324db4a0bc3a559e2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/SantaSnowman.prefab using Guid(27115028171c0324db4a0bc3a559e2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6238304520a5ec3bc3f73e0e59a81edc') in 0.041035 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000080 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/RainbowSnowman.prefab
-  artifactKey: Guid(bcfa749414604f442871bdf92c6ac2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/RainbowSnowman.prefab using Guid(bcfa749414604f442871bdf92c6ac2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea9d05814bb313ee18b7441468a3305') in 0.089554 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/PenguinSnowman.prefab
-  artifactKey: Guid(0032b09b1ed374e419584a81a72a7f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/PenguinSnowman.prefab using Guid(0032b09b1ed374e419584a81a72a7f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f865b2dea57873f6b438c06dfeef6118') in 0.062014 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 51.166365 seconds.
-  path: Assets/Snowmen/Textures/SnowmanBase 1.jpg
-  artifactKey: Guid(beeaada15421a9940b6d90cb6fed0759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/Textures/SnowmanBase 1.jpg using Guid(beeaada15421a9940b6d90cb6fed0759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2284bbe4722f399d6c56564fc6925f0a') in 0.030505 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.754095 seconds.
-  path: Assets/Snowmen/Textures/SnowmanSpec.jpg
-  artifactKey: Guid(beeaada15421a9940b6d90cb6fed0759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/Textures/SnowmanSpec.jpg using Guid(beeaada15421a9940b6d90cb6fed0759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '688417ec9b99093901324fd6762f17b7') in 0.014061 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 81.959431 seconds.
-  path: Assets/Snowmen/Textures/SnowmanSpec.jpg
-  artifactKey: Guid(beeaada15421a9940b6d90cb6fed0759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/Textures/SnowmanSpec.jpg using Guid(beeaada15421a9940b6d90cb6fed0759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a73c698e41763cf9b4dc24aab6627f0') in 0.015274 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.445479 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat
-  artifactKey: Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat using Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77ca182971c79c9d295da5aa05cad2c1') in 0.018875 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.063661 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Visibility_Tool.png
-  artifactKey: Guid(7342ee656932e31489ea62e64e012645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Visibility_Tool.png using Guid(7342ee656932e31489ea62e64e012645) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28b3053b10861b0511d0eae5f3f026f0') in 0.074372 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Visibility_Tool@2x.png
-  artifactKey: Guid(ef9977ed07c438845a52c577f4ffcc3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Visibility_Tool@2x.png using Guid(ef9977ed07c438845a52c577f4ffcc3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5b5328092696369c6ead9884ee19788') in 0.036038 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Brush@4x.png
-  artifactKey: Guid(48464cd53bb3c604f999e7d3f15e8d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Brush@4x.png using Guid(48464cd53bb3c604f999e7d3f15e8d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a55aba80e3172f5fb254432ba83792') in 0.033456 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider.png
-  artifactKey: Guid(96b029a4248c85a4e8de2aa81fc0b60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider.png using Guid(96b029a4248c85a4e8de2aa81fc0b60a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25895ad6d03d201314a7acc69860052d') in 0.055633 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Weight_Brush@3x.png
-  artifactKey: Guid(3279d541bf75c624cbdd7179eb5559a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Weight_Brush@3x.png using Guid(3279d541bf75c624cbdd7179eb5559a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e01f64faae7a07032ff4e1a30d0cf8a') in 0.047579 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider@4x.png
-  artifactKey: Guid(ac47ed8ccc79cf04dae198b9cc5b3a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider@4x.png using Guid(ac47ed8ccc79cf04dae198b9cc5b3a6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79317e80be5c8f800d7b444ba1b71aa5') in 0.034696 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Weight_Slider.png
-  artifactKey: Guid(aa91af43c72989f44bf937fd28243bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Weight_Slider.png using Guid(aa91af43c72989f44bf937fd28243bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8180cfcbcc82bdc6cb74990d6f822cb') in 0.026393 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider@3x.png
-  artifactKey: Guid(af73899d5803d99448134360f184f348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider@3x.png using Guid(af73899d5803d99448134360f184f348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c0f4d99342bb18691eb014cbdb1d49a') in 0.032040 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Weight_Slider@2x.png
-  artifactKey: Guid(6306a4776b130304bba7a139fc1d2bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Weight_Slider@2x.png using Guid(6306a4776b130304bba7a139fc1d2bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db0bbd57fa0bda59c7ffcd6393eb8675') in 0.028916 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Visibility_Tool@3x.png
-  artifactKey: Guid(ec23e33668eecff4aaec16f735dcc204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Visibility_Tool@3x.png using Guid(ec23e33668eecff4aaec16f735dcc204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b0f7cb403bad81dd4586b3702da5fc') in 0.030944 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Brush@2x.png
-  artifactKey: Guid(bb668641abe10a64891e26613cf530ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Brush@2x.png using Guid(bb668641abe10a64891e26613cf530ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58eaf2997a0ad333346f7ed085c30572') in 0.024899 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000318 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider@2x.png
-  artifactKey: Guid(7f64a6e091143c0458506b559165cf72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Weight_Slider@2x.png using Guid(7f64a6e091143c0458506b559165cf72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '593f63f0e9761a1d34d60da7323c1da5') in 0.020782 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.058176 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Influence@3x.png
-  artifactKey: Guid(7ce16c63ba627427cab935593c090e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Influence@3x.png using Guid(7ce16c63ba627427cab935593c090e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6a0f466dd017291a4ea9d8de595f1be') in 0.056232 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Mode@4x.png
-  artifactKey: Guid(2223b0a570b66ee42b3e0a79f0789b2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Mode@4x.png using Guid(2223b0a570b66ee42b3e0a79f0789b2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5010eb9e56e081f3ad248323888b5d8') in 0.028605 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000058 seconds.
-  path: Packages/com.unity.2d.spriteshape/Editor/Icons/SpriteShapeController@64.png
-  artifactKey: Guid(d1508e1dc42abb745b24c8891a614d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.spriteshape/Editor/Icons/SpriteShapeController@64.png using Guid(d1508e1dc42abb745b24c8891a614d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4892015b64e8a0b98fa669cf4f52f04') in 0.027567 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Mode@3x.png
-  artifactKey: Guid(ea833d779996e3244b3b567764be9cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Mode@3x.png using Guid(ea833d779996e3244b3b567764be9cf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '543cf560b694a476a4326a1430cfade3') in 0.032593 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Sprite_Mode@3x.png
-  artifactKey: Guid(71d8b2e508f1d9947ba51013600a5eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Sprite_Mode@3x.png using Guid(71d8b2e508f1d9947ba51013600a5eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97d1a3479347f0bd990f378b5119a112') in 0.024562 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000091 seconds.
-  path: Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/SpriteShapeEdge.png
-  artifactKey: Guid(0ae2b74b1edd14bb18dd7b65ae916a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/SpriteShapeEdge.png using Guid(0ae2b74b1edd14bb18dd7b65ae916a54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e130d892dd348b008591416fd26e73') in 0.031887 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Mode.png
-  artifactKey: Guid(ca778bc7303b24948abf3e907abbf2a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Mode.png using Guid(ca778bc7303b24948abf3e907abbf2a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0df21a1b59697a4eb67d6a606c427d5c') in 0.029813 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Mode@2x.png
-  artifactKey: Guid(ff2aa9ebc8aee604caa5f8459ac4ae43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Sprite_Mode@2x.png using Guid(ff2aa9ebc8aee604caa5f8459ac4ae43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe2537800579fb7fd5e5e2493687630a') in 0.024278 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 23.576673 seconds.
-  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Dark/d_Split Bones.png
-  artifactKey: Guid(3e98b5bf8fbc84d4bafe25706ebcde8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Dark/d_Split Bones.png using Guid(3e98b5bf8fbc84d4bafe25706ebcde8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23cf6117e9eab6cbc0886d638e811ac9') in 0.046310 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 22.196717 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat
-  artifactKey: Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat using Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4cfd914fa11781db34d8c3aecd4a928') in 0.031038 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 11.541918 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/BasicSnowman.prefab
-  artifactKey: Guid(43d887eb10fdbd14f941c16b1b4389a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/BasicSnowman.prefab using Guid(43d887eb10fdbd14f941c16b1b4389a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e830052ea335fbc24f1e6cbd0109091') in 0.027640 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/YellowSnowman.prefab
-  artifactKey: Guid(8177b5bddb02c2e4b86f6ddb83c2eee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/YellowSnowman.prefab using Guid(8177b5bddb02c2e4b86f6ddb83c2eee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd177204e7d7e3dcebe45f7c656c5eb22') in 0.043630 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/RacerSnowman.prefab
-  artifactKey: Guid(b62b37ceb8fba7d44a1e66e888a54f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/RacerSnowman.prefab using Guid(b62b37ceb8fba7d44a1e66e888a54f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba7ae2fc57f61c3c879f52499b64982f') in 0.037043 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000197 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/IceSnowman.prefab
-  artifactKey: Guid(31857441e69fc6e49964e59af60e242c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/IceSnowman.prefab using Guid(31857441e69fc6e49964e59af60e242c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f971a8531ffe8b44db4660811c4a57a5') in 1.300770 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 50.626625 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/IceSnowman.mat
-  artifactKey: Guid(910919ef77608bf4a8ade4271780dde3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/IceSnowman.mat using Guid(910919ef77608bf4a8ade4271780dde3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c92951733ee0592f6f1ec4c5bba2135a') in 0.019513 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.014239 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.96 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.368 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2369ms)
-		BeginReloadAssembly (215ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (1ms)
-			CreateAndSetChildDomain (58ms)
-		EndReloadAssembly (1963ms)
-			LoadAssemblies (187ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (488ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (84ms)
-			SetupLoadedEditorAssemblies (1007ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (62ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (198ms)
-				ProcessInitializeOnLoadAttributes (579ms)
-				ProcessInitializeOnLoadMethodAttributes (126ms)
-				AfterProcessingInitializeOnLoad (39ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (65ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 12.83 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 84 unused Assets / (381.7 KB). Loaded Objects now: 6809.
-Memory consumption went from 243.5 MB to 243.2 MB.
-Total: 4.958700 ms (FindLiveObjects: 0.898600 ms CreateObjectMapping: 0.228200 ms MarkObjects: 3.700900 ms  DeleteObjects: 0.128800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.014273 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.76 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.622 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1623ms)
-		BeginReloadAssembly (165ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (47ms)
-		EndReloadAssembly (1332ms)
-			LoadAssemblies (124ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (337ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (66ms)
-			SetupLoadedEditorAssemblies (689ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (49ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (136ms)
-				ProcessInitializeOnLoadAttributes (381ms)
-				ProcessInitializeOnLoadMethodAttributes (110ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (24ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 12.55 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 84 unused Assets / (381.7 KB). Loaded Objects now: 6824.
-Memory consumption went from 243.5 MB to 243.1 MB.
-Total: 6.467700 ms (FindLiveObjects: 0.748200 ms CreateObjectMapping: 0.300800 ms MarkObjects: 5.324300 ms  DeleteObjects: 0.092900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 214.392527 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat
-  artifactKey: Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat using Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b9f024cb0dfe7e867219d938fe6820b') in 0.228868 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/PenguinSnowman.mat
-  artifactKey: Guid(0ab1c1b6e904b9046a03f17e57926326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/PenguinSnowman.mat using Guid(0ab1c1b6e904b9046a03f17e57926326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad7b5a793a8fa2f53b6fb7d6f773c1ce') in 0.022856 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 21.964717 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat
-  artifactKey: Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/BaseSnowman.mat using Guid(c3125dffebb6002498d8226d81f5efdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f7928d6498109c0e64fe8711cfcf612') in 0.027287 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/PaperSnowman.mat
-  artifactKey: Guid(5834015c311b0eb45a2d14139572bd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/PaperSnowman.mat using Guid(5834015c311b0eb45a2d14139572bd60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60d60ba10c53dd697af05b1f757e3851') in 0.036296 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Snowmen/SnowmanMaterials/PenguinSnowman.mat
-  artifactKey: Guid(0ab1c1b6e904b9046a03f17e57926326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMaterials/PenguinSnowman.mat using Guid(0ab1c1b6e904b9046a03f17e57926326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78643afa8332887b12f4c6feb6f0f87a') in 0.040997 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013788 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.56 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.776 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1777ms)
-		BeginReloadAssembly (184ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (58ms)
-		EndReloadAssembly (1461ms)
-			LoadAssemblies (130ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (368ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (81ms)
-			SetupLoadedEditorAssemblies (747ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (46ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (141ms)
-				ProcessInitializeOnLoadAttributes (426ms)
-				ProcessInitializeOnLoadMethodAttributes (120ms)
-				AfterProcessingInitializeOnLoad (11ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (34ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 13.22 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 84 unused Assets / (381.7 KB). Loaded Objects now: 6880.
-Memory consumption went from 243.6 MB to 243.3 MB.
-Total: 5.233500 ms (FindLiveObjects: 0.793200 ms CreateObjectMapping: 0.258900 ms MarkObjects: 4.078500 ms  DeleteObjects: 0.101500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 39.461491 seconds.
-  path: Assets/Snowmen/SnowmanArms.obj
-  artifactKey: Guid(43f435025dced5d4584b90c7f6a80b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanArms.obj using Guid(43f435025dced5d4584b90c7f6a80b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '982eb785c4c79e97dee682d249be5f8f') in 0.319586 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Snowmen/SnowmanNoArms.obj
-  artifactKey: Guid(ae022d8ad220ead488c2fc3e5a406bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanNoArms.obj using Guid(ae022d8ad220ead488c2fc3e5a406bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d5137e4facfe3d0ebd37e92c23a37a') in 0.043376 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Snowmen/SnowmanMeltFace.obj
-  artifactKey: Guid(411b7d45589df174cbac9d97b0988bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMeltFace.obj using Guid(411b7d45589df174cbac9d97b0988bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9533c7c420214e9f85e48dd345eae2b') in 0.049900 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.617441 seconds.
-  path: Assets/Snowmen/Textures/SnowmanSpec.jpg
-  artifactKey: Guid(beeaada15421a9940b6d90cb6fed0759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/Textures/SnowmanSpec.jpg using Guid(beeaada15421a9940b6d90cb6fed0759) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f15f9ea3da5d14aedebe09677d68a70') in 0.022878 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 41.908884 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/BasicSnowman.prefab
-  artifactKey: Guid(43d887eb10fdbd14f941c16b1b4389a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/BasicSnowman.prefab using Guid(43d887eb10fdbd14f941c16b1b4389a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661b499b0e68c09521424cd38bd1f796') in 0.094163 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000744 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/YellowSnowman.prefab
-  artifactKey: Guid(8177b5bddb02c2e4b86f6ddb83c2eee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/YellowSnowman.prefab using Guid(8177b5bddb02c2e4b86f6ddb83c2eee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed1e3d10bcd7a031cd2f768560d7e2b') in 0.032186 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/SantaSnowman.prefab
-  artifactKey: Guid(27115028171c0324db4a0bc3a559e2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/SantaSnowman.prefab using Guid(27115028171c0324db4a0bc3a559e2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8f1ef7fdf914520d31ca4f4585bc405') in 0.056097 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Resources/Prefabs/SnowmanPrefabs/PenguinSnowman.prefab
-  artifactKey: Guid(0032b09b1ed374e419584a81a72a7f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/SnowmanPrefabs/PenguinSnowman.prefab using Guid(0032b09b1ed374e419584a81a72a7f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fda339e2b8290aad7099050377286fc') in 0.073323 seconds 
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/SantaSnowman.prefab using Guid(27115028171c0324db4a0bc3a559e2bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e7fa3d0fc0f3c11f50a1b5d8f7a80e') in 0.054450 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

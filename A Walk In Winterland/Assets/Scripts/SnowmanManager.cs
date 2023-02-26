@@ -195,7 +195,7 @@ public class SnowmanManager : MonoBehaviour
         snowmanCamera.DeactivateCameras();
     }
 
-    void ViewNextSnowman(float direction)
+    public void ViewNextSnowman(float direction)
     {
         if (!snowmanCamera.gameObject.activeSelf)
         {
