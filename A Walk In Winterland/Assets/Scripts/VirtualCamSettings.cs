@@ -32,6 +32,6 @@ public class VirtualCamSettings : MonoBehaviour
     void SetLookSpeed(float trueValue)
     {
         virtualCamera.m_HorizontalAxis.m_MaxSpeed = trueValue;
-        virtualCamera.m_VerticalAxis.m_MaxSpeed = trueValue;
+        virtualCamera.m_VerticalAxis.m_MaxSpeed = trueValue*(3/4.0f);
     }
 }

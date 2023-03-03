@@ -86,18 +86,23 @@ public class RacerSnowman : Snowman
         walkSpeeds = new MinMax(300, 450);
     }
 
+    private void FixedUpdate()
+    {
+        if (racerState == RacerState.Drifting)
+        {
+            float turnDirection = turnRight ? 6f : -6f;
+            snowmanRigidbody.AddRelativeTorque(Vector3.up * turnDirection, ForceMode.Acceleration);
+            Vector3 newVel = transform.forward * 18;
+            newVel.y = snowmanRigidbody.velocity.y;
+            snowmanRigidbody.velocity = newVel;
+        }
+    }
+
     protected override void Update()
     {
         if(racerState == RacerState.Relaxing)
         {
             base.Update();
-        } else if(racerState == RacerState.Drifting)
-        {
-            float turnDirection = turnRight ? 1f : -1f;
-            snowmanRigidbody.AddRelativeTorque(Vector3.up * turnDirection, ForceMode.Acceleration);
-            Vector3 newVel = transform.forward * 18;
-            newVel.y = snowmanRigidbody.velocity.y;
-            snowmanRigidbody.velocity = newVel;
         }
         transform.eulerAngles = Vector3.up * transform.eulerAngles.y;
     }
