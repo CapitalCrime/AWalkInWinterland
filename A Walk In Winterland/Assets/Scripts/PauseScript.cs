@@ -34,10 +34,18 @@ public class PauseScript : MonoBehaviour
         if (paused)
         {
             Time.timeScale = 0;
+            if(AudioSettings.instance != null)
+            {
+                AudioSettings.instance.PauseSFX(true);
+            }
             playMap.Disable();
         } else
         {
             Time.timeScale = 1;
+            if (AudioSettings.instance != null)
+            {
+                AudioSettings.instance.PauseSFX(false);
+            }
             playMap.Enable();
         }
     }

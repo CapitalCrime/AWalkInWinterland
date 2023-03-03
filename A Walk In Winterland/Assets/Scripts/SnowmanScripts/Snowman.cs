@@ -19,6 +19,8 @@ public abstract class Snowman : MonoBehaviour
     float walkSeconds;
     float lastActivedUniqueActionSeconds;
     float lastWalkedSeconds;
+    float uniqueActionPauseSeconds;
+    float walkPauseSeconds;
     bool walkingEnabled = true;
     bool walkingStartEnabled = true;
     protected MinMax walkSpeeds = new MinMax(200, 350);
@@ -81,8 +83,9 @@ public abstract class Snowman : MonoBehaviour
         }
 
         DayCycle.nightActions += NightArriveAction;
+        DayCycle.nightActions += PauseActionTimes;
         DayCycle.dayActions += DayArriveAction;
-        DayCycle.dayActions += ResetActionTimes;
+        DayCycle.dayActions += ResumeActionTimes;
         walkingStartEnabled = walkingEnabled;
 
         if(clickSoundRef.Target != null)
@@ -94,9 +97,13 @@ public abstract class Snowman : MonoBehaviour
     public void EnableWalking(bool value)
     {
         if (!walkingStartEnabled) return;
+        if(value == false)
+        {
+            PauseWalkTime();
+        }
         if(walkingEnabled == false && value == true)
         {
-            lastWalkedSeconds = Time.time;
+            ResumeWalkTime();
         }
         walkingEnabled = value;
     }
@@ -133,6 +140,30 @@ public abstract class Snowman : MonoBehaviour
         Vector3 forceDirection = forceAngle * Vector3.right * forceAmount;
         snowmanRigidbody.AddForce(forceDirection, ForceMode.Acceleration);
         snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude/3 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x), ForceMode.Acceleration);
+    }
+
+    protected void PauseWalkTime()
+    {
+        walkPauseSeconds = Time.time - lastWalkedSeconds;
+        Debug.Log("Walk pause time: " + walkPauseSeconds);
+    }
+
+    protected void ResumeWalkTime()
+    {
+        lastWalkedSeconds = Time.time - walkPauseSeconds;
+        Debug.Log("Walk resume time: " + (Time.time- lastWalkedSeconds));
+    }
+
+    protected void PauseActionTimes()
+    {
+        uniqueActionPauseSeconds = Time.time - lastActivedUniqueActionSeconds;
+        PauseWalkTime();
+    }
+
+    protected void ResumeActionTimes()
+    {
+        lastActivedUniqueActionSeconds = Time.time - uniqueActionPauseSeconds;
+        ResumeWalkTime();
     }
 
     protected void ResetActionTimes()
@@ -177,8 +208,9 @@ public abstract class Snowman : MonoBehaviour
     protected virtual void OnDestroy()
     {
         DayCycle.nightActions -= NightArriveAction;
+        DayCycle.nightActions -= PauseActionTimes;
         DayCycle.dayActions -= DayArriveAction;
-        DayCycle.dayActions -= ResetActionTimes;
+        DayCycle.dayActions -= ResumeActionTimes;
         snowmanViewedEvent -= ClickSoundPlay;
     }
 }
