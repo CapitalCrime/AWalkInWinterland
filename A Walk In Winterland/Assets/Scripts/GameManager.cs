@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         QualitySettings.SetQualityLevel(startingQuality);
-        Resolution resolution = Screen.currentResolution;
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
     public void CloseGame()

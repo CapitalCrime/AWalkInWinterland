@@ -30,7 +30,6 @@ public class ScreenResolutionPicker : MonoBehaviour
         }
 
         dropdownMenu.value = currentIndex;
-        ChangeResolution(currentIndex);
     }
 
     public void ChangeResolution(int value)
