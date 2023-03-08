@@ -90,7 +90,7 @@ public class RacerSnowman : Snowman
     {
         if (racerState == RacerState.Drifting)
         {
-            float turnDirection = turnRight ? 6f : -6f;
+            float turnDirection = turnRight ? 5f : -5f;
             snowmanRigidbody.AddRelativeTorque(Vector3.up * turnDirection, ForceMode.Acceleration);
             Vector3 newVel = transform.forward * 18;
             newVel.y = snowmanRigidbody.velocity.y;

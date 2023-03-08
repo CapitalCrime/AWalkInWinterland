@@ -197,6 +197,8 @@ public class SnowmanManager : MonoBehaviour
 
     public void ViewNextSnowman(float direction)
     {
+        if (PauseScript.isPaused()) return;
+
         if (!snowmanCamera.gameObject.activeSelf)
         {
             setCurrentLookIndex(0);

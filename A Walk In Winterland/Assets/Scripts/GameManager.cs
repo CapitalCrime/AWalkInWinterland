@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int startingResolution = 2;
     public int startingQuality = 1;
+
     private void Awake()
     {
         instance = this;
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         QualitySettings.SetQualityLevel(startingQuality);
-        Res resolution = PlayerData.GetResolutions()[startingResolution];
+        Resolution resolution = Screen.currentResolution;
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 

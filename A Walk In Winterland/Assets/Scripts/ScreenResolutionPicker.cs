@@ -7,7 +7,7 @@ using System;
 public class ScreenResolutionPicker : MonoBehaviour
 {
     TMP_Dropdown dropdownMenu;
-    List<Res> resolutions;
+    Resolution[] resolutions;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,19 +21,12 @@ public class ScreenResolutionPicker : MonoBehaviour
         }
 
         resolutions = PlayerData.GetResolutions();
-        int currentIndex = -1;
+        int currentIndex = 0;
 
-        for(int i = 0; i < resolutions.Count; i++)
+        for(int i = 0; i < resolutions.Length; i++)
         {
+            if (resolutions[i].width == Screen.currentResolution.width) currentIndex = i;
             dropdownMenu.options.Add(new TMP_Dropdown.OptionData(resolutions[i].width + " x " + resolutions[i].height));
-        }
-
-        if(GameManager.instance != null)
-        {
-            currentIndex = GameManager.instance.startingResolution;
-        } else
-        {
-            currentIndex = 0;
         }
 
         dropdownMenu.value = currentIndex;

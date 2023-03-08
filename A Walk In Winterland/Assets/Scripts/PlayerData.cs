@@ -36,9 +36,9 @@ public static class PlayerData
         setCameraSpeedEvent?.Invoke(GetCameraSpeed());
     }
 
-    public static List<Res> GetResolutions()
+    public static Resolution[] GetResolutions()
     {
-        return resolutions;
+        return Screen.resolutions;
     }
 
     public static float GetCameraSpeed()
