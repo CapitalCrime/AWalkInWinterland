@@ -29,7 +29,7 @@ public class ScreenResolutionPicker : MonoBehaviour
             dropdownMenu.options.Add(new TMP_Dropdown.OptionData(resolutions[i].width + " x " + resolutions[i].height));
         }
 
-        dropdownMenu.value = currentIndex;
+        dropdownMenu.SetValueWithoutNotify(currentIndex);
     }
 
     public void ChangeResolution(int value)
