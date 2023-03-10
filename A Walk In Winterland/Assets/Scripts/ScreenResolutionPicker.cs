@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Linq;
 
 public class ScreenResolutionPicker : MonoBehaviour
 {
@@ -20,13 +21,14 @@ public class ScreenResolutionPicker : MonoBehaviour
             Debug.LogError("Object" + gameObject.name + " is missing TMP_Dropdown component");
         }
 
-        resolutions = PlayerData.GetResolutions();
+        resolutions = PlayerData.GetResolutions().Where(resolution => resolution.refreshRate == Screen.currentResolution.refreshRate).ToArray();
         int currentIndex = 0;
 
         for(int i = 0; i < resolutions.Length; i++)
         {
+            if (!Mathf.Approximately(resolutions[i].width / (float)resolutions[i].height, 16 / 9.0f)) continue;
             if (resolutions[i].width == Screen.currentResolution.width) currentIndex = i;
-            dropdownMenu.options.Add(new TMP_Dropdown.OptionData(resolutions[i].width + " x " + resolutions[i].height));
+            dropdownMenu.options.Add(new TMP_Dropdown.OptionData(resolutions[i].width + " x " + resolutions[i].height + " @ "+resolutions[i].refreshRate));
         }
 
         dropdownMenu.SetValueWithoutNotify(currentIndex);

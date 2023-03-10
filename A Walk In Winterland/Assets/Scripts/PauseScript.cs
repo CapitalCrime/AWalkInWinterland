@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PauseScript : MonoBehaviour
@@ -8,9 +9,12 @@ public class PauseScript : MonoBehaviour
     private InputAction pauseAction;
     private InputActionMap playMap;
     [SerializeField] GameObject pauseMenu;
+    public UnityEvent<bool> OnFullscreen;
     static bool paused = false;
+    private bool fullscreen;
     private void Awake()
     {
+        fullscreen = Screen.fullScreen;
         pauseAction = InputManager.instance.playerInputs.actions.FindActionMap("Menu").FindAction("Pause");
         playMap = InputManager.instance.playerInputs.actions.FindActionMap("PlayMode");
         pauseAction.performed += PauseGame;
@@ -33,6 +37,7 @@ public class PauseScript : MonoBehaviour
         pauseMenu.SetActive(paused);
         if (paused)
         {
+            OnFullscreen?.Invoke(Screen.fullScreen);
             Time.timeScale = 0;
             if(AudioSettings.instance != null)
             {
@@ -47,6 +52,15 @@ public class PauseScript : MonoBehaviour
                 AudioSettings.instance.PauseSFX(false);
             }
             playMap.Enable();
+        }
+    }
+
+    private void Update()
+    {
+        if (fullscreen != Screen.fullScreen)
+        {
+            fullscreen = Screen.fullScreen;
+            OnFullscreen?.Invoke(Screen.fullScreen);
         }
     }
 }

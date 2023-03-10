@@ -9325,7 +9325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab9b293c700d794b92a380616d6ff3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingResolution: 2
   startingQuality: 1
 --- !u!1 &1383495752
 GameObject:
@@ -12786,6 +12785,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 111717113}
+  OnFullscreen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1339348187}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1450618966}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1834651776
 MonoBehaviour:
   m_ObjectHideFlags: 0
