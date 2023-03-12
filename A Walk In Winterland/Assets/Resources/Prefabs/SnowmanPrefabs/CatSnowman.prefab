@@ -250,6 +250,7 @@ Transform:
   - {fileID: 2735479950973590808}
   - {fileID: 2010628803101120767}
   - {fileID: 4369738168728332741}
+  - {fileID: 3162761022738381190}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -149.9, z: 0}
@@ -317,7 +318,7 @@ MonoBehaviour:
   clickSoundRef:
     Target: {fileID: 6671950180918364212}
     Params: []
-  thirdPersonCam: {fileID: 0}
+  thirdPersonCam: {fileID: 3162761022738381191}
   description: {fileID: 11400000, guid: 39d9240378aa02d439a7d3124b875d71, type: 2}
   purrSoundRef:
     Target: {fileID: 6366528363623497080}
@@ -591,3 +592,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8044038383068873322}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8363185317587953809
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7231033878098494957}
+    m_Modifications:
+    - target: {fileID: 6914260011402268949, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_Name
+      value: SnowmanCamThirdPerson
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.843346
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.2895803
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.787384
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 599484a0901a36640b2986f660e57c67, type: 3}
+--- !u!4 &3162761022738381190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+    type: 3}
+  m_PrefabInstance: {fileID: 8363185317587953809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3162761022738381191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6914260011402268950, guid: 599484a0901a36640b2986f660e57c67,
+    type: 3}
+  m_PrefabInstance: {fileID: 8363185317587953809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

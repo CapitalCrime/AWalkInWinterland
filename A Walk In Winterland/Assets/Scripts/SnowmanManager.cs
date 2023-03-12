@@ -40,6 +40,7 @@ public class SnowmanManager : MonoBehaviour
                 randomUnlockSnowmen.Remove(snowman);
             }
         }
+        snowmanCamera.gameObject.SetActive(false);
         instance = this;
     }
 
@@ -183,11 +184,15 @@ public class SnowmanManager : MonoBehaviour
         snowman.OnViewEvent();
         snowmanCameraActivateEvent?.Invoke(true);
         playerCamera.gameObject.SetActive(false);
+
+        snowmanCamera.gameObject.SetActive(true);
     }
 
     public void ActivatePlayerCamera()
     {
         if (playerCamera.gameObject.activeSelf) return;
+        snowmanCamera.gameObject.SetActive(false);
+
         currentViewSnowman = null;
         playerCamera.transform.position = _camera.transform.position - _camera.transform.forward*2 + Vector3.up;
         snowmanCameraActivateEvent?.Invoke(false);

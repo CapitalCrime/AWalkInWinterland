@@ -21,7 +21,7 @@ public class FreeCamSettings : MonoBehaviour
     private void OnEnable()
     {
         PlayerData.setSnowmanCameraSpeedEvent.AddListener(SetLookSpeed);
-        PlayerData.GetSnowmanCameraSpeed();
+        SetLookSpeed(PlayerData.GetSnowmanCameraSpeed());
     }
 
     private void OnDisable()

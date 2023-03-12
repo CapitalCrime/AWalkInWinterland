@@ -6,10 +6,9 @@ using UnityEngine.EventSystems;
 
 public class SnowmanCamera : MonoBehaviour
 {
-    [SerializeField] private Cinemachine.CinemachineFreeLook cinemachineFreeLook;
-    [SerializeField] private CinemachineCameraOffset cameraOffset;
     [SerializeField] private InputActionReference snowmanZoom;
     [SerializeField] private InputActionReference cycleSnowmanView;
+    private CinemachineCameraOffset cameraOffset;
     private Cinemachine.CinemachineVirtualCamera currentFPSCam;
     private Cinemachine.CinemachineFreeLook currentThirdPersonCam;
     Snowman currentSnowmanTarget;
@@ -62,11 +61,6 @@ public class SnowmanCamera : MonoBehaviour
         if(currentThirdPersonCam != null)
         {
             currentThirdPersonCam.gameObject.SetActive(false);
-        }
-        if(currentSnowmanTarget.thirdPersonCam == null)
-        {
-            Cinemachine.CinemachineFreeLook camCopy = Instantiate(cinemachineFreeLook.gameObject, currentSnowmanTarget.transform).GetComponent<Cinemachine.CinemachineFreeLook>();
-            currentSnowmanTarget.thirdPersonCam = camCopy;
         }
         currentThirdPersonCam = currentSnowmanTarget.thirdPersonCam;
         cameraOffset = currentThirdPersonCam.GetComponent<CinemachineCameraOffset>();
