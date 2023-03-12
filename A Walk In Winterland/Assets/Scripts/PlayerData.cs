@@ -24,16 +24,26 @@ public static class PlayerData
         new Res(854,480),
         new Res(640,360)
     };
-    const float maxCameraSpeed = 300;
+    const float maxCameraSpeed = 200;
     const float minCameraSpeed = 100;
+    const float maxSnowmanCameraSpeed = 300;
+    const float minSnowmanCameraSpeed = 100;
     static float cameraSpeed = 1;
+    static float snowmanCameraSpeed = 1;
 
-    public static UnityEvent<float> setCameraSpeedEvent = new UnityEvent<float>();
+    public static UnityEvent<float> setPlayerCameraSpeedEvent = new UnityEvent<float>();
+    public static UnityEvent<float> setSnowmanCameraSpeedEvent = new UnityEvent<float>();
 
     public static void SetCameraSpeed(float valueNormalized)
     {
         cameraSpeed = valueNormalized;
-        setCameraSpeedEvent?.Invoke(GetCameraSpeed());
+        setPlayerCameraSpeedEvent?.Invoke(GetPlayerCameraSpeed());
+    }
+
+    public static void SetSnowmanCameraSpeed(float valueNormalized)
+    {
+        snowmanCameraSpeed = valueNormalized;
+        setSnowmanCameraSpeedEvent?.Invoke(GetSnowmanCameraSpeed());
     }
 
     public static Resolution[] GetResolutions()
@@ -41,8 +51,18 @@ public static class PlayerData
         return Screen.resolutions;
     }
 
-    public static float GetCameraSpeed()
+    static float TrueCameraSpeed(float normalizedCameraSpeed, float minSpeed, float maxSpeed)
     {
-        return minCameraSpeed + (cameraSpeed * (maxCameraSpeed - minCameraSpeed));
+        return minSpeed + (normalizedCameraSpeed * (maxSpeed - minSpeed));
+    }
+
+    public static float GetSnowmanCameraSpeed()
+    {
+        return TrueCameraSpeed(snowmanCameraSpeed, minSnowmanCameraSpeed, maxSnowmanCameraSpeed);
+    }
+
+    public static float GetPlayerCameraSpeed()
+    {
+        return TrueCameraSpeed(cameraSpeed, minCameraSpeed, maxCameraSpeed);
     }
 }

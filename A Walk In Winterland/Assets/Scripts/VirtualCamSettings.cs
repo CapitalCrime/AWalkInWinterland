@@ -20,13 +20,13 @@ public class VirtualCamSettings : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerData.setCameraSpeedEvent.AddListener(SetLookSpeed);
-        SetLookSpeed(PlayerData.GetCameraSpeed());
+        PlayerData.setPlayerCameraSpeedEvent.AddListener(SetLookSpeed);
+        SetLookSpeed(PlayerData.GetPlayerCameraSpeed());
     }
 
     private void OnDisable()
     {
-        PlayerData.setCameraSpeedEvent.RemoveListener(SetLookSpeed);
+        PlayerData.setPlayerCameraSpeedEvent.RemoveListener(SetLookSpeed);
     }
 
     void SetLookSpeed(float trueValue)
