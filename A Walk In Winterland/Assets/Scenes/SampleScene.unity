@@ -2207,7 +2207,6 @@ GameObject:
   - component: {fileID: 290798810}
   - component: {fileID: 290798812}
   - component: {fileID: 290798813}
-  - component: {fileID: 290798814}
   m_Layer: 0
   m_Name: PlayerCam
   m_TagString: Untagged
@@ -2297,23 +2296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 135f74f8706c07c45a5da3b3185ac2d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &290798814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 290798809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 449ef5ebbe24720439ec31d15f7b6f3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FocusTracksTarget: 0
-  m_FocusTracking: 0
-  m_FocusTarget: {fileID: 0}
-  m_FocusOffset: 0
-  m_Profile: {fileID: 11400000, guid: 1e5adf7f70acf92459baa94e85477142, type: 2}
 --- !u!1 &388983200
 GameObject:
   m_ObjectHideFlags: 0
@@ -8255,7 +8237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 510b2250248282e44aebeb456a73c5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 1e5adf7f70acf92459baa94e85477142, type: 2}
+  profile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
 --- !u!1 &1309963769
 GameObject:
   m_ObjectHideFlags: 0
