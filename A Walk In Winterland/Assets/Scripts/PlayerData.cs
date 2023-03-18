@@ -24,12 +24,12 @@ public static class PlayerData
         new Res(854,480),
         new Res(640,360)
     };
-    const float maxCameraSpeed = 200;
-    const float minCameraSpeed = 100;
-    const float maxSnowmanCameraSpeed = 300;
+    const float maxCameraSpeed = 300;
+    const float minCameraSpeed = 50;
+    const float maxSnowmanCameraSpeed = 500;
     const float minSnowmanCameraSpeed = 100;
-    static float cameraSpeed = 1;
-    static float snowmanCameraSpeed = 1;
+    static float cameraSpeed = 0.5f;
+    static float snowmanCameraSpeed = 0.5f;
 
     public static UnityEvent<float> setPlayerCameraSpeedEvent = new UnityEvent<float>();
     public static UnityEvent<float> setSnowmanCameraSpeedEvent = new UnityEvent<float>();
@@ -54,6 +54,16 @@ public static class PlayerData
     static float TrueCameraSpeed(float normalizedCameraSpeed, float minSpeed, float maxSpeed)
     {
         return minSpeed + (normalizedCameraSpeed * (maxSpeed - minSpeed));
+    }
+
+    public static float getNormalizedSnowmanCameraSpeed()
+    {
+        return snowmanCameraSpeed;
+    }
+
+    public static float getNormalizedCameraSpeed()
+    {
+        return cameraSpeed;
     }
 
     public static float GetSnowmanCameraSpeed()

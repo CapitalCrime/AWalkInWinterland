@@ -32,6 +32,6 @@ public class FreeCamSettings : MonoBehaviour
     void SetLookSpeed(float trueValue)
     {
         freeLookCam.m_XAxis.m_MaxSpeed = trueValue;
-        freeLookCam.m_YAxis.m_MaxSpeed = trueValue / 100;
+        freeLookCam.m_YAxis.m_MaxSpeed = trueValue / 75;
     }
 }

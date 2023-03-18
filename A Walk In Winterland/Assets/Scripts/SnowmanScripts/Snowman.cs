@@ -82,15 +82,6 @@ public abstract class Snowman : MonoBehaviour
             Debug.LogError("No rigidbody found on snowman: "+transform.name);
         }
 
-        //DayCycle.nightActions += NightArriveAction;
-        //DayCycle.nightActions += PauseActionTimes;
-        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(NightArriveAction);
-        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(PauseActionTimes);
-        //DayCycle.dayActions += DayArriveAction;
-        //DayCycle.dayActions += ResumeActionTimes;
-        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(DayArriveAction);
-        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(ResumeActionTimes);
-
         walkingStartEnabled = walkingEnabled;
 
         if(clickSoundRef.Target != null)
@@ -116,6 +107,14 @@ public abstract class Snowman : MonoBehaviour
     protected virtual void Start()
     {
         snowmanCreatedEvent?.Invoke(this);
+        //DayCycle.nightActions += NightArriveAction;
+        //DayCycle.nightActions += PauseActionTimes;
+        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(NightArriveAction);
+        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(PauseActionTimes);
+        //DayCycle.dayActions += DayArriveAction;
+        //DayCycle.dayActions += ResumeActionTimes;
+        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(DayArriveAction);
+        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(ResumeActionTimes);
     }
 
     public void AddForce(Vector3 amount)
