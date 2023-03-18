@@ -23,13 +23,11 @@ public class CameraControls : MonoBehaviour
     void MousePressed(InputAction.CallbackContext context)
     {
         Cursor.lockState = CursorLockMode.Confined;
-        Debug.Log("Mouse pressed");
     }
 
     void MouseReleased(InputAction.CallbackContext context)
     {
         Cursor.lockState = CursorLockMode.None;
-        Debug.Log("Mouse released");
     }
 
     Vector3 movementAxis;
@@ -39,6 +37,5 @@ public class CameraControls : MonoBehaviour
         movementAxis = movement.action.ReadValue<Vector3>();
         fasterCam = fasterCamAction.action.ReadValue<float>() > 0.5f;
         transform.position += _camera.transform.rotation * movementAxis * Time.deltaTime * (fasterCam ? 30 : 10);
-        Debug.Log(provider.XYAxis.action.bindings[0]);
     }
 }

@@ -82,10 +82,15 @@ public abstract class Snowman : MonoBehaviour
             Debug.LogError("No rigidbody found on snowman: "+transform.name);
         }
 
-        DayCycle.nightActions += NightArriveAction;
-        DayCycle.nightActions += PauseActionTimes;
-        DayCycle.dayActions += DayArriveAction;
-        DayCycle.dayActions += ResumeActionTimes;
+        //DayCycle.nightActions += NightArriveAction;
+        //DayCycle.nightActions += PauseActionTimes;
+        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(NightArriveAction);
+        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(PauseActionTimes);
+        //DayCycle.dayActions += DayArriveAction;
+        //DayCycle.dayActions += ResumeActionTimes;
+        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(DayArriveAction);
+        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(ResumeActionTimes);
+
         walkingStartEnabled = walkingEnabled;
 
         if(clickSoundRef.Target != null)
@@ -194,7 +199,8 @@ public abstract class Snowman : MonoBehaviour
 
     void PerformActions()
     {
-        if (!DayCycle.IsSunUp()) return;
+        //if (!DayCycle.IsSunUp()) return;
+        if (!UniStorm.UniStormSystem.Instance.isDay()) return;
 
         UniqueCheck();
         WalkCheck();
@@ -207,10 +213,14 @@ public abstract class Snowman : MonoBehaviour
 
     protected virtual void OnDestroy()
     {
-        DayCycle.nightActions -= NightArriveAction;
-        DayCycle.nightActions -= PauseActionTimes;
-        DayCycle.dayActions -= DayArriveAction;
-        DayCycle.dayActions -= ResumeActionTimes;
+        //DayCycle.nightActions -= NightArriveAction;
+        //DayCycle.nightActions -= PauseActionTimes;
+        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.RemoveListener(NightArriveAction);
+        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.RemoveListener(PauseActionTimes);
+        //DayCycle.dayActions -= DayArriveAction;
+        //DayCycle.dayActions -= ResumeActionTimes;
+        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(DayArriveAction);
+        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(ResumeActionTimes);
         snowmanViewedEvent -= ClickSoundPlay;
     }
 }
