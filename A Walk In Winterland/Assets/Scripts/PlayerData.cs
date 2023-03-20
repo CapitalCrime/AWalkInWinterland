@@ -24,7 +24,7 @@ public static class PlayerData
         new Res(854,480),
         new Res(640,360)
     };
-    const float maxCameraSpeed = 300;
+    const float maxCameraSpeed = 350;
     const float minCameraSpeed = 50;
     const float maxSnowmanCameraSpeed = 500;
     const float minSnowmanCameraSpeed = 100;

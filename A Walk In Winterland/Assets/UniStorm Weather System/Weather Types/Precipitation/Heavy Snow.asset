@@ -68,7 +68,7 @@ MonoBehaviour:
   ParticleEffectVector: {x: 0, y: 6, z: 20}
   AdditionalWeatherEffect: {fileID: 198814685187613174, guid: 872b852f5cbd3d54dbfd29aec77b4965,
     type: 3}
-  AdditionalParticleEffectAmount: 25
+  AdditionalParticleEffectAmount: 65
   AdditionalParticleEffectVector: {x: 0, y: 0, z: 3}
   WeatherVolume: 1
   WeatherSound: {fileID: 8300000, guid: 7b61d7e0abee2f84db505d2380db4ea2, type: 3}
@@ -77,7 +77,7 @@ MonoBehaviour:
   UseWeatherEffect: 0
   UseAdditionalWeatherEffect: 0
   SpecialWeatherType: 1
-  Season: 4
+  Season: 0
   CloudHeight: 650
   CloudLevel: 4
   TemperatureType: 0
