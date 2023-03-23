@@ -1,0 +1,256 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.4f1 (cb45f9cae8b7) revision 13321721'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'en' Physical Memory: 32509 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker26
+-projectPath
+C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+-logFile
+Logs/AssetImportWorker26.log
+-srvPort
+51232
+Successfully changed project path to: C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 255.45 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Ti (ID=0x2482)
+    Vendor:   NVIDIA
+    VRAM:     8041 MB
+    Driver:   31.0.15.1748
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56028
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.012005 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+Native extension for iOS target not found
+[usbmuxd] Listen thread started
+Native extension for Android target not found
+[usbmuxd] Send listen message
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 222.48 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.977 seconds
+Domain Reload Profiling:
+	ReloadAssembly (977ms)
+		BeginReloadAssembly (90ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (739ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (131ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (501ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (96ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (223ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (128ms)
+				ProcessInitializeOnLoadMethodAttributes (53ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.014113 seconds.
+Begin MonoManager ReloadAssembly
+An ADB process has shut down when we were accessing it, the following System.Threading.ThreadAbortException has been thrown: Thread was being aborted..
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 189.24 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.916 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1917ms)
+		BeginReloadAssembly (202ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (127ms)
+		EndReloadAssembly (1587ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (327ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (89ms)
+			SetupLoadedEditorAssemblies (1012ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (189ms)
+				BeforeProcessingInitializeOnLoad (174ms)
+				ProcessInitializeOnLoadAttributes (508ms)
+				ProcessInitializeOnLoadMethodAttributes (104ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Switching render pipeline e1260c1148f6143b28bae5ace5e9c5d1 -> d0e2fc18fe036412f8223b3b3d9ad574
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.60 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6665 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 140 unused Assets / (2.0 MB). Loaded Objects now: 7094.
+Memory consumption went from 376.5 MB to 374.4 MB.
+Total: 4.709200 ms (FindLiveObjects: 0.726200 ms CreateObjectMapping: 0.266300 ms MarkObjects: 3.293300 ms  DeleteObjects: 0.422100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:srp/default-pipeline: 0d2ecf81ef3046218f22b3b3d3a95d47 -> 1e62c011846f41b382ab5eca5e9e5c1d
+========================================================================
+Received Import Request.
+  Time since last request: 365435.084181 seconds.
+  path: Assets/LeanTween/Examples/Models/BasicExamplesText.fbx
+  artifactKey: Guid(803bfbdea65eb4ebe96e481875403860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/LeanTween/Examples/Models/BasicExamplesText.fbx using Guid(803bfbdea65eb4ebe96e481875403860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '516909ec740cd828fe1d9ff92d6e73ee') in 0.542876 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/IcecreamSnowman.prefab
+  artifactKey: Guid(27b3309473679f94c8a4e67d8b26ea9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/IcecreamSnowman.prefab using Guid(27b3309473679f94c8a4e67d8b26ea9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd6127448311ca163e87550e4e1090bd') in 1.690389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/BruteForce/Textures/Ice/Ice01Albedo.png
+  artifactKey: Guid(6b4e56324b2a140469e48854a8594683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BruteForce/Textures/Ice/Ice01Albedo.png using Guid(6b4e56324b2a140469e48854a8594683) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27afe1ac1e95136af6de146dd6f7c8b7') in 0.037214 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/BruteForce/Textures/Ice/Ice02Albedo.png
+  artifactKey: Guid(c3152677f4bca3f41ace4b48811dbf3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BruteForce/Textures/Ice/Ice02Albedo.png using Guid(c3152677f4bca3f41ace4b48811dbf3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8d3100d11821a547298904e4426f8e6') in 0.027593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/BruteForce/Textures/Ice/Ice04.png
+  artifactKey: Guid(72dff6a6f427bcb46ae15fe9150c7ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BruteForce/Textures/Ice/Ice04.png using Guid(72dff6a6f427bcb46ae15fe9150c7ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef53e0d72a683b0c42df2d4fab7f1e09') in 0.034681 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/BruteForce/Textures/Ice/Ice07.png
+  artifactKey: Guid(55d200924dc692549a2ac749c5b7910e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BruteForce/Textures/Ice/Ice07.png using Guid(55d200924dc692549a2ac749c5b7910e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ca085ccee4d47c749566b512df6686e') in 0.032242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Snowmen/Textures/SnowmanIce.jpg
+  artifactKey: Guid(25d8ceb4fa08dff4ebff6dbb5ae09d93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snowmen/Textures/SnowmanIce.jpg using Guid(25d8ceb4fa08dff4ebff6dbb5ae09d93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd8b005e477532f87a8ebde7b4072ad') in 0.026784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Snowmen/SnowmanMaterials/IceSnowman.mat
+  artifactKey: Guid(910919ef77608bf4a8ade4271780dde3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snowmen/SnowmanMaterials/IceSnowman.mat using Guid(910919ef77608bf4a8ade4271780dde3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c09a4872f3c220954e80cf07e175b1b7') in 0.048308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/IceSnowman.prefab
+  artifactKey: Guid(31857441e69fc6e49964e59af60e242c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/IceSnowman.prefab using Guid(31857441e69fc6e49964e59af60e242c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ced24036e712c9d5cd9dc2e3256ef09') in 0.072125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/BruteForce/Textures/Ice/Ice06.png
+  artifactKey: Guid(eaaf25f9c976c0748aceaced4f56c43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BruteForce/Textures/Ice/Ice06.png using Guid(eaaf25f9c976c0748aceaced4f56c43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44cac84864add3436809a904acc32eef') in 0.032655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.530391 seconds.
+  path: Assets/UniStorm Weather System/Demo Source/Terrain/Rock.terrainlayer
+  artifactKey: Guid(1142320fc1e8d4b4b8d22d67b5b092fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniStorm Weather System/Demo Source/Terrain/Rock.terrainlayer using Guid(1142320fc1e8d4b4b8d22d67b5b092fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fae71d13b557f20bcb32ed7d717794a5') in 0.043007 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.213165 seconds.
+  path: Assets/Terrain/TerrainData_5e1b58b0-1c2c-407f-99e6-03c3d1df6ef2.asset
+  artifactKey: Guid(a9bf61d7451684840af52116a4da8a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/TerrainData_5e1b58b0-1c2c-407f-99e6-03c3d1df6ef2.asset using Guid(a9bf61d7451684840af52116a4da8a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f68f56818d253ebadef7c63da3e89ca6') in 0.024982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Terrain/TerrainData_05147d8d-75c6-48ef-9900-0940463294bc.asset
+  artifactKey: Guid(af07756a183bd314e89c728b0feaa043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Terrain/TerrainData_05147d8d-75c6-48ef-9900-0940463294bc.asset using Guid(af07756a183bd314e89c728b0feaa043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '450ebed182557a142114014b3d4de5fb') in 0.025023 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

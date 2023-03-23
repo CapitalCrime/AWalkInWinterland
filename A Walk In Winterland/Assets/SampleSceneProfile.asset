@@ -15,10 +15,10 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.6
   intensity:
     m_OverrideState: 1
-    m_Value: 0.8
+    m_Value: 1
   scatter:
     m_OverrideState: 1
     m_Value: 0.8
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_Value: 0
   quality:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.25
@@ -106,28 +106,11 @@ MonoBehaviour:
   m_Name: SampleSceneProfile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: 849379129802519247}
   - {fileID: -7893295128165547882}
   - {fileID: -7011558710299706105}
   - {fileID: 5317061649910480803}
   - {fileID: 4105622847723094403}
   - {fileID: -3640410070043668032}
---- !u!114 &849379129802519247
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
-  m_Name: Tonemapping
-  m_EditorClassIdentifier: 
-  active: 1
-  mode:
-    m_OverrideState: 1
-    m_Value: 1
 --- !u!114 &4105622847723094403
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -146,13 +129,13 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 50
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 3000
+    m_Value: 2500
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 1
   highQualitySampling:
     m_OverrideState: 0
     m_Value: 0
@@ -186,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
   m_Name: ShadowsMidtonesHighlights
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 1
     m_Value: {x: 0.43260837, y: 0.546951, z: 1, w: 0.3099564}
