@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snowmanName: Racer Snowman
   image: {fileID: 21300000, guid: db77cdbf04580634083d4d001d8a649b, type: 3}
-  unlocked: 0
+  unlocked: 1
   randomUnlock: 1
   randomUniqueActionTimeSeconds:
     min: 25
     max: 30
   randomWalkTimeSeconds:
-    min: 5
-    max: 10
+    min: 0
+    max: 0

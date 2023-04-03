@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 7193218912654008845}
   - component: {fileID: 7019722259075334445}
   - component: {fileID: 2757281886280434203}
+  - component: {fileID: 3076674338407535489}
   m_Layer: 6
   m_Name: RacerSnowman
   m_TagString: Snowman
@@ -359,6 +360,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 0.5}
+--- !u!75 &3076674338407535489
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003489915558960983}
+  m_Enabled: 1
+  m_Force: {x: 0, y: -20, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1 &8484104300149842351
 GameObject:
   m_ObjectHideFlags: 0

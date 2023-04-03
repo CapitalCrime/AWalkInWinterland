@@ -15,7 +15,7 @@ C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 -logFile
 Logs/AssetImportWorker24.log
 -srvPort
-51232
+59116
 Successfully changed project path to: C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 258.50 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 290.42 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,14 +63,14 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56168
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012069 seconds.
+Registered in 0.011947 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
@@ -78,39 +78,39 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 192.21 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 228.82 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.844 seconds
+- Completed reload, in  0.955 seconds
 Domain Reload Profiling:
-	ReloadAssembly (845ms)
-		BeginReloadAssembly (88ms)
+	ReloadAssembly (955ms)
+		BeginReloadAssembly (110ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (629ms)
-			LoadAssemblies (86ms)
+		EndReloadAssembly (695ms)
+			LoadAssemblies (107ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (115ms)
+			SetupTypeCache (127ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (425ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (469ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (77ms)
+				InitializePlatformSupportModulesInManaged (82ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (192ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (106ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
+				RefreshPlugins (229ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (105ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013154 seconds.
+Registered in 0.012232 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
@@ -118,47 +118,46 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 180.84 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 276.67 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.937 seconds
+- Completed reload, in  2.566 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1938ms)
-		BeginReloadAssembly (195ms)
+	ReloadAssembly (2568ms)
+		BeginReloadAssembly (299ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (124ms)
-		EndReloadAssembly (1608ms)
-			LoadAssemblies (88ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (152ms)
+		EndReloadAssembly (2094ms)
+			LoadAssemblies (147ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (324ms)
+			SetupTypeCache (363ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (91ms)
-			SetupLoadedEditorAssemblies (1016ms)
+			RebuildScriptCaches (116ms)
+			SetupLoadedEditorAssemblies (1395ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (28ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (181ms)
-				BeforeProcessingInitializeOnLoad (169ms)
-				ProcessInitializeOnLoadAttributes (523ms)
-				ProcessInitializeOnLoadMethodAttributes (105ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
+				InitializePlatformSupportModulesInManaged (44ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (277ms)
+				BeforeProcessingInitializeOnLoad (201ms)
+				ProcessInitializeOnLoadAttributes (701ms)
+				ProcessInitializeOnLoadMethodAttributes (158ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Switching render pipeline e1260c1148f6143b28bae5ace5e9c5d1 -> d0e2fc18fe036412f8223b3b3d9ad574
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.72 ms, found 6 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 4.91 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6665 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 140 unused Assets / (2.0 MB). Loaded Objects now: 7094.
-Memory consumption went from 376.4 MB to 374.3 MB.
-Total: 5.386200 ms (FindLiveObjects: 0.762600 ms CreateObjectMapping: 0.345000 ms MarkObjects: 3.761600 ms  DeleteObjects: 0.493700 ms)
+Unloading 6693 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 140 unused Assets / (2.3 MB). Loaded Objects now: 7123.
+Memory consumption went from 426.0 MB to 423.7 MB.
+Total: 8.613000 ms (FindLiveObjects: 1.195900 ms CreateObjectMapping: 0.600800 ms MarkObjects: 6.094400 ms  DeleteObjects: 0.720000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,43 +169,72 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:srp/default-pipeline: 0d2ecf81ef3046218f22b3b3d3a95d47 -> 1e62c011846f41b382ab5eca5e9e5c1d
 ========================================================================
 Received Import Request.
-  Time since last request: 364817.554449 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitInput.hlsl
-  artifactKey: Guid(a817cb90496894b368593402e13b040c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Shaders/Terrain/TerrainLitInput.hlsl using Guid(a817cb90496894b368593402e13b040c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db74bd808431be80afa36ca429388db2') in 0.049029 seconds 
+  Time since last request: 1076070.152831 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Models/Textures/T_Photoscanned_Cliff_01_BC.jpg
+  artifactKey: Guid(dda1b3a762fcb0641b66c6fbf0031d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Models/Textures/T_Photoscanned_Cliff_01_BC.jpg using Guid(dda1b3a762fcb0641b66c6fbf0031d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27484d72fc962a5089c6a9a97a182fb') in 0.102314 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrassPasses.hlsl
-  artifactKey: Guid(b4bc78a1364154f15b718a412e9710b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Shaders/Terrain/WavingGrassPasses.hlsl using Guid(b4bc78a1364154f15b718a412e9710b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1930628b1d7c25c325f491eb66e71fb0') in 0.011286 seconds 
+  Time since last request: 486.920234 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Models/Textures/T_Photoscanned_Cliff_01_BC.jpg
+  artifactKey: Guid(dda1b3a762fcb0641b66c6fbf0031d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Models/Textures/T_Photoscanned_Cliff_01_BC.jpg using Guid(dda1b3a762fcb0641b66c6fbf0031d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '450231b6d8a929308289070b5e1de378') in 0.024545 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.536403 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Shaders/BakedLitMetaPass.hlsl
-  artifactKey: Guid(f31bf343921b848fa8e5cde15f1dbaab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Shaders/BakedLitMetaPass.hlsl using Guid(f31bf343921b848fa8e5cde15f1dbaab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e36633da1151418030e09bb6eca7b412') in 0.017996 seconds 
+  Time since last request: 35.947676 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_base_01_grass_top.prefab
+  artifactKey: Guid(21b710cd9aa03954b92f79db2ba3f579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_base_01_grass_top.prefab using Guid(21b710cd9aa03954b92f79db2ba3f579) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7203980e1fba711cf7e0ab3447091a7') in 0.513872 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Shaders/LitDepthNormalsPass.hlsl
-  artifactKey: Guid(d6641dcdedd1f422aa58ffec746e5342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Shaders/LitDepthNormalsPass.hlsl using Guid(d6641dcdedd1f422aa58ffec746e5342) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '081928c1e95546d63948dfac25dc29ed') in 0.017000 seconds 
+  Time since last request: 0.000043 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_overpaint_03_grass_top.prefab
+  artifactKey: Guid(b2777b08cf8fd044a93669c21c484aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_overpaint_03_grass_top.prefab using Guid(b2777b08cf8fd044a93669c21c484aae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f40d42c84b866ed11f66874d0be11a13') in 0.103793 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Shaders/SimpleLitMetaPass.hlsl
-  artifactKey: Guid(ffc632d1e38ef4682807a89afb2b966f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Shaders/SimpleLitMetaPass.hlsl using Guid(ffc632d1e38ef4682807a89afb2b966f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8af68b932fa1f712afb5a322d7f7f1d0') in 0.018307 seconds 
+  Time since last request: 0.000069 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_piece_02_grass_top.prefab
+  artifactKey: Guid(797db204bcb596045977e85bb53be1f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_piece_02_grass_top.prefab using Guid(797db204bcb596045977e85bb53be1f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25f0ba3a188e8d71719d6146f6f1c207') in 0.119638 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Packages/com.unity.render-pipelines.universal/Shaders/LitGBufferPass.hlsl
-  artifactKey: Guid(92673cbb58cac8e4d8b5d044ce912dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.render-pipelines.universal/Shaders/LitGBufferPass.hlsl using Guid(92673cbb58cac8e4d8b5d044ce912dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5b3a396bddf3805f90679f9e344a045') in 0.017566 seconds 
+  Time since last request: 0.000035 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_piece_01_grass_top.prefab
+  artifactKey: Guid(e78eb81b1fd02494e9cc9bbedb398503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_piece_01_grass_top.prefab using Guid(e78eb81b1fd02494e9cc9bbedb398503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '164d226eb79e622a82eedb6c10676560') in 0.110315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_base_07_grass_top.prefab
+  artifactKey: Guid(ed8df522bf3e6384d95c23c17c30b90b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_base_07_grass_top.prefab using Guid(ed8df522bf3e6384d95c23c17c30b90b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7c8c18610d408c5ec845b515f32bf8') in 0.131849 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_overpaint_04_grass_top.prefab
+  artifactKey: Guid(654b6d67b37b09b40b913cf92ef74464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_overpaint_04_grass_top.prefab using Guid(654b6d67b37b09b40b913cf92ef74464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3881f1d65d914831723749059d1b33e2') in 0.117486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_overpaint_02_grass_top.prefab
+  artifactKey: Guid(32263b5eb26231c4fb4d427558b6d8b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_overpaint_02_grass_top.prefab using Guid(32263b5eb26231c4fb4d427558b6d8b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdf5a303f2a920885e034f7e3b9c813d') in 0.135364 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_piece_05_grass_top.prefab
+  artifactKey: Guid(29d9cd257b24fe34a94aeb0eb9b52583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_piece_05_grass_top.prefab using Guid(29d9cd257b24fe34a94aeb0eb9b52583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07761adddd0443e3c2bead4b5e3d6742') in 0.116321 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_base_05_grass_top.prefab
+  artifactKey: Guid(7b36cc109394beb4097d5173368d1ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs Blended Grass Top/prefab_cliff_base_05_grass_top.prefab using Guid(7b36cc109394beb4097d5173368d1ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99787c21c5ef4208b875cf2f1a9a8e46') in 0.170805 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        //QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
         instance = this;
     }
     // Start is called before the first frame update
