@@ -15,7 +15,7 @@ C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-59116
+62878
 Successfully changed project path to: C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 317.34 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 287.98 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,54 +63,54 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56652
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.012521 seconds.
+Registered in 0.012287 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
+Native extension for iOS target not found
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
-Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 206.94 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 223.65 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.875 seconds
+- Completed reload, in  0.950 seconds
 Domain Reload Profiling:
-	ReloadAssembly (876ms)
-		BeginReloadAssembly (83ms)
+	ReloadAssembly (950ms)
+		BeginReloadAssembly (90ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (661ms)
-			LoadAssemblies (80ms)
+		EndReloadAssembly (718ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (121ms)
+			SetupTypeCache (128ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (445ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (488ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (80ms)
+				InitializePlatformSupportModulesInManaged (93ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (208ms)
+				RefreshPlugins (224ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (107ms)
-				ProcessInitializeOnLoadMethodAttributes (49ms)
+				ProcessInitializeOnLoadAttributes (113ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.014605 seconds.
+Registered in 0.013918 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
@@ -118,46 +118,46 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 224.81 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 273.90 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.213 seconds
+- Completed reload, in  2.811 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2214ms)
-		BeginReloadAssembly (222ms)
+	ReloadAssembly (2812ms)
+		BeginReloadAssembly (338ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (18ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (128ms)
-		EndReloadAssembly (1834ms)
-			LoadAssemblies (97ms)
+			CreateAndSetChildDomain (194ms)
+		EndReloadAssembly (2309ms)
+			LoadAssemblies (151ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (380ms)
+			SetupTypeCache (489ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (120ms)
-			SetupLoadedEditorAssemblies (1132ms)
+			RebuildScriptCaches (141ms)
+			SetupLoadedEditorAssemblies (1461ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (33ms)
+				InitializePlatformSupportModulesInManaged (42ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (225ms)
-				BeforeProcessingInitializeOnLoad (175ms)
-				ProcessInitializeOnLoadAttributes (575ms)
-				ProcessInitializeOnLoadMethodAttributes (113ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				RefreshPlugins (274ms)
+				BeforeProcessingInitializeOnLoad (227ms)
+				ProcessInitializeOnLoadAttributes (829ms)
+				ProcessInitializeOnLoadMethodAttributes (80ms)
+				AfterProcessingInitializeOnLoad (9ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 2.01 ms, found 6 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.91 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6679 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 140 unused Assets / (2.3 MB). Loaded Objects now: 7108.
-Memory consumption went from 400.1 MB to 397.8 MB.
-Total: 10.770300 ms (FindLiveObjects: 1.019500 ms CreateObjectMapping: 1.772900 ms MarkObjects: 7.311200 ms  DeleteObjects: 0.664500 ms)
+Unloading 6741 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 140 unused Assets / (2.3 MB). Loaded Objects now: 7171.
+Memory consumption went from 428.3 MB to 426.0 MB.
+Total: 5.844700 ms (FindLiveObjects: 0.803800 ms CreateObjectMapping: 0.313100 ms MarkObjects: 4.148200 ms  DeleteObjects: 0.577800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -170,64 +170,203 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.014130 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 7.05 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.533 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2533ms)
-		BeginReloadAssembly (247ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (13ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (80ms)
-		EndReloadAssembly (2110ms)
-			LoadAssemblies (178ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (526ms)
-			ReleaseScriptCaches (4ms)
-			RebuildScriptCaches (102ms)
-			SetupLoadedEditorAssemblies (1183ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (63ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (7ms)
-				BeforeProcessingInitializeOnLoad (172ms)
-				ProcessInitializeOnLoadAttributes (754ms)
-				ProcessInitializeOnLoadMethodAttributes (174ms)
-				AfterProcessingInitializeOnLoad (13ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (25ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 13.65 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6426 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7123.
-Memory consumption went from 386.6 MB to 384.3 MB.
-Total: 8.175800 ms (FindLiveObjects: 0.994400 ms CreateObjectMapping: 0.302300 ms MarkObjects: 6.146600 ms  DeleteObjects: 0.730200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 1419945.882138 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_brownray_knapweed_01_1.fbx
+  artifactKey: Guid(9b00a255c2f8e434aabbffa539f2b8bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_brownray_knapweed_01_1.fbx using Guid(9b00a255c2f8e434aabbffa539f2b8bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fba15c7f07c72dd44b1d31fd698af997') in 4.331915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_chamomile_01_1.fbx
+  artifactKey: Guid(a7ccb630d9d1eeb41a9385d6b39fb93b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_chamomile_01_1.fbx using Guid(a7ccb630d9d1eeb41a9385d6b39fb93b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '181d3e635ebc66562c8fa1c9820bebe2') in 0.087815 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_brownray_knapweed_01_2.fbx
+  artifactKey: Guid(f45209fd90fbcc04299109108d3928e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_brownray_knapweed_01_2.fbx using Guid(f45209fd90fbcc04299109108d3928e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77bd12fc134c5947f30c37cd06056b39') in 0.142122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/grass_meadow_01_2.fbx
+  artifactKey: Guid(75ae806440699014d88ddc03993e79a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/grass_meadow_01_2.fbx using Guid(75ae806440699014d88ddc03993e79a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d621b81d3a7cb4e112c8fb5d22e5c11') in 0.146840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002790 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_chamomile_01_detailed_1.fbx
+  artifactKey: Guid(ac65d260a5fd1404b9d40379e1bf762f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_chamomile_01_detailed_1.fbx using Guid(ac65d260a5fd1404b9d40379e1bf762f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a91c6327d913166bd40df0366ded34') in 0.068849 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000727 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_common_chicory_01_detailed_1.fbx
+  artifactKey: Guid(c71132b3d74e8054786f6a5b7385dc16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_common_chicory_01_detailed_1.fbx using Guid(c71132b3d74e8054786f6a5b7385dc16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64ac3ab58a67f290b29ee336276554e2') in 0.152027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_common_poppy_01_2.fbx
+  artifactKey: Guid(e0cb24e1c77039d4595895fac94f0a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_common_poppy_01_2.fbx using Guid(e0cb24e1c77039d4595895fac94f0a4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f40ba02ae5c3560d423a64db15579bdb') in 0.132600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_brownray_knapweed_01_detailed_1.fbx
+  artifactKey: Guid(2aaeba2f59d4826428f8671a0aa50b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_brownray_knapweed_01_detailed_1.fbx using Guid(2aaeba2f59d4826428f8671a0aa50b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3e1b46d3c15a4aa9e886567e3529eac') in 0.110934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003799 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_chamomile_01_detailed_2.fbx
+  artifactKey: Guid(3a2cc4f8ab916ad41940061d02ae9c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_chamomile_01_detailed_2.fbx using Guid(3a2cc4f8ab916ad41940061d02ae9c45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fa7f58978a9527791976dc661553ba6') in 0.071625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_chamomile_01_cross_1.fbx
+  artifactKey: Guid(8960e6f82d273b149a91481ced87ed5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_chamomile_01_cross_1.fbx using Guid(8960e6f82d273b149a91481ced87ed5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3a87a1fcd1d70abff719a5fcf0f7ab0') in 0.057434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_common_poppy_01_1.fbx
+  artifactKey: Guid(21779a3949c4c814fb5f22a4cc0d2ec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_common_poppy_01_1.fbx using Guid(21779a3949c4c814fb5f22a4cc0d2ec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f79c47e61b42e5177102893025212b1') in 0.165171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/grass_meadow_02_cross_1.fbx
+  artifactKey: Guid(de1a80e9bff654a4f89a2d88e466caf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/grass_meadow_02_cross_1.fbx using Guid(de1a80e9bff654a4f89a2d88e466caf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cbbcd82ea8b415373a4b87c2c7bb8a1') in 0.103444 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_common_poppy_01_detailed_1.fbx
+  artifactKey: Guid(ef669ab43e7620945836c50bf8589d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_common_poppy_01_detailed_1.fbx using Guid(ef669ab43e7620945836c50bf8589d69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '227dc9af35df52c39e3e5b7cfc05275b') in 0.078828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000084 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_cornflower_01_detailed_1.fbx
+  artifactKey: Guid(887c4534cd6b74f40bdc2cfe8305dea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_cornflower_01_detailed_1.fbx using Guid(887c4534cd6b74f40bdc2cfe8305dea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e67e882d4a6e0dd9debf40542fb6e5e') in 0.092790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/grass_meadow_01_6.fbx
+  artifactKey: Guid(1e59cf917e4cbb041926cda656dbd638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/grass_meadow_01_6.fbx using Guid(1e59cf917e4cbb041926cda656dbd638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46feafbc6af7dcd6a3121edce1b27f9b') in 0.111701 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_cornflower_01_detailed_2.fbx
+  artifactKey: Guid(a1d6ec65349d4cd40802bf6d60705191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_cornflower_01_detailed_2.fbx using Guid(a1d6ec65349d4cd40802bf6d60705191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be2ead16e5a2af035cec2b7ec79d8bec') in 0.079774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/grass_meadow_03_2.fbx
+  artifactKey: Guid(4b795d2ca63711a46b68059f42d83024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/grass_meadow_03_2.fbx using Guid(4b795d2ca63711a46b68059f42d83024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67a42b83b9d909c9f1a1afcce845967c') in 0.114189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_sunroot_01_cross_1.fbx
+  artifactKey: Guid(fe88a21a3aa2ca7409d02798e17c40d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Models/flower_sunroot_01_cross_1.fbx using Guid(fe88a21a3aa2ca7409d02798e17c40d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2b857f6c0189b0dea2fb90ad05266e3') in 0.059917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.868960 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_brownray_knapweed_01_1.prefab
+  artifactKey: Guid(e4965fed94951b148bd394b55f611ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_brownray_knapweed_01_1.prefab using Guid(e4965fed94951b148bd394b55f611ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '160f21f4a1db21a6379d4e83c3d9b05e') in 0.045240 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_chamomile_01_detailed_1.prefab
+  artifactKey: Guid(dd8bd316a4a671e47b9947fc84bdc7e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_chamomile_01_detailed_1.prefab using Guid(dd8bd316a4a671e47b9947fc84bdc7e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c31db7d032eb01a48ad701f2169df42') in 0.033715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_common_Saint_John's_wort_01_2.prefab
+  artifactKey: Guid(c0bb3711b11117d4ab7e0dbbcd40fa85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_common_Saint_John's_wort_01_2.prefab using Guid(c0bb3711b11117d4ab7e0dbbcd40fa85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14f8a0e551c85ffd4656286273b3929b') in 0.029648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_goldenrod_01_2.prefab
+  artifactKey: Guid(a89a1ed76d44aa74694fcbc6262b61ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_goldenrod_01_2.prefab using Guid(a89a1ed76d44aa74694fcbc6262b61ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50d3892c581dfc3f23dc5543d5594a8d') in 0.038634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_common_Saint_John's_wort_01_detailed_1.prefab
+  artifactKey: Guid(628b6a72bac669e41942f9200627f15d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_common_Saint_John's_wort_01_detailed_1.prefab using Guid(628b6a72bac669e41942f9200627f15d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02337a09c3c2916978554816903341cf') in 0.035403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_common_chicory_01_detailed_1.prefab
+  artifactKey: Guid(70e48b9a1041f594ba79994d29cc46f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_common_chicory_01_detailed_1.prefab using Guid(70e48b9a1041f594ba79994d29cc46f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f99aecf06608a61d7ebf5f8f9eb47006') in 0.051173 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_common_poppy_01_2.prefab
+  artifactKey: Guid(999da706abf37164585e5bb58a1fa1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_common_poppy_01_2.prefab using Guid(999da706abf37164585e5bb58a1fa1e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e1624a1a1400e3b1a5dee7f2d8168e') in 0.055602 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_cornflower_01_detailed_1.prefab
+  artifactKey: Guid(b3d9c1e07ba0a1d448ed3ff7d2404031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_cornflower_01_detailed_1.prefab using Guid(b3d9c1e07ba0a1d448ed3ff7d2404031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b4d602aa0bc8c9dea21a231eec61d5') in 0.030340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_sunroot_01_detailed_1.prefab
+  artifactKey: Guid(67b883dfb9da541499c08c0aff83e0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Grass/Prefabs Flowers/prefab_flower_sunroot_01_detailed_1.prefab using Guid(67b883dfb9da541499c08c0aff83e0ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab1e58a998f5d2add80d5fa5d8020eca') in 0.050388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.467962 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_02_Poplar.prefab
+  artifactKey: Guid(69e05313bc41dce4bbfb9f7f4473e56c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_02_Poplar.prefab using Guid(69e05313bc41dce4bbfb9f7f4473e56c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0370400452c9e7d70e30355effbd2533') in 0.256488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_03_Poplar.prefab
+  artifactKey: Guid(a5af712a450b6144fb8f0d3978b9321c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_03_Poplar.prefab using Guid(a5af712a450b6144fb8f0d3978b9321c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd53e2c253c443f67ad57ce52eed3f72b') in 0.324949 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.929160 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs/prefab_cliff_base_05.prefab
+  artifactKey: Guid(497c83671bef91748a1b423c458d7d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs/prefab_cliff_base_05.prefab using Guid(497c83671bef91748a1b423c458d7d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e87fdb66c098a4caf1640188f027d91b') in 0.141921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs/prefab_cliff_piece_06.prefab
+  artifactKey: Guid(e6a2af467a39df2479004c69d5c7d70f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs/prefab_cliff_piece_06.prefab using Guid(e6a2af467a39df2479004c69d5c7d70f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ed2a154c7c9dd823a727a866823969') in 0.108967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs/prefab_cliff_piece_10.prefab
+  artifactKey: Guid(027fec6f9a7e7b24186e16b62c8fd31e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs/prefab_cliff_piece_10.prefab using Guid(027fec6f9a7e7b24186e16b62c8fd31e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89e7056ae23f08d0472d07582686c7e9') in 0.108323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs/prefab_cliff_piece_04.prefab
+  artifactKey: Guid(35f353ffd92e0ed49bb5fb114a80a7a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Rocks/Cliffs/Prefabs/prefab_cliff_piece_04.prefab using Guid(35f353ffd92e0ed49bb5fb114a80a7a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b950203494074967fe8e5acd82758b5a') in 0.102439 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
