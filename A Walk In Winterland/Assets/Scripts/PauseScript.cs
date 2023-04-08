@@ -12,6 +12,7 @@ public class PauseScript : MonoBehaviour
     public UnityEvent<bool> OnFullscreen;
     static bool paused = false;
     private bool fullscreen;
+
     private void Awake()
     {
         fullscreen = Screen.fullScreen;
@@ -35,6 +36,11 @@ public class PauseScript : MonoBehaviour
     {
         paused = !paused;
         pauseMenu.SetActive(paused);
+        if(pauseMenu.TryGetComponent(out PauseMenuElements elements))
+        {
+            elements.DeactivateAllTabs();
+        }
+
         if (paused)
         {
             OnFullscreen?.Invoke(Screen.fullScreen);
@@ -42,6 +48,10 @@ public class PauseScript : MonoBehaviour
             if(AudioSettings.instance != null)
             {
                 AudioSettings.instance.PauseSFX(true);
+                //AudioSettings.instance.PauseMusic(true);
+                //AudioSettings.instance.PauseAmbience(true);
+                AudioSettings.instance.SetMusicVolumeRelative(0.33f);
+                AudioSettings.instance.SetAmbienceVolumeRelative(0.33f);
             }
             playMap.Disable();
         } else
@@ -50,6 +60,10 @@ public class PauseScript : MonoBehaviour
             if (AudioSettings.instance != null)
             {
                 AudioSettings.instance.PauseSFX(false);
+                //AudioSettings.instance.PauseMusic(false);
+                //AudioSettings.instance.PauseAmbience(false);
+                AudioSettings.instance.SetMusicVolumeRelative(1);
+                AudioSettings.instance.SetAmbienceVolumeRelative(1);
             }
             playMap.Enable();
         }

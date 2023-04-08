@@ -30,6 +30,9 @@ public static class PlayerData
     const float minSnowmanCameraSpeed = 100;
     static float cameraSpeed = 0.5f;
     static float snowmanCameraSpeed = 0.5f;
+    public static float musicVolume = 1;
+    public static float ambienceVolume = 1;
+    public static float sfxVolume = 1;
 
     public static UnityEvent<float> setPlayerCameraSpeedEvent = new UnityEvent<float>();
     public static UnityEvent<float> setSnowmanCameraSpeedEvent = new UnityEvent<float>();

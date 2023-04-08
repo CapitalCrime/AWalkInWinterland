@@ -22,6 +22,7 @@ MonoBehaviour:
   AuroraIntensity: 0.4
   AuroraOuterColor: {r: 0, g: 1, b: 1, a: 1}
   AuroraInnerColor: {r: 0, g: 1, b: 0, a: 1}
+  addExtraFog: 0
   MinimumFogLevel: 300
   MaximumFogLevel: 600
   FogDensity: 0.005
@@ -70,7 +71,13 @@ MonoBehaviour:
   AdditionalParticleEffectAmount: 200
   AdditionalParticleEffectVector: {x: 0, y: 28, z: 0}
   WeatherVolume: 1
-  WeatherSound: {fileID: 8300000, guid: 90487634ecd968d4a9cf094142553b64, type: 3}
+  WeatherSound:
+    Guid:
+      Data1: 907679502
+      Data2: 1101660042
+      Data3: 166511530
+      Data4: -1129428461
+    Path: event:/Hail
   PrecipitationWeatherType: 0
   UseWeatherSound: 0
   UseWeatherEffect: 0

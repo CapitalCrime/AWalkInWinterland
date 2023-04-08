@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8122338831165296445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hail
+  m_EditorClassIdentifier: 
+  Path: event:/Hail
+  Guid:
+    Data1: 907679502
+    Data2: 1101660042
+    Data3: 166511530
+    Data4: -1129428461
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 24006
 --- !u!114 &-7401460815522780700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +96,10 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638165213777510388
+  lastModified: 638165580756912651
   FileSizes:
   - Name: Desktop
-    Value: 1336
+    Value: 1420
   Exists: 1
 --- !u!114 &-4831214777332310060
 MonoBehaviour:
@@ -128,12 +155,13 @@ MonoBehaviour:
   - {fileID: 6293425118213005378}
   - {fileID: -6660341423363840908}
   - {fileID: 1081291946725579372}
+  - {fileID: -8122338831165296445}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3490342174954165286}
   StringsBanks:
   - {fileID: -5082213400612829643}
-  cacheTime: 638165213777510388
+  cacheTime: 638165580756912651
   cacheVersion: 131593
 --- !u!114 &1081291946725579372
 MonoBehaviour:
@@ -157,7 +185,7 @@ MonoBehaviour:
   - {fileID: 3490342174954165286}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -255,10 +283,10 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638165213777500424
+  lastModified: 638165580756902685
   FileSizes:
   - Name: Desktop
-    Value: 12837664
+    Value: 13215904
   Exists: 1
 --- !u!114 &5280989881604413686
 MonoBehaviour:
