@@ -1,0 +1,398 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8888224472714794364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SnowCannon
+  m_EditorClassIdentifier: 
+  Path: event:/SnowCannon
+  Guid:
+    Data1: 1535765984
+    Data2: 1181596768
+    Data3: 1102889656
+    Data4: -1279715884
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 672
+--- !u!114 &-8021920191891694632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music 2
+  m_EditorClassIdentifier: 
+  Path: event:/Music 2
+  Guid:
+    Data1: -1438685851
+    Data2: 1297557077
+    Data3: 1113509035
+    Data4: 1408581476
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 177998
+--- !u!114 &-7622507850350248537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lightning
+  m_EditorClassIdentifier: 
+  Path: event:/Lightning
+  Guid:
+    Data1: -1565697151
+    Data2: 1335777329
+    Data3: 2126582667
+    Data4: 218822916
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12000
+--- !u!114 &-6305837233437958928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Heavy Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Heavy Wind
+  Guid:
+    Data1: -915037593
+    Data2: 1185520579
+    Data3: -142772842
+    Data4: -1523286800
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 118000
+--- !u!114 &-6008771611422645366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Santa
+  m_EditorClassIdentifier: 
+  Path: event:/Santa
+  Guid:
+    Data1: -1055813810
+    Data2: 1107751909
+    Data3: 912884150
+    Data4: -1894807713
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 928
+--- !u!114 &-5940694030893584885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Car Start Up
+  m_EditorClassIdentifier: 
+  Path: event:/Car Start Up
+  Guid:
+    Data1: -1613276386
+    Data2: 1263260372
+    Data3: -1979685968
+    Data4: 438547273
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 20
+  Length: 2600
+--- !u!114 &-4282220587058865006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638165213777500424
+  FileSizes:
+  - Name: 
+    Value: 12837664
+  Exists: 1
+--- !u!114 &-3460235795583146102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638165213777510388
+  FileSizes:
+  - Name: 
+    Value: 1336
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -3460235795583146102}
+  - {fileID: -4282220587058865006}
+  EditorEvents:
+  - {fileID: -5940694030893584885}
+  - {fileID: 5581560183944472095}
+  - {fileID: 7355787567066531324}
+  - {fileID: -6008771611422645366}
+  - {fileID: 5675967383027979310}
+  - {fileID: 7259028021975233364}
+  - {fileID: -8888224472714794364}
+  - {fileID: 1785292424560800897}
+  - {fileID: -8021920191891694632}
+  - {fileID: -7622507850350248537}
+  - {fileID: -6305837233437958928}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -4282220587058865006}
+  StringsBanks:
+  - {fileID: -3460235795583146102}
+  cacheTime: 638165213777510388
+  cacheVersion: 131603
+--- !u!114 &1785292424560800897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music 1
+  m_EditorClassIdentifier: 
+  Path: event:/Music 1
+  Guid:
+    Data1: 1233460015
+    Data2: 1101371339
+    Data3: -1910040690
+    Data4: 595054758
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 174144
+--- !u!114 &5581560183944472095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Snowball
+  m_EditorClassIdentifier: 
+  Path: event:/Snowball
+  Guid:
+    Data1: 285480232
+    Data2: 1165016146
+    Data3: -189390204
+    Data4: -766511621
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 648
+--- !u!114 &5675967383027979310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Car Song
+  m_EditorClassIdentifier: 
+  Path: event:/Car Song
+  Guid:
+    Data1: -856174974
+    Data2: 1286349485
+    Data3: 1006137235
+    Data4: -1717011335
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 8493988262581729010}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6050
+--- !u!114 &7259028021975233364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cat Purr
+  m_EditorClassIdentifier: 
+  Path: event:/Cat Purr
+  Guid:
+    Data1: 1098365331
+    Data2: 1338542256
+    Data3: 748468896
+    Data4: 539413581
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 4
+  Length: 4200
+--- !u!114 &7355787567066531324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cat Meow
+  m_EditorClassIdentifier: 
+  Path: event:/Cat Meow
+  Guid:
+    Data1: -1184848327
+    Data2: 1325876833
+    Data3: 1299723964
+    Data4: -402896470
+  Banks:
+  - {fileID: -4282220587058865006}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 560
+--- !u!114 &8493988262581729010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Car Song/FinishLoop
+  m_EditorClassIdentifier: 
+  Name: FinishLoop
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3192672646
+    data2: 2899251525
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

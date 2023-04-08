@@ -183,6 +183,9 @@ namespace UniStorm.Utility
             GUI.backgroundColor = Color.white;
             EditorGUILayout.Space();
 
+            SerializedProperty addExtraFog = serializedObject.FindProperty("addExtraFog");
+            EditorGUILayout.PropertyField(addExtraFog);
+
             self.FogDensity = EditorGUILayout.Slider("Fog Desnity", self.FogDensity, 0.0f, 0.04f);
             GUI.backgroundColor = new Color(0.1f, 0.1f, 0.1f, 0.19f);
             EditorGUILayout.LabelField("Controls UniStorm's Fog Density.", EditorStyles.helpBox);
@@ -330,7 +333,13 @@ namespace UniStorm.Utility
                 GUILayout.Space(15);
                 EditorGUILayout.BeginVertical();
 
-                self.WeatherSound = (AudioClip)EditorGUILayout.ObjectField("Weather Sound", self.WeatherSound, typeof(AudioClip), false);
+
+                SerializedProperty WeatherSound = serializedObject.FindProperty("WeatherSound");
+                EditorGUILayout.PropertyField(WeatherSound);
+
+                //self.WeatherSound = (FMODUnity.StudioEventEmitter)EditorGUILayout.ObjectField("Weather Sound", self.WeatherSound, typeof(FMODUnity.StudioEventEmitter), false); s
+                //self.WeatherSound = (FMODUnity.EventReference)EditorGUILayout.ObjectField("Weather Sound", self.WeatherSound, typeof(FMODUnity.EventReference), false);
+
                 EditorGUILayout.Space();
                 self.WeatherVolume = EditorGUILayout.Slider("Weather Sound Volume", self.WeatherVolume, 0.1f, 1.0f);
                 EditorGUILayout.Space();

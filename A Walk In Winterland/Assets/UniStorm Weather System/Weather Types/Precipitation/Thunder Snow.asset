@@ -16,18 +16,19 @@ MonoBehaviour:
   CloudProfileComponent: {fileID: 11400000, guid: 8af8e06821542df46bd3ee0b1093a6ff,
     type: 2}
   SunIntensity: 0.6
-  CloudShadowIntensity: 0
+  CloudShadowIntensity: 0.25
   MoonIntensity: 0.5
   UseAuroras: 1
   AuroraIntensity: 0.4
   AuroraOuterColor: {r: 0, g: 1, b: 1, a: 1}
   AuroraInnerColor: {r: 0, g: 1, b: 0, a: 1}
+  addExtraFog: 1
   MinimumFogLevel: 300
   MaximumFogLevel: 600
-  FogDensity: 0.005
+  FogDensity: 0.015
   FogLightFalloff: 0.1
-  FogHeight: 0.85
-  CameraFogHeight: 0.85
+  FogHeight: 0.907
+  CameraFogHeight: 1
   OverrideFogColor: 1
   OverrideCameraFogHeight: 1
   FogColor:
@@ -68,17 +69,23 @@ MonoBehaviour:
   ParticleEffectVector: {x: 0, y: 6, z: 20}
   AdditionalWeatherEffect: {fileID: 198814685187613174, guid: 872b852f5cbd3d54dbfd29aec77b4965,
     type: 3}
-  AdditionalParticleEffectAmount: 50
+  AdditionalParticleEffectAmount: 20
   AdditionalParticleEffectVector: {x: 0, y: 0, z: 3}
   WeatherVolume: 1
-  WeatherSound: {fileID: 8300000, guid: 7b61d7e0abee2f84db505d2380db4ea2, type: 3}
+  WeatherSound:
+    Guid:
+      Data1: -915037593
+      Data2: 1185520579
+      Data3: -142772842
+      Data4: -1523286800
+    Path: event:/Heavy Wind
   PrecipitationWeatherType: 0
   UseWeatherSound: 0
   UseWeatherEffect: 0
-  UseAdditionalWeatherEffect: 0
+  UseAdditionalWeatherEffect: 1
   SpecialWeatherType: 1
   Season: 0
-  CloudHeight: 650
+  CloudHeight: 150
   CloudLevel: 4
   TemperatureType: 0
   ShaderControl: 1
@@ -114,5 +121,5 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   UseLightning: 0
   CustomizeWeatherIcon: 0
-  WaitForCloudLevel: 1
+  WaitForCloudLevel: 0
   WeatherIcon: {fileID: 2800000, guid: cc66a5b19f3308e48bc28734c4df3b2a, type: 3}

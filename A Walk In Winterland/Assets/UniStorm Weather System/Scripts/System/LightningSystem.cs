@@ -50,7 +50,7 @@ namespace UniStorm.Utility
         [HideInInspector]
         public float StaticIntensity = 0.05f;
 
-        AudioSource AS;
+        //AudioSource AS;
         Coroutine LightningCoroutine;
         float m_FlashTimer;
         float m_GenerateTimer;
@@ -92,8 +92,9 @@ namespace UniStorm.Utility
                 LightningPoints.Add(transform.position);
             }
 
-            gameObject.AddComponent<AudioSource>();
-            AS = GetComponent<AudioSource>();
+            //gameObject.AddComponent<AudioSource>();
+            //AS = GetComponent<AudioSource>();
+
             //AS.outputAudioMixerGroup = FindObjectOfType<UniStormSystem>().UniStormAudioMixer.FindMatchingGroups("Master/Weather")[0];
             LightningBolt.enabled = false;
             m_LightningMaterial = LightningBolt.material;
@@ -287,9 +288,10 @@ namespace UniStorm.Utility
         //Create a delay based on the distance to simulate the sound having to travel.
         IEnumerator ThunderSoundDelay()
         {
-            float DistanceDelay = Vector3.Distance(EndingPoint.position, PlayerTransform.position) / 50;
+            float DistanceDelay = Vector3.Distance(EndingPoint.position, PlayerTransform.position) / 150;
             yield return new WaitForSeconds(DistanceDelay);
-            AS.pitch = Random.Range(0.7f, 1.3f);
+
+            //AS.pitch = Random.Range(0.7f, 1.3f);
             if (ThunderSounds.Count > 0)
             {
                 FMODUnity.EmitterRef m_ThunderSound = ThunderSounds[Random.Range(0, ThunderSounds.Count)];

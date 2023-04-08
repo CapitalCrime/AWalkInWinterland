@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 20
   Length: 2600
+--- !u!114 &-6660341423363840908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lightning
+  m_EditorClassIdentifier: 
+  Path: event:/Lightning
+  Guid:
+    Data1: -1565697151
+    Data2: 1335777329
+    Data3: 2126582667
+    Data4: 218822916
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12000
 --- !u!114 &-5082213400612829643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +69,10 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638157337501995196
+  lastModified: 638165213777510388
   FileSizes:
   - Name: Desktop
-    Value: 1136
+    Value: 1336
   Exists: 1
 --- !u!114 &-4831214777332310060
 MonoBehaviour:
@@ -97,13 +124,44 @@ MonoBehaviour:
   - {fileID: 3367002805512894025}
   - {fileID: 5694644536009449672}
   - {fileID: 7254776412058897860}
+  - {fileID: 5280989881604413686}
+  - {fileID: 6293425118213005378}
+  - {fileID: -6660341423363840908}
+  - {fileID: 1081291946725579372}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3490342174954165286}
   StringsBanks:
   - {fileID: -5082213400612829643}
-  cacheTime: 638157337501995196
+  cacheTime: 638165213777510388
   cacheVersion: 131593
+--- !u!114 &1081291946725579372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Heavy Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Heavy Wind
+  Guid:
+    Data1: -915037593
+    Data2: 1185520579
+    Data3: -142772842
+    Data4: -1523286800
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 118000
 --- !u!114 &2251118214362955823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,11 +255,38 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638157337501985231
+  lastModified: 638165213777500424
   FileSizes:
   - Name: Desktop
-    Value: 7111808
+    Value: 12837664
   Exists: 1
+--- !u!114 &5280989881604413686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music 1
+  m_EditorClassIdentifier: 
+  Path: event:/Music 1
+  Guid:
+    Data1: 1233460015
+    Data2: 1101371339
+    Data3: -1910040690
+    Data4: 595054758
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 174144
 --- !u!114 &5694644536009449672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +314,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 672
+--- !u!114 &6293425118213005378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music 2
+  m_EditorClassIdentifier: 
+  Path: event:/Music 2
+  Guid:
+    Data1: -1438685851
+    Data2: 1297557077
+    Data3: 1113509035
+    Data4: 1408581476
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 177998
 --- !u!114 &7254776412058897860
 MonoBehaviour:
   m_ObjectHideFlags: 0

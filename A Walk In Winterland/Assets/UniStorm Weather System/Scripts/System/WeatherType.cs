@@ -21,6 +21,7 @@ namespace UniStorm
         public Color AuroraInnerColor = Color.green;
 
         //Fog
+        public bool addExtraFog = false;
         public int MinimumFogLevel = 300;
         public int MaximumFogLevel = 600;
         public float FogDensity = 0.0015f;
@@ -45,7 +46,8 @@ namespace UniStorm
 
         //Audio
         public float WeatherVolume = 1;
-        public AudioClip WeatherSound;
+        //public AudioSource WeatherSound;
+        public FMODUnity.EventReference WeatherSound;
 
         //Particle Effect
         public Yes_No PrecipitationWeatherType = Yes_No.No;
@@ -109,18 +111,27 @@ namespace UniStorm
             UniStormSystem UniStormSystemObject = FindObjectOfType<UniStormSystem>();
             if (UniStormSystemObject.enabled)
             {
+                //GameObject Temp = new GameObject();
+                //Temp.AddComponent<AudioSource>();
+                //AudioSource _AS = Temp.GetComponent<AudioSource>();
+                //_AS.clip = WeatherSound;
+                //_AS.volume = 0;
+                //_AS.loop = true;
+                //UnityEngine.Audio.AudioMixer m_AudioMixer = Resources.Load("UniStorm Audio Mixer") as UnityEngine.Audio.AudioMixer;
+                //_AS.outputAudioMixerGroup = m_AudioMixer.FindMatchingGroups("Master/Weather")[0];
+                //Temp.name = WeatherTypeName + " (UniStorm)";
+                //Temp.transform.SetParent(GameObject.Find("UniStorm Sounds").transform);
+                //Temp.transform.position = new Vector3(Temp.transform.parent.position.x, Temp.transform.parent.position.y, Temp.transform.parent.position.z);
+                //UniStormSystemObject.WeatherSoundsList.Add(_AS);
+
                 GameObject Temp = new GameObject();
-                Temp.AddComponent<AudioSource>();
-                AudioSource _AS = Temp.GetComponent<AudioSource>();
-                _AS.clip = WeatherSound;
-                _AS.volume = 0;
-                _AS.loop = true;
-                UnityEngine.Audio.AudioMixer m_AudioMixer = Resources.Load("UniStorm Audio Mixer") as UnityEngine.Audio.AudioMixer;
-                _AS.outputAudioMixerGroup = m_AudioMixer.FindMatchingGroups("Master/Weather")[0];
+                Temp.AddComponent<FMODUnity.StudioEventEmitter>();
+                FMODUnity.StudioEventEmitter _AS = Temp.GetComponent<FMODUnity.StudioEventEmitter>();
+                _AS.EventReference = WeatherSound;
                 Temp.name = WeatherTypeName + " (UniStorm)";
                 Temp.transform.SetParent(GameObject.Find("UniStorm Sounds").transform);
                 Temp.transform.position = new Vector3(Temp.transform.parent.position.x, Temp.transform.parent.position.y, Temp.transform.parent.position.z);
-                //UniStormSystemObject.WeatherSoundsList.Add(_AS);
+                UniStormSystemObject.WeatherSoundsList.Add(_AS);
             }
         }
 

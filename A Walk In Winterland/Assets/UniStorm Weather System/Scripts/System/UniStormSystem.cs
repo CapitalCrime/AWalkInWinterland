@@ -119,21 +119,21 @@ namespace UniStorm
         //public List<AudioClip> DaySounds = new List<AudioClip>();
         //public List<AudioClip> EveningSounds = new List<AudioClip>();
         //public List<AudioClip> NightSounds = new List<AudioClip>();
-        [NonReorderable]public List<FMODUnity.EmitterRef> MorningSounds = new List<FMODUnity.EmitterRef>();
+        [NonReorderable] public List<FMODUnity.EmitterRef> MorningSounds = new List<FMODUnity.EmitterRef>();
         [NonReorderable] public List<FMODUnity.EmitterRef> DaySounds = new List<FMODUnity.EmitterRef>();
         [NonReorderable] public List<FMODUnity.EmitterRef> EveningSounds = new List<FMODUnity.EmitterRef>();
         [NonReorderable] public List<FMODUnity.EmitterRef> NightSounds = new List<FMODUnity.EmitterRef>();
-        public FMODUnity.EmitterRef TimeOfDayAudioSource;
+        public FMODUnity.EmitterRef TimeOfDaySoundAudioSource;
         //public AudioSource TimeOfDayAudioSource;
         //public List<AudioClip> MorningMusic = new List<AudioClip>();
         //public List<AudioClip> DayMusic = new List<AudioClip>();
         //public List<AudioClip> EveningMusic = new List<AudioClip>();
         //public List<AudioClip> NightMusic = new List<AudioClip>();
-        [NonReorderable] public List<FMODUnity.EmitterRef> MorningMusic = new List<FMODUnity.EmitterRef>();
-        [NonReorderable] public List<FMODUnity.EmitterRef> DayMusic = new List<FMODUnity.EmitterRef>();
-        [NonReorderable] public List<FMODUnity.EmitterRef> EveningMusic = new List<FMODUnity.EmitterRef>();
-        [NonReorderable] public List<FMODUnity.EmitterRef> NightMusic = new List<FMODUnity.EmitterRef>();
-        public FMODUnity.EmitterRef TimeOfDayMusicAudioSource;
+        [NonReorderable] public List<FMODUnity.StudioEventEmitter> MorningMusic = new List<FMODUnity.StudioEventEmitter>();
+        [NonReorderable] public List<FMODUnity.StudioEventEmitter> DayMusic = new List<FMODUnity.StudioEventEmitter>();
+        [NonReorderable] public List<FMODUnity.StudioEventEmitter> EveningMusic = new List<FMODUnity.StudioEventEmitter>();
+        [NonReorderable] public List<FMODUnity.StudioEventEmitter> NightMusic = new List<FMODUnity.StudioEventEmitter>();
+        FMODUnity.StudioEventEmitter TimeOfDayMusicAudioSource;
         //public AudioSource TimeOfDayMusicAudioSource;
         public int TimeOfDayMusicDelay = 1;
         float m_CurrentMusicClipLength = 0;
@@ -191,7 +191,7 @@ namespace UniStorm
         bool m_WeatherGenerated = false;
         Coroutine CloudCoroutine, FogCoroutine, WeatherEffectCoroutine, AdditionalWeatherEffectCoroutine, ParticleFadeCoroutine, StormyCloudsCoroutine, CloudTallnessCoroutine, AuroraCoroutine, FogLightFalloffCoroutine;
         Coroutine AdditionalParticleFadeCoroutine, SunCoroutine, MoonCoroutine, WindCoroutine, SoundInCoroutine, SoundOutCoroutine, MostlyCloudyCoroutine, SunAttenuationIntensityCoroutine, AtmosphericFogCoroutine;
-        Coroutine ColorCoroutine, CloudHeightCoroutine, RainShaderCoroutine, SnowShaderCoroutine, SunColorCoroutine, CloudProfileCoroutine, CloudShadowIntensityCoroutine, MusicVolumeCoroutine, SunHeightCoroutine;
+        Coroutine ColorCoroutine, CloudHeightCoroutine, RainShaderCoroutine, SnowShaderCoroutine, SunColorCoroutine, CloudProfileCoroutine, CloudShadowIntensityCoroutine, SunHeightCoroutine;
         public WindZone UniStormWindZone;
         public GameObject m_SoundTransform;
         public GameObject m_EffectsTransform;
@@ -234,6 +234,8 @@ namespace UniStorm
         public Color CurrentFogColor;
         public enum FogTypeEnum { UnistormFog, UnityFog };
         public FogTypeEnum FogType = FogTypeEnum.UnistormFog;
+        MinMax fogFarDist = new MinMax(0, 3000);
+        MinMax fogCloseDist = new MinMax(-50, 400);
         public enum FogModeEnum { Exponential, ExponentialSquared };
         public FogModeEnum FogMode = FogModeEnum.Exponential;
         public UniStormAtmosphericFog m_UniStormAtmosphericFog;
@@ -420,6 +422,7 @@ namespace UniStorm
         public List<ParticleSystem> AdditionalParticleSystemList = new List<ParticleSystem>();
         public List<ParticleSystem> AdditionalWeatherEffectsList = new List<ParticleSystem>();
         //public List<AudioSource> WeatherSoundsList = new List<AudioSource>();
+        public List<FMODUnity.StudioEventEmitter> WeatherSoundsList = new List<FMODUnity.StudioEventEmitter>();
         public ParticleSystem CurrentParticleSystem;
         public float m_ParticleAmount = 0;
         public ParticleSystem AdditionalCurrentParticleSystem;       
@@ -600,7 +603,11 @@ namespace UniStorm
                 if (AllWeatherTypes[i] != null)
                 {
                     //If our weather types have certain features enabled, but there are none detected, disable the feature.
-                    if (AllWeatherTypes[i].UseWeatherSound == WeatherType.Yes_No.Yes && AllWeatherTypes[i].WeatherSound == null)
+                    //if (AllWeatherTypes[i].UseWeatherSound == WeatherType.Yes_No.Yes && AllWeatherTypes[i].WeatherSound == null)
+                    //{
+                    //    AllWeatherTypes[i].UseWeatherSound = WeatherType.Yes_No.No;
+                    //}
+                    if (AllWeatherTypes[i].UseWeatherSound == WeatherType.Yes_No.Yes && AllWeatherTypes[i].WeatherSound.Guid.ToString() == "")
                     {
                         AllWeatherTypes[i].UseWeatherSound = WeatherType.Yes_No.No;
                     }
@@ -633,9 +640,13 @@ namespace UniStorm
                     }
 
                     //Create a weather sound for each weather type that has one.
-                    if (AllWeatherTypes[i].UseWeatherSound == WeatherType.Yes_No.Yes && AllWeatherTypes[i].WeatherSound != null)
+                    //if (AllWeatherTypes[i].UseWeatherSound == WeatherType.Yes_No.Yes && AllWeatherTypes[i].WeatherSound != null)
+                    //{
+                    //    AllWeatherTypes[i].CreateWeatherSound();
+                    //}
+                    if (AllWeatherTypes[i].UseWeatherSound == WeatherType.Yes_No.Yes && AllWeatherTypes[i].WeatherSound.Guid.ToString() != "")
                     {
-                        //AllWeatherTypes[i].CreateWeatherSound();
+                        AllWeatherTypes[i].CreateWeatherSound();
                     }
                 }
             }
@@ -1082,11 +1093,22 @@ namespace UniStorm
             {
                 RenderSettings.fogMode = UnityEngine.FogMode.ExponentialSquared;
             }
+            RenderSettings.fogMode = UnityEngine.FogMode.Linear;
+            if(CurrentWeatherType.addExtraFog)
+            {
+                RenderSettings.fogEndDistance = fogCloseDist.max;
+                RenderSettings.fogStartDistance = fogCloseDist.min;
+            } else
+            {
+                RenderSettings.fogEndDistance = fogFarDist.max;
+                RenderSettings.fogStartDistance = fogFarDist.min;
+            }
 
             if (FogType == FogTypeEnum.UnistormFog)
             {
                 //Disable Unity's fog while UniStorm's fog is being used.
-                RenderSettings.fog = false;
+
+                //RenderSettings.fog = false;
 
                 if (CurrentWeatherType.PrecipitationWeatherType == WeatherType.Yes_No.Yes)
                 {
@@ -1352,22 +1374,26 @@ namespace UniStorm
                 SunColor.SetKeys(SunLightColorKeySwitcher, SunColor.alphaKeys);
             }
 
-            //foreach (AudioSource A in WeatherSoundsList)
-            //{
-            //    A.volume = 0;
-            //}
+            foreach (FMODUnity.StudioEventEmitter emitter in WeatherSoundsList)
+            {
+                emitter.Stop();
+                //if (emitter.EventInstance.hasHandle())
+                //{
+                //    emitter.EventInstance.setVolume(0);
+                //}
+            }
 
-            //if (CurrentWeatherType.UseWeatherSound == WeatherType.Yes_No.Yes)
-            //{
-            //    foreach (AudioSource A in WeatherSoundsList)
-            //    {
-            //        if (A.gameObject.name == CurrentWeatherType.WeatherTypeName + " (UniStorm)")
-            //        {
-            //            A.Play();
-            //            A.volume = CurrentWeatherType.WeatherVolume;
-            //        }
-            //    }
-            //}
+            if (CurrentWeatherType.UseWeatherSound == WeatherType.Yes_No.Yes)
+            {
+                foreach (FMODUnity.StudioEventEmitter emitter in WeatherSoundsList)
+                {
+                    if (emitter.gameObject.name == CurrentWeatherType.WeatherTypeName + " (UniStorm)")
+                    {
+                        emitter.Play();
+                        emitter.EventInstance.setVolume(CurrentWeatherType.WeatherVolume);
+                    }
+                }
+            }
         }
 
         //If follow player is enabled, adjust the distant UniStorm components to the player's position
@@ -2097,10 +2123,10 @@ namespace UniStorm
                         //Morning Sounds
                         if (MorningSounds.Count != 0)
                         {
-                            TimeOfDayAudioSource = MorningSounds[Random.Range(0, MorningSounds.Count)];
-                            if (TimeOfDayAudioSource.Target != null)
+                            TimeOfDaySoundAudioSource = MorningSounds[Random.Range(0, MorningSounds.Count)];
+                            if (TimeOfDaySoundAudioSource.Target != null)
                             {
-                                TimeOfDayAudioSource.Target.Play();
+                                TimeOfDaySoundAudioSource.Target.Play();
                                 m_CurrentClipLength = Mathf.Infinity;
                             }
                         }
@@ -2110,10 +2136,10 @@ namespace UniStorm
                         //Day Sounds
                         if (DaySounds.Count != 0)
                         {
-                            TimeOfDayAudioSource = DaySounds[Random.Range(0, DaySounds.Count)];
-                            if (TimeOfDayAudioSource.Target != null)
+                            TimeOfDaySoundAudioSource = DaySounds[Random.Range(0, DaySounds.Count)];
+                            if (TimeOfDaySoundAudioSource.Target != null)
                             {
-                                TimeOfDayAudioSource.Target.Play();
+                                TimeOfDaySoundAudioSource.Target.Play();
                                 m_CurrentClipLength = Mathf.Infinity;
                             }
                         }
@@ -2123,10 +2149,10 @@ namespace UniStorm
                         //Evening Sounds
                         if (EveningSounds.Count != 0)
                         {
-                            TimeOfDayAudioSource = EveningSounds[Random.Range(0, EveningSounds.Count)];
-                            if (TimeOfDayAudioSource.Target != null)
+                            TimeOfDaySoundAudioSource = EveningSounds[Random.Range(0, EveningSounds.Count)];
+                            if (TimeOfDaySoundAudioSource.Target != null)
                             {
-                                TimeOfDayAudioSource.Target.Play();
+                                TimeOfDaySoundAudioSource.Target.Play();
                                 m_CurrentClipLength = Mathf.Infinity;
                             }
                         }
@@ -2136,10 +2162,10 @@ namespace UniStorm
                         //Night Sounds
                         if (NightSounds.Count != 0)
                         {
-                            TimeOfDayAudioSource = NightSounds[Random.Range(0, NightSounds.Count)];
-                            if (TimeOfDayAudioSource.Target != null)
+                            TimeOfDaySoundAudioSource = NightSounds[Random.Range(0, NightSounds.Count)];
+                            if (TimeOfDaySoundAudioSource.Target != null)
                             {
-                                TimeOfDayAudioSource.Target.Play();
+                                TimeOfDaySoundAudioSource.Target.Play();
                                 m_CurrentClipLength = Mathf.Infinity;
                             }
                         }
@@ -2150,78 +2176,142 @@ namespace UniStorm
             }
         }
 
+        void PickTimeOfDayMusic()
+        {
+            switch (CurrentTimeOfDay)
+            {
+                case CurrentTimeOfDayEnum.Morning:
+                    if (MorningMusic.Count == 0) break;
+                    if(TimeOfDayMusicAudioSource != null) { TimeOfDayMusicAudioSource.gameObject.SetActive(false); }
+
+                    TimeOfDayMusicAudioSource = MorningMusic[Random.Range(0, MorningMusic.Count)];
+                    if (TimeOfDayMusicAudioSource != null)
+                    {
+                        TimeOfDayMusicAudioSource.gameObject.SetActive(true);
+                    }
+                    break;
+                case CurrentTimeOfDayEnum.Day:
+                    if (DayMusic.Count == 0) break;
+                    if (TimeOfDayMusicAudioSource != null) { TimeOfDayMusicAudioSource.gameObject.SetActive(false); }
+
+                    TimeOfDayMusicAudioSource = DayMusic[Random.Range(0, MorningMusic.Count)];
+                    if (TimeOfDayMusicAudioSource != null)
+                    {
+                        TimeOfDayMusicAudioSource.gameObject.SetActive(true);
+                    }
+                    break;
+                case CurrentTimeOfDayEnum.Evening:
+                    if (EveningMusic.Count == 0) break;
+                    if (TimeOfDayMusicAudioSource != null) { TimeOfDayMusicAudioSource.gameObject.SetActive(false); }
+
+                    TimeOfDayMusicAudioSource = EveningMusic[Random.Range(0, MorningMusic.Count)];
+                    if (TimeOfDayMusicAudioSource != null)
+                    {
+                        TimeOfDayMusicAudioSource.gameObject.SetActive(true);
+                    }
+                    break;
+                case CurrentTimeOfDayEnum.Night:
+                    if (NightMusic.Count == 0) break;
+                    if (TimeOfDayMusicAudioSource != null) { TimeOfDayMusicAudioSource.gameObject.SetActive(false); }
+
+                    TimeOfDayMusicAudioSource = NightMusic[Random.Range(0, MorningMusic.Count)];
+                    if (TimeOfDayMusicAudioSource != null)
+                    {
+                        TimeOfDayMusicAudioSource.gameObject.SetActive(true);
+                    }
+                    break;
+            }
+        }
+
+        bool timeOfDayFirstSet = false;
+        CurrentTimeOfDayEnum LastRecordedTimeOfDay;
+        void PlayTimeOfDayMusicNew()
+        {
+            if (!timeOfDayFirstSet)
+            {
+                LastRecordedTimeOfDay = CurrentTimeOfDay;
+                PickTimeOfDayMusic();
+                timeOfDayFirstSet = true;
+                return;
+            }
+            if(CurrentTimeOfDay != LastRecordedTimeOfDay)
+            {
+                LastRecordedTimeOfDay = CurrentTimeOfDay;
+                PickTimeOfDayMusic();
+            }
+        }
+
         //Calculates our time of day sounds according to the hour and randomized seconds set by the user.
         void PlayTimeOfDayMusic()
         {
-            m_TimeOfDayMusicTimer += Time.deltaTime;
+            PlayTimeOfDayMusicNew();
+            return;
 
-            if (m_TimeOfDayMusicTimer >= m_CurrentMusicClipLength + TimeOfDayMusicDelay || m_UpdateTimeOfDayMusic && TransitionMusicOnTimeOfDayChange == EnableFeature.Enabled || m_UpdateBiomeTimeOfDayMusic)
-            {
-                if (CurrentTimeOfDay == CurrentTimeOfDayEnum.Morning)
-                {
-                    //Morning Music
-                    if (MorningMusic.Count != 0)
-                    {
-                        if (MusicVolumeCoroutine != null) { StopCoroutine(MusicVolumeCoroutine); }
-                        TimeOfDayMusicAudioSource = MorningMusic[Random.Range(0, MorningMusic.Count)];
-                        if (TimeOfDayMusicAudioSource.Target != null)
-                        {
-                            TimeOfDayMusicAudioSource.Target.Play();
-                            //MusicVolumeCoroutine = StartCoroutine(MusicFadeSequence(MusicTransitionLength, RandomMorningSound));
-                            //m_CurrentMusicClipLength = RandomMorningSound.length;
-                        }
-                    }
-                }
-                else if (CurrentTimeOfDay == CurrentTimeOfDayEnum.Day)
-                {
-                    //Day Music
-                    if (DayMusic.Count != 0)
-                    {
-                        if (MusicVolumeCoroutine != null) { StopCoroutine(MusicVolumeCoroutine); }
-                        TimeOfDayMusicAudioSource = DayMusic[Random.Range(0, DayMusic.Count)];
-                        if (TimeOfDayMusicAudioSource.Target != null)
-                        {
-                            TimeOfDayMusicAudioSource.Target.Play();
-                            //MusicVolumeCoroutine = StartCoroutine(MusicFadeSequence(MusicTransitionLength, RandomDaySound));
-                            //m_CurrentMusicClipLength = RandomDaySound.length;
-                        }
-                    }
-                }
-                else if (CurrentTimeOfDay == CurrentTimeOfDayEnum.Evening)
-                {
-                    //Evening Music
-                    if (EveningMusic.Count != 0)
-                    {
-                        if (MusicVolumeCoroutine != null) { StopCoroutine(MusicVolumeCoroutine); }
-                        TimeOfDayMusicAudioSource = EveningMusic[Random.Range(0, EveningMusic.Count)];
-                        if (TimeOfDayMusicAudioSource.Target != null)
-                        {
-                            TimeOfDayMusicAudioSource.Target.Play();
-                            //MusicVolumeCoroutine = StartCoroutine(MusicFadeSequence(MusicTransitionLength, RandomEveningSound));
-                            //m_CurrentMusicClipLength = RandomEveningSound.length;
-                        }
-                    }
-                }
-                else if (CurrentTimeOfDay == CurrentTimeOfDayEnum.Night)
-                {
-                    //Night Music
-                    if (NightMusic.Count != 0)
-                    {
-                        if (MusicVolumeCoroutine != null) { StopCoroutine(MusicVolumeCoroutine); }
-                        TimeOfDayMusicAudioSource = NightMusic[Random.Range(0, NightMusic.Count)];
-                        if (TimeOfDayMusicAudioSource.Target != null)
-                        {
-                            TimeOfDayMusicAudioSource.Target.Play();
-                            //MusicVolumeCoroutine = StartCoroutine(MusicFadeSequence(MusicTransitionLength, RandomNightSound));
-                            //m_CurrentMusicClipLength = RandomNightSound.length;
-                        }
-                    }
-                }
+            //m_TimeOfDayMusicTimer += Time.deltaTime;
 
-                m_TimeOfDayMusicTimer = 0;
-                m_UpdateTimeOfDayMusic = false;
-                m_UpdateBiomeTimeOfDayMusic = false;
-            }
+            //if (m_TimeOfDayMusicTimer >= m_CurrentMusicClipLength + TimeOfDayMusicDelay || m_UpdateTimeOfDayMusic && TransitionMusicOnTimeOfDayChange == EnableFeature.Enabled || m_UpdateBiomeTimeOfDayMusic)
+            //{
+            //    if (CurrentTimeOfDay == CurrentTimeOfDayEnum.Morning)
+            //    {
+            //        //Morning Music
+            //        if (MorningMusic.Count != 0)
+            //        {
+            //            TimeOfDayMusicAudioSource = MorningMusic[Random.Range(0, MorningMusic.Count)];
+            //            if (TimeOfDayMusicAudioSource.Target != null)
+            //            {
+            //                TimeOfDayMusicAudioSource.Target.Play();
+            //                //MusicVolumeCoroutine = StartCoroutine(MusicFadeSequence(MusicTransitionLength, RandomMorningSound));
+            //                //m_CurrentMusicClipLength = RandomMorningSound.length;
+            //            }
+            //        }
+            //    }
+            //    else if (CurrentTimeOfDay == CurrentTimeOfDayEnum.Day)
+            //    {
+            //        //Day Music
+            //        if (DayMusic.Count != 0)
+            //        {
+            //            TimeOfDayMusicAudioSource = DayMusic[Random.Range(0, DayMusic.Count)];
+            //            if (TimeOfDayMusicAudioSource.Target != null)
+            //            {
+            //                TimeOfDayMusicAudioSource.Target.Play();
+            //                //MusicVolumeCoroutine = StartCoroutine(MusicFadeSequence(MusicTransitionLength, RandomDaySound));
+            //                //m_CurrentMusicClipLength = RandomDaySound.length;
+            //            }
+            //        }
+            //    }
+            //    else if (CurrentTimeOfDay == CurrentTimeOfDayEnum.Evening)
+            //    {
+            //        //Evening Music
+            //        if (EveningMusic.Count != 0)
+            //        {
+            //            TimeOfDayMusicAudioSource = EveningMusic[Random.Range(0, EveningMusic.Count)];
+            //            if (TimeOfDayMusicAudioSource.Target != null)
+            //            {
+            //                TimeOfDayMusicAudioSource.Target.Play();
+            //                //MusicVolumeCoroutine = StartCoroutine(MusicFadeSequence(MusicTransitionLength, RandomEveningSound));
+            //                //m_CurrentMusicClipLength = RandomEveningSound.length;
+            //            }
+            //        }
+            //    }
+            //    else if (CurrentTimeOfDay == CurrentTimeOfDayEnum.Night)
+            //    {
+            //        //Night Music
+            //        if (NightMusic.Count != 0)
+            //        {
+            //            TimeOfDayMusicAudioSource = NightMusic[Random.Range(0, NightMusic.Count)];
+            //            if (TimeOfDayMusicAudioSource.Target != null)
+            //            {
+            //                TimeOfDayMusicAudioSource.Target.Play();
+            //                //MusicVolumeCoroutine = StartCoroutine(MusicFadeSequence(MusicTransitionLength, RandomNightSound));
+            //                //m_CurrentMusicClipLength = RandomNightSound.length;
+            //            }
+            //        }
+            //    }
+
+            //    m_TimeOfDayMusicTimer = 0;
+            //    m_UpdateTimeOfDayMusic = false;
+            //    m_UpdateBiomeTimeOfDayMusic = false;
+            //}
         }
 
         //Check our generated weather to see if it's time to update the weather.
@@ -2504,6 +2594,15 @@ namespace UniStorm
                 //        SoundInCoroutine = StartCoroutine(SoundFadeSequence(10 * TransitionSpeed, CurrentWeatherType.WeatherVolume, A, false));
                 //    }
                 //}
+                foreach (FMODUnity.StudioEventEmitter A in WeatherSoundsList)
+                {
+                    if (A.gameObject.name == CurrentWeatherType.WeatherTypeName + " (UniStorm)")
+                    {
+                        A.Play();
+                        A.EventInstance.setVolume(CurrentWeatherType.WeatherVolume);
+                        //SoundInCoroutine = StartCoroutine(SoundFadeSequence(10 * TransitionSpeed, CurrentWeatherType.WeatherVolume, A, false));
+                    }
+                }
             }
 
             if (CurrentWeatherType.UseWeatherEffect == WeatherType.Yes_No.No)
@@ -2541,6 +2640,13 @@ namespace UniStorm
             //        SoundOutCoroutine = StartCoroutine(SoundFadeSequence(5 * TransitionSpeed, 0, A, true));
             //    }
             //}
+            foreach (FMODUnity.StudioEventEmitter A in WeatherSoundsList)
+            {
+                if (A.gameObject.name != CurrentWeatherType.WeatherTypeName + " (UniStorm)" || CurrentWeatherType.UseWeatherSound == WeatherType.Yes_No.No)
+                {
+                    A.Stop();
+                }
+            }
         }
 
         //Calculates our moon phases. This is updated daily at exactly 12:00.
@@ -3089,11 +3195,17 @@ namespace UniStorm
             float LerpValue = CurrentValue;
             float t = 0;
 
+            MinMax chosenDepth = CurrentWeatherType.addExtraFog ? fogCloseDist : fogFarDist;
+            MinMax currentDepth = new MinMax(RenderSettings.fogStartDistance, RenderSettings.fogEndDistance);
+
             while ((LerpValue > MaxValue && FadeOut) || (LerpValue < MaxValue && !FadeOut))
             {
+                Debug.Log("Is the fog moving?");
                 t += Time.deltaTime;
                 LerpValue = Mathf.Lerp(CurrentValue, MaxValue, t / TransitionTime);
                 RenderSettings.fogDensity = LerpValue;
+                RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, chosenDepth.min, t / TransitionTime);
+                RenderSettings.fogEndDistance = Mathf.Lerp(currentDepth.max, chosenDepth.max, t / TransitionTime);
 
                 yield return null;
             }
