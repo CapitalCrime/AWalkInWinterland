@@ -234,8 +234,10 @@ namespace UniStorm
         public Color CurrentFogColor;
         public enum FogTypeEnum { UnistormFog, UnityFog };
         public FogTypeEnum FogType = FogTypeEnum.UnistormFog;
-        MinMax fogFarDist = new MinMax(200, 1400);
-        MinMax fogCloseDist = new MinMax(-50, 400);
+        MinMax fogFarDist;
+        MinMax fogFarDistDay = new MinMax(200, 1900);
+        MinMax fogFarDistNight = new MinMax(1000, 9000);
+        MinMax fogCloseDist = new MinMax(-100, 250);
         public enum FogModeEnum { Exponential, ExponentialSquared };
         public FogModeEnum FogMode = FogModeEnum.Exponential;
         public UniStormAtmosphericFog m_UniStormAtmosphericFog;
@@ -1010,7 +1012,7 @@ namespace UniStorm
         public void InitializeWeather(bool UseWeatherConditions)
         {
             if (CloudCoroutine != null) { StopCoroutine(CloudCoroutine); }
-            if (FogCoroutine != null) { StopCoroutine(FogCoroutine); }
+            if (FogCoroutine != null) { StopCoroutine(FogCoroutine); fogFading = false; }
             if (WeatherEffectCoroutine != null) { StopCoroutine(WeatherEffectCoroutine); }
             if (AdditionalWeatherEffectCoroutine != null) { StopCoroutine(AdditionalWeatherEffectCoroutine); }
             if (ParticleFadeCoroutine != null) { StopCoroutine(ParticleFadeCoroutine); }
@@ -1093,6 +1095,7 @@ namespace UniStorm
             {
                 RenderSettings.fogMode = UnityEngine.FogMode.ExponentialSquared;
             }
+
             RenderSettings.fogMode = UnityEngine.FogMode.Linear;
             if(CurrentWeatherType.addExtraFog)
             {
@@ -1734,6 +1737,34 @@ namespace UniStorm
             m_MenuToggle = !m_MenuToggle;
         }
 
+        static float normalizeFloat(float value, float min, float max)
+        {
+            return (Mathf.Clamp(value,min,max) - min) / (max - min);
+        }
+
+        void UpdateFarFogDist()
+        {
+            float timeOfDay = m_TimeFloat;
+            MinMax dayTime = new MinMax(0.24f,0.31f);
+            MinMax nightTime = new MinMax(0.75f, 0.83f);
+
+            float t;
+            if(timeOfDay > 0.5f)
+            {
+                t = Mathf.Clamp(normalizeFloat(timeOfDay, nightTime.min, nightTime.max), 0, 1);
+            } else
+            {
+                t = Mathf.Clamp(1-normalizeFloat(timeOfDay, dayTime.min, dayTime.max), 0, 1);
+            }
+            fogFarDist.min = Mathf.Lerp(fogFarDistDay.min, fogFarDistNight.min, t);
+            fogFarDist.max = Mathf.Lerp(fogFarDistDay.max, fogFarDistNight.max, t);
+            if(!fogFading && CurrentWeatherType.addExtraFog == false)
+            {
+                RenderSettings.fogStartDistance = fogFarDist.min;
+                RenderSettings.fogEndDistance = fogFarDist.max;
+            }
+        }
+
         void Update()
         {
             //Only run UniStorm if it has been initialized.
@@ -1804,6 +1835,9 @@ namespace UniStorm
                 PlayTimeOfDaySound();
                 PlayTimeOfDayMusic();
                 CalculateTimeOfDay();
+
+                //Update Fog Far Dist
+                UpdateFarFogDist();
 
                 //Generate our lightning, if the randomized lightning seconds have been met
                 if (CurrentWeatherType.UseLightning == WeatherType.Yes_No.Yes)
@@ -2353,7 +2387,7 @@ namespace UniStorm
         {
             OnWeatherChangeEvent.Invoke(); //Invoke our weather change event
             if (CloudCoroutine != null) { StopCoroutine(CloudCoroutine); }
-            if (FogCoroutine != null) { StopCoroutine(FogCoroutine); }
+            if (FogCoroutine != null) { StopCoroutine(FogCoroutine); fogFading = false; }
             if (WeatherEffectCoroutine != null) { StopCoroutine(WeatherEffectCoroutine); }
             if (AdditionalWeatherEffectCoroutine != null) { StopCoroutine(AdditionalWeatherEffectCoroutine); }
             if (ParticleFadeCoroutine != null) { StopCoroutine(ParticleFadeCoroutine); }
@@ -3181,8 +3215,10 @@ namespace UniStorm
             }
         }
 
+        bool fogFading = false;
         IEnumerator FogFadeSequence(float TransitionTime, float MaxValue, bool FadeOut)
         {
+            fogFading = true;
             if (CurrentWeatherType.PrecipitationWeatherType == WeatherType.Yes_No.Yes)
             {
                 if (QualitySettings.activeColorSpace == ColorSpace.Gamma)
@@ -3195,7 +3231,6 @@ namespace UniStorm
             float LerpValue = CurrentValue;
             float t = 0;
 
-            MinMax chosenDepth = CurrentWeatherType.addExtraFog ? fogCloseDist : fogFarDist;
             MinMax currentDepth = new MinMax(RenderSettings.fogStartDistance, RenderSettings.fogEndDistance);
 
             while ((LerpValue > MaxValue && FadeOut) || (LerpValue < MaxValue && !FadeOut))
@@ -3204,11 +3239,12 @@ namespace UniStorm
                 t += Time.deltaTime;
                 LerpValue = Mathf.Lerp(CurrentValue, MaxValue, t / TransitionTime);
                 RenderSettings.fogDensity = LerpValue;
-                RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, chosenDepth.min, t / TransitionTime);
-                RenderSettings.fogEndDistance = Mathf.Lerp(currentDepth.max, chosenDepth.max, t / TransitionTime);
+                RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, CurrentWeatherType.addExtraFog ? fogCloseDist.min : fogFarDist.min, t / TransitionTime);
+                RenderSettings.fogEndDistance = Mathf.Lerp(currentDepth.max, CurrentWeatherType.addExtraFog ? fogCloseDist.max : fogFarDist.max, t / TransitionTime);
 
                 yield return null;
             }
+            fogFading = false;
         }
 
         IEnumerator WindFadeSequence(float TransitionTime, float MaxValue, bool FadeOut)

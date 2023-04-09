@@ -29,8 +29,8 @@ public class SnowmanImageManager : MonoBehaviour
         }
         else
         {
-            maxImageXPosition = 130 * (Mathf.CeilToInt(imageHolder.childCount / 4.0f) - 3);
-            scrollbar.size = 65 / maxImageXPosition;
+            maxImageXPosition = 135 * (Mathf.CeilToInt(imageHolder.childCount / 4.0f) - 3);
+            scrollbar.size = 70 / maxImageXPosition;
         }
         Snowman.snowmanCreatedEvent += UpdateSnowmanButton;
     }

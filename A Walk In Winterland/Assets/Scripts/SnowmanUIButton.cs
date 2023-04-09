@@ -14,7 +14,7 @@ public class SnowmanUIButton : MonoBehaviour
         opening = !opening;
         if(opening)
         {
-            LeanTween.moveX(imageHolder, -405, 0.5f).setIgnoreTimeScale(true);
+            LeanTween.moveX(imageHolder, -415, 0.5f).setIgnoreTimeScale(true);
         } else
         {
             LeanTween.moveX(imageHolder, 0, 0.5f).setIgnoreTimeScale(true);
