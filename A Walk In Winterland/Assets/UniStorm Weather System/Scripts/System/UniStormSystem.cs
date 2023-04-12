@@ -235,8 +235,8 @@ namespace UniStorm
         public enum FogTypeEnum { UnistormFog, UnityFog };
         public FogTypeEnum FogType = FogTypeEnum.UnistormFog;
         MinMax fogFarDist;
-        MinMax fogFarDistDay = new MinMax(200, 1900);
-        MinMax fogFarDistNight = new MinMax(1000, 9000);
+        MinMax fogFarDistDay = new MinMax(1000, 3500);
+        MinMax fogFarDistNight = new MinMax(2000, 10000);
         MinMax fogCloseDist = new MinMax(-100, 250);
         public enum FogModeEnum { Exponential, ExponentialSquared };
         public FogModeEnum FogMode = FogModeEnum.Exponential;
