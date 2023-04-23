@@ -15,7 +15,7 @@ C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-63974
+55668
 Successfully changed project path to: C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 304.94 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 295.99 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,46 +63,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56924
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56272
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.011617 seconds.
+Registered in 0.011764 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
-Native extension for iOS target not found
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
+Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 239.16 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 225.59 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.944 seconds
+- Completed reload, in  0.948 seconds
 Domain Reload Profiling:
-	ReloadAssembly (945ms)
-		BeginReloadAssembly (84ms)
+	ReloadAssembly (949ms)
+		BeginReloadAssembly (82ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (721ms)
-			LoadAssemblies (82ms)
+		EndReloadAssembly (733ms)
+			LoadAssemblies (80ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (129ms)
+			SetupTypeCache (125ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (32ms)
-			SetupLoadedEditorAssemblies (492ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (508ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (81ms)
+				InitializePlatformSupportModulesInManaged (91ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (239ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (119ms)
+				RefreshPlugins (226ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (138ms)
 				ProcessInitializeOnLoadMethodAttributes (51ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -110,7 +110,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013090 seconds.
+Registered in 0.017685 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
@@ -118,46 +118,46 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 206.35 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 277.30 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.512 seconds
+- Completed reload, in  2.864 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2513ms)
-		BeginReloadAssembly (211ms)
+	ReloadAssembly (2865ms)
+		BeginReloadAssembly (213ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (124ms)
-		EndReloadAssembly (2130ms)
-			LoadAssemblies (114ms)
+			CreateAndSetChildDomain (120ms)
+		EndReloadAssembly (2475ms)
+			LoadAssemblies (109ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (382ms)
+			SetupTypeCache (478ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (101ms)
-			SetupLoadedEditorAssemblies (1426ms)
+			RebuildScriptCaches (134ms)
+			SetupLoadedEditorAssemblies (1647ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (28ms)
+				InitializePlatformSupportModulesInManaged (45ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (206ms)
-				BeforeProcessingInitializeOnLoad (187ms)
-				ProcessInitializeOnLoadAttributes (904ms)
-				ProcessInitializeOnLoadMethodAttributes (89ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				RefreshPlugins (277ms)
+				BeforeProcessingInitializeOnLoad (270ms)
+				ProcessInitializeOnLoadAttributes (922ms)
+				ProcessInitializeOnLoadMethodAttributes (112ms)
+				AfterProcessingInitializeOnLoad (20ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.72 ms, found 6 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.20 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 6746 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 140 unused Assets / (2.3 MB). Loaded Objects now: 7180.
-Memory consumption went from 430.1 MB to 427.8 MB.
-Total: 8.669400 ms (FindLiveObjects: 0.795000 ms CreateObjectMapping: 0.317800 ms MarkObjects: 6.933700 ms  DeleteObjects: 0.621100 ms)
+Memory consumption went from 430.6 MB to 428.3 MB.
+Total: 8.956800 ms (FindLiveObjects: 0.966300 ms CreateObjectMapping: 0.839300 ms MarkObjects: 6.167800 ms  DeleteObjects: 0.981800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -171,58 +171,214 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 491893.071725 seconds.
-  path: Assets/Snowmen/SnowmanNoArms.obj
-  artifactKey: Guid(ae022d8ad220ead488c2fc3e5a406bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanNoArms.obj using Guid(ae022d8ad220ead488c2fc3e5a406bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fffd877d59c83b4785698fbfac0f127d') in 0.481811 seconds 
+  Time since last request: 685536.933768 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/00_Poplar_plant_B.FBX
+  artifactKey: Guid(096a25141e577ef4c9233b69e76d2fcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/00_Poplar_plant_B.FBX using Guid(096a25141e577ef4c9233b69e76d2fcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8b3d3d0c550c678ed1cb642560d451f') in 0.765969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/08_Poplar_skan.FBX
+  artifactKey: Guid(5f180050f49bb744da4b6b542438f3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/08_Poplar_skan.FBX using Guid(5f180050f49bb744da4b6b542438f3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eea71f2c6e6454942f889cf41d217556') in 0.347829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/03_Poplar_LOD2.asset
+  artifactKey: Guid(c8e5192c98b3130499a1d253181547f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/03_Poplar_LOD2.asset using Guid(c8e5192c98b3130499a1d253181547f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0817c154475e06f106f8fe8dc060f9e2') in 0.032756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/03_Poplar_skan.FBX
+  artifactKey: Guid(3bd600bd6ad25274c91c12e6a282c1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/03_Poplar_skan.FBX using Guid(3bd600bd6ad25274c91c12e6a282c1e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64dc76149fe1fae216a2866ea949915f') in 0.378690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/04_Poplar_cross_s_Mesh.asset
+  artifactKey: Guid(0c9165234ae3a8e40878e7a58b9c9d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/04_Poplar_cross_s_Mesh.asset using Guid(0c9165234ae3a8e40878e7a58b9c9d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18fdd4a3c51b8e7ab192ac10620535c9') in 0.022138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/00_Poplar_plant_B_LOD1.asset
+  artifactKey: Guid(72ba1792c2eb4db4ebb884eedfc5d827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/00_Poplar_plant_B_LOD1.asset using Guid(72ba1792c2eb4db4ebb884eedfc5d827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb37a59eba911bc3e607334b0b0a3aee') in 0.020934 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000035 seconds.
-  path: Assets/Snowmen/SnowmanMeltFace.obj
-  artifactKey: Guid(411b7d45589df174cbac9d97b0988bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanMeltFace.obj using Guid(411b7d45589df174cbac9d97b0988bb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abc030489a125b40e1dfea6b9e36a6da') in 0.066246 seconds 
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/05_Poplar_LOD0.asset
+  artifactKey: Guid(81c6696ed9026d949b71233da21d4986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/05_Poplar_LOD0.asset using Guid(81c6696ed9026d949b71233da21d4986) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cda66eaa0bdb4a05d5cf9a9986ac45c6') in 0.066462 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Snowmen/SnowmanSadFace.obj
-  artifactKey: Guid(79e9da32a65cc054f8baad60cf3dbbee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanSadFace.obj using Guid(79e9da32a65cc054f8baad60cf3dbbee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0cec553b83afb6212fb85619edddc15') in 0.049736 seconds 
+  Time since last request: 0.000054 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/03_Poplar_cross_Mesh.asset
+  artifactKey: Guid(0f987b7243d12944ab7beea4a9e5c448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/03_Poplar_cross_Mesh.asset using Guid(0f987b7243d12944ab7beea4a9e5c448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0055b14de64bb93f1d8ec3857a4a9f8c') in 0.022484 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Snowmen/SnowmanButtonSmile.obj
-  artifactKey: Guid(d3a43218373b30940a1b8c1d85d49370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanButtonSmile.obj using Guid(d3a43218373b30940a1b8c1d85d49370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '138ffc367cddc8cb6754e9995b8a6889') in 0.048918 seconds 
+  Time since last request: 0.000052 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/00_Poplar_plant_C_LOD0.asset
+  artifactKey: Guid(275ef8066a953014b985f94fa64ad5ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/00_Poplar_plant_C_LOD0.asset using Guid(275ef8066a953014b985f94fa64ad5ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b375e7b71daab0f2048b6fe75b5babb4') in 0.029546 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000093 seconds.
-  path: Assets/Snowmen/SnowmanSmile.obj
-  artifactKey: Guid(785991bbf85386d4faaa9e22595e2a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanSmile.obj using Guid(785991bbf85386d4faaa9e22595e2a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ba616cdbb3d196d4c7205a70573d95') in 0.052793 seconds 
+  Time since last request: 0.000048 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/05_Poplar_skan.FBX
+  artifactKey: Guid(8435d3e8989cf524d8a7a46d921cd375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/05_Poplar_skan.FBX using Guid(8435d3e8989cf524d8a7a46d921cd375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cab42dfc79c1a0d015db337b0b40814e') in 0.417401 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Materials/Shaders/Water.shadergraph
-  artifactKey: Guid(79592577e020ebc4381b2ffdbae75738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Shaders/Water.shadergraph using Guid(79592577e020ebc4381b2ffdbae75738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc4f7ac338e6c8b073b7e838e6091645') in 0.009348 seconds 
+  Time since last request: 0.000056 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/08_Poplar_cross_s_Mesh.asset
+  artifactKey: Guid(db79254f2eb8e7e4796d22b49e3ef0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/08_Poplar_cross_s_Mesh.asset using Guid(db79254f2eb8e7e4796d22b49e3ef0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eda2fa3c79d9adba726945823a386e30') in 0.025801 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Snowmen/SnowmanArms.obj
-  artifactKey: Guid(43f435025dced5d4584b90c7f6a80b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanArms.obj using Guid(43f435025dced5d4584b90c7f6a80b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23cc74848d96164918bc0eb556101625') in 0.055348 seconds 
+  Time since last request: 18.211388 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_00_B_Cross_A_T.png
+  artifactKey: Guid(604be78062d9b1b47a3dc157c4f6451c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_00_B_Cross_A_T.png using Guid(604be78062d9b1b47a3dc157c4f6451c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d911f55d228b96e3f730c1b7f8fb89b') in 0.054864 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Snowmen/SnowmanBody.obj
-  artifactKey: Guid(6716244ba7084e34c918b1b90cfb26f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanBody.obj using Guid(6716244ba7084e34c918b1b90cfb26f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db263554bb464f88778bd4194aaa1efa') in 0.047098 seconds 
+  Time since last request: 0.003867 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_07_Cross_N.png
+  artifactKey: Guid(3e223f6d5ef17774b815cf09520ad876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_07_Cross_N.png using Guid(3e223f6d5ef17774b815cf09520ad876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e46a15af54ac63606090ac1553dfa6') in 0.028098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000122 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_05_N.tga
+  artifactKey: Guid(997c6058fb7beea40ba39a43a86744b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_05_N.tga using Guid(997c6058fb7beea40ba39a43a86744b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fd41ce257d6f42ffc92056b0ed8b5a0') in 0.034771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_07_Cross_T.png
+  artifactKey: Guid(dd3673371a7c47b46825856efe3bc764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_07_Cross_T.png using Guid(dd3673371a7c47b46825856efe3bc764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a624cbd6fe1b606dbd7e7a7b7dd0f12') in 0.021062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_bark_05_BC.tga
+  artifactKey: Guid(d56f13a5e28175240b8a4d1b82da4ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_bark_05_BC.tga using Guid(d56f13a5e28175240b8a4d1b82da4ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae0634d40d9f7abbcc69c86bf4cccecb') in 0.030406 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000029 seconds.
-  path: Assets/Snowmen/SnowmanBase.obj
-  artifactKey: Guid(fc251b102795a1a459efaaec95fa9c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Snowmen/SnowmanBase.obj using Guid(fc251b102795a1a459efaaec95fa9c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3464d1e5af578936d8422f71b92300ad') in 0.041629 seconds 
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_bark_06_N.tga
+  artifactKey: Guid(12b81aa2a42aeca4fa315dd4c73ff7aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_bark_06_N.tga using Guid(12b81aa2a42aeca4fa315dd4c73ff7aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24ae838dc1cb917701cb69e4386f0223') in 0.020066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_03_Cross_T.png
+  artifactKey: Guid(9f6f6e703486625458ed7fbbb99e3c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_03_Cross_T.png using Guid(9f6f6e703486625458ed7fbbb99e3c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a828a9ccf8575713f04ae3ae887751b7') in 0.020101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_08_Cross_N.png
+  artifactKey: Guid(340974271fb35364db3f87280e7b42ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_08_Cross_N.png using Guid(340974271fb35364db3f87280e7b42ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '563fd724de03067c031f3ebe9b4ec417') in 0.022368 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_02_Cross_T.png
+  artifactKey: Guid(1bb2823b4b2b5f24087126e166025883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_02_Cross_T.png using Guid(1bb2823b4b2b5f24087126e166025883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76c021e6b112218f91f52771e734fef3') in 0.020099 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_03_MT_AO_G.tga
+  artifactKey: Guid(159e46e5e68cb0646b90ee53c9cce4c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_03_MT_AO_G.tga using Guid(159e46e5e68cb0646b90ee53c9cce4c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d631a400568a41497afca2423184b7c') in 0.033254 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000741 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_01_Cross_m.png
+  artifactKey: Guid(79390e27f0d3438478b8f365f8351dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_01_Cross_m.png using Guid(79390e27f0d3438478b8f365f8351dfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bed81568509123711e61168ed8179fc') in 0.020416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_03_BC.tga
+  artifactKey: Guid(e9b191a368e7339449045e8ad31c5c83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_03_BC.tga using Guid(e9b191a368e7339449045e8ad31c5c83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '255345d4e1f26d0a1d014755130df44c') in 0.028409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_07_MASKA.tga
+  artifactKey: Guid(c81690f971cf8e04d9b1019a2edaac63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_07_MASKA.tga using Guid(c81690f971cf8e04d9b1019a2edaac63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5184d1f60cc8505b19729d33c85cde8c') in 0.020165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_02_Cross_m.png
+  artifactKey: Guid(8dda32093a96adf49a7f828a237d695c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_02_Cross_m.png using Guid(8dda32093a96adf49a7f828a237d695c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '278ac30fac3703e2f6523d185524c277') in 0.021051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_bark_02_N.tga
+  artifactKey: Guid(5e91759ec90b77f41aaff7acf6b15d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_bark_02_N.tga using Guid(5e91759ec90b77f41aaff7acf6b15d36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41dfafb781d23e79c35b3e3f2de31ccc') in 0.027847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_05_Cross_T.png
+  artifactKey: Guid(b0f1dde31c74116488286f23c9911356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_05_Cross_T.png using Guid(b0f1dde31c74116488286f23c9911356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2203a9c478072d41997c6734632f5d2f') in 0.021931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_bark_04_MT_AO_G.tga
+  artifactKey: Guid(a721f1f5f58e0f2479790c34ac9b7bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_bark_04_MT_AO_G.tga using Guid(a721f1f5f58e0f2479790c34ac9b7bc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a4c802a967ec81830aab025bb484d5') in 0.034734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_07_Cross_A_T.png
+  artifactKey: Guid(3f745f95a001fc54aab1daa84421290b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_07_Cross_A_T.png using Guid(3f745f95a001fc54aab1daa84421290b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb24f0558d89dfab19551e2d00df81fb') in 0.022251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_08_MASKA.tga
+  artifactKey: Guid(755a745da7385244da1d991968d53163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Models/Textures/T_Poplar_trunk_08_MASKA.tga using Guid(755a745da7385244da1d991968d53163) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8baadc623a946618933ed516a49d1412') in 0.019036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 105.207958 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_00_Poplar_plant_B.prefab
+  artifactKey: Guid(be7ac6d51e45ddc45b142f7aa518144b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_00_Poplar_plant_B.prefab using Guid(be7ac6d51e45ddc45b142f7aa518144b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dafd474b533de3fad4d23a965b38ff53') in 0.128546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_03_Poplar.prefab
+  artifactKey: Guid(a5af712a450b6144fb8f0d3978b9321c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_03_Poplar.prefab using Guid(a5af712a450b6144fb8f0d3978b9321c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd53e2c253c443f67ad57ce52eed3f72b') in 0.189321 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_07_Poplar.prefab
+  artifactKey: Guid(82d61be7aee4a6b488b38ae13b7820c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_07_Poplar.prefab using Guid(82d61be7aee4a6b488b38ae13b7820c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7815e00928e05581f9912cdf2e7a2e4') in 0.157482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_04_Poplar.prefab
+  artifactKey: Guid(6dc76beee7a1e3e41a2aa1cdc621a10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_04_Poplar.prefab using Guid(6dc76beee7a1e3e41a2aa1cdc621a10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c995cbd56712e6409d92c78fe1e57b82') in 0.203597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000131 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_02_Poplar.prefab
+  artifactKey: Guid(69e05313bc41dce4bbfb9f7f4473e56c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Baked and Optimised Poplar Prefabs/prefab_Baked_02_Poplar.prefab using Guid(69e05313bc41dce4bbfb9f7f4473e56c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0370400452c9e7d70e30355effbd2533') in 0.149519 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

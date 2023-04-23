@@ -1,0 +1,1458 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.4f1 (cb45f9cae8b7) revision 13321721'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'en' Physical Memory: 32509 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker17
+-projectPath
+C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+-logFile
+Logs/AssetImportWorker17.log
+-srvPort
+55668
+Successfully changed project path to: C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 247.09 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Ti (ID=0x2482)
+    Vendor:   NVIDIA
+    VRAM:     8041 MB
+    Driver:   31.0.15.1748
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56376
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009931 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 210.49 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.855 seconds
+Domain Reload Profiling:
+	ReloadAssembly (856ms)
+		BeginReloadAssembly (75ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (656ms)
+			LoadAssemblies (74ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (116ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (440ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (76ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (211ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (103ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.012463 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 194.50 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.001 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2002ms)
+		BeginReloadAssembly (226ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (125ms)
+		EndReloadAssembly (1645ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (316ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (1088ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (195ms)
+				BeforeProcessingInitializeOnLoad (166ms)
+				ProcessInitializeOnLoadAttributes (628ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.79 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6746 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 140 unused Assets / (2.3 MB). Loaded Objects now: 7180.
+Memory consumption went from 430.7 MB to 428.4 MB.
+Total: 7.473500 ms (FindLiveObjects: 0.882000 ms CreateObjectMapping: 0.420600 ms MarkObjects: 4.911300 ms  DeleteObjects: 1.257700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 694387.400819 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb060897b5daaa5f998a0fd7486244cf') in 0.283631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 214.538416 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425490e0569461530dcf2fdf07bb20df') in 0.048066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowQuad.prefab
+  artifactKey: Guid(5d64c9f483b5a334fa4687d158c47d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowQuad.prefab using Guid(5d64c9f483b5a334fa4687d158c47d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bfab44e66a74a00d7e046536dd0b008') in 0.265358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowQuadMat 1.mat
+  artifactKey: Guid(ac67d6f212f2a7e40a9dbf96db438b06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowQuadMat 1.mat using Guid(ac67d6f212f2a7e40a9dbf96db438b06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed77903362447d0160cb4253892943e2') in 0.028327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 309.364786 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '397a92d9f058fe9fadc0eedf8dfb5ce9') in 0.032551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.595828 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6c9ed600192cc3fe6310e0fc0df606f') in 0.032583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.369985 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2457e0d573b6fb7654f6de0413b99a0') in 0.032990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMat.mat
+  artifactKey: Guid(78622354e9429e74c84b21968bccf055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMat.mat using Guid(78622354e9429e74c84b21968bccf055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8211d6177c3469ab43a10df0f777f1b6') in 0.106517 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuad.prefab
+  artifactKey: Guid(7595f47b86835cb4dbf44016932ed018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuad.prefab using Guid(7595f47b86835cb4dbf44016932ed018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11e07be761ef5cbc93307561f3906a11') in 0.017445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowQuadMat 1.mat
+  artifactKey: Guid(ac67d6f212f2a7e40a9dbf96db438b06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowQuadMat 1.mat using Guid(ac67d6f212f2a7e40a9dbf96db438b06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9682365aafe7c31ee3e4c899ea277945') in 0.022561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.161076 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17c5d54d6e51135f11b27e4afb35b4c5') in 0.033390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.345353 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2211e7bd119dbfba80dc0c898aee75a2') in 0.039801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 62.750484 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bb8d2f8ce507cf314cc1b746da3968b') in 0.050911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.648629 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7583cbc3ebcf9a9cf1b36f7c7c5a5aa') in 0.048177 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.080163 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '900995cffe98eb262dded65597f5361b') in 0.031457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.970627 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd65233b00d3611c6aecd6138a0cd3897') in 0.034538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.910177 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adacfb6780ecc6dbaf6a92d24352ca3b') in 0.031103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.204036 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99aa463d6a1eba846cc63e29fe3fa5a0') in 0.034187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 148.552502 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b04154fd0589560212e1672e1529d16') in 0.029506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.455540 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fb68d269c0bb87b75f476f1713050df') in 0.023802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.972800 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2adb60a9c782bb7e3ca5825a1efd67c') in 0.023945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 57.339488 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89be6bb898545c625883aaa9d97d202c') in 0.028407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.587731 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec0756079907b300401ff5591d893da5') in 0.026254 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.768846 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd96930fecb862dd7dcb3acec20434c') in 0.022824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.587357 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad23540e129c5a58638ca8ad064b31a5') in 0.030634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.824223 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d5d5592bfaaa6a92fdfe514b62825b8') in 0.030629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.931002 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f53598eac873e52a9a822e3b59b0665a') in 0.033324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.307165 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '681c412d2bd841efcb11608f4f7ec3e8') in 0.024408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.629393 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '631ca9c8b85cd318b5e0abf22d2eea10') in 0.030462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.022676 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79d7d8e7a8121e43f7ffcc1b3c8752c2') in 0.028206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.054758 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd26f5db4b134d6947f4df4c17a2e8fd') in 0.028327 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.863186 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '329d05e58feaab632116d063b7dae5f7') in 0.033602 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013389 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.20 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.776 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1777ms)
+		BeginReloadAssembly (162ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1502ms)
+			LoadAssemblies (111ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (351ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (841ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (134ms)
+				ProcessInitializeOnLoadAttributes (550ms)
+				ProcessInitializeOnLoadMethodAttributes (103ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (32ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 12.32 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7312.
+Memory consumption went from 422.7 MB to 420.4 MB.
+Total: 5.434300 ms (FindLiveObjects: 0.924200 ms CreateObjectMapping: 0.254200 ms MarkObjects: 3.554200 ms  DeleteObjects: 0.700700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 196.175032 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b51e1d83d0467040beff7c1f0e5fc517') in 0.283905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.682327 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f0994223015feb6501c84512a6f6b89') in 0.029596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMat.mat
+  artifactKey: Guid(78622354e9429e74c84b21968bccf055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMat.mat using Guid(78622354e9429e74c84b21968bccf055) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7553ddca9432d729b0f9c394ddcaecd5') in 0.028855 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.903763 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d6b366d2b2b3203a53a768838d41d4e') in 0.035561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.186568 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9a09c44725a8d7afeea5b9ed4768ad3') in 0.026469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.842991 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce0df3410c031060c1da99e96e28136c') in 0.036858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.808257 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aeecc49a513dc8379e7240aae804c97') in 0.035598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.286351 seconds.
+  path: Assets/PluginMaster/DesignTools/Editor/PrefabWorldBuilder/Resources/Sprites/Clear.png
+  artifactKey: Guid(c32fdb196a5e25b4780a1114c6f2c603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PluginMaster/DesignTools/Editor/PrefabWorldBuilder/Resources/Sprites/Clear.png using Guid(c32fdb196a5e25b4780a1114c6f2c603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554b582bd892fff0408cbad0f112c541') in 0.049308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/UniStorm Weather System/Resources/Icons/Resources/CloudProfileIcon1.png
+  artifactKey: Guid(024aef66353d6c549a7314dcc3ad4502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniStorm Weather System/Resources/Icons/Resources/CloudProfileIcon1.png using Guid(024aef66353d6c549a7314dcc3ad4502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391bd835f5d1997c05a6eb4849dcfb2c') in 0.030320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.216990 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d19afe2932c62f6120b94d5384e39f') in 0.032935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.496949 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dc523e88903c9787bb9a18526949bb7') in 0.026641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.756027 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee7147f96d5e63c83eb550370864f968') in 0.028918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.564537 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e258af5d42ec599bd25264520070d1b3') in 0.030586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.363564 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aabe6cf5a79482dc329bf2f1f7c298a') in 0.028222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.323439 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86c0ceaaf49df4aaea31d622b4321c73') in 0.033022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.687242 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b87ef2235fa5d16c83ffa2e686c323ef') in 0.035658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 36.571139 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceImageSide 1.png
+  artifactKey: Guid(403d919de9efd3547be31cf8565dc765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceImageSide 1.png using Guid(403d919de9efd3547be31cf8565dc765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7a9e3d9694c12e008fe9629699690a') in 0.026441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.170213 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceImageSide 1.png
+  artifactKey: Guid(403d919de9efd3547be31cf8565dc765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceImageSide 1.png using Guid(403d919de9efd3547be31cf8565dc765) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f66b5b72cd5a497016d5ac8ed4ac0f14') in 0.033228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.238683 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMat 1.mat
+  artifactKey: Guid(d21cdc4aa8e23644eb10ffeb5e25c9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMat 1.mat using Guid(d21cdc4aa8e23644eb10ffeb5e25c9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37c1e2fd12009a7b93d90be2ca415762') in 0.030015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.345078 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMatSide.mat
+  artifactKey: Guid(d21cdc4aa8e23644eb10ffeb5e25c9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMatSide.mat using Guid(d21cdc4aa8e23644eb10ffeb5e25c9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c20e12ba2533859f7d1c963ca06b1d66') in 0.024161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.835942 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMatSide.mat
+  artifactKey: Guid(d21cdc4aa8e23644eb10ffeb5e25c9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceQuadMatSide.mat using Guid(d21cdc4aa8e23644eb10ffeb5e25c9b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce067e23965df0c80c5b81e191ba5874') in 0.026429 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.228326 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0975dc63678508a0b874c7a024418c91') in 0.029936 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.713092 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c050c56cec9a03f99f31765079594446') in 0.041878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 92.029222 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06cd1d5e20d17d173940c237de4f1174') in 0.032391 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.472072 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93576ef332bd703720699a71c9d31b6d') in 0.021180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.589553 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee87f1a82c255eb23871c5f48a29d7c2') in 0.017156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.173815 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e769ad38870147838aca52bf2cc92cb3') in 0.017753 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 994.784398 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceLow.obj
+  artifactKey: Guid(99d2eaeb7e3cad54fa5cc304ae643db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceLow.obj using Guid(99d2eaeb7e3cad54fa5cc304ae643db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7eb77096ca7ae2e56d1ea484a1b5fab') in 0.089144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 50.417440 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce 1.prefab
+  artifactKey: Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce 1.prefab using Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86eca7f7d5788ee95e3957c52e1779a0') in 0.028464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.821334 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce 1.prefab
+  artifactKey: Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce 1.prefab using Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aad57fcc6fd57a1271a6678d7501d1f') in 0.023210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.816096 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce 1.prefab
+  artifactKey: Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce 1.prefab using Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '571032be4e39d5e384edd2e6dbfcd5bd') in 0.018582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.237535 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce 1.prefab
+  artifactKey: Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce 1.prefab using Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3db0c24594ca25084937a69830d0fcc4') in 0.034329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.231129 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceLow.prefab
+  artifactKey: Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceLow.prefab using Guid(8fee9f330404e7e4a9a32a80621c291d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48592d605a783bfd22a1120b830ee214') in 0.025458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.516668 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceLow 1.prefab
+  artifactKey: Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceLow 1.prefab using Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6105f550e1d30cefba5056a197ae92e') in 0.022319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.820179 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab
+  artifactKey: Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab using Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '192b781b3212cb352f56ba2edf526cf1') in 0.022450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.006167 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab
+  artifactKey: Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab using Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5556a90b5119ea9ead89ec4c887d90a6') in 0.021386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.383154 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac9a098602bb9efe27a76b896bdaa959') in 0.021800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.895988 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da5030c3d239acafeecfa5ae835b6142') in 0.026892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.089790 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd32d097bbb53082260fcd8530916a4b4') in 0.020895 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.078939 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ca8a5507e053ccc406a0301dc55478f') in 0.023692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.790020 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da649caa5e9811a485dedbb5ce58008e') in 0.016674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.189353 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b540917f6229dee11e1985828645e738') in 0.016691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.177064 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1c5d9a1bc0a45b2f651e830e103b503') in 0.019902 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.504821 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caee703e9490280ac0eeb35bbd159ef6') in 0.029924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.267550 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f4a32c33d39bb1bb77f80dc4e819dfa') in 0.026964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 35.315507 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3219dea90eb84dd01fe0c492b6af321') in 0.028289 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.499796 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '715127377f9b456843fac802aab666cf') in 0.025228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.363876 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04c17226e4473e291bf0e88c7a5a7b5c') in 0.023010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.050242 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5d249a2751b3dcbac45921cd627c670') in 0.025984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.415633 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '556763a5a509629bc413db1754745b60') in 0.025762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.083546 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4318e21e1081c9de9a1738ecfe3fc5cd') in 0.022413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.211398 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e628565a713ca4b287905d5bcf810a0') in 0.021523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.284561 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab91e071ba16f92f1a97fa9e41a79f35') in 0.021537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.618923 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c02739a0792d438154e7f207509e0982') in 0.024491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.842827 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795d1e44bbba7991a0c113f5a4c057f9') in 0.018482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.481045 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44b2f78c34e6e56f4af79da2f6c83043') in 0.019566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.233544 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab
+  artifactKey: Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab using Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bcf28c77a53488aec52746e0caf4413') in 0.025235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.200526 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab
+  artifactKey: Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab using Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e80c2a946004bf65b1110b2b7e838cc') in 0.019983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.375002 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab
+  artifactKey: Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/SpruceSnowLow.prefab using Guid(d8cfc7cfb066854429590d0b86307bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c3413e3d74bbc668e803b1de760f536') in 0.019025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.218564 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e370833e358cce339880dd411591f9e') in 0.019082 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.966687 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ef543b6e32951d5ad99c3bf7c1b3ad') in 0.020841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.585048 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b9ca70b7091a1814d71ec22dade9285') in 0.020893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.027107 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac9b0a15582c98506336d7217475084') in 0.026940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.312710 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1e32354d3ddf4dfd034218e31cd41de') in 0.022457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.785977 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbec7aa14b67a98aa36da04a7071866b') in 0.021700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.063665 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e619f07574f2de32114d39e409a00c1c') in 0.026047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.316034 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a0e1791cf89c1790d04a567061d29a8') in 0.026887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.776145 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1205db8f5b1e6571857db541738aa7b') in 0.023413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.814461 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53d1f093f54de4c3bcab1d8bd012a858') in 0.017716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.773370 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3275ff6afefd4317d87e1d160854c7c') in 0.022347 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.976218 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b1ed223f9b3a93a9da2f6220499d060') in 0.023621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.769326 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea1bda1261f77f24fb55f823e300c12c') in 0.017075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.012806 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13d302a674b0cbe3a672d81ef3d93cad') in 0.021677 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.368242 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e80fe79355e973f9df62f36b193de6c0') in 0.026521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.477809 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0906e4b4a9d622a3acff54d69925d977') in 0.022146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.169774 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3951292c0b8bf17fad02d945044acba6') in 0.025501 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.416951 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c560f2661437377d4060c3d9f2fe8aa') in 0.017400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.177933 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ba4858a748b5858eafc96c2bf292bb7') in 0.021299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.551845 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31098dfa60a13c60e1019f44917c7a99') in 0.020661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.724553 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9a9a342793f0c4dd44b335ccc319b8e') in 0.019285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.003221 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b06b7e5fe901d3e064a93af547bd312d') in 0.017815 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.194881 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e78c7309f66c35e286eee9fadb6c66c') in 0.024746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.787000 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e56de04cc8dcb6ebc71d2f16020c49e') in 0.026836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.330442 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88555f7f119e3ac375dcf42269111f79') in 0.020510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.227395 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16ba189d430ee9d168675dff17ddac6a') in 0.019216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.512472 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ae642ab63a1853f5a45a13d0dcfb0c') in 0.026879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.742998 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f421d79738965727b467531442ae153') in 0.026908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.714967 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4fe8a75da57506677b08d8fa7b8fc08') in 0.017891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.494114 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b690a3930e7a49c9ba40566b79405427') in 0.027374 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.612163 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea601d802ad2729d974b98cf23d35da9') in 0.026141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.658744 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4c458e6398a49f7d272a5dd623099b1') in 0.024671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.825408 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '148219cb1a24fc0d5e3335a5e44f5ec9') in 0.026144 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012247 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.15 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.794 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1795ms)
+		BeginReloadAssembly (170ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (1504ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (338ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (844ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (556ms)
+				ProcessInitializeOnLoadMethodAttributes (102ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (34ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 11.70 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7459.
+Memory consumption went from 423.3 MB to 421.0 MB.
+Total: 6.785500 ms (FindLiveObjects: 1.048400 ms CreateObjectMapping: 0.292500 ms MarkObjects: 4.183500 ms  DeleteObjects: 1.259700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011319 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.84 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.775 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1776ms)
+		BeginReloadAssembly (162ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1494ms)
+			LoadAssemblies (119ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (342ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (836ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (543ms)
+				ProcessInitializeOnLoadMethodAttributes (107ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (27ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 13.88 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7474.
+Memory consumption went from 423.3 MB to 421.0 MB.
+Total: 7.846200 ms (FindLiveObjects: 1.338000 ms CreateObjectMapping: 0.634100 ms MarkObjects: 4.773300 ms  DeleteObjects: 1.099100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 300.740160 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab
+  artifactKey: Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce.prefab using Guid(e72a1070f687fbe43a96dce4820a645c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48fc7e94acffe0c2ffda72caec93de6c') in 0.236238 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.255992 seconds.
+  path: Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab
+  artifactKey: Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/NatureManufacture Assets/Meadow Environment Dynamic Nature/Trees/Spruce Snow.prefab using Guid(35df8312ecff4f94fb2bedeeec95fbdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e01a43dc8d9d971120777bf1c3b3ade') in 0.017762 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010604 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.14 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.811 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1812ms)
+		BeginReloadAssembly (167ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1525ms)
+			LoadAssemblies (116ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (356ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (848ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (39ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (557ms)
+				ProcessInitializeOnLoadMethodAttributes (106ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (31ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 12.21 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7532.
+Memory consumption went from 423.4 MB to 421.1 MB.
+Total: 7.031000 ms (FindLiveObjects: 1.058800 ms CreateObjectMapping: 0.292300 ms MarkObjects: 4.763400 ms  DeleteObjects: 0.915100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010979 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.20 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.748 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1749ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (1486ms)
+			LoadAssemblies (109ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (333ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (842ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (552ms)
+				ProcessInitializeOnLoadMethodAttributes (105ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Switching render pipeline e1260c1148f6143b28bae5ace5e9c5d1 -> d0e2fc18fe036412f8223b3b3d9ad574
+Refreshing native plugins compatible for Editor in 12.86 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7547.
+Memory consumption went from 423.3 MB to 421.0 MB.
+Total: 5.714700 ms (FindLiveObjects: 1.027200 ms CreateObjectMapping: 0.238900 ms MarkObjects: 3.635000 ms  DeleteObjects: 0.811900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:srp/default-pipeline: 0d2ecf81ef3046218f22b3b3d3a95d47 -> 1e62c011846f41b382ab5eca5e9e5c1d
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 19.19 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 104 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7547.
+Memory consumption went from 287.9 MB to 285.6 MB.
+Total: 4.811500 ms (FindLiveObjects: 0.655600 ms CreateObjectMapping: 0.241800 ms MarkObjects: 3.278100 ms  DeleteObjects: 0.635100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 23.02 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 106 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7549.
+Memory consumption went from 287.9 MB to 285.6 MB.
+Total: 5.192000 ms (FindLiveObjects: 0.722300 ms CreateObjectMapping: 0.259400 ms MarkObjects: 3.484700 ms  DeleteObjects: 0.724300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010726 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.04 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.770 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1772ms)
+		BeginReloadAssembly (159ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1493ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (341ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (839ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (547ms)
+				ProcessInitializeOnLoadMethodAttributes (104ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 12.08 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7564.
+Memory consumption went from 423.3 MB to 421.0 MB.
+Total: 7.351200 ms (FindLiveObjects: 1.090700 ms CreateObjectMapping: 0.415300 ms MarkObjects: 4.897800 ms  DeleteObjects: 0.946300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 24.69 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 104 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7564.
+Memory consumption went from 287.9 MB to 285.6 MB.
+Total: 5.423000 ms (FindLiveObjects: 0.756500 ms CreateObjectMapping: 0.249000 ms MarkObjects: 3.674600 ms  DeleteObjects: 0.741700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011837 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.82 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.752 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1752ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1485ms)
+			LoadAssemblies (109ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (343ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (834ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (134ms)
+				ProcessInitializeOnLoadAttributes (543ms)
+				ProcessInitializeOnLoadMethodAttributes (104ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 12.48 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6477 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 104 unused Assets / (2.3 MB). Loaded Objects now: 7579.
+Memory consumption went from 423.4 MB to 421.1 MB.
+Total: 6.028900 ms (FindLiveObjects: 1.024800 ms CreateObjectMapping: 0.304000 ms MarkObjects: 3.885600 ms  DeleteObjects: 0.812300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 670.399785 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/AstronautSnowman.prefab
+  artifactKey: Guid(27cf620cf56d43c4ebfc8cfa78347325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/AstronautSnowman.prefab using Guid(27cf620cf56d43c4ebfc8cfa78347325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bec35bd51a2674c06faa436985760a7') in 0.430083 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/ClassicSnowman.prefab
+  artifactKey: Guid(9847363ad90da024d95b2e24e076a5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/ClassicSnowman.prefab using Guid(9847363ad90da024d95b2e24e076a5d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78d95bd110b662345fca9e49a66434cf') in 0.063011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/FishingSnowman.prefab
+  artifactKey: Guid(c2b7a2337f2e8a947bc090df3fded7ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/FishingSnowman.prefab using Guid(c2b7a2337f2e8a947bc090df3fded7ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78bfdd0695d2fc3277b593cd4c4927f6') in 0.067222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000534 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/RainbowSnowman.prefab
+  artifactKey: Guid(bcfa749414604f442871bdf92c6ac2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/RainbowSnowman.prefab using Guid(bcfa749414604f442871bdf92c6ac2f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb64d66bec2aca2653be42ebee5ea43') in 0.042621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/PenguinSnowman.prefab
+  artifactKey: Guid(0032b09b1ed374e419584a81a72a7f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/PenguinSnowman.prefab using Guid(0032b09b1ed374e419584a81a72a7f30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61f61326d898c07d05fcbfdc18f86972') in 0.074538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/MobsterSnowman.prefab
+  artifactKey: Guid(19c8cd1cc06938c43a66b5002d47e1d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/MobsterSnowman.prefab using Guid(19c8cd1cc06938c43a66b5002d47e1d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9eaa1da3d72a1be360fc21cffb94fa1') in 0.049369 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/RacerSnowman.prefab
+  artifactKey: Guid(b62b37ceb8fba7d44a1e66e888a54f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/RacerSnowman.prefab using Guid(b62b37ceb8fba7d44a1e66e888a54f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9b386437a9bf72108f281bffcb402e1') in 0.088632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/MinerSnowman.prefab
+  artifactKey: Guid(b230aa08eb1022f4595c2665beb71534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/MinerSnowman.prefab using Guid(b230aa08eb1022f4595c2665beb71534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a38c46649a7f98c0f9fe1d541df0dacd') in 0.063125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Resources/Prefabs/SnowmanPrefabs/SadSnowman.prefab
+  artifactKey: Guid(f6295e6e49fdcb34fabab4879b6095b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/SnowmanPrefabs/SadSnowman.prefab using Guid(f6295e6e49fdcb34fabab4879b6095b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0649dd77b060f218fa5df38cc024d203') in 0.066868 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
