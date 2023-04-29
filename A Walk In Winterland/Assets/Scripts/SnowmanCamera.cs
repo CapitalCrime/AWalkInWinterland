@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class SnowmanCamera : MonoBehaviour
 {
+    [SerializeField] private LayerMask terrainBoundariesMask;
     [SerializeField] private InputActionReference snowmanZoom;
     [SerializeField] private InputActionReference cycleSnowmanView;
     private CinemachineCameraOffset cameraOffset;
@@ -51,6 +53,15 @@ public class SnowmanCamera : MonoBehaviour
         }
     }
 
+    void DisableThirdPersonCam()
+    {
+        if (currentThirdPersonCam != null)
+        {
+            currentThirdPersonCam.GetComponent<CinemachineCameraOffset>().m_Offset.z = realOffsetZoom;
+            currentThirdPersonCam.gameObject.SetActive(false);
+        }
+    }
+
     public void ActivateThirdPersonCam()
     {
         if (currentSnowmanTarget == null)
@@ -58,12 +69,10 @@ public class SnowmanCamera : MonoBehaviour
             SnowmanManager.instance.ActivatePlayerCamera();
             return;
         }
-        if(currentThirdPersonCam != null)
-        {
-            currentThirdPersonCam.gameObject.SetActive(false);
-        }
+        DisableThirdPersonCam();
         currentThirdPersonCam = currentSnowmanTarget.thirdPersonCam;
         cameraOffset = currentThirdPersonCam.GetComponent<CinemachineCameraOffset>();
+        cameraOffset.m_Offset.z = realOffsetZoom;
         firstPerson = false;
         currentThirdPersonCam.Follow = currentSnowmanTarget.transform;
         currentThirdPersonCam.LookAt = currentSnowmanTarget.transform;
@@ -91,10 +100,7 @@ public class SnowmanCamera : MonoBehaviour
         firstPerson = true;
         currentFPSCam.Follow = currentSnowmanTarget.transform;
         EnableFPSCam(true);
-        if (currentThirdPersonCam != null)
-        {
-            currentThirdPersonCam.gameObject.SetActive(false);
-        }
+        DisableThirdPersonCam();
         //cinemachineFreeLook.gameObject.SetActive(false);
     }
 
@@ -113,12 +119,35 @@ public class SnowmanCamera : MonoBehaviour
     public void DeactivateCameras()
     {
         EnableFPSCam(false);
-        if(currentThirdPersonCam != null)
-        {
-            currentThirdPersonCam.gameObject.SetActive(false);
-        }
+        DisableThirdPersonCam();
         //cinemachineFreeLook.gameObject.SetActive(false);
     }
+
+    private void LateUpdate()
+    {
+        if(cameraOffset != null)
+        {
+            Vector3 snowmanPos = currentThirdPersonCam.LookAt.position;
+            Vector3 rayDir = (SnowmanManager.instance._camera.transform.position - snowmanPos);
+            Debug.DrawRay(snowmanPos, rayDir.normalized * rayDir.magnitude);
+            RaycastHit[] hits = Physics.RaycastAll(snowmanPos, rayDir.normalized, rayDir.magnitude+0.5f, terrainBoundariesMask);
+            Debug.Log("Hits: " + hits.Length);
+            if (hits.Length > 0)
+            {
+                hits = hits.OrderBy(x => Vector3.Distance(x.transform.position, snowmanPos)).ToArray();
+                Vector3 pos = hits[hits.Length - 1].point;
+                Debug.Log("Move back to: " + pos);
+                Debug.Log("Hit target was: " + hits[hits.Length - 1].transform.name);
+                Vector3 cameraPosition = pos - rayDir.normalized * 2;
+                cameraOffset.m_Offset.z += (SnowmanManager.instance._camera.transform.position - cameraPosition).magnitude*Time.deltaTime*6 + Time.deltaTime;
+            } else if(!Physics.Raycast(SnowmanManager.instance._camera.transform.position, -SnowmanManager.instance._camera.transform.forward, 1, terrainBoundariesMask))
+            {
+                cameraOffset.m_Offset.z = Mathf.Lerp(cameraOffset.m_Offset.z, realOffsetZoom, Time.deltaTime);
+            }
+        }
+    }
+
+    float realOffsetZoom = 3.5f;
 
     // Update is called once per frame
     void Update()
@@ -127,7 +156,8 @@ public class SnowmanCamera : MonoBehaviour
         if(zoomAmount != 0)
         {
             zoomAmount /= Mathf.Abs(zoomAmount);
-            cameraOffset.m_Offset = new Vector3(0, 0, Mathf.Clamp(cameraOffset.m_Offset.z + zoomAmount/2, -10, 6));
+            realOffsetZoom = Mathf.Clamp(realOffsetZoom + zoomAmount / 2, -10, 6);
+            cameraOffset.m_Offset.z = realOffsetZoom;
         }
         if (cycleSnowmanView.action.WasPerformedThisFrame() && !SnowmanManager.instance.PlayerCameraActive())
         {

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class FreeCamSettings : MonoBehaviour
 {
+    [SerializeField] private LayerMask terrainBoundariesMask;
     Cinemachine.CinemachineFreeLook freeLookCam;
 
     private void Awake()
@@ -22,6 +24,10 @@ public class FreeCamSettings : MonoBehaviour
     {
         PlayerData.setSnowmanCameraSpeedEvent.AddListener(SetLookSpeed);
         SetLookSpeed(PlayerData.GetSnowmanCameraSpeed());
+    }
+
+    private void LateUpdate()
+    {
     }
 
     private void OnDisable()

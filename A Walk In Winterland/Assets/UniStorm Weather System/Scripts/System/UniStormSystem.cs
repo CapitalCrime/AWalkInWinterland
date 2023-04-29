@@ -2054,7 +2054,6 @@ namespace UniStorm
 
         void CalculateTimeOfDay()
         {
-            Debug.Log("Is day? " + isDay());
             if (Hour >= 6 && Hour <= 7)
             {
                 if (CurrentTimeOfDay != CurrentTimeOfDayEnum.Morning)

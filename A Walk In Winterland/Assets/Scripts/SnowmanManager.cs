@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 public class SnowmanManager : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
+    [SerializeField] public Camera _camera;
     public UnityEvent<bool> snowmanCameraActivateEvent;
     Outline currentOutline;
+    [SerializeField] private LayerMask terrainBoundariesMask;
     [SerializeField] private Cinemachine.CinemachineFreeLook cinemachineFreeLook;
     [SerializeField] private SnowmanCamera snowmanCamera;
     [SerializeField] private CameraControls playerCamera;
@@ -191,10 +193,26 @@ public class SnowmanManager : MonoBehaviour
     public void ActivatePlayerCamera()
     {
         if (playerCamera.gameObject.activeSelf) return;
-        snowmanCamera.gameObject.SetActive(false);
+        if (_camera == null) return;
 
+        Vector3 snowmanPos = currentViewSnowman.transform.position + Vector3.up;
+        Vector3 playerCameraPosition = _camera.transform.position - _camera.transform.forward * 2 + Vector3.up;
+        //Move player back into bounds if out of bounds
+        if (_camera != null)
+        {
+            Vector3 rayDir = (playerCameraPosition - snowmanPos);
+            RaycastHit hit;
+            if (Physics.Raycast(snowmanPos, rayDir.normalized, out hit, rayDir.magnitude, terrainBoundariesMask))
+            {
+                Debug.Log("Broke into wall after leaving camera");
+                playerCameraPosition = hit.point + hit.normal;
+            }
+        }
+
+        snowmanCamera.gameObject.SetActive(false);
         currentViewSnowman = null;
-        playerCamera.transform.position = _camera.transform.position - _camera.transform.forward*2 + Vector3.up;
+
+        playerCamera.transform.position = playerCameraPosition;
         snowmanCameraActivateEvent?.Invoke(false);
         playerCamera.gameObject.SetActive(true);
         snowmanCamera.DeactivateCameras();
