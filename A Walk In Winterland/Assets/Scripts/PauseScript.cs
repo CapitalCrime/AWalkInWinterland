@@ -8,9 +8,11 @@ public class PauseScript : MonoBehaviour
 {
     private InputAction pauseAction;
     private InputActionMap playMap;
+    private InputActionMap nonMenuMap;
     [SerializeField] GameObject pauseMenu;
     public UnityEvent<bool> OnFullscreen;
     static bool paused = false;
+    public static bool snowmanIndexOpen = false;
     private bool fullscreen;
 
     private void Awake()
@@ -18,6 +20,7 @@ public class PauseScript : MonoBehaviour
         fullscreen = Screen.fullScreen;
         pauseAction = InputManager.instance.playerInputs.actions.FindActionMap("Menu").FindAction("Pause");
         playMap = InputManager.instance.playerInputs.actions.FindActionMap("PlayMode");
+        nonMenuMap = InputManager.instance.playerInputs.actions.FindActionMap("NonMenu");
         pauseAction.performed += PauseGame;
         pauseAction.actionMap.Enable();
     }
@@ -54,6 +57,7 @@ public class PauseScript : MonoBehaviour
                 AudioSettings.instance.SetAmbienceVolumeRelative(0.33f);
             }
             playMap.Disable();
+            nonMenuMap.Disable();
         } else
         {
             Time.timeScale = 1;
@@ -66,6 +70,10 @@ public class PauseScript : MonoBehaviour
                 AudioSettings.instance.SetAmbienceVolumeRelative(1);
             }
             playMap.Enable();
+            if (!snowmanIndexOpen)
+            {
+                nonMenuMap.Enable();
+            }
         }
     }
 

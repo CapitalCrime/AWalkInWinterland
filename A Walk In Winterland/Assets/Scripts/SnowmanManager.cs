@@ -9,6 +9,7 @@ using System.Linq;
 public class SnowmanManager : MonoBehaviour
 {
     [SerializeField] public Camera _camera;
+    [HideInInspector] public Cinemachine.CinemachineBrain cinemachineBrain { get; private set; }
     public UnityEvent<bool> snowmanCameraActivateEvent;
     Outline currentOutline;
     [SerializeField] private LayerMask terrainBoundariesMask;
@@ -30,6 +31,16 @@ public class SnowmanManager : MonoBehaviour
     Snowman currentViewSnowman;
     void Awake()
     {
+        if(_camera == null) { Debug.LogError("Camera is not set in SnowmanManager"); }
+        if(_camera.TryGetComponent(out Cinemachine.CinemachineBrain brain))
+        {
+            cinemachineBrain = brain;
+        }
+        else
+        {
+            Debug.LogError("Camera is missing Cinemachine Brain");
+        }
+
         lastDroppedTime = Time.time;
         Snowman.snowmanCreatedEvent += AddSnowman;
         snowmen = new List<Snowman>();
@@ -44,6 +55,7 @@ public class SnowmanManager : MonoBehaviour
         }
         snowmanCamera.gameObject.SetActive(false);
         instance = this;
+        performAction.action.actionMap.Enable();
     }
 
     public bool PlayerCameraActive()

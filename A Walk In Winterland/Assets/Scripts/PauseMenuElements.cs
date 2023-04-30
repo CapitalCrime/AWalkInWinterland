@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PauseMenuElements : MonoBehaviour
 {
     public List<GameObject> menuTabs;
-    public GameObject backToMenuButton;
     public GameObject menuButtonsHolder;
     void Start()
     {
@@ -18,7 +18,6 @@ public class PauseMenuElements : MonoBehaviour
         {
             tab.SetActive(false);
         }
-        backToMenuButton.SetActive(false);
         menuButtonsHolder.SetActive(true);
     }
 }

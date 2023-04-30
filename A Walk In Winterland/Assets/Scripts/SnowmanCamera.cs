@@ -125,6 +125,7 @@ public class SnowmanCamera : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (SnowmanManager.instance.cinemachineBrain.IsBlending) return;
         if(cameraOffset != null)
         {
             Vector3 snowmanPos = currentThirdPersonCam.LookAt.position;
@@ -136,10 +137,9 @@ public class SnowmanCamera : MonoBehaviour
             {
                 hits = hits.OrderBy(x => Vector3.Distance(x.transform.position, snowmanPos)).ToArray();
                 Vector3 pos = hits[hits.Length - 1].point;
-                Debug.Log("Move back to: " + pos);
-                Debug.Log("Hit target was: " + hits[hits.Length - 1].transform.name);
                 Vector3 cameraPosition = pos - rayDir.normalized * 2;
                 cameraOffset.m_Offset.z += (SnowmanManager.instance._camera.transform.position - cameraPosition).magnitude*Time.deltaTime*6 + Time.deltaTime;
+                cameraOffset.m_Offset.z = Mathf.Clamp(cameraOffset.m_Offset.z, -10, 7.5f);
             } else if(!Physics.Raycast(SnowmanManager.instance._camera.transform.position, -SnowmanManager.instance._camera.transform.forward, 1, terrainBoundariesMask))
             {
                 cameraOffset.m_Offset.z = Mathf.Lerp(cameraOffset.m_Offset.z, realOffsetZoom, Time.deltaTime);

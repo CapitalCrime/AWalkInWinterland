@@ -21,8 +21,26 @@ public class CameraControls : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        provider.XYAxis.action.started += MousePressed;
-        provider.XYAxis.action.canceled += MouseReleased;
+        CheckForController();
+    }
+
+    void CheckForController()
+    {
+        foreach(Gamepad gamepad in Gamepad.all)
+        {
+            Debug.Log("This is active: " + gamepad);
+        }
+        if(Gamepad.current != null)
+        {
+            provider.XYAxis.action.started -= MousePressed;
+            provider.XYAxis.action.canceled -= MouseReleased;
+            Cursor.lockState = CursorLockMode.Locked;
+        } else
+        {
+            provider.XYAxis.action.started += MousePressed;
+            provider.XYAxis.action.canceled += MouseReleased;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     void MousePressed(InputAction.CallbackContext context)
@@ -51,6 +69,7 @@ public class CameraControls : MonoBehaviour
     bool fasterCam = false;
     private void Update()
     {
+        CheckForController();
         movementAxis = movement.action.ReadValue<Vector3>();
         fasterCam = fasterCamAction.action.ReadValue<float>() > 0.5f;
         //transform.position += _camera.transform.rotation * movementAxis * Time.deltaTime * (fasterCam ? 30 : 10);
