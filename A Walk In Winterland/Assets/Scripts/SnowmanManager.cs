@@ -9,6 +9,11 @@ using System.Linq;
 public class SnowmanManager : MonoBehaviour
 {
     [SerializeField] public Camera _camera;
+    private PlayerInput playerInput;
+    private InputActionMap currentMap;
+    private InputActionMap playMap;
+    private InputActionMap snowmanMap;
+
     [HideInInspector] public Cinemachine.CinemachineBrain cinemachineBrain { get; private set; }
     public UnityEvent<bool> snowmanCameraActivateEvent;
     Outline currentOutline;
@@ -31,7 +36,9 @@ public class SnowmanManager : MonoBehaviour
     Snowman currentViewSnowman;
     void Awake()
     {
-        if(_camera == null) { Debug.LogError("Camera is not set in SnowmanManager"); }
+        instance = this;
+
+        if (_camera == null) { Debug.LogError("Camera is not set in SnowmanManager"); }
         if(_camera.TryGetComponent(out Cinemachine.CinemachineBrain brain))
         {
             cinemachineBrain = brain;
@@ -54,8 +61,36 @@ public class SnowmanManager : MonoBehaviour
             }
         }
         snowmanCamera.gameObject.SetActive(false);
-        instance = this;
         performAction.action.actionMap.Enable();
+    }
+
+    private void Start()
+    {
+        playerInput = InputManager.instance.playerInputs;
+        playMap = playerInput.actions.FindActionMap("PlayMode");
+        snowmanMap = playerInput.actions.FindActionMap("SnowmanMode");
+        SwitchMap();
+    }
+
+    public void SwitchMap()
+    {
+        playMap.Disable();
+        snowmanMap.Disable();
+
+        if (PlayerCameraActive())
+        {
+            currentMap = playMap;
+        } else
+        {
+            currentMap = snowmanMap;
+        }
+
+        currentMap.Enable();
+    }
+
+    public InputActionMap GetCurrentMap()
+    {
+        return currentMap;
     }
 
     public bool PlayerCameraActive()
@@ -200,6 +235,9 @@ public class SnowmanManager : MonoBehaviour
         playerCamera.gameObject.SetActive(false);
 
         snowmanCamera.gameObject.SetActive(true);
+
+        SnowmanImageManager.UpdateCurrentSnowmanIndex(snowman.description);
+        SwitchMap();
     }
 
     public void ActivatePlayerCamera()
@@ -228,6 +266,7 @@ public class SnowmanManager : MonoBehaviour
         snowmanCameraActivateEvent?.Invoke(false);
         playerCamera.gameObject.SetActive(true);
         snowmanCamera.DeactivateCameras();
+        SwitchMap();
     }
 
     public void ViewNextSnowman(float direction)

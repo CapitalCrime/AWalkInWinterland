@@ -24,10 +24,50 @@ public abstract class Snowman : MonoBehaviour
     bool walkingEnabled = true;
     bool walkingStartEnabled = true;
     protected MinMax walkSpeeds = new MinMax(250, 400);
+    event UnityAction queuedUntilEnabledEvents;
     public abstract void NightArriveAction();
     public abstract void DayArriveAction();
 
     protected abstract void UniqueAction();
+
+    void QueuedDayActionCheck()
+    {
+        if (UniStorm.UniStormSystem.Instance.isDay())
+        {
+            DayArriveAction();
+        }
+    }
+
+    void QueuedNightActionCheck()
+    {
+        if (!UniStorm.UniStormSystem.Instance.isDay())
+        {
+            NightArriveAction();
+        }
+    }
+
+    void DayActionTrigger()
+    {
+        if (enabled)
+        {
+            DayArriveAction();
+        } else
+        {
+            queuedUntilEnabledEvents += QueuedDayActionCheck;
+        }
+    }
+
+    void NightActionTrigger()
+    {
+        if (enabled)
+        {
+            NightArriveAction();
+        }
+        else
+        {
+            queuedUntilEnabledEvents += QueuedNightActionCheck;
+        }
+    }
 
     public Cinemachine.CinemachineVirtualCamera GetSnowmanFPSCam()
     {
@@ -90,6 +130,11 @@ public abstract class Snowman : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        queuedUntilEnabledEvents?.Invoke();
+    }
+
     public void EnableWalking(bool value)
     {
         if (!walkingStartEnabled) return;
@@ -109,11 +154,11 @@ public abstract class Snowman : MonoBehaviour
         snowmanCreatedEvent?.Invoke(this);
         //DayCycle.nightActions += NightArriveAction;
         //DayCycle.nightActions += PauseActionTimes;
-        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(NightArriveAction);
+        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(NightActionTrigger);
         UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(PauseActionTimes);
         //DayCycle.dayActions += DayArriveAction;
         //DayCycle.dayActions += ResumeActionTimes;
-        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(DayArriveAction);
+        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(DayActionTrigger);
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(ResumeActionTimes);
     }
 
@@ -214,11 +259,11 @@ public abstract class Snowman : MonoBehaviour
     {
         //DayCycle.nightActions -= NightArriveAction;
         //DayCycle.nightActions -= PauseActionTimes;
-        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.RemoveListener(NightArriveAction);
+        UniStorm.UniStormSystem.Instance.OnNightArriveEvent.RemoveListener(NightActionTrigger);
         UniStorm.UniStormSystem.Instance.OnNightArriveEvent.RemoveListener(PauseActionTimes);
         //DayCycle.dayActions -= DayArriveAction;
         //DayCycle.dayActions -= ResumeActionTimes;
-        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(DayArriveAction);
+        UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(DayActionTrigger);
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(ResumeActionTimes);
         snowmanViewedEvent -= ClickSoundPlay;
     }

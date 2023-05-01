@@ -35,6 +35,7 @@ public class CameraControls : MonoBehaviour
             provider.XYAxis.action.started -= MousePressed;
             provider.XYAxis.action.canceled -= MouseReleased;
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
         } else
         {
             provider.XYAxis.action.started += MousePressed;

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class SnowmanImageManager : MonoBehaviour
 {
     public static SnowmanImageManager instance;
+    public static UnityEvent triggerOnClose = new UnityEvent();
     public SnowmanImageCreator imagePrefab;
     [SerializeField] private InputActionReference scrollMenu;
     SnowmanDescription[] snowmanDescriptions;
@@ -17,6 +19,7 @@ public class SnowmanImageManager : MonoBehaviour
     float snowmenPerRow = 4;
     float snowmenVisibleColumn = 3;
     [SerializeField] int currentIndex = 0;
+    bool isOpen = false;
 
     private void Awake()
     {
@@ -26,7 +29,7 @@ public class SnowmanImageManager : MonoBehaviour
         foreach (SnowmanDescription desc in snowmanDescriptions)
         {
             SnowmanImageCreator button = Instantiate(imagePrefab, imageHolder.transform);
-            button.Init(null, this);
+            button.Init(null);
             buttonDictionary.Add(desc, button);
         }
         if (imageHolder.childCount <= 12)
@@ -40,19 +43,20 @@ public class SnowmanImageManager : MonoBehaviour
             scrollbar.size = 70 / maxImageXPosition;
         }
         Snowman.snowmanCreatedEvent += UpdateSnowmanButton;
-        scrollMenu.action.performed += ScrollMenu;
     }
 
-    public void UpdateCurrentSnowmanIndex(SnowmanDescription description)
+    public static void UpdateCurrentSnowmanIndex(SnowmanDescription description)
     {
-        for(int i = 0; i < snowmanDescriptions.Length; i++)
+        if (instance == null) return;
+        for(int i = 0; i < instance.snowmanDescriptions.Length; i++)
         {
-            if(description == snowmanDescriptions[i])
+            if(description == instance.snowmanDescriptions[i])
             {
-                currentIndex = i;
-                return;
+                instance.currentIndex = i;
+                break;
             }
         }
+        instance.SelectButton(true);
     }
 
     void UpdateSnowmanButton(Snowman snowman)
@@ -64,14 +68,44 @@ public class SnowmanImageManager : MonoBehaviour
         }
     }
 
+    Vector2 scrollDirection = Vector2.zero;
+
     void ScrollMenu(InputAction.CallbackContext context)
     {
-        Vector2 direction = context.ReadValue<Vector2>();
-        int changeAmount = (int)direction.x * (int)snowmenPerRow + (int)-direction.y;
+        if(context.phase == InputActionPhase.Performed)
+        {
+            scrollDirection = context.ReadValue<Vector2>();
+            lastScrollTime = 0;
+        }
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            scrollDirection = Vector2.zero;
+        }
+    }
+
+    void SetScrollBarValue()
+    {
+        float pageSize = snowmenPerRow * snowmenVisibleColumn;
+        float snowmanNumber = currentIndex + 1;
+
+        if (snowmanNumber < pageSize)
+        {
+            scrollbar.value = 0;
+        }
+        else
+        {
+            scrollbar.value = Mathf.Ceil((snowmanNumber - pageSize) / snowmenPerRow) / Mathf.Ceil((buttonDictionary.Count - pageSize) / snowmenPerRow);
+        }
+    }
+
+    void ScrollMenuDirection()
+    {
+        if (!isOpen || !gameObject.activeSelf) return;
+
+        int changeAmount = (int)scrollDirection.x * (int)snowmenPerRow + (int)-scrollDirection.y;
         currentIndex += changeAmount;
         while (true)
         {
-
             if (currentIndex > buttonDictionary.Count - 1)
             {
                 currentIndex = 0;
@@ -86,53 +120,66 @@ public class SnowmanImageManager : MonoBehaviour
                 if (tempButton.getPairedSnowman() != null) break;
             }
 
-            if(changeAmount > 0)
+            if (changeAmount > 0)
             {
                 currentIndex++;
-            } else
+            }
+            else
             {
                 currentIndex--;
             }
         }
 
-        float pageSize = snowmenPerRow * snowmenVisibleColumn;
-        float snowmanNumber = currentIndex + 1;
+        SelectButton(true);
+    }
 
-        if (snowmanNumber < pageSize)
-        {
-            scrollbar.value = 0;
-        } else
-        {
-            scrollbar.value = Mathf.Ceil((snowmanNumber - pageSize)/snowmenPerRow) / Mathf.Ceil((buttonDictionary.Count - pageSize)/snowmenPerRow);
-        }
+    public void SelectButton(bool value)
+    {
+        if (value && (!isOpen || !gameObject.activeSelf)) return;
 
         if (buttonDictionary.TryGetValue(snowmanDescriptions[currentIndex], out SnowmanImageCreator button))
         {
-            button.SelectButton(true);
+            button.SelectButton(value);
+            SetScrollBarValue();
+            if (!value)
+            {
+                triggerOnClose?.Invoke();
+            }
         }
     }
 
     public static void DisableButtons()
     {
         if (instance == null) return;
-        if (instance.buttonDictionary.TryGetValue(instance.snowmanDescriptions[instance.currentIndex], out SnowmanImageCreator button))
-        {
-            button.SelectButton(false);
-        }
+        instance.scrollMenu.action.performed -= instance.ScrollMenu;
+        instance.isOpen = false;
+        instance.SelectButton(instance.isOpen);
     }
 
     public static void EnableButtons()
     {
         if (instance == null) return;
-        if (instance.buttonDictionary.TryGetValue(instance.snowmanDescriptions[instance.currentIndex], out SnowmanImageCreator button))
-        {
-            button.SelectButton(true);
-        }
+        instance.scrollMenu.action.performed += instance.ScrollMenu;
+        instance.isOpen = true;
+        instance.SelectButton(instance.isOpen);
     }
 
+    private void OnDisable()
+    {
+        triggerOnClose?.Invoke();
+        triggerOnClose.RemoveAllListeners();
+    }
+
+    float scrollWaitTime = 0.25f;
+    float lastScrollTime = 0;
     // Update is called once per frame
     void Update()
     {
         imageHolder.anchoredPosition = new Vector2(scrollbar.value * -maxImageXPosition, -(imageHolder.sizeDelta.y/2));
+        if(scrollDirection != Vector2.zero && Time.time - lastScrollTime > scrollWaitTime)
+        {
+            lastScrollTime = Time.time;
+            ScrollMenuDirection();
+        }
     }
 }

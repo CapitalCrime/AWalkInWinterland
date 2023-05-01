@@ -9,15 +9,10 @@ public class SnowmanImageCreator : MonoBehaviour
 {
     [SerializeField] Image image;
     Snowman pairedSnowman;
-    SnowmanImageManager manager;
     [SerializeField] Button button;
 
-    public void Init(Sprite image, SnowmanImageManager manager = null)
+    public void Init(Sprite image)
     {
-        if (manager != null)
-        {
-            this.manager = manager;
-        }
         if(image != null)
         {
             this.image.sprite = image;
@@ -52,7 +47,6 @@ public class SnowmanImageCreator : MonoBehaviour
     {
         if (PauseScript.isPaused()) return;
         if (pairedSnowman == null) return;
-        manager.UpdateCurrentSnowmanIndex(pairedSnowman.description);
         SnowmanManager.instance.ActivateSnowmanCamera(pairedSnowman);
     }
 }

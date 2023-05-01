@@ -7,6 +7,7 @@ public class FreeCamSettings : MonoBehaviour
 {
     [SerializeField] private LayerMask terrainBoundariesMask;
     Cinemachine.CinemachineFreeLook freeLookCam;
+    [SerializeField] Vector3[] rigSettings = new Vector3[3];
 
     private void Awake()
     {

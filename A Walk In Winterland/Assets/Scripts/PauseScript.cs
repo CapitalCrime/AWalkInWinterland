@@ -6,11 +6,12 @@ using UnityEngine.InputSystem;
 
 public class PauseScript : MonoBehaviour
 {
-    private InputAction pauseAction;
-    private InputActionMap playMap;
+    [SerializeField] private InputActionReference pauseAction;
+    private PlayerInput playerInput;
     private InputActionMap nonMenuMap;
     [SerializeField] GameObject pauseMenu;
     public UnityEvent<bool> OnFullscreen;
+    public UnityEvent OnUnpause;
     static bool paused = false;
     public static bool snowmanIndexOpen = false;
     private bool fullscreen;
@@ -18,11 +19,10 @@ public class PauseScript : MonoBehaviour
     private void Awake()
     {
         fullscreen = Screen.fullScreen;
-        pauseAction = InputManager.instance.playerInputs.actions.FindActionMap("Menu").FindAction("Pause");
-        playMap = InputManager.instance.playerInputs.actions.FindActionMap("PlayMode");
-        nonMenuMap = InputManager.instance.playerInputs.actions.FindActionMap("NonMenu");
-        pauseAction.performed += PauseGame;
-        pauseAction.actionMap.Enable();
+        playerInput = InputManager.instance.playerInputs;
+        nonMenuMap = playerInput.actions.FindActionMap("NonMenu");
+        pauseAction.action.performed += PauseGame;
+        pauseAction.action.actionMap.Enable();
     }
 
     public static bool isPaused()
@@ -32,7 +32,7 @@ public class PauseScript : MonoBehaviour
 
     private void OnDisable()
     {
-        pauseAction.performed -= PauseGame;
+        pauseAction.action.performed -= PauseGame;
     }
 
     private void PauseGame(InputAction.CallbackContext context)
@@ -56,7 +56,7 @@ public class PauseScript : MonoBehaviour
                 AudioSettings.instance.SetMusicVolumeRelative(0.33f);
                 AudioSettings.instance.SetAmbienceVolumeRelative(0.33f);
             }
-            playMap.Disable();
+            SnowmanManager.instance.GetCurrentMap().Disable();
             nonMenuMap.Disable();
         } else
         {
@@ -69,11 +69,14 @@ public class PauseScript : MonoBehaviour
                 AudioSettings.instance.SetMusicVolumeRelative(1);
                 AudioSettings.instance.SetAmbienceVolumeRelative(1);
             }
-            playMap.Enable();
+
+            SnowmanManager.instance.GetCurrentMap().Enable();
+
             if (!snowmanIndexOpen)
             {
                 nonMenuMap.Enable();
             }
+            OnUnpause?.Invoke();
         }
     }
 
