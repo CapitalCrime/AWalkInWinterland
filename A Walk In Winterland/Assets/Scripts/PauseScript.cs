@@ -56,6 +56,10 @@ public class PauseScript : MonoBehaviour
                 AudioSettings.instance.SetMusicVolumeRelative(0.33f);
                 AudioSettings.instance.SetAmbienceVolumeRelative(0.33f);
             }
+            if(Gamepad.all.Count > 0)
+            {
+                Cursor.visible = false;
+            }
             SnowmanManager.instance.GetCurrentMap().Disable();
             nonMenuMap.Disable();
         } else
@@ -76,6 +80,7 @@ public class PauseScript : MonoBehaviour
             {
                 nonMenuMap.Enable();
             }
+            Cursor.visible = true;
             OnUnpause?.Invoke();
         }
     }

@@ -102,24 +102,42 @@ public class SnowmanImageManager : MonoBehaviour
     {
         if (!isOpen || !gameObject.activeSelf) return;
 
+        //Move index horizontally and vertically by input
         int changeAmount = (int)scrollDirection.x * (int)snowmenPerRow + (int)-scrollDirection.y;
-        currentIndex += changeAmount;
+
+        //Handle wrap around at end points, else increase index by direction
+        if(currentIndex == 0 && changeAmount < 0)
+        {
+            currentIndex = buttonDictionary.Count - 1;
+        } else if(currentIndex == buttonDictionary.Count - 1 && changeAmount > 0)
+        {
+            currentIndex = 0;
+        } else
+        {
+            currentIndex += changeAmount;
+        }
+
+        //If next snowman is undiscovered, keep scrolling until unlocked one is found
         while (true)
         {
+            //Handle wrap around and clamp between end points
             if (currentIndex > buttonDictionary.Count - 1)
             {
-                currentIndex = 0;
+                currentIndex -= buttonDictionary.Count-1;
             }
             if (currentIndex < 0)
             {
-                currentIndex = buttonDictionary.Count - 1;
+                currentIndex += buttonDictionary.Count-1;
             }
+            currentIndex = Mathf.Clamp(currentIndex, 0, buttonDictionary.Count - 1);
 
+            //If unlocked snowman is found, break out of while loop
             if (buttonDictionary.TryGetValue(snowmanDescriptions[(int)currentIndex], out SnowmanImageCreator tempButton))
             {
                 if (tempButton.getPairedSnowman() != null) break;
             }
 
+            //If unlocked snowman is not found, increase index to check for next one
             if (changeAmount > 0)
             {
                 currentIndex++;
@@ -130,21 +148,21 @@ public class SnowmanImageManager : MonoBehaviour
             }
         }
 
+        //After snowman is found, select the index button
         SelectButton(true);
     }
 
     public void SelectButton(bool value)
     {
+        //If snowman menu is not open, don't select button. Basically nulls input when index isn't open.
         if (value && (!isOpen || !gameObject.activeSelf)) return;
 
+        //Checks to see if current index snowman is linked to a button
         if (buttonDictionary.TryGetValue(snowmanDescriptions[currentIndex], out SnowmanImageCreator button))
         {
+            //Select button and scroll menu to correct spot
             button.SelectButton(value);
             SetScrollBarValue();
-            if (!value)
-            {
-                triggerOnClose?.Invoke();
-            }
         }
     }
 
@@ -154,6 +172,8 @@ public class SnowmanImageManager : MonoBehaviour
         instance.scrollMenu.action.performed -= instance.ScrollMenu;
         instance.isOpen = false;
         instance.SelectButton(instance.isOpen);
+        //If closing menu, trigger close menu events
+        triggerOnClose?.Invoke();
     }
 
     public static void EnableButtons()

@@ -27,6 +27,8 @@ public class SelectOnIndexClose : MonoBehaviour
 
     void SelectThis()
     {
+        if (_object.gameObject == null) return;
+
         EventSystem.current.SetSelectedGameObject(_object.gameObject);
         Navigation navigation = quitButton.navigation;
         navigation.selectOnDown = _object;
