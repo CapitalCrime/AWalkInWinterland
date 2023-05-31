@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8676718868746894242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/HeavyRain
+  m_EditorClassIdentifier: 
+  Path: event:/HeavyRain
+  Guid:
+    Data1: -543919656
+    Data2: 1214027559
+    Data3: -151566942
+    Data4: -235651088
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18074
 --- !u!114 &-8122338831165296445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,10 +123,10 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638165580756912651
+  lastModified: 638210770074681956
   FileSizes:
   - Name: Desktop
-    Value: 1420
+    Value: 1514
   Exists: 1
 --- !u!114 &-4831214777332310060
 MonoBehaviour:
@@ -156,12 +183,14 @@ MonoBehaviour:
   - {fileID: -6660341423363840908}
   - {fileID: 1081291946725579372}
   - {fileID: -8122338831165296445}
+  - {fileID: 8576621207673504620}
+  - {fileID: -8676718868746894242}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3490342174954165286}
   StringsBanks:
   - {fileID: -5082213400612829643}
-  cacheTime: 638165580756912651
+  cacheTime: 638210770074681956
   cacheVersion: 131593
 --- !u!114 &1081291946725579372
 MonoBehaviour:
@@ -189,7 +218,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 118000
+  Length: 59000
 --- !u!114 &2251118214362955823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,10 +312,10 @@ MonoBehaviour:
   Path: D:/FMOD Projects/WalkInWinterland/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638165580756902685
+  lastModified: 638210770074671987
   FileSizes:
   - Name: Desktop
-    Value: 13215904
+    Value: 13756576
   Exists: 1
 --- !u!114 &5280989881604413686
 MonoBehaviour:
@@ -424,3 +453,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6050
+--- !u!114 &8576621207673504620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LightRain
+  m_EditorClassIdentifier: 
+  Path: event:/LightRain
+  Guid:
+    Data1: 2135423513
+    Data2: 1131771227
+    Data3: 271446435
+    Data4: 122152213
+  Banks:
+  - {fileID: 3490342174954165286}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 35112

@@ -11,9 +11,6 @@ public class CameraControls : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private SnowmanCamera snowmanCamera;
     [SerializeField] private Cinemachine.CinemachineInputProvider provider;
-    [SerializeField] float playerMoveBounds;
-    [SerializeField] float playerMoveHeightBounds;
-    [SerializeField] Vector3 centerOfWorld;
     public LayerMask snowmanMask;
     Outline currentOutline;
     Rigidbody rb;

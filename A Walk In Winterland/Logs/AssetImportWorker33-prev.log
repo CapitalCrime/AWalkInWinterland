@@ -1,0 +1,307 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.4f1 (cb45f9cae8b7) revision 13321721'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 32509 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker33
+-projectPath
+C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+-logFile
+Logs/AssetImportWorker33.log
+-srvPort
+61243
+Successfully changed project path to: C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 356.45 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Ti (ID=0x2482)
+    Vendor:   NVIDIA
+    VRAM:     8041 MB
+    Driver:   31.0.15.1748
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56876
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.010540 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 210.87 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.867 seconds
+Domain Reload Profiling:
+	ReloadAssembly (867ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (664ms)
+			LoadAssemblies (75ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (121ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (452ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (77ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (211ms)
+				BeforeProcessingInitializeOnLoad (7ms)
+				ProcessInitializeOnLoadAttributes (109ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.012178 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 212.36 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.091 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2092ms)
+		BeginReloadAssembly (201ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (129ms)
+		EndReloadAssembly (1755ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (331ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (94ms)
+			SetupLoadedEditorAssemblies (1156ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (212ms)
+				BeforeProcessingInitializeOnLoad (169ms)
+				ProcessInitializeOnLoadAttributes (664ms)
+				ProcessInitializeOnLoadMethodAttributes (73ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.64 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6751 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 140 unused Assets / (2.3 MB). Loaded Objects now: 7185.
+Memory consumption went from 431.6 MB to 429.3 MB.
+Total: 5.721100 ms (FindLiveObjects: 0.807400 ms CreateObjectMapping: 0.289300 ms MarkObjects: 3.938600 ms  DeleteObjects: 0.684100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1209410.224449 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '665fd9005c130ab566cd3f2137ad832a') in 0.374088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.497970 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7514de1f20a41df89dbf8dfbc1d14c') in 0.043044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.531115 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af3f1b27f5b6ce2cf79e74f0c8e80633') in 0.059794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.506460 seconds.
+  path: Assets/Resources/Prefabs/Cabin/CampfireWood 1.mat
+  artifactKey: Guid(9ed67c0a398dbce48893f17a10ef9362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/CampfireWood 1.mat using Guid(9ed67c0a398dbce48893f17a10ef9362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7578a9dab94e6fed88100a07d546f92') in 0.021263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.469167 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1ed13d39da6114006b062a487493fa8') in 0.035551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.154779 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e96b751587862e019928dfc0d672c000') in 0.048576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.898000 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb43e639105b4d59fb0268a23524b265') in 0.065061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.620765 seconds.
+  path: Assets/Resources/Prefabs/Cabin/uploads_files_1925509_Campfire.obj
+  artifactKey: Guid(10d6206f039a63e4987ee8489ca6a395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/uploads_files_1925509_Campfire.obj using Guid(10d6206f039a63e4987ee8489ca6a395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b03306344d4fc306967c2935ab12eca') in 0.073964 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.269471 seconds.
+  path: Assets/Resources/Prefabs/Cabin/uploads_files_1925509_Campfire.obj
+  artifactKey: Guid(10d6206f039a63e4987ee8489ca6a395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/uploads_files_1925509_Campfire.obj using Guid(10d6206f039a63e4987ee8489ca6a395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4132bb7e9a9fef2963324e05e253a04d') in 0.031795 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 459.290364 seconds.
+  path: Assets/Hovl Studio/Procedural fire
+  artifactKey: Guid(c163764eb563598488aa508827447228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire using Guid(c163764eb563598488aa508827447228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b00820ae0de7539f32ff66681f946ff') in 0.009170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.172577 seconds.
+  path: Assets/Hovl Studio/Procedural fire/URP and HDRP
+  artifactKey: Guid(4637db4a3296c7343969113830564f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/URP and HDRP using Guid(4637db4a3296c7343969113830564f50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2e0cd808dd71a10203df2c50ce2b50e') in 0.010677 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.039215 seconds.
+  path: Assets/Hovl Studio/Procedural fire/URP and HDRP/How to change rendering pipeline.png
+  artifactKey: Guid(e7ccd183c307b23438d784153ab85448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/URP and HDRP/How to change rendering pipeline.png using Guid(e7ccd183c307b23438d784153ab85448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef697e70ffe98f8d7e2d6f9a0fc8878c') in 0.023277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.753882 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Explosion.prefab
+  artifactKey: Guid(67a684e320da6e7439421a07e3fa265c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Explosion.prefab using Guid(67a684e320da6e7439421a07e3fa265c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee3998c9f8db987eefbee59f762b62e5') in 0.076096 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro green.prefab
+  artifactKey: Guid(3d35e81bdc5955041be098ef22e82a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro green.prefab using Guid(3d35e81bdc5955041be098ef22e82a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaff4d14a4b9f95efa3ce55680ea0162') in 0.043596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro yellow.prefab
+  artifactKey: Guid(52d340ed9c2714c4f8aabf1f82df1b58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro yellow.prefab using Guid(52d340ed9c2714c4f8aabf1f82df1b58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5886af6c84bdb5ed6ce6b6d24eadc396') in 0.042435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire 2.prefab
+  artifactKey: Guid(529eb4216865eba419c1a4a68d0b0388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire 2.prefab using Guid(529eb4216865eba419c1a4a68d0b0388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dcdbca8c22521d72791c62ec0afaa1f') in 0.037107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002335 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire 3.prefab
+  artifactKey: Guid(78e8b38d431ddef4fa2994a3f2d6e2ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire 3.prefab using Guid(78e8b38d431ddef4fa2994a3f2d6e2ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '698482f56baf474cbf365b851ea40914') in 0.032244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro orange.prefab
+  artifactKey: Guid(e55149ba6f4d00741984987e258c3378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro orange.prefab using Guid(e55149ba6f4d00741984987e258c3378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2158f00dc4b5b7d87f3269e0f987bdf4') in 0.037958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.039471 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Materials/FireSphere1.mat
+  artifactKey: Guid(14fab0de6c54324468738e7b38a88207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Materials/FireSphere1.mat using Guid(14fab0de6c54324468738e7b38a88207) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a77ff6c78c2c1e29fbcc0e2d5efdda7a') in 0.025525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.785794 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Shaders/FireSphere.shader
+  artifactKey: Guid(1d4a9c916d62a324e90c32798caf3f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Shaders/FireSphere.shader using Guid(1d4a9c916d62a324e90c32798caf3f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b24005ac6f6f2148da188221a9f1a93') in 0.007945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.214568 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Textures/FireSphere2.png
+  artifactKey: Guid(a52c2b00382a3264cbea32cfc2c36b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Textures/FireSphere2.png using Guid(a52c2b00382a3264cbea32cfc2c36b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a3c43e4db6d9ff19cfd78f52a5da094') in 0.018496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.466197 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Materials/Smoke26.mat
+  artifactKey: Guid(1fd724d226066ad4cbc105d4ad53a444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Materials/Smoke26.mat using Guid(1fd724d226066ad4cbc105d4ad53a444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bcda5bbc911f12ad563ef2ae8325e9f') in 0.021865 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

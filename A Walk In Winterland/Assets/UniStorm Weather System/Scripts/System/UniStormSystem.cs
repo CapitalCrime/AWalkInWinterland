@@ -1392,11 +1392,13 @@ namespace UniStorm
                 {
                     if (emitter.gameObject.name == CurrentWeatherType.WeatherTypeName + " (UniStorm)")
                     {
-                        if(emitter.EventInstance.hasHandle())
-                        {
+                        Debug.Log("Emitter found!");
+                        //if(emitter.EventInstance.hasHandle())
+                        //{
+                            Debug.Log("Emitter play");
                             emitter.Play();
                             emitter.EventInstance.setVolume(CurrentWeatherType.WeatherVolume);
-                        }
+                        //}
                     }
                 }
             }

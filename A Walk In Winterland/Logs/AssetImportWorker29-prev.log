@@ -1,0 +1,379 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.4f1 (cb45f9cae8b7) revision 13321721'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 32509 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker29
+-projectPath
+C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+-logFile
+Logs/AssetImportWorker29.log
+-srvPort
+61243
+Successfully changed project path to: C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 281.45 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Carter/Documents/GitHub/AWalkInWinterland/A Walk In Winterland/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3070 Ti (ID=0x2482)
+    Vendor:   NVIDIA
+    VRAM:     8041 MB
+    Driver:   31.0.15.1748
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56908
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011613 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 221.50 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.873 seconds
+Domain Reload Profiling:
+	ReloadAssembly (873ms)
+		BeginReloadAssembly (77ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (668ms)
+			LoadAssemblies (75ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (116ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (461ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (78ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (222ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (109ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.013187 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Carter\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 213.22 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.189 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2190ms)
+		BeginReloadAssembly (233ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (129ms)
+		EndReloadAssembly (1807ms)
+			LoadAssemblies (117ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (358ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (93ms)
+			SetupLoadedEditorAssemblies (1181ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (213ms)
+				BeforeProcessingInitializeOnLoad (172ms)
+				ProcessInitializeOnLoadAttributes (684ms)
+				ProcessInitializeOnLoadMethodAttributes (75ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.65 ms, found 6 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6751 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 140 unused Assets / (2.3 MB). Loaded Objects now: 7185.
+Memory consumption went from 431.5 MB to 429.2 MB.
+Total: 5.399400 ms (FindLiveObjects: 0.724700 ms CreateObjectMapping: 0.322300 ms MarkObjects: 3.781100 ms  DeleteObjects: 0.569800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1209276.344437 seconds.
+  path: Assets/Resources/uploads_files_1925509_Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/uploads_files_1925509_Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f257baa1a1346f7cf958158df2c22dfb') in 0.346861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.016212 seconds.
+  path: Assets/Resources/Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec13f6652d48ad2d2854d31d3c2a3206') in 0.065556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 51.339444 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Campfire_Base.jpg
+  artifactKey: Guid(cd7623c1e520e924d812dff80d2a16fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Campfire_Base.jpg using Guid(cd7623c1e520e924d812dff80d2a16fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7718d4d6e27e054c8ac1474f208f7991') in 0.042438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Tex_A.jpg
+  artifactKey: Guid(565198dc097576d47826af92ef126a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Tex_A.jpg using Guid(565198dc097576d47826af92ef126a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8f37f869b9e81c2d3cae8e427fd3355') in 0.018277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.393049 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Fire.mat
+  artifactKey: Guid(777243fe2443b644dba1dbe0389d9a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Fire.mat using Guid(777243fe2443b644dba1dbe0389d9a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35c2ebe54aaefd2c9db3e60d1512a002') in 0.018535 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.906117 seconds.
+  path: Assets/Resources/Prefabs/Cabin/CampfireWood.mat
+  artifactKey: Guid(777243fe2443b644dba1dbe0389d9a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/CampfireWood.mat using Guid(777243fe2443b644dba1dbe0389d9a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38be88385a15dc253c32023c1689d1a3') in 0.017186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.065306 seconds.
+  path: Assets/Resources/Prefabs/Cabin/Campfire.fbx
+  artifactKey: Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/Campfire.fbx using Guid(04292c78b39fa1d4a9adc7328743cad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7a584ffa69d34199554148e72dadbf') in 0.047484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.066904 seconds.
+  path: Assets/TerrainSampleAssets/Textures/Details/Bush_A_MaskMap.tif
+  artifactKey: Guid(0e1771a5cd057014db71494d5a458d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainSampleAssets/Textures/Details/Bush_A_MaskMap.tif using Guid(0e1771a5cd057014db71494d5a458d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d0dea5441c48542820cfd6a334bd3b2') in 0.059127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@2x.png
+  artifactKey: Guid(25096ce515c063c48a2bd6b108c95912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@2x.png using Guid(25096ce515c063c48a2bd6b108c95912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb7ce7cad7cf420cbc68afb62bb50e47') in 0.046288 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@3x.png
+  artifactKey: Guid(dcea51d6065d64246aeec467afeff684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@3x.png using Guid(dcea51d6065d64246aeec467afeff684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '673fb8e0602f5f0d6108a08c3ea3b6be') in 0.043159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PluginMaster/DesignTools/Editor/PrefabWorldBuilder/Resources/Sprites/C.png
+  artifactKey: Guid(bc9e834a0a84cad49a7aaf7e1bb5ae6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PluginMaster/DesignTools/Editor/PrefabWorldBuilder/Resources/Sprites/C.png using Guid(bc9e834a0a84cad49a7aaf7e1bb5ae6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b855eca4a6c429108c01e7c3bbdfdae9') in 0.024814 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PluginMaster/DesignTools/Editor/Common/Resources/Sprites/ButtonHover.png
+  artifactKey: Guid(664ab29bb4fe49e4c8121fe85de27939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PluginMaster/DesignTools/Editor/Common/Resources/Sprites/ButtonHover.png using Guid(664ab29bb4fe49e4c8121fe85de27939) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b9ee34bae27817a05a34a2e2cf9e1b') in 0.046124 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Snowmen/Textures/Accessories/CatHeadphones.png
+  artifactKey: Guid(95631309b56a51c478442fbb08047582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snowmen/Textures/Accessories/CatHeadphones.png using Guid(95631309b56a51c478442fbb08047582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b786e884ec278120c0c3659e8eb45fd') in 0.015434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TerrainSampleAssets/Textures/Heightmaps/Canyon01_Heightmap.tif
+  artifactKey: Guid(903360ef543b50449ae74931c4fddc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainSampleAssets/Textures/Heightmaps/Canyon01_Heightmap.tif using Guid(903360ef543b50449ae74931c4fddc2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '783a629a1ebc5b1e11aa30a48f6988bd') in 0.018691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button@2x.png
+  artifactKey: Guid(1c37f00575bd6494ea726be5afee89b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button@2x.png using Guid(1c37f00575bd6494ea726be5afee89b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de2f07bca9f5370b35f4c75472341af6') in 0.024594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button.png
+  artifactKey: Guid(2a5d0a7febdc741039abf135883517e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button.png using Guid(2a5d0a7febdc741039abf135883517e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '708fa5b1bb720c9f5957b98e72960a2b') in 0.031202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/TerrainSampleAssets/Textures/Details/BushDry_Normal.tif
+  artifactKey: Guid(03fe3ff010bcfb3418536e2f7896257b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainSampleAssets/Textures/Details/BushDry_Normal.tif using Guid(03fe3ff010bcfb3418536e2f7896257b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '996a851fcd486df19b766c5513116be3') in 0.052592 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@4x.png
+  artifactKey: Guid(0ccc508108fa6ed4fa11b4a467d7f609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/character_Mode@4x.png using Guid(0ccc508108fa6ed4fa11b4a467d7f609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '433ddd9b41b9f39cc5fa2bd883bcb0ca') in 0.031159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/PluginMaster/DesignTools/Editor/Common/Resources/Sprites/ButtonNormal.png
+  artifactKey: Guid(15de3bc77e580124e9d7d6843db4ce2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PluginMaster/DesignTools/Editor/Common/Resources/Sprites/ButtonNormal.png using Guid(15de3bc77e580124e9d7d6843db4ce2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c51b533095ec68e5a08e7963a859e2d') in 0.023731 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TerrainSampleAssets/Textures/Details/BushDry_BaseColor.tif
+  artifactKey: Guid(a366a386d5147ee47b6111652608c240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainSampleAssets/Textures/Details/BushDry_BaseColor.tif using Guid(a366a386d5147ee47b6111652608c240) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd54b01f671b8e4fcda6a075e4197e21') in 0.046467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button@4x.png
+  artifactKey: Guid(aa356632480554016ab8f4200032981b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.inputsystem/InputSystem/Editor/Icons/Button@4x.png using Guid(aa356632480554016ab8f4200032981b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14a549be6f76cf9a5f2e8d8cc65870b5') in 0.023961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TerrainSampleAssets/Textures/Details/BushDry_MaskMap.tif
+  artifactKey: Guid(ba5d550271efae04b84eeb0e550be656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainSampleAssets/Textures/Details/BushDry_MaskMap.tif using Guid(ba5d550271efae04b84eeb0e550be656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f401b95abd7bbdc3828777b28dc3f23e') in 0.034663 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@4x.png
+  artifactKey: Guid(748ae8b33df036b46a86e0387f1602cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/character_Mode@4x.png using Guid(748ae8b33df036b46a86e0387f1602cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a11dc45bba8bbd8e9d9ebefe09c64794') in 0.026137 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/TerrainSampleAssets/Textures/Heightmaps/Canyon04_Heightmap.tif
+  artifactKey: Guid(fd3a283142a57bd4aa8029f5e0705fc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TerrainSampleAssets/Textures/Heightmaps/Canyon04_Heightmap.tif using Guid(fd3a283142a57bd4aa8029f5e0705fc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1883dac4015ef6601839631adae65d2a') in 0.027791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.628439 seconds.
+  path: Assets/Resources/Prefabs/Cabin/CampfireWood.mat
+  artifactKey: Guid(777243fe2443b644dba1dbe0389d9a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/CampfireWood.mat using Guid(777243fe2443b644dba1dbe0389d9a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '935d6f9781099b354ae238d610415571') in 0.025412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.704788 seconds.
+  path: Assets/Resources/Prefabs/Cabin/CampfireWood 1.mat
+  artifactKey: Guid(9ed67c0a398dbce48893f17a10ef9362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cabin/CampfireWood 1.mat using Guid(9ed67c0a398dbce48893f17a10ef9362) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0892bd24444ed32ac4a93bdc0c4de8b4') in 0.020765 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 527.351615 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire 0.prefab
+  artifactKey: Guid(08fd1b80cc24cc8439f45fda3c558255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire 0.prefab using Guid(08fd1b80cc24cc8439f45fda3c558255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fce9d68ab48791038040f91be92d4fa') in 0.043534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro blue.prefab
+  artifactKey: Guid(c590b17884b119046bc6412066500b7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro blue.prefab using Guid(c590b17884b119046bc6412066500b7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08b8a4c64f6a799f631f4dc4928f270') in 0.068070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire 1.prefab
+  artifactKey: Guid(25093a0593dc83043a7bc17ebba0e95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire 1.prefab using Guid(25093a0593dc83043a7bc17ebba0e95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c326ae40a423954f581664e39c40f2b') in 0.040909 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001633 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro red.prefab
+  artifactKey: Guid(eca000ab44c908d4dab395f654753038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/Magic fire pro red.prefab using Guid(eca000ab44c908d4dab395f654753038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9741e35fa3f5dbce6bc61184dd9bcebf') in 0.042249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/RotatorPS1.prefab
+  artifactKey: Guid(1381b64ff1936ac4e80c3a00687081f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/RotatorPS1.prefab using Guid(1381b64ff1936ac4e80c3a00687081f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9adbaeb3c8cc014d9ba4db7211e27fb') in 0.042072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Prefabs/RotatorPS2.prefab
+  artifactKey: Guid(26255240385821a4185c7163c7a7aec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Prefabs/RotatorPS2.prefab using Guid(26255240385821a4185c7163c7a7aec6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a81db72d8c215bc5377d3e317d0fba0f') in 0.036001 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.091587 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Textures/Smoke26.png
+  artifactKey: Guid(08b3912bdc0a5ed4d9a27125425a97f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Textures/Smoke26.png using Guid(08b3912bdc0a5ed4d9a27125425a97f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6db3bca2609c382e5ac396e1a85fd06') in 0.025763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.459471 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Materials/SparkSphere.mat
+  artifactKey: Guid(20e729147a4dad247abfc2305c3dd963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Materials/SparkSphere.mat using Guid(20e729147a4dad247abfc2305c3dd963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0deb6f4bec1c2e2517adcf96d980ebd2') in 0.017836 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

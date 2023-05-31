@@ -65,7 +65,7 @@ MonoBehaviour:
   WindIntensity: 1
   WeatherEffect: {fileID: 198882807848139052, guid: 516fd25c12e04ba46bce3ce4bab8f8e1,
     type: 3}
-  ParticleEffectAmount: 1000
+  ParticleEffectAmount: 700
   ParticleEffectVector: {x: 0, y: 15, z: 0}
   AdditionalWeatherEffect: {fileID: 0}
   AdditionalParticleEffectAmount: 200
@@ -73,11 +73,11 @@ MonoBehaviour:
   WeatherVolume: 1
   WeatherSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 2135423513
+      Data2: 1131771227
+      Data3: 271446435
+      Data4: 122152213
+    Path: event:/LightRain
   PrecipitationWeatherType: 0
   UseWeatherSound: 0
   UseWeatherEffect: 0
