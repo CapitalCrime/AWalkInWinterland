@@ -58,11 +58,11 @@ public class RacerSnowman : Snowman
         }
         yield return null;
     }
-    public override void DayArriveAction()
+    protected override void DayArriveAction()
     {
     }
 
-    public override void NightArriveAction()
+    protected override void NightArriveAction()
     {
     }
 

@@ -7,11 +7,11 @@ public class CatSnowman : Snowman
 {
     [SerializeField] private FMODUnity.EmitterRef purrSoundRef;
 
-    public override void NightArriveAction()
+    protected override void NightArriveAction()
     {
     }
 
-    public override void DayArriveAction()
+    protected override void DayArriveAction()
     {
     }
 

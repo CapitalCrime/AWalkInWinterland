@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BasicSnowman : Snowman
 {
-    public override void DayArriveAction()
+    protected override void DayArriveAction()
     {
     }
 
-    public override void NightArriveAction()
+    protected override void NightArriveAction()
     {
     }
 

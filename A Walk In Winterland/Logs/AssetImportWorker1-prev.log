@@ -15,7 +15,7 @@ C:/Users/check/OneDrive/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-59084
+50229
 Successfully changed project path to: C:/Users/check/OneDrive/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 C:/Users/check/OneDrive/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/check/OneDrive/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 147.00 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 138.46 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,39 +63,39 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56748
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003898 seconds.
+Registered in 0.003581 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
-Refreshing native plugins compatible for Editor in 136.84 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 132.83 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.576 seconds
+- Completed reload, in  0.558 seconds
 Domain Reload Profiling:
-	ReloadAssembly (576ms)
-		BeginReloadAssembly (51ms)
+	ReloadAssembly (558ms)
+		BeginReloadAssembly (53ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (434ms)
-			LoadAssemblies (50ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (421ms)
+			LoadAssemblies (52ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (80ms)
+			SetupTypeCache (75ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (19ms)
-			SetupLoadedEditorAssemblies (294ms)
+			SetupLoadedEditorAssemblies (288ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (20ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (137ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (133ms)
 				BeforeProcessingInitializeOnLoad (1ms)
 				ProcessInitializeOnLoadAttributes (103ms)
 				ProcessInitializeOnLoadMethodAttributes (32ms)
@@ -105,52 +105,52 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011057 seconds.
+Registered in 0.020643 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\check\OneDrive\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\check\OneDrive\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
-Refreshing native plugins compatible for Editor in 142.40 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 157.82 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.558 seconds
+- Completed reload, in  1.623 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1558ms)
-		BeginReloadAssembly (90ms)
+	ReloadAssembly (1624ms)
+		BeginReloadAssembly (98ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1359ms)
-			LoadAssemblies (81ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1422ms)
+			LoadAssemblies (98ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (310ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (93ms)
-			SetupLoadedEditorAssemblies (825ms)
+			SetupTypeCache (282ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (80ms)
+			SetupLoadedEditorAssemblies (922ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (25ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (142ms)
-				BeforeProcessingInitializeOnLoad (114ms)
-				ProcessInitializeOnLoadAttributes (495ms)
-				ProcessInitializeOnLoadMethodAttributes (55ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				RefreshPlugins (158ms)
+				BeforeProcessingInitializeOnLoad (127ms)
+				ProcessInitializeOnLoadAttributes (546ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.80 ms, found 6 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.82 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 6778 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 141 unused Assets / (2.3 MB). Loaded Objects now: 7178.
-Memory consumption went from 338.1 MB to 335.8 MB.
-Total: 4.821900 ms (FindLiveObjects: 0.514900 ms CreateObjectMapping: 0.310400 ms MarkObjects: 3.370200 ms  DeleteObjects: 0.625300 ms)
+Memory consumption went from 338.2 MB to 335.8 MB.
+Total: 4.784900 ms (FindLiveObjects: 0.557100 ms CreateObjectMapping: 0.304700 ms MarkObjects: 3.417100 ms  DeleteObjects: 0.504600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -164,22 +164,58 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 344156.021451 seconds.
-  path: Assets/Resources/Prefabs/MountainPrefabs/well_whole.jpg
-  artifactKey: Guid(9c7fc77e419038f43a4b91858e29b503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/MountainPrefabs/well_whole.jpg using Guid(9c7fc77e419038f43a4b91858e29b503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ca7e8e19a3b3dfa13552dd15b6376a4') in 0.086345 seconds 
+  Time since last request: 2518.917838 seconds.
+  path: Assets/Resources/Prefabs/MountainPrefabs/ChairPillowMat.mat
+  artifactKey: Guid(cd9eca37081786d449a75a9248bdfd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/MountainPrefabs/ChairPillowMat.mat using Guid(cd9eca37081786d449a75a9248bdfd02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd94e3c26cb90b35b21c8c82c754199f0') in 0.275698 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Resources/Prefabs/MountainPrefabs/rope.jpg
-  artifactKey: Guid(25a521840ec4e94448883668097a7084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/MountainPrefabs/rope.jpg using Guid(25a521840ec4e94448883668097a7084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24226dbe5ceb852679ff5181e9d69202') in 0.013981 seconds 
+  Time since last request: 116.246967 seconds.
+  path: Assets/Resources/Prefabs/MountainPrefabs/ChairPlasticMat.mat
+  artifactKey: Guid(3fc8583fa32fa484194484be56fdc8c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/MountainPrefabs/ChairPlasticMat.mat using Guid(3fc8583fa32fa484194484be56fdc8c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe2b989a36f21e772982ef2e20dfe555') in 0.023040 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Resources/Prefabs/MountainPrefabs/well.obj
-  artifactKey: Guid(9e873bf05c2a9b542b1962c82622ada3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/MountainPrefabs/well.obj using Guid(9e873bf05c2a9b542b1962c82622ada3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6b953f883614b1494523c72e963aea') in 0.311752 seconds 
+  Time since last request: 87.580682 seconds.
+  path: Assets/Resources/Prefabs/Cliff/stonen_55_SPEC.png
+  artifactKey: Guid(262f13e9acae55541a6c067789eb60e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cliff/stonen_55_SPEC.png using Guid(262f13e9acae55541a6c067789eb60e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9022479077432059d919fb7c9fbdf4f') in 0.048698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/UniStorm Weather System/Textures/Celestial/sun 1.png
+  artifactKey: Guid(0c0877aeacdc649439963bb7499e4797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniStorm Weather System/Textures/Celestial/sun 1.png using Guid(0c0877aeacdc649439963bb7499e4797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fce9114e1833a71c48ccbd7234e0630') in 0.012500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Snowmen/Textures/Accessories/SunglassesColour.png
+  artifactKey: Guid(758a0a1f1c68155498316873c9229f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Snowmen/Textures/Accessories/SunglassesColour.png using Guid(758a0a1f1c68155498316873c9229f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf5977b4d9287a8218808783adae4cc3') in 0.015509 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/BruteForce/Textures/Pattern/StreakLines01.png
+  artifactKey: Guid(54a6a5cd40babcc498fc787b91243aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BruteForce/Textures/Pattern/StreakLines01.png using Guid(54a6a5cd40babcc498fc787b91243aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d3a8a3d309179a29cfa67ca1258626') in 0.013751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.277069 seconds.
+  path: Assets/Resources/Prefabs/Cliff/stonen_55_NRM.png
+  artifactKey: Guid(fd067ca57b255d042bc324348cc34471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Cliff/stonen_55_NRM.png using Guid(fd067ca57b255d042bc324348cc34471) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a2e7bceb560a26a5718d91200e32f8d') in 0.016290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.094061 seconds.
+  path: Assets/UniStorm Weather System/Resources/Components/Resources/Starmap (Very Strong Constellations).png
+  artifactKey: Guid(54eea75ec1205a145a87fa53695461ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniStorm Weather System/Resources/Components/Resources/Starmap (Very Strong Constellations).png using Guid(54eea75ec1205a145a87fa53695461ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20034f9b7f8ae1e09b415fdd92d07eb5') in 0.060559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.292971 seconds.
+  path: Assets/UniStorm Weather System/Resources/Components/Resources/Starmap (Light Constellations).png
+  artifactKey: Guid(8c3fa8824ff9c0f479d6804543881df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniStorm Weather System/Resources/Components/Resources/Starmap (Light Constellations).png using Guid(8c3fa8824ff9c0f479d6804543881df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '291fc6d0b78f85d31147b5305b7505cc') in 0.059871 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

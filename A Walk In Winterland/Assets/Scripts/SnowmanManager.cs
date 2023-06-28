@@ -8,7 +8,8 @@ using System.Linq;
 
 public class SnowmanManager : MonoBehaviour
 {
-    [SerializeField] public Camera _camera;
+    [SerializeField] Camera _camera;
+    public Camera mainCamera { get => _camera; }
     private PlayerInput playerInput;
     private InputActionMap currentMap;
     private InputActionMap playMap;

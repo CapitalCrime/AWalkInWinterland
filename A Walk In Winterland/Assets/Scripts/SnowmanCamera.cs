@@ -131,19 +131,22 @@ public class SnowmanCamera : MonoBehaviour
         if(cameraOffset != null)
         {
             Vector3 snowmanPos = currentThirdPersonCam.LookAt.position;
-            Vector3 rayDir = (SnowmanManager.instance._camera.transform.position - snowmanPos);
+            Vector3 rayDir = (SnowmanManager.instance.mainCamera.transform.position - snowmanPos);
             Debug.DrawRay(snowmanPos, rayDir.normalized * rayDir.magnitude);
             RaycastHit[] hits = Physics.RaycastAll(snowmanPos, rayDir.normalized, rayDir.magnitude+0.5f, terrainBoundariesMask);
             Debug.Log("Hits: " + hits.Length);
             if (hits.Length > 0)
             {
                 rayHit = true;
-                hits = hits.OrderBy(x => Vector3.Distance(x.transform.position, snowmanPos)).ToArray();
+                if(hits.Length > 1)
+                {
+                    hits = hits.OrderBy(x => Vector3.Distance(x.transform.position, snowmanPos)).ToArray();
+                }
                 Vector3 pos = hits[hits.Length - 1].point;
                 Vector3 cameraPosition = pos - rayDir.normalized * 2;
-                cameraOffset.m_Offset.z += (SnowmanManager.instance._camera.transform.position - cameraPosition).magnitude*Time.deltaTime*6 + Time.deltaTime*2;
+                cameraOffset.m_Offset.z += (SnowmanManager.instance.mainCamera.transform.position - cameraPosition).magnitude*Time.deltaTime*6 + Time.deltaTime*2;
                 cameraOffset.m_Offset.z = Mathf.Clamp(cameraOffset.m_Offset.z, realOffsetZoom, 7.5f);
-            } else if(!Physics.Raycast(SnowmanManager.instance._camera.transform.position, -SnowmanManager.instance._camera.transform.forward, 1, terrainBoundariesMask))
+            } else if(!Physics.Raycast(SnowmanManager.instance.mainCamera.transform.position, -SnowmanManager.instance.mainCamera.transform.forward, 1, terrainBoundariesMask))
             {
                 if (rayHit)
                 {

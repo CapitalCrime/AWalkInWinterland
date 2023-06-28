@@ -11,11 +11,11 @@ public class PenguinSnowman : Snowman
         snowmanFPSEvent += CanvasManager.EnablePenguinPanel;
         snowmanLeaveFPSEvent += CanvasManager.DisablePenguinPanel;
     }
-    public override void DayArriveAction()
+    protected override void DayArriveAction()
     {
     }
 
-    public override void NightArriveAction()
+    protected override void NightArriveAction()
     {
     }
 

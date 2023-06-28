@@ -10,11 +10,11 @@ public class MobsterSnowman : Snowman
     Coroutine shootRoutine;
     public LayerMask snowmanMask;
 
-    public override void DayArriveAction()
+    protected override void DayArriveAction()
     {
     }
 
-    public override void NightArriveAction()
+    protected override void NightArriveAction()
     {
     }
 
