@@ -191,13 +191,26 @@ public abstract class Snowman : MonoBehaviour
         snowmanViewedEvent?.Invoke();
     }
 
+    public void MoveInDirection(Vector3 forceDirection)
+    {
+        snowmanRigidbody.velocity = Vector3.zero;
+        snowmanRigidbody.angularVelocity = Vector3.zero;
+        AddForce(forceDirection);
+        snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude / 3 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x), ForceMode.Acceleration);
+    }
+
+    public void PushInDirection(Vector3 forceDirection)
+    {
+        AddForce(forceDirection);
+        snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude / 3 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x), ForceMode.Acceleration);
+    }
+
     void PushRandomDirection()
     {
         float forceAmount = Random.Range(walkSpeeds.min, walkSpeeds.max);
         Quaternion forceAngle = Quaternion.Euler(0, Random.Range(0, 360), 0);
         Vector3 forceDirection = forceAngle * Vector3.right * forceAmount;
-        AddForce(forceDirection);
-        snowmanRigidbody.AddRelativeTorque(transform.up * forceDirection.magnitude/3 * Mathf.Sign(transform.InverseTransformPoint(transform.position + forceDirection).x), ForceMode.Acceleration);
+        PushInDirection(forceDirection);
     }
 
     protected void PauseWalkTime()

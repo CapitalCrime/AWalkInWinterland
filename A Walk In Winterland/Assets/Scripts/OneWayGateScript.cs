@@ -36,7 +36,7 @@ public class OneWayGateScript : MonoBehaviour
                 }
                 if (other.TryGetComponent(out Snowman snowman))
                 {
-                    snowman.AddForce(openDirection * 100);
+                    snowman.MoveInDirection(openDirection * 300);
                 }
                 Physics.IgnoreCollision(objectCollider, other, true);
             } else
