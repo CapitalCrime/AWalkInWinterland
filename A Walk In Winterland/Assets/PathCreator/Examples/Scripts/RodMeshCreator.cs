@@ -61,8 +61,8 @@ namespace PathCreation.Examples {
 
                 for (int rodIndex = 0; rodIndex < rodResolution; rodIndex++)
                 {
-                    vertSideA = path.GetPoint(i) + Quaternion.AngleAxis(45 * rodIndex, path.GetTangent(i)) * localUp * Mathf.Abs(thickness);
-                    vertSideB = path.GetPoint(i) + Quaternion.AngleAxis(45 * (rodIndex + 1), path.GetTangent(i)) * localUp * Mathf.Abs(thickness);
+                    vertSideA = path.GetPoint(i) + Quaternion.AngleAxis((360/rodResolution) * rodIndex, path.GetTangent(i)) * localUp * Mathf.Abs(thickness);
+                    vertSideB = path.GetPoint(i) + Quaternion.AngleAxis((360 / rodResolution) * (rodIndex + 1), path.GetTangent(i)) * localUp * Mathf.Abs(thickness);
 
                     verts[(rodIndex * 2) + vertIndex] = vertSideA;
                     verts[(rodIndex * 2) + vertIndex + 1] = vertSideB;
