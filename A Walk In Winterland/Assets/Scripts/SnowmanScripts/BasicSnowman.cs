@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BasicSnowman : Snowman
 {
+    protected override void CancelUniqueAction()
+    {
+    }
+
     protected override void DayArriveAction()
     {
     }

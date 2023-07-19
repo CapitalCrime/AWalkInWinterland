@@ -18,13 +18,8 @@ public class RacerSnowman : Snowman
     [SerializeField] private FMODUnity.EmitterRef carSoundRef;
     [SerializeField] private FMODUnity.EmitterRef carSongRef;
 
-    IEnumerator switchDriftingState()
+    void StartDrifting()
     {
-        while (carSoundRef.Target.IsPlaying())
-        {
-            yield return null;
-        }
-
         racerState = RacerState.Drifting;
         driftingTime = 0;
         timeSinceChangeDriftDirection = 0;
@@ -34,6 +29,26 @@ public class RacerSnowman : Snowman
             carSongRef.Target.Stop();
             carSongRef.Target.Play();
         }
+    }
+
+    void EndDrifting()
+    {
+        racerState = RacerState.Relaxing;
+        ResetActionTimes();
+        if (carSongRef.Target != null)
+        {
+            carSongRef.Target.SetParameter("FinishLoop", 1);
+        }
+    }
+
+    IEnumerator switchDriftingState()
+    {
+        while (carSoundRef.Target.IsPlaying())
+        {
+            yield return null;
+        }
+
+        StartDrifting();
 
         while (driftingTime < 15)
         {
@@ -47,15 +62,13 @@ public class RacerSnowman : Snowman
             yield return null;
         }
 
-        racerState = RacerState.Relaxing;
-        ResetActionTimes();
+        EndDrifting();
+
+        //Car spins out after drifting ends
         snowmanRigidbody.velocity = snowmanRigidbody.velocity.normalized * 4;
         float turnDirection = turnRight ? 150f : -150f;
         snowmanRigidbody.AddRelativeTorque(Vector3.up * turnDirection, ForceMode.Acceleration);
-        if (carSongRef.Target != null)
-        {
-            carSongRef.Target.SetParameter("FinishLoop", 1);
-        }
+
         yield return null;
     }
     protected override void DayArriveAction()
@@ -78,6 +91,16 @@ public class RacerSnowman : Snowman
             StopCoroutine(driftingRoutine);
         }
         driftingRoutine = StartCoroutine(switchDriftingState());
+    }
+
+    protected override void CancelUniqueAction()
+    {
+        if (driftingRoutine != null)
+        {
+            StopCoroutine(driftingRoutine);
+        }
+
+        EndDrifting();
     }
 
     protected override void Start()

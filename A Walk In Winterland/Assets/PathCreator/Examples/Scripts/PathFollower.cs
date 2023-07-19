@@ -9,7 +9,6 @@ namespace PathCreation.Examples
         public PathCreator pathCreator;
         public EndOfPathInstruction endOfPathInstruction;
         public float speed = 5;
-        public float startingPoint = 0;
         float distanceTravelled;
 
         void Start() {
@@ -18,7 +17,31 @@ namespace PathCreation.Examples
                 // Subscribed to the pathUpdated event so that we're notified if the path changes during the game
                 pathCreator.pathUpdated += OnPathChanged;
             }
-            distanceTravelled = startingPoint;
+        }
+
+        public void SetDistanceTravelled(float amount)
+        {
+            distanceTravelled = amount;
+        }
+
+        public void SetDistanceByPoint(Vector3 pos)
+        {
+            distanceTravelled = pathCreator.path.GetClosestDistanceAlongPath(pos);
+        }
+
+        public float GetDistanceTravelled()
+        {
+            return distanceTravelled;
+        }
+
+        public Vector3 GetPointByDistance()
+        {
+            return pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
+        }
+
+        public float GetDistanceByPoint(Vector3 pos)
+        {
+            return pathCreator.path.GetClosestDistanceAlongPath(pos);
         }
 
         void Update()

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Outline))]
 public abstract class Snowman : MonoBehaviour
 {
     public delegate void SnowmanDelegate(Snowman snowman);
@@ -21,6 +24,7 @@ public abstract class Snowman : MonoBehaviour
     float lastWalkedSeconds;
     float uniqueActionPauseSeconds;
     float walkPauseSeconds;
+    bool uniqueActionsEnabled = true;
     bool walkingEnabled = true;
     bool walkingStartEnabled = true;
     protected MinMax walkSpeeds = new MinMax(250, 400);
@@ -29,6 +33,8 @@ public abstract class Snowman : MonoBehaviour
     protected abstract void DayArriveAction();
 
     protected abstract void UniqueAction();
+
+    protected abstract void CancelUniqueAction();
 
     void QueuedDayActionCheck()
     {
@@ -108,6 +114,9 @@ public abstract class Snowman : MonoBehaviour
         } else
         {
             DisableEvents();
+            CancelUniqueAction();
+            snowmanRigidbody.angularVelocity = Vector3.zero;
+            snowmanRigidbody.velocity = Vector3.zero;
         }
 
         enabled = value;
@@ -133,13 +142,7 @@ public abstract class Snowman : MonoBehaviour
         SetUniqueActionActivationTime();
         lastWalkedSeconds = Time.time;
         lastActivedUniqueActionSeconds = Time.time;
-        if(TryGetComponent(out Rigidbody rigidbody))
-        {
-            snowmanRigidbody = rigidbody;
-        } else
-        {
-            Debug.LogError("No rigidbody found on snowman: "+transform.name);
-        }
+        snowmanRigidbody = GetComponent<Rigidbody>();
 
         walkingStartEnabled = walkingEnabled;
     }
@@ -168,6 +171,10 @@ public abstract class Snowman : MonoBehaviour
     {
         snowmanCreatedEvent?.Invoke(this);
 
+        snowmanRigidbody.centerOfMass = Vector3.zero;
+        snowmanRigidbody.inertiaTensorRotation = Quaternion.identity;
+
+        EnableSounds();
         EnableEvents();
     }
 
@@ -245,7 +252,7 @@ public abstract class Snowman : MonoBehaviour
 
     protected void UniqueCheck()
     {
-        if (Time.time - lastActivedUniqueActionSeconds >= uniqueActionSeconds)
+        if (uniqueActionsEnabled && Time.time - lastActivedUniqueActionSeconds >= uniqueActionSeconds)
         {
             SetUniqueActionActivationTime();
             lastActivedUniqueActionSeconds = Time.time;
@@ -277,13 +284,16 @@ public abstract class Snowman : MonoBehaviour
         PerformActions();
     }
 
-    void EnableEvents()
+    void EnableSounds()
     {
         if (clickSoundRef.Target != null)
         {
             snowmanViewedEvent += ClickSoundPlay;
         }
+    }
 
+    void EnableEvents()
+    {
         //DayCycle.nightActions += NightArriveAction;
         //DayCycle.nightActions += PauseActionTimes;
         UniStorm.UniStormSystem.Instance.OnNightArriveEvent.AddListener(NightActionTrigger);
@@ -292,6 +302,11 @@ public abstract class Snowman : MonoBehaviour
         //DayCycle.dayActions += ResumeActionTimes;
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(DayActionTrigger);
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.AddListener(ResumeActionTimes);
+    }
+
+    void DisableSounds()
+    {
+        snowmanViewedEvent -= ClickSoundPlay;
     }
 
     void DisableEvents()
@@ -304,11 +319,11 @@ public abstract class Snowman : MonoBehaviour
         //DayCycle.dayActions -= ResumeActionTimes;
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(DayActionTrigger);
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(ResumeActionTimes);
-        snowmanViewedEvent -= ClickSoundPlay;
     }
 
     protected virtual void OnDestroy()
     {
         DisableEvents();
+        DisableSounds();
     }
 }

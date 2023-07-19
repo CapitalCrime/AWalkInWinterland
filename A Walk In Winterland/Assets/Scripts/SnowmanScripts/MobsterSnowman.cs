@@ -73,4 +73,8 @@ public class MobsterSnowman : Snowman
         EnableWalking(false);
         shootRoutine = StartCoroutine(ShootAction());
     }
+
+    protected override void CancelUniqueAction()
+    {
+    }
 }

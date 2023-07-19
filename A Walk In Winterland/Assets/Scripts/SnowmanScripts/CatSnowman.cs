@@ -22,4 +22,8 @@ public class CatSnowman : Snowman
             purrSoundRef.Target.Play();
         }
     }
+
+    protected override void CancelUniqueAction()
+    {
+    }
 }

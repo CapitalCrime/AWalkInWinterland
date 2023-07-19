@@ -30,4 +30,8 @@ public class PenguinSnowman : Snowman
         snowmanFPSEvent -= CanvasManager.EnablePenguinPanel;
         snowmanLeaveFPSEvent -= CanvasManager.DisablePenguinPanel;
     }
+
+    protected override void CancelUniqueAction()
+    {
+    }
 }

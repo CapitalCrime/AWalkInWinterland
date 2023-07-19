@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118404276966158}
-  m_Mesh: {fileID: 4300006, guid: 67dfc9a32229b7c40aaaf3a179e792c8, type: 3}
+  m_Mesh: {fileID: -3214512504191479892, guid: 67dfc9a32229b7c40aaaf3a179e792c8, type: 3}
 --- !u!23 &23705386070872470
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,7 +97,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 67dfc9a32229b7c40aaaf3a179e792c8, type: 3}
+  m_Mesh: {fileID: 5215633674785661376, guid: 67dfc9a32229b7c40aaaf3a179e792c8, type: 3}
 --- !u!1 &1373413698889372
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ LODGroup:
   m_GameObject: {fileID: 1373413698889372}
   serializedVersion: 2
   m_LocalReferencePoint: {x: -0.0033933222, y: 0.0014497042, z: -0.0029995441}
-  m_Size: 1.2521565
+  m_Size: 1
   m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
@@ -151,11 +151,11 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23705386070872470}
-  - screenRelativeHeight: 0.25
+  - screenRelativeHeight: 0.35
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23435148243419154}
-  - screenRelativeHeight: 0.02
+  - screenRelativeHeight: 0.0025
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 23677940838154308}
@@ -200,7 +200,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378859980554924}
-  m_Mesh: {fileID: 4300002, guid: 67dfc9a32229b7c40aaaf3a179e792c8, type: 3}
+  m_Mesh: {fileID: 5215633674785661376, guid: 67dfc9a32229b7c40aaaf3a179e792c8, type: 3}
 --- !u!23 &23677940838154308
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -283,7 +283,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911958061256962}
-  m_Mesh: {fileID: 4300004, guid: 67dfc9a32229b7c40aaaf3a179e792c8, type: 3}
+  m_Mesh: {fileID: 6576716960646010146, guid: 67dfc9a32229b7c40aaaf3a179e792c8, type: 3}
 --- !u!23 &23435148243419154
 MeshRenderer:
   m_ObjectHideFlags: 0
