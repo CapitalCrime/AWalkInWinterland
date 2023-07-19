@@ -15,7 +15,7 @@ C:/Users/check/OneDrive/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-63832
+65098
 Successfully changed project path to: C:/Users/check/OneDrive/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 C:/Users/check/OneDrive/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/check/OneDrive/Documents/GitHub/AWalkInWinterland/A Walk In Winterland
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 158.91 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 142.40 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,81 +63,81 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56980
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003740 seconds.
+Registered in 0.004175 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
-Refreshing native plugins compatible for Editor in 137.56 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 136.61 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.556 seconds
+- Completed reload, in  0.562 seconds
 Domain Reload Profiling:
-	ReloadAssembly (556ms)
-		BeginReloadAssembly (48ms)
+	ReloadAssembly (562ms)
+		BeginReloadAssembly (49ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (428ms)
-			LoadAssemblies (46ms)
+		EndReloadAssembly (429ms)
+			LoadAssemblies (47ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (87ms)
+			SetupTypeCache (84ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (20ms)
-			SetupLoadedEditorAssemblies (281ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (287ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (18ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (138ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (137ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (93ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
+				ProcessInitializeOnLoadAttributes (99ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006562 seconds.
+Registered in 0.007900 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\check\OneDrive\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\check\OneDrive\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
-Refreshing native plugins compatible for Editor in 139.10 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 147.11 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.359 seconds
+- Completed reload, in  1.418 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1359ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (1419ms)
+		BeginReloadAssembly (82ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (1184ms)
-			LoadAssemblies (73ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1241ms)
+			LoadAssemblies (75ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (231ms)
+			SetupTypeCache (260ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (64ms)
-			SetupLoadedEditorAssemblies (779ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (793ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (16ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (139ms)
-				BeforeProcessingInitializeOnLoad (106ms)
-				ProcessInitializeOnLoadAttributes (467ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				RefreshPlugins (147ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (469ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (4ms)
@@ -145,12 +145,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.51 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 1.52 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 6881 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 142 unused Assets / (2.5 MB). Loaded Objects now: 7282.
 Memory consumption went from 348.6 MB to 346.1 MB.
-Total: 4.273700 ms (FindLiveObjects: 0.537200 ms CreateObjectMapping: 0.282200 ms MarkObjects: 3.013700 ms  DeleteObjects: 0.439800 ms)
+Total: 4.901800 ms (FindLiveObjects: 0.526300 ms CreateObjectMapping: 0.307300 ms MarkObjects: 3.522100 ms  DeleteObjects: 0.545100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -162,106 +162,14 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 550668.122572 seconds.
-  path: Assets/Settings/URP-HighFidelity.asset
-  artifactKey: Guid(7b7fd9122c28c4d15b667c7040e3b3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/URP-HighFidelity.asset using Guid(7b7fd9122c28c4d15b667c7040e3b3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c8c1d8127fd39fba6e01b21c872fe9e') in 0.030779 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Settings/URP-Balanced.asset
-  artifactKey: Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/URP-Balanced.asset using Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d388e5803a5bcd401c5dd25279e4bdf') in 0.002911 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.765842 seconds.
-  path: Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Blowing Pine Needles.asset
-  artifactKey: Guid(f0417bc7aee5058499ed9c7e3cab98ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Blowing Pine Needles.asset using Guid(f0417bc7aee5058499ed9c7e3cab98ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5dbc450a4b93ec4371173766698fac2') in 0.006340 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Blowing Snow.asset
-  artifactKey: Guid(7ebca4bb3b5bc94439d523e69756d95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Blowing Snow.asset using Guid(7ebca4bb3b5bc94439d523e69756d95d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcb4b73e2a51755d1164d5298f7d6d1e') in 0.004053 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Lightning Bugs 1.asset
-  artifactKey: Guid(b25953b038ac99641a84679479a5f3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Lightning Bugs 1.asset using Guid(b25953b038ac99641a84679479a5f3ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09d5b70489c2dcce20a37d8d2ce2bb71') in 0.010100 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Partly Cloud with Showers.asset
-  artifactKey: Guid(1dde56a5346ef0e4792ae43595c10e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Partly Cloud with Showers.asset using Guid(1dde56a5346ef0e4792ae43595c10e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07a0aa41c8a272edfcbe429c77a20ea6') in 0.004615 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Hazy.asset
-  artifactKey: Guid(9c9c95d0c839e12409171dc4a845551a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Hazy.asset using Guid(9c9c95d0c839e12409171dc4a845551a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28233538372d8db4d02d9ae420962d62') in 0.003377 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Mostly Clear.asset
-  artifactKey: Guid(496382d3b6d3bde4ba6af9ddd1274248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Mostly Clear.asset using Guid(496382d3b6d3bde4ba6af9ddd1274248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '877efa1b89d3bde6607e6472dfee0a5a') in 0.003479 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Mostly Cloudy.asset
-  artifactKey: Guid(b1b04f0270cfa784588fdc5818097ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniStorm Weather System/Weather Types/Non-Precipitation/Mostly Cloudy.asset using Guid(b1b04f0270cfa784588fdc5818097ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aab82676d47492b031c4355279b356dc') in 0.003484 seconds 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008043 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\check\OneDrive\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\check\OneDrive\Documents\GitHub\AWalkInWinterland\A Walk In Winterland\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Refreshing native plugins compatible for Editor in 1.79 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 16.40 ms, found 6 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.454 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1455ms)
-		BeginReloadAssembly (133ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		EndReloadAssembly (1215ms)
-			LoadAssemblies (91ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (293ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (698ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (24ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (108ms)
-				ProcessInitializeOnLoadAttributes (462ms)
-				ProcessInitializeOnLoadMethodAttributes (95ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (20ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 16.31 ms, found 6 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6577 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 106 unused Assets / (2.5 MB). Loaded Objects now: 7298.
-Memory consumption went from 331.5 MB to 329.0 MB.
-Total: 7.622000 ms (FindLiveObjects: 0.665900 ms CreateObjectMapping: 0.653000 ms MarkObjects: 5.189900 ms  DeleteObjects: 1.111400 ms)
+Unloading 105 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 105 unused Assets / (2.5 MB). Loaded Objects now: 7282.
+Memory consumption went from 190.9 MB to 188.4 MB.
+Total: 4.621500 ms (FindLiveObjects: 0.543400 ms CreateObjectMapping: 0.313200 ms MarkObjects: 3.265300 ms  DeleteObjects: 0.498900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -273,7 +181,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
