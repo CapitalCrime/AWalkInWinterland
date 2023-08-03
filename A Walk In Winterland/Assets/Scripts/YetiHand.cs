@@ -6,18 +6,20 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Animation))]
 public class YetiHand : MonoBehaviour
 {
-    public event UnityAction releaseAction; 
+    public event UnityAction<Snowman> releaseAction; 
     [SerializeField] Transform yetiHandGrabPoint;
     Snowman heldSnowman;
     Transform yetiArm;
-    Animation yetiGrabAnimation;
+    Animation yetiAnimation;
     public bool grabbing { get; private set; }
+    public bool throwing { get; private set; }
     // Start is called before the first frame update
     void Awake()
     {
         grabbing = false;
+        throwing = false;
         yetiArm = transform.parent;
-        yetiGrabAnimation = GetComponent<Animation>();
+        yetiAnimation = GetComponent<Animation>();
     }
 
     public void ReachSnowman(Snowman snowman, Vector3 centerPosition, float reachDistance)
@@ -34,7 +36,42 @@ public class YetiHand : MonoBehaviour
 
         snowman.transform.position = GetSnowmanHandRangePosition(snowman, centerPosition, reachDistance);
 
-        yetiGrabAnimation.Play();
+        yetiAnimation.Play();
+    }
+
+    public void ThrowSnowman(Snowman snowman)
+    {
+        gameObject.SetActive(true);
+        heldSnowman = snowman;
+        snowman.gameObject.SetActive(true);
+
+        snowman.transform.SetParent(yetiHandGrabPoint);
+        snowman.transform.localPosition = Vector3.zero;
+        snowman.transform.localRotation = Quaternion.identity;
+
+        transform.Rotate(Vector3.up * Random.value * 180, Space.World);
+
+        yetiAnimation.Play();
+    }
+
+    float minThrowDistance = 8;
+    public void LaunchSnowman()
+    {
+        heldSnowman.transform.SetParent(null, true);
+        heldSnowman.SetInteractable(false);
+        heldSnowman.transform.eulerAngles = Vector3.zero;
+        LeanTween.move(heldSnowman.gameObject, heldSnowman.transform.position - transform.forward * minThrowDistance, 0.33f).setOnComplete(() =>
+        {
+            heldSnowman.GetRigidbody().velocity = Vector3.zero;
+            heldSnowman.SetInteractable(true);
+            Vector3 moveDir = -transform.forward;
+            moveDir.y = 0;
+            heldSnowman.MoveInDirection(moveDir * 350);
+            heldSnowman.transform.eulerAngles = Vector3.zero;
+            heldSnowman = null;
+
+            releaseAction?.Invoke(null);
+        });
     }
 
     Vector3 GetReachDirection(Snowman snowman, Vector3 centerPosition)
@@ -67,6 +104,16 @@ public class YetiHand : MonoBehaviour
         LeanTween.move(snowman.gameObject, inRangePosition, moveSpeed).setOnComplete(() => snowman.transform.position = inRangePosition);
     }
 
+    public void StartThrowing()
+    {
+        throwing = true;
+    }
+
+    public void StopThrowing()
+    {
+        throwing = false;
+    }
+
     public void StartGrabbing()
     {
         grabbing = true;
@@ -91,7 +138,7 @@ public class YetiHand : MonoBehaviour
 
         heldSnowman.gameObject.SetActive(false);
         heldSnowman.transform.SetParent(null);
+        releaseAction?.Invoke(heldSnowman);
         heldSnowman = null;
-        releaseAction?.Invoke();
     }
 }

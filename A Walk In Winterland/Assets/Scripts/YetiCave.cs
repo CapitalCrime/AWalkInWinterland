@@ -5,36 +5,62 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class YetiCave : MonoBehaviour
 {
-    [SerializeField] YetiHand yetiHand;
+    [SerializeField] YetiHand yetiGrabHand;
+    [SerializeField] YetiHand yetiThrowHand;
     [SerializeField] float reachDistance = 3;
     SphereCollider yetiCaveBounds;
     Queue<Snowman> linedUpSnowmen = new Queue<Snowman>();
+    Queue<Snowman> captiveSnowmen = new Queue<Snowman>();
     // Start is called before the first frame update
     void Start()
     {
-        yetiHand.releaseAction += ResetGrabTime;
-        yetiHand.gameObject.SetActive(false);
+        yetiGrabHand.releaseAction += ResetGrabTime;
+        yetiThrowHand.releaseAction += ResetThrowingTime;
+        yetiThrowHand.gameObject.SetActive(false);
+        yetiGrabHand.gameObject.SetActive(false);
         yetiCaveBounds = GetComponent<SphereCollider>();
         yetiCaveBounds.isTrigger = true;
     }
 
     float grabTime = 0;
+    float throwTime = -1;
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.time - grabTime >= 3 && !yetiHand.grabbing && linedUpSnowmen.Count > 0)
+        if(Time.time - grabTime >= 3 && !yetiGrabHand.grabbing && linedUpSnowmen.Count > 0)
         {
             Debug.Log("Grabbed!");
-            yetiHand.StartGrabbing();
-            yetiHand.ReachSnowman(linedUpSnowmen.Dequeue(), transform.position, reachDistance);
+            yetiGrabHand.StartGrabbing();
+            Snowman snowman = linedUpSnowmen.Dequeue();
+            yetiGrabHand.ReachSnowman(snowman, transform.position, reachDistance);
+        }
+
+        if (throwTime != -1 && Time.time - throwTime >= 6 && !yetiThrowHand.throwing && captiveSnowmen.Count > 0)
+        {
+            Debug.Log("Thrown!");
+            throwTime = -1;
+            yetiThrowHand.StartThrowing();
+            yetiThrowHand.ThrowSnowman(captiveSnowmen.Dequeue());
         }
     }
 
-    void ResetGrabTime()
+    void ResetGrabTime(Snowman snowman)
     {
         grabTime = Time.time;
-        yetiHand.StopGrabbing();
+        yetiGrabHand.StopGrabbing();
+
+        captiveSnowmen.Enqueue(snowman);
+        if (throwTime == -1)
+        {
+            throwTime = Time.time;
+        }
+    }
+
+    void ResetThrowingTime(Snowman _)
+    {
+        throwTime = Time.time;
+        yetiThrowHand.StopThrowing();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,7 +76,7 @@ public class YetiCave : MonoBehaviour
             {
                 grabTime = Time.time;
             }
-            yetiHand.MoveIntoHandRange(snowman, transform.position, reachDistance);
+            yetiGrabHand.MoveIntoHandRange(snowman, transform.position, reachDistance);
             linedUpSnowmen.Enqueue(snowman);
         }
     }
