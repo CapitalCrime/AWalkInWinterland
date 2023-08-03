@@ -11,6 +11,7 @@ public class CameraControls : MonoBehaviour
     [SerializeField] private Camera _camera;
     [SerializeField] private SnowmanCamera snowmanCamera;
     [SerializeField] private Cinemachine.CinemachineInputProvider provider;
+    [SerializeField] Texture2D gamepadCursor;
     public LayerMask snowmanMask;
     Outline currentOutline;
     Rigidbody rb;
@@ -18,26 +19,30 @@ public class CameraControls : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        CheckForController();
+        GameManager.OnControllerChange += CheckForController;
     }
 
-    void CheckForController()
+    private void Start()
     {
-        foreach(Gamepad gamepad in Gamepad.all)
+    }
+
+    void CheckForController(ControllerType controller)
+    {
+        switch (controller)
         {
-            Debug.Log("This is active: " + gamepad);
-        }
-        if(Gamepad.current != null)
-        {
-            provider.XYAxis.action.started -= MousePressed;
-            provider.XYAxis.action.canceled -= MouseReleased;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = true;
-        } else
-        {
-            provider.XYAxis.action.started += MousePressed;
-            provider.XYAxis.action.canceled += MouseReleased;
-            Cursor.lockState = CursorLockMode.None;
+            case ControllerType.Controller:
+                provider.XYAxis.action.started -= MousePressed;
+                provider.XYAxis.action.canceled -= MouseReleased;
+                Cursor.SetCursor(gamepadCursor, Vector2.zero, CursorMode.Auto);
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = true;
+                break;
+            case ControllerType.Keyboard:
+                provider.XYAxis.action.started += MousePressed;
+                provider.XYAxis.action.canceled += MouseReleased;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                break;
         }
     }
 
@@ -67,7 +72,10 @@ public class CameraControls : MonoBehaviour
     bool fasterCam = false;
     private void Update()
     {
-        CheckForController();
+        if(PlayerData.controller == ControllerType.Controller)
+        {
+            Cursor.visible = true;
+        }
         movementAxis = movement.action.ReadValue<Vector3>();
         fasterCam = fasterCamAction.action.ReadValue<float>() > 0.5f;
         //transform.position += _camera.transform.rotation * movementAxis * Time.deltaTime * (fasterCam ? 30 : 10);

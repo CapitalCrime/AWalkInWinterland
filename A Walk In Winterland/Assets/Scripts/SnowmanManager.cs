@@ -173,7 +173,11 @@ public class SnowmanManager : MonoBehaviour
         if (PauseScript.isPaused()) return;
         if (EventSystem.current.IsPointerOverGameObject()) { RemoveOutline(); return; }
         RaycastHit info;
-        Vector3 mousePos = Mouse.current.position.ReadValue();
+        Vector3 mousePos = new Vector2(Screen.width/2, Screen.height/2);
+        if (PlayerData.controller == ControllerType.Keyboard)
+        {
+            mousePos = Mouse.current.position.ReadValue();
+        }
         mousePos.z = _camera.farClipPlane;
         Ray ray = new Ray(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos));
         Debug.DrawLine(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos));

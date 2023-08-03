@@ -249,6 +249,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnowmanCamThirdPerson
       objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268949, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
         type: 3}
       propertyPath: m_RootOrder
@@ -303,6 +308,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914260011402268954, guid: 599484a0901a36640b2986f660e57c67,
+        type: 3}
+      propertyPath: m_Offset.z
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599484a0901a36640b2986f660e57c67, type: 3}

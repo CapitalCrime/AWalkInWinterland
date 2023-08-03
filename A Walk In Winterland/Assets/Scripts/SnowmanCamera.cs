@@ -134,7 +134,6 @@ public class SnowmanCamera : MonoBehaviour
             Vector3 rayDir = (SnowmanManager.instance.mainCamera.transform.position - snowmanPos);
             Debug.DrawRay(snowmanPos, rayDir.normalized * rayDir.magnitude);
             RaycastHit[] hits = Physics.RaycastAll(snowmanPos, rayDir.normalized, rayDir.magnitude+0.5f, terrainBoundariesMask);
-            Debug.Log("Hits: " + hits.Length);
             if (hits.Length > 0)
             {
                 rayHit = true;
@@ -178,7 +177,7 @@ public class SnowmanCamera : MonoBehaviour
         if(zoomAmount != 0)
         {
             zoomAmount /= Mathf.Abs(zoomAmount);
-            realOffsetZoom = Mathf.Clamp(realOffsetZoom + zoomAmount / 2, -10, 6);
+            realOffsetZoom = Mathf.Clamp(realOffsetZoom + zoomAmount / 2, -10, 5);
             //cameraOffset.m_Offset.z = realOffsetZoom;
         }
         if (cycleSnowmanView.action.WasPerformedThisFrame() && !SnowmanManager.instance.PlayerCameraActive())

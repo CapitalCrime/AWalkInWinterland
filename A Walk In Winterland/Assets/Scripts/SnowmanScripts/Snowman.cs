@@ -140,6 +140,7 @@ public abstract class Snowman : MonoBehaviour
 
     private void Awake()
     {
+        thirdPersonCam = transform.GetComponentsInChildren<Cinemachine.CinemachineFreeLook>(true)[0];
         if(description == null)
         {
             Debug.LogError("Snowman description missing on snowman: " + transform.name);

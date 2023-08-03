@@ -15,6 +15,35 @@ public class SnowmanUIButton : MonoBehaviour
     {
         nonMenuMap = InputManager.instance.playerInputs.actions.FindActionMap("NonMenu");
         openIndex.action.performed += OpenAction;
+        GameManager.OnControllerChange += OnControllerChange;
+    }
+
+    void OnControllerChange(ControllerType controllerType)
+    {
+        switch (controllerType)
+        {
+            case ControllerType.Controller:
+                break;
+            case ControllerType.Keyboard:
+                break;
+        }
+    }
+
+    void EnableNonMenuMap(bool value)
+    {
+        if (value)
+        {
+            if (!PauseScript.isPaused())
+            {
+                nonMenuMap.Enable();
+            }
+        } else
+        {
+            if(PlayerData.controller != ControllerType.Keyboard)
+            {
+                nonMenuMap.Disable();
+            }
+        }
     }
 
     void OpenAction(InputAction.CallbackContext context)
@@ -29,7 +58,7 @@ public class SnowmanUIButton : MonoBehaviour
         if(opening)
         {
             LeanTween.moveX(imageHolder, -415, 0.5f).setIgnoreTimeScale(true);
-            nonMenuMap.Disable();
+            EnableNonMenuMap(false);
             PauseScript.snowmanIndexOpen = true;
             SnowmanImageManager.EnableButtons();
         } else
@@ -37,10 +66,7 @@ public class SnowmanUIButton : MonoBehaviour
             LeanTween.moveX(imageHolder, 0, 0.5f).setIgnoreTimeScale(true);
             SnowmanImageManager.DisableButtons();
             PauseScript.snowmanIndexOpen = false;
-            if (!PauseScript.isPaused())
-            {
-                nonMenuMap.Enable();
-            }
+            EnableNonMenuMap(true);
         }
     }
 

@@ -193,7 +193,7 @@ MonoBehaviour:
   clickSoundRef:
     Target: {fileID: 0}
     Params: []
-  thirdPersonCam: {fileID: 8014428050213856523}
+  thirdPersonCam: {fileID: 3726317513312820770}
   description: {fileID: 11400000, guid: d9f5120db580e7641933189028c4245c, type: 2}
 --- !u!114 &7193218912654008845
 MonoBehaviour:
@@ -401,15 +401,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599484a0901a36640b2986f660e57c67, type: 3}
---- !u!4 &8014428050213856522 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
-    type: 3}
-  m_PrefabInstance: {fileID: 3516349243461628957}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8014428050213856523 stripped
+--- !u!114 &3726317513312820770 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6914260011402268950, guid: 599484a0901a36640b2986f660e57c67,
+  m_CorrespondingSourceObject: {fileID: 250546851712707135, guid: 599484a0901a36640b2986f660e57c67,
     type: 3}
   m_PrefabInstance: {fileID: 3516349243461628957}
   m_PrefabAsset: {fileID: 0}
@@ -419,6 +413,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8014428050213856522 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
+    type: 3}
+  m_PrefabInstance: {fileID: 3516349243461628957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7971198568108482272
 PrefabInstance:
   m_ObjectHideFlags: 0

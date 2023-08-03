@@ -19,8 +19,56 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CheckController();
         QualitySettings.SetQualityLevel(startingQuality);
         InputSystem.onDeviceChange += HandleDeviceChange;
+    }
+
+    void EnableGamepad()
+    {
+        if (Keyboard.current != null)
+        {
+            InputSystem.DisableDevice(Keyboard.current);
+        }
+        if (Mouse.current != null)
+        {
+            InputSystem.DisableDevice(Mouse.current);
+        }
+        if (Gamepad.current != null)
+        {
+            InputSystem.EnableDevice(Gamepad.current);
+        }
+    }
+
+    PlayerInput inputs;
+
+    void EnableKeyboard()
+    {
+        if(Keyboard.current != null)
+        {
+            InputSystem.EnableDevice(Keyboard.current);
+        }
+        if(Mouse.current != null)
+        {
+            InputSystem.EnableDevice(Mouse.current);
+        }
+        if(Gamepad.current != null)
+        {
+            InputSystem.DisableDevice(Gamepad.current);
+        }
+    }
+
+    void CheckController()
+    {
+        if(Gamepad.current != null)
+        {
+            PlayerData.SetCurrentController(ControllerType.Controller);
+            EnableGamepad();
+        } else
+        {
+            PlayerData.SetCurrentController(ControllerType.Keyboard);
+            EnableKeyboard();
+        }
     }
 
     void HandleDeviceChange(InputDevice device, InputDeviceChange change)
@@ -31,34 +79,26 @@ public class GameManager : MonoBehaviour
                 if (device is Gamepad)
                 {
                     PlayerData.SetCurrentController(ControllerType.Controller);
-                    InputSystem.DisableDevice(Keyboard.current);
-                    InputSystem.DisableDevice(Mouse.current);
-                    InputSystem.EnableDevice(Gamepad.current);
+                    EnableGamepad();
                 }
                 else
                 {
                     PlayerData.SetCurrentController(ControllerType.Keyboard);
-                    InputSystem.EnableDevice(Keyboard.current);
-                    InputSystem.EnableDevice(Mouse.current);
-                    InputSystem.DisableDevice(Gamepad.current);
+                    EnableKeyboard();
                 }
                 break;
             case InputDeviceChange.Removed:
                 if (device is Gamepad)
                 {
                     PlayerData.SetCurrentController(ControllerType.Keyboard);
-                    InputSystem.EnableDevice(Keyboard.current);
-                    InputSystem.EnableDevice(Mouse.current);
-                    InputSystem.DisableDevice(Gamepad.current);
+                    EnableKeyboard();
                 }
                 break;
             case InputDeviceChange.Disconnected:
                 if (device is Gamepad)
                 {
                     PlayerData.SetCurrentController(ControllerType.Keyboard);
-                    InputSystem.EnableDevice(Keyboard.current);
-                    InputSystem.EnableDevice(Mouse.current);
-                    InputSystem.DisableDevice(Gamepad.current);
+                    EnableKeyboard();
                 }
                 break;
         }
