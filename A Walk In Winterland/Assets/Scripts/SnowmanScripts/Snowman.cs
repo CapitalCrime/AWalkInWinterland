@@ -13,6 +13,7 @@ public abstract class Snowman : MonoBehaviour
     [HideInInspector] protected event UnityAction snowmanViewedEvent;
     [HideInInspector] protected event UnityAction snowmanFPSEvent;
     [HideInInspector] protected event UnityAction snowmanLeaveFPSEvent;
+    [HideInInspector] public event UnityAction snowmanDisableEvent;
     [SerializeField] Cinemachine.CinemachineVirtualCamera fpsCam;
     [SerializeField] private FMODUnity.EmitterRef clickSoundRef;
     public Cinemachine.CinemachineFreeLook thirdPersonCam;
@@ -42,6 +43,11 @@ public abstract class Snowman : MonoBehaviour
         {
             DayArriveAction();
         }
+    }
+
+    public Rigidbody GetRigidbody()
+    {
+        return snowmanRigidbody;
     }
 
     void QueuedNightActionCheck()
@@ -106,6 +112,18 @@ public abstract class Snowman : MonoBehaviour
 
     public void SetInteractable(bool value)
     {
+        SetSnowmanEnabled(value);
+
+        if (!value)
+        {
+            snowmanRigidbody.angularVelocity = Vector3.zero;
+            snowmanRigidbody.velocity = Vector3.zero;
+        }
+        snowmanRigidbody.isKinematic = !value;
+    }
+
+    public void SetSnowmanEnabled(bool value)
+    {
         ResetActionTimes();
 
         if (value)
@@ -115,13 +133,9 @@ public abstract class Snowman : MonoBehaviour
         {
             DisableEvents();
             CancelUniqueAction();
-            snowmanRigidbody.angularVelocity = Vector3.zero;
-            snowmanRigidbody.velocity = Vector3.zero;
         }
 
         enabled = value;
-        snowmanRigidbody.isKinematic = !value;
-
     }
 
     private void Awake()
@@ -319,6 +333,15 @@ public abstract class Snowman : MonoBehaviour
         //DayCycle.dayActions -= ResumeActionTimes;
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(DayActionTrigger);
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(ResumeActionTimes);
+    }
+
+    private void OnDisable()
+    {
+        if (SnowmanManager.instance.CheckIfCurrentViewedSnowman(this))
+        {
+            Debug.Log("This has been disabled, return to player camera");
+            SnowmanManager.instance.ActivatePlayerCamera();
+        }
     }
 
     protected virtual void OnDestroy()

@@ -14,6 +14,12 @@ public class Res
     }
 }
 
+public enum ControllerType
+{
+    Keyboard,
+    Controller
+}
+
 public static class PlayerData
 {
     static List<Res> resolutions = new List<Res>()
@@ -33,6 +39,7 @@ public static class PlayerData
     public static float musicVolume = 1;
     public static float ambienceVolume = 1;
     public static float sfxVolume = 1;
+    public static ControllerType controller { get; private set; }
 
     public static UnityEvent<float> setPlayerCameraSpeedEvent = new UnityEvent<float>();
     public static UnityEvent<float> setSnowmanCameraSpeedEvent = new UnityEvent<float>();
@@ -47,6 +54,11 @@ public static class PlayerData
     {
         snowmanCameraSpeed = valueNormalized;
         setSnowmanCameraSpeedEvent?.Invoke(GetSnowmanCameraSpeed());
+    }
+
+    public static void SetCurrentController(ControllerType controller)
+    {
+        PlayerData.controller = controller;
     }
 
     public static Resolution[] GetResolutions()

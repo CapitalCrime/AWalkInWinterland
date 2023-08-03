@@ -222,9 +222,14 @@ public class SnowmanManager : MonoBehaviour
         }
     }
 
+    public bool CheckIfCurrentViewedSnowman(Snowman snowman)
+    {
+        return snowman == currentViewSnowman;
+    }
+
     public void ActivateSnowmanCamera(Snowman snowman)
     {
-        if (snowman == null) return;
+        if (snowman == null || !snowman.enabled) return;
         if (snowman == currentViewSnowman) { ActivatePlayerCamera(); return; }
 
         index = GetSnowmanIndex(snowman);

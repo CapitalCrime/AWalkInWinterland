@@ -18,6 +18,7 @@ public class SnowmanImageManager : MonoBehaviour
     float maxImageXPosition;
     float snowmenPerRow = 4;
     float snowmenVisibleColumn = 3;
+    float snowmenInputScrollVisibleColumn = 2;
     [SerializeField] int currentIndex = 0;
     bool isOpen = false;
 
@@ -86,7 +87,7 @@ public class SnowmanImageManager : MonoBehaviour
     void SetScrollBarValue()
     {
         float pageSize = snowmenPerRow * snowmenVisibleColumn;
-        float snowmanNumber = currentIndex + 1;
+        float snowmanNumber = currentIndex + 1 + (snowmenPerRow* (snowmenVisibleColumn- snowmenInputScrollVisibleColumn));
 
         if (snowmanNumber < pageSize)
         {
@@ -94,7 +95,11 @@ public class SnowmanImageManager : MonoBehaviour
         }
         else
         {
-            scrollbar.value = Mathf.Ceil((snowmanNumber - pageSize) / snowmenPerRow) / Mathf.Ceil((buttonDictionary.Count - pageSize) / snowmenPerRow);
+            int changeAmount = (int)scrollDirection.x * (int)snowmenPerRow + (int)-scrollDirection.y;
+            float snowmanNumberEffector = Mathf.Ceil((snowmanNumber - pageSize) / snowmenPerRow);
+            scrollbar.value = Mathf.Clamp(snowmanNumberEffector / Mathf.Ceil((buttonDictionary.Count - pageSize) / snowmenPerRow)
+                ,0
+                ,1);
         }
     }
 
@@ -114,7 +119,12 @@ public class SnowmanImageManager : MonoBehaviour
             currentIndex = 0;
         } else
         {
+            int lastIndex = currentIndex;
             currentIndex += changeAmount;
+            if(lastIndex < buttonDictionary.Count-1 && currentIndex > buttonDictionary.Count - 1 && buttonDictionary.Count % 4 != 0)
+            {
+                currentIndex = buttonDictionary.Count - 1;
+            }
         }
 
         //If next snowman is undiscovered, keep scrolling until unlocked one is found
