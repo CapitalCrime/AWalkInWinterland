@@ -209,6 +209,11 @@ namespace UniStorm.Utility
         SerializedProperty NightMusicList;
         ReorderableList LightningFireTagsList;
 
+        //Fog
+        SerializedProperty FogSphereMaterial;
+        SerializedProperty FogDayColor;
+        SerializedProperty FogNightColor;
+
         public float secs = 2f;
         public float startVal = 0f;
         public float progress = 0f;
@@ -600,6 +605,10 @@ namespace UniStorm.Utility
             //        var element = NightMusicList.serializedProperty.GetArrayElementAtIndex(index);
             //        EditorGUI.PropertyField(new Rect(rect.x, rect.y, rect.width, EditorGUIUtility.singleLineHeight), element, GUIContent.none);
             //    };
+
+            FogSphereMaterial = serializedObject.FindProperty("fogSphereMaterial");
+            FogDayColor = serializedObject.FindProperty("fogDayColor");
+            FogNightColor = serializedObject.FindProperty("fogNightColor");
 
             //Lightning Fire Tags
             LightningFireTagsList = new ReorderableList(serializedObject, serializedObject.FindProperty("LightningFireTags"), true, true, true, true);
@@ -1460,6 +1469,10 @@ namespace UniStorm.Utility
 
                 EditorGUILayout.EndVertical();
                 EditorGUILayout.EndHorizontal();
+
+                EditorGUILayout.PropertyField(FogSphereMaterial);
+                EditorGUILayout.PropertyField(FogDayColor);
+                EditorGUILayout.PropertyField(FogNightColor);
 
                 if (FogFoldoutProp.boolValue)
                 {

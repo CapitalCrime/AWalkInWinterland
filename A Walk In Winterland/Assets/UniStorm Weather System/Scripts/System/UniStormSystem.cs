@@ -234,10 +234,16 @@ namespace UniStorm
         public Color CurrentFogColor;
         public enum FogTypeEnum { UnistormFog, UnityFog };
         public FogTypeEnum FogType = FogTypeEnum.UnistormFog;
+        public Material fogSphereMaterial;
+        public Color fogDayColor;
+        public Color fogNightColor;
+        Color currentFogColor;
         MinMax fogFarDist;
-        MinMax fogFarDistDay = new MinMax(1000, 3500);
+        MinMax fogFarDistDay = new MinMax(0, 3500);
         MinMax fogFarDistNight = new MinMax(2000, 10000);
-        MinMax fogCloseDist = new MinMax(-100, 250);
+        MinMax fogCloseDist = new MinMax(-100, 350);
+        float normalExposure = 0.8f;
+        float fogExposure = 0.08f;
         public enum FogModeEnum { Exponential, ExponentialSquared };
         public FogModeEnum FogMode = FogModeEnum.Exponential;
         public UniStormAtmosphericFog m_UniStormAtmosphericFog;
@@ -1097,8 +1103,14 @@ namespace UniStorm
             }
 
             RenderSettings.fogMode = UnityEngine.FogMode.Linear;
-            if(CurrentWeatherType.addExtraFog)
+            UpdateFarFogDist();
+
+            if (CurrentWeatherType.addExtraFog)
             {
+                Color color = currentFogColor;
+                color.a = 0.98f;
+                fogSphereMaterial.color = color;
+
                 RenderSettings.fogEndDistance = fogCloseDist.max;
                 RenderSettings.fogStartDistance = fogCloseDist.min;
             } else
@@ -1761,10 +1773,18 @@ namespace UniStorm
             {
                 t = Mathf.Clamp(1-normalizeFloat(timeOfDay, dayTime.min, dayTime.max), 0, 1);
             }
+
             fogFarDist.min = Mathf.Lerp(fogFarDistDay.min, fogFarDistNight.min, t);
             fogFarDist.max = Mathf.Lerp(fogFarDistDay.max, fogFarDistNight.max, t);
-            if(!fogFading && CurrentWeatherType.addExtraFog == false)
+            currentFogColor = Color.Lerp(fogDayColor, fogNightColor, t);
+            RenderSettings.fogColor = currentFogColor;
+
+            if (!fogFading && CurrentWeatherType.addExtraFog == false)
             {
+                Color color = currentFogColor;
+                color.a = 0;
+                fogSphereMaterial.color = color;
+
                 RenderSettings.fogStartDistance = fogFarDist.min;
                 RenderSettings.fogEndDistance = fogFarDist.max;
             }
@@ -2470,15 +2490,7 @@ namespace UniStorm
                 FogLightFalloffCoroutine = StartCoroutine(FogLightFalloffSequence(10 * TransitionSpeed, CurrentWeatherType.FogLightFalloff));
             }
 
-            //Fog
-            if (RenderSettings.fogDensity < CurrentWeatherType.FogDensity)
-            {
-                FogCoroutine = StartCoroutine(FogFadeSequence(5 * TransitionSpeed, CurrentWeatherType.FogDensity, false));
-            }
-            else
-            {
-                FogCoroutine = StartCoroutine(FogFadeSequence(5 * TransitionSpeed, CurrentWeatherType.FogDensity, true));
-            }
+            FogCoroutine = StartCoroutine(FogFadeSequence(80, CurrentWeatherType.FogDensity));
 
             //Auroras
             if (CurrentWeatherType.UseAuroras == WeatherType.Yes_No.Yes)
@@ -3220,7 +3232,7 @@ namespace UniStorm
         }
 
         bool fogFading = false;
-        IEnumerator FogFadeSequence(float TransitionTime, float MaxValue, bool FadeOut)
+        IEnumerator FogFadeSequence(float TransitionTime, float MaxValue)
         {
             fogFading = true;
             if (CurrentWeatherType.PrecipitationWeatherType == WeatherType.Yes_No.Yes)
@@ -3231,20 +3243,22 @@ namespace UniStorm
                     yield return new WaitUntil(() => m_CloudDomeMaterial.GetFloat("_uCloudsCoverage") >= 0.5f);
             }
 
-            float CurrentValue = RenderSettings.fogDensity;
-            float LerpValue = CurrentValue;
             float t = 0;
 
             MinMax currentDepth = new MinMax(RenderSettings.fogStartDistance, RenderSettings.fogEndDistance);
+            float currentFogAlpha = currentFogColor.a;
 
-            while ((LerpValue > MaxValue && FadeOut) || (LerpValue < MaxValue && !FadeOut))
+            while (t < 1)
             {
                 Debug.Log("Is the fog moving?");
-                t += Time.deltaTime;
-                LerpValue = Mathf.Lerp(CurrentValue, MaxValue, t / TransitionTime);
-                RenderSettings.fogDensity = LerpValue;
-                RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, CurrentWeatherType.addExtraFog ? fogCloseDist.min : fogFarDist.min, t / TransitionTime);
-                RenderSettings.fogEndDistance = Mathf.Lerp(currentDepth.max, CurrentWeatherType.addExtraFog ? fogCloseDist.max : fogFarDist.max, t / TransitionTime);
+                t += Time.deltaTime / TransitionTime;
+
+                Color color = currentFogColor;
+                color.a = Mathf.Clamp(Mathf.Lerp(currentFogAlpha, CurrentWeatherType.addExtraFog ? 0.98f : 0, t*3), 0, 0.98f);
+                fogSphereMaterial.color = color;
+
+                RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, CurrentWeatherType.addExtraFog ? fogCloseDist.min : fogFarDist.min, t);
+                RenderSettings.fogEndDistance = Mathf.Lerp(currentDepth.max, CurrentWeatherType.addExtraFog ? fogCloseDist.max : fogFarDist.max, t);
 
                 yield return null;
             }
@@ -3835,6 +3849,16 @@ namespace UniStorm
             if (CloudShadows == EnableFeature.Enabled)
             {
                 m_CloudShadows.ShadowIntensity = 0;
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if(fogSphereMaterial != null)
+            {
+                Color color = fogSphereMaterial.color;
+                color.a = 0;
+                fogSphereMaterial.color = color;
             }
         }
     }
