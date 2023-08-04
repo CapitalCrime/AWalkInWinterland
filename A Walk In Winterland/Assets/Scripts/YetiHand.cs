@@ -54,7 +54,7 @@ public class YetiHand : MonoBehaviour
         yetiAnimation.Play();
     }
 
-    float minThrowDistance = 8;
+    float minThrowDistance = 5;
     public void LaunchSnowman()
     {
         heldSnowman.transform.SetParent(null, true);

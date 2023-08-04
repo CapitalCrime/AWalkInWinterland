@@ -65,6 +65,11 @@ public class SnowmanManager : MonoBehaviour
         performAction.action.actionMap.Enable();
     }
 
+    public bool UsingPlayerCamera()
+    {
+        return playerCamera.gameObject.activeSelf;
+    }
+
     private void Start()
     {
         playerInput = InputManager.instance.playerInputs;
@@ -170,6 +175,7 @@ public class SnowmanManager : MonoBehaviour
 
     void HoverSnowman()
     {
+        if (!UsingPlayerCamera()) return;
         if (PauseScript.isPaused()) return;
         if (EventSystem.current.IsPointerOverGameObject()) { RemoveOutline(); return; }
         RaycastHit info;

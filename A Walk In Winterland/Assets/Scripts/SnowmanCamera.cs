@@ -144,7 +144,7 @@ public class SnowmanCamera : MonoBehaviour
                 Vector3 pos = hits[hits.Length - 1].point;
                 Vector3 cameraPosition = pos - rayDir.normalized * 2;
                 cameraOffset.m_Offset.z += (SnowmanManager.instance.mainCamera.transform.position - cameraPosition).magnitude*Time.deltaTime*6 + Time.deltaTime*2;
-                cameraOffset.m_Offset.z = Mathf.Clamp(cameraOffset.m_Offset.z, realOffsetZoom, 7.5f);
+                cameraOffset.m_Offset.z = Mathf.Clamp(cameraOffset.m_Offset.z, realOffsetZoom, 6.5f);
             } else if(!Physics.Raycast(SnowmanManager.instance.mainCamera.transform.position, -SnowmanManager.instance.mainCamera.transform.forward, 1, terrainBoundariesMask))
             {
                 if (rayHit)
@@ -163,7 +163,7 @@ public class SnowmanCamera : MonoBehaviour
                 }
             } else
             {
-                cameraOffset.m_Offset.z = Mathf.Clamp(cameraOffset.m_Offset.z, realOffsetZoom, 7.5f);
+                cameraOffset.m_Offset.z = Mathf.Clamp(cameraOffset.m_Offset.z, realOffsetZoom, 6.5f);
             }
         }
     }
@@ -173,10 +173,28 @@ public class SnowmanCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(PlayerData.controller == ControllerType.Controller)
+        {
+            Cursor.visible = SnowmanManager.instance.UsingPlayerCamera();
+        } else
+        {
+            Cursor.visible = true;
+        }
         float zoomAmount = snowmanZoom.action.ReadValue<float>();
         if(zoomAmount != 0)
         {
             zoomAmount /= Mathf.Abs(zoomAmount);
+            if(PlayerData.controller == ControllerType.Controller)
+            {
+                zoomAmount /= 3;
+            }
+            if(zoomAmount > 0 && realOffsetZoom < cameraOffset.m_Offset.z)
+            {
+                realOffsetZoom = Mathf.Clamp(cameraOffset.m_Offset.z + zoomAmount / 2, -10, 5);
+            } else
+            {
+                realOffsetZoom = Mathf.Clamp(realOffsetZoom + zoomAmount / 2, -10, 5);
+            }
             realOffsetZoom = Mathf.Clamp(realOffsetZoom + zoomAmount / 2, -10, 5);
             //cameraOffset.m_Offset.z = realOffsetZoom;
         }

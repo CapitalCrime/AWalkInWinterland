@@ -33,7 +33,7 @@ public class CameraControls : MonoBehaviour
             case ControllerType.Controller:
                 provider.XYAxis.action.started -= MousePressed;
                 provider.XYAxis.action.canceled -= MouseReleased;
-                Cursor.SetCursor(gamepadCursor, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(gamepadCursor, Vector2.one*50, CursorMode.Auto);
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = true;
                 break;
