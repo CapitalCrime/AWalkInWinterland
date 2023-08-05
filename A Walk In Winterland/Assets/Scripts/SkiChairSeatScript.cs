@@ -61,7 +61,7 @@ public class SkiChairSeatScript : MonoBehaviour
         switch (currentMovement)
         {
             case MovementType.Moving:
-                if (Vector3.Magnitude(pathFollower.GetPointByDistance() - stopPoint) < 2)
+                if (Vector3.Magnitude(pathFollower.GetPointByDistance() - stopPoint) < 1)
                 {
                     pathFollower.speed = 0;
                     pathFollower.SetDistanceByPoint(stopPoint);
