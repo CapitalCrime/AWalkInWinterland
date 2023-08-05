@@ -92,27 +92,6 @@ namespace PathCreation.Examples {
                 triIndex += 6*rodResolution;
             }
 
-            Debug.Log(rodTriangles[0]);
-            Debug.Log(rodTriangles[1]);
-            Debug.Log(rodTriangles[2]);
-            Debug.Log(rodTriangles[3]);
-            Debug.Log(rodTriangles[4]);
-            Debug.Log(rodTriangles[5]);
-            Debug.Log("Break");
-            Debug.Log(rodTriangles[6]);
-            Debug.Log(rodTriangles[7]);
-            Debug.Log(rodTriangles[8]);
-            Debug.Log(rodTriangles[9]);
-            Debug.Log(rodTriangles[10]);
-            Debug.Log(rodTriangles[11]);
-            Debug.Log("Break");
-            Debug.Log(rodTriangles[12]);
-            Debug.Log(rodTriangles[13]);
-            Debug.Log(rodTriangles[14]);
-            Debug.Log(rodTriangles[15]);
-            Debug.Log(rodTriangles[16]);
-            Debug.Log(rodTriangles[17]);
-
             mesh.Clear ();
             mesh.vertices = verts;
             mesh.uv = uvs;
