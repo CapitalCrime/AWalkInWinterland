@@ -34,6 +34,11 @@ namespace PathCreation.Examples
             return distanceTravelled;
         }
 
+        public float GetTotalLength()
+        {
+            return pathCreator.path.length;
+        }
+
         public Vector3 GetPointByDistance()
         {
             return pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);

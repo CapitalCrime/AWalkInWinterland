@@ -36,6 +36,8 @@ public class SkiChairSeatScript : MonoBehaviour
         stopPoint = skiliftData.GetPointByIndex(currentPointIndex);
         skiliftData.signalMove += MoveChair;
         seatForwardDirectionLocal = transform.TransformDirection(seatForwardDirection);
+        Debug.Log(transform.name + " distance is " + pathFollower.GetDistanceByPoint(stopPoint));
+        Debug.Log("Total length = " + pathFollower.GetTotalLength());
     }
 
     private void Start()
@@ -43,6 +45,8 @@ public class SkiChairSeatScript : MonoBehaviour
         currentMovement = MovementType.Stopped;
         pathFollower.SetDistanceByPoint(stopPoint);
     }
+
+    float targetDistance = 0;
 
     void MoveChair()
     {
@@ -52,6 +56,13 @@ public class SkiChairSeatScript : MonoBehaviour
             stopPoint = skiliftData.GetPointByIndex(currentPointIndex);
             pathFollower.speed = normalChairSpeed;
             currentMovement = MovementType.Moving;
+            targetDistance = pathFollower.GetDistanceTravelled() - pathFollower.GetDistanceByPoint(stopPoint);
+            if(targetDistance < 0)
+            {
+                targetDistance = pathFollower.GetDistanceByPoint(stopPoint) - pathFollower.GetTotalLength();
+            }
+            Debug.Log(transform.name+" current distance travelled "+pathFollower.GetDistanceTravelled());
+            Debug.Log(transform.name + " target point distance " + pathFollower.GetDistanceByPoint(stopPoint));
         }
     }
 
@@ -61,7 +72,7 @@ public class SkiChairSeatScript : MonoBehaviour
         switch (currentMovement)
         {
             case MovementType.Moving:
-                if (Vector3.Magnitude(pathFollower.GetPointByDistance() - stopPoint) < 1)
+                if(pathFollower.GetDistanceTravelled() < targetDistance)//if (Vector3.Magnitude(pathFollower.GetPointByDistance() - stopPoint) < 1)
                 {
                     pathFollower.speed = 0;
                     pathFollower.SetDistanceByPoint(stopPoint);
