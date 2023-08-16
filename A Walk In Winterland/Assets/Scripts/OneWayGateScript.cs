@@ -5,6 +5,7 @@ using UnityEngine;
 public class OneWayGateScript : MonoBehaviour
 {
     [SerializeField] Vector3 openDirection = Vector3.forward;
+    [SerializeField] float moveDistance = 1;
     [SerializeField] Vector3 physicsColliderSize;
     [SerializeField] Animation openAnimation;
     BoxCollider objectCollider;
@@ -13,7 +14,7 @@ public class OneWayGateScript : MonoBehaviour
     void Start()
     {
         objectCollider = gameObject.GetComponent<BoxCollider>();
-        openDirection = transform.TransformDirection(openDirection);
+        openDirection = transform.TransformDirection(openDirection.normalized);
 
         physicsCollider = gameObject.AddComponent<BoxCollider>();
         physicsCollider.size = objectCollider.size + physicsColliderSize;
@@ -23,25 +24,34 @@ public class OneWayGateScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Snowman")) return;
-        if (Physics.ComputePenetration(physicsCollider, transform.position, transform.rotation, 
-            other, other.transform.position, other.transform.rotation,
-            out Vector3 direction, out float depth))
+        if (other.TryGetComponent(out Snowman snowman))
         {
-            if(Vector3.Dot(openDirection, direction) > 0)
+            if (Physics.ComputePenetration(physicsCollider, transform.position, transform.rotation,
+                other, other.transform.position, other.transform.rotation,
+                out Vector3 direction, out float depth))
             {
-                if(openAnimation != null && !openAnimation.isPlaying)
+                if (Vector3.Dot(openDirection, direction) > 0)
                 {
-                    openAnimation.Play();
-                }
-                if (other.TryGetComponent(out Snowman snowman))
-                {
+                    if (openAnimation != null && !openAnimation.isPlaying)
+                    {
+                        openAnimation.Play();
+                    }
+                    if (snowman.enabled && !LeanTween.isTweening(snowman.gameObject))
+                    {
+                        Vector3 doorPos = transform.position;
+                        if(doorPos.y > snowman.transform.position.y)
+                        {
+                            doorPos.y = snowman.transform.position.y;
+                        }
+                        LeanTween.move(snowman.gameObject, doorPos + openDirection* moveDistance, .75f);
+                    }
                     snowman.MoveInDirection(openDirection * 300);
+                    Physics.IgnoreCollision(objectCollider, other, true);
                 }
-                Physics.IgnoreCollision(objectCollider, other, true);
-            } else
-            {
-                Physics.IgnoreCollision(objectCollider, other, false);
+                else
+                {
+                    Physics.IgnoreCollision(objectCollider, other, false);
+                }
             }
         }
     }
