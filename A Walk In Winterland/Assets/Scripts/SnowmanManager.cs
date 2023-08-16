@@ -189,6 +189,10 @@ public class SnowmanManager : MonoBehaviour
         Debug.DrawLine(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos));
         if (Physics.Raycast(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos) - _camera.transform.position, out info, _camera.farClipPlane, snowmanMask))
         {
+            if (!info.transform.GetComponent<Snowman>() || !info.transform.GetComponent<Snowman>().enabled)
+            {
+                return;
+            }
             if (currentViewSnowman == null || info.transform != currentViewSnowman.transform)
             {
                 if (info.transform.TryGetComponent(out Outline outline))
