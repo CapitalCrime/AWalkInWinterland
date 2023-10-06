@@ -24,7 +24,6 @@ public class SkiChairSeatScript : MonoBehaviour
     PathCreation.Examples.PathFollower pathFollower;
     Snowman[] passengers;
     int passengersOnboard = 0;
-    Vector3 seatForwardDirectionLocal;
 
     private void Awake()
     {
@@ -35,7 +34,6 @@ public class SkiChairSeatScript : MonoBehaviour
         currentPointIndex = skiliftData.GetValidIndex(startPointIndex);
         stopPoint = skiliftData.GetPointByIndex(currentPointIndex);
         skiliftData.signalMove += MoveChair;
-        seatForwardDirectionLocal = transform.TransformDirection(seatForwardDirection);
         Debug.Log(transform.name + " distance is " + pathFollower.GetDistanceByPoint(stopPoint));
         Debug.Log("Total length = " + pathFollower.GetTotalLength());
     }
@@ -109,7 +107,9 @@ public class SkiChairSeatScript : MonoBehaviour
         {
             passengersOnboard--;
             passengers[index].transform.SetParent(null);
-            passengers[index].transform.position = seats[index].position + seatForwardDirectionLocal * 10;
+            Vector3 seatRemoveDirection = transform.TransformDirection(seatForwardDirection);
+            seatForwardDirection.y = 0;
+            passengers[index].transform.position = seats[index].position + seatRemoveDirection * skiliftData.GetDropDistanceAtIndex(currentPointIndex);
             passengers[index].SetInteractable(true);
             passengers[index].transform.rotation = Quaternion.Euler(0, passengers[index].transform.rotation.eulerAngles.y, 0);
             passengers[index] = null;

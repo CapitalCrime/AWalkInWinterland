@@ -13,7 +13,7 @@ public abstract class Snowman : MonoBehaviour
     [HideInInspector] protected event UnityAction snowmanViewedEvent;
     [HideInInspector] protected event UnityAction snowmanFPSEvent;
     [HideInInspector] protected event UnityAction snowmanLeaveFPSEvent;
-    [HideInInspector] public event UnityAction snowmanDisableEvent;
+    [HideInInspector] public UnityAction<bool> snowmanEnableEvent;
     [SerializeField] Cinemachine.CinemachineVirtualCamera fpsCam;
     [SerializeField] private FMODUnity.EmitterRef clickSoundRef;
     public Cinemachine.CinemachineFreeLook thirdPersonCam;
@@ -160,12 +160,6 @@ public abstract class Snowman : MonoBehaviour
         snowmanRigidbody = GetComponent<Rigidbody>();
 
         walkingStartEnabled = walkingEnabled;
-    }
-
-    private void OnEnable()
-    {
-        queuedUntilEnabledEvents?.Invoke();
-        queuedUntilEnabledEvents = null;
     }
 
     public void EnableWalking(bool value)
@@ -336,13 +330,20 @@ public abstract class Snowman : MonoBehaviour
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(ResumeActionTimes);
     }
 
+    private void OnEnable()
+    {
+        snowmanEnableEvent?.Invoke(true);
+        queuedUntilEnabledEvents?.Invoke();
+        queuedUntilEnabledEvents = null;
+    }
+
     private void OnDisable()
     {
         if (SnowmanManager.instance.CheckIfCurrentViewedSnowman(this))
         {
-            Debug.Log("This has been disabled, return to player camera");
             SnowmanManager.instance.ActivatePlayerCamera();
         }
+        snowmanEnableEvent?.Invoke(false);
     }
 
     protected virtual void OnDestroy()

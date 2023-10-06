@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,23 @@ using UnityEngine.Events;
 
 public class SkiliftData : MonoBehaviour
 {
-    [SerializeField] List<Transform> stopPoints;
+    [Serializable]
+    public class SkiliftDropPoint
+    {
+        [SerializeField]float dropDistance;
+        [SerializeField]Transform dropPoint;
+
+        public Transform GetDropPoint()
+        {
+            return dropPoint;
+        }
+
+        public float GetDropDistance()
+        {
+            return dropDistance;
+        }
+    }
+    [SerializeField][NonReorderable] List<SkiliftDropPoint> stopPoints;
     public event UnityAction signalMove;
 
     public void MoveChairs()
@@ -15,7 +32,12 @@ public class SkiliftData : MonoBehaviour
 
     public Vector3 GetPointByIndex(int index)
     {
-        return stopPoints[index].position;
+        return stopPoints[index].GetDropPoint().position;
+    }
+
+    public float GetDropDistanceAtIndex(int index)
+    {
+        return stopPoints[index].GetDropDistance();
     }
 
     public int GetValidIndex(int index)

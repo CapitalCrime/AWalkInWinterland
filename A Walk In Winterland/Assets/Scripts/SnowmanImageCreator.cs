@@ -10,6 +10,7 @@ public class SnowmanImageCreator : MonoBehaviour
     [SerializeField] Image image;
     Snowman pairedSnowman;
     [SerializeField] Button button;
+    [SerializeField] Image visibilityImage;
 
     public void Init(Sprite image)
     {
@@ -41,6 +42,18 @@ public class SnowmanImageCreator : MonoBehaviour
     public void PairButtonWithSnowman(Snowman snowman)
     {
         pairedSnowman = snowman;
+        snowman.snowmanEnableEvent = EnableVisibilityIcon;
+    }
+
+    void EnableVisibilityIcon(bool snowmanEnabled)
+    {
+        if (snowmanEnabled)
+        {
+            visibilityImage.gameObject.SetActive(false);
+        } else
+        {
+            visibilityImage.gameObject.SetActive(true);
+        }
     }
 
     public void ViewSnowman()
