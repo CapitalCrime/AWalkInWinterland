@@ -47,6 +47,8 @@ public class SnowmanImageCreator : MonoBehaviour
 
     void EnableVisibilityIcon(bool snowmanEnabled)
     {
+        if (visibilityImage.gameObject == null) return;
+
         if (snowmanEnabled)
         {
             visibilityImage.gameObject.SetActive(false);
