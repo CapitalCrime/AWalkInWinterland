@@ -262,7 +262,7 @@ public class SnowmanManager : MonoBehaviour
 
     public void ActivatePlayerCamera()
     {
-        if (playerCamera.gameObject.activeSelf) return;
+        if (playerCamera == null || playerCamera.gameObject.activeSelf) return;
         if (_camera == null) return;
 
         Vector3 snowmanPos = currentViewSnowman.transform.position + Vector3.up;

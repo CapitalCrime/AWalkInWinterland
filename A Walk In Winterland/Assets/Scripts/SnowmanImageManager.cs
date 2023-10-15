@@ -123,7 +123,15 @@ public class SnowmanImageManager : MonoBehaviour
             currentIndex += changeAmount;
             if(lastIndex < buttonDictionary.Count-1 && currentIndex > buttonDictionary.Count - 1 && buttonDictionary.Count % 4 != 0)
             {
-                currentIndex = buttonDictionary.Count - 1;
+                Debug.Log("last Index = " + (lastIndex / 4.0f));
+                Debug.Log("buttonDictionary = " + (buttonDictionary.Count / 4.0f));
+                if(Mathf.Floor(lastIndex/4.0f) == Mathf.Floor(buttonDictionary.Count / 4.0f))
+                {
+                    currentIndex = 0;
+                } else
+                {
+                    currentIndex = buttonDictionary.Count - 1;
+                }
             }
         }
 
