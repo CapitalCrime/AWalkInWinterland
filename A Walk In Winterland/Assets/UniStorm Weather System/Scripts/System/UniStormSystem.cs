@@ -242,6 +242,7 @@ namespace UniStorm
         MinMax fogFarDistDay = new MinMax(0, 3500);
         MinMax fogFarDistNight = new MinMax(2000, 10000);
         MinMax fogCloseDist = new MinMax(-100, 350);
+        [SerializeField] UnityEvent<bool> fogEnterEvent;
         float normalExposure = 0.8f;
         float fogExposure = 0.08f;
         public enum FogModeEnum { Exponential, ExponentialSquared };
@@ -1113,6 +1114,7 @@ namespace UniStorm
 
                 RenderSettings.fogEndDistance = fogCloseDist.max;
                 RenderSettings.fogStartDistance = fogCloseDist.min;
+                fogEnterEvent?.Invoke(true);
             } else
             {
                 RenderSettings.fogEndDistance = fogFarDist.max;
@@ -1785,6 +1787,7 @@ namespace UniStorm
                 color.a = 0;
                 fogSphereMaterial.color = color;
 
+                fogEnterEvent?.Invoke(false);
                 RenderSettings.fogStartDistance = fogFarDist.min;
                 RenderSettings.fogEndDistance = fogFarDist.max;
             }
@@ -3247,6 +3250,8 @@ namespace UniStorm
 
             MinMax currentDepth = new MinMax(RenderSettings.fogStartDistance, RenderSettings.fogEndDistance);
             float currentFogAlpha = currentFogColor.a;
+
+            if(CurrentWeatherType.addExtraFog) { fogEnterEvent?.Invoke(true); }
 
             while (t < 1)
             {

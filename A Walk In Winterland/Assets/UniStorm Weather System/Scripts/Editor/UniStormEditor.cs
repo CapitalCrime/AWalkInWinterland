@@ -119,6 +119,7 @@ namespace UniStorm.Utility
         SerializedProperty LightningLightColorProp;
         SerializedProperty FogTypeProp;
         SerializedProperty FogModeProp;
+        SerializedProperty FogDissipateEvent;
         SerializedProperty CameraFogHeightProp;
         SerializedProperty UseRadialDistantFogProp;
         #if EMERALD_AI_PRESENT
@@ -360,6 +361,7 @@ namespace UniStorm.Utility
             LightningColorProp = serializedObject.FindProperty("LightningColor");
             LightningLightColorProp = serializedObject.FindProperty("LightningLightColor");
             FogTypeProp = serializedObject.FindProperty("FogType");
+            FogDissipateEvent = serializedObject.FindProperty("fogEnterEvent");
             FogModeProp = serializedObject.FindProperty("FogMode");
             CameraFogHeightProp = serializedObject.FindProperty("CameraFogHeight");
             UseRadialDistantFogProp = serializedObject.FindProperty("UseRadialDistantFog");
@@ -1530,6 +1532,7 @@ namespace UniStorm.Utility
                     EditorGUILayout.PropertyField(FogModeProp,
                         new GUIContent("Fog Mode", "Controls the mode of fog UniStorm will use."));
                     EditorGUILayout.Space();
+                    EditorGUILayout.PropertyField(FogDissipateEvent);
 
                     EditorGUILayout.Space();
                     EditorGUILayout.PropertyField(FogColorProp,
