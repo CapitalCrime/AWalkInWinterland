@@ -198,7 +198,7 @@ public class SnowmanCamera : MonoBehaviour
             realOffsetZoom = Mathf.Clamp(realOffsetZoom + zoomAmount / 2, -10, 5);
             //cameraOffset.m_Offset.z = realOffsetZoom;
         }
-        if (cycleSnowmanView.action.WasPerformedThisFrame() && !SnowmanManager.instance.PlayerCameraActive())
+        if (cycleSnowmanView.action.WasPerformedThisFrame() && !SnowmanManager.instance.UsingPlayerCamera())
         {
             SwapCam();
         }

@@ -76,6 +76,15 @@ public class SnowmanManager : MonoBehaviour
         playMap = playerInput.actions.FindActionMap("PlayMode");
         snowmanMap = playerInput.actions.FindActionMap("SnowmanMode");
         SwitchMap();
+
+        CameraControls[] cameras = GameObject.FindObjectsOfType<CameraControls>();
+        foreach(CameraControls camera in cameras)
+        {
+            if(camera != playerCamera)
+            {
+                camera.gameObject.SetActive(false);
+            }
+        }
     }
 
     public void SwitchMap()
@@ -83,7 +92,7 @@ public class SnowmanManager : MonoBehaviour
         playMap.Disable();
         snowmanMap.Disable();
 
-        if (PlayerCameraActive())
+        if (UsingPlayerCamera())
         {
             currentMap = playMap;
         } else
@@ -97,11 +106,6 @@ public class SnowmanManager : MonoBehaviour
     public InputActionMap GetCurrentMap()
     {
         return currentMap;
-    }
-
-    public bool PlayerCameraActive()
-    {
-        return playerCamera.gameObject.activeSelf;
     }
 
     public void AddSnowman(Snowman snowman)
@@ -185,7 +189,6 @@ public class SnowmanManager : MonoBehaviour
             mousePos = Mouse.current.position.ReadValue();
         }
         mousePos.z = _camera.farClipPlane;
-        Ray ray = new Ray(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos));
         Debug.DrawLine(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos));
         if (Physics.Raycast(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos) - _camera.transform.position, out info, _camera.farClipPlane, snowmanMask))
         {
@@ -258,6 +261,19 @@ public class SnowmanManager : MonoBehaviour
 
         SnowmanImageManager.UpdateCurrentSnowmanIndex(snowman.description);
         SwitchMap();
+    }
+
+    public void SwitchPlayerCamera(CameraControls camera)
+    {
+        if (UsingPlayerCamera())
+        {
+            playerCamera.gameObject.SetActive(false);
+            playerCamera = camera;
+            playerCamera.gameObject.SetActive(true);
+        } else
+        {
+            playerCamera = camera;
+        }
     }
 
     public void ActivatePlayerCamera()
