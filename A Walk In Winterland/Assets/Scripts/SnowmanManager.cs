@@ -270,6 +270,7 @@ public class SnowmanManager : MonoBehaviour
         {
             playerCamera.gameObject.SetActive(false);
             playerCamera = camera;
+            playerCamera.GetVirtualCamera().m_Transitions.m_InheritPosition = false;
             playerCamera.gameObject.SetActive(true);
         } else
         {
@@ -296,14 +297,15 @@ public class SnowmanManager : MonoBehaviour
             {
                 playerCameraPosition = hit.point + hit.normal;
             }
+            playerCamera.GetVirtualCamera().m_Transitions.m_InheritPosition = true;
         } else
         {
             //Reset camera position to old position
+            playerCamera.GetVirtualCamera().m_Transitions.m_InheritPosition = false;
             playerCameraPosition = playerCamera.transform.position;
         }
 
         snowmanCamera.gameObject.SetActive(false);
-        playerCamera.GetVirtualCamera().LookAt = currentViewSnowman.transform;
         currentViewSnowman = null;
         playerCamera.transform.position = playerCameraPosition;
         snowmanCameraActivateEvent?.Invoke(false);
