@@ -9,6 +9,7 @@ public class CameraControls : MonoBehaviour
     [SerializeField] private InputActionReference movement;
     [SerializeField] private InputActionReference fasterCamAction;
     [SerializeField] private Camera _camera;
+    [SerializeField] private Collider roughCameraBounds;
     [SerializeField] private SnowmanCamera snowmanCamera;
     [SerializeField] private Cinemachine.CinemachineInputProvider provider;
     [SerializeField] Texture2D gamepadCursor;
@@ -20,6 +21,16 @@ public class CameraControls : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         GameManager.OnControllerChange += CheckForController;
+    }
+
+    public Collider GetCameraRoughBounds()
+    {
+        return roughCameraBounds;
+    }
+
+    public Cinemachine.CinemachineVirtualCamera GetVirtualCamera()
+    {
+        return provider.GetComponent<Cinemachine.CinemachineVirtualCamera>();
     }
 
     private void Start()

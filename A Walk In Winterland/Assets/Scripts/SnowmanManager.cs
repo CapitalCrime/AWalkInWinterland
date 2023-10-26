@@ -22,6 +22,7 @@ public class SnowmanManager : MonoBehaviour
     [SerializeField] private Cinemachine.CinemachineFreeLook cinemachineFreeLook;
     [SerializeField] private SnowmanCamera snowmanCamera;
     [SerializeField] private CameraControls playerCamera;
+    CameraControls[] cameras;
     [SerializeField] private InputActionReference performAction;
     [SerializeField] private InputActionReference changeSnowmanCam;
     public Transform dropPoints;
@@ -77,7 +78,7 @@ public class SnowmanManager : MonoBehaviour
         snowmanMap = playerInput.actions.FindActionMap("SnowmanMode");
         SwitchMap();
 
-        CameraControls[] cameras = GameObject.FindObjectsOfType<CameraControls>();
+        cameras = GameObject.FindObjectsOfType<CameraControls>();
         foreach(CameraControls camera in cameras)
         {
             if(camera != playerCamera)
@@ -283,21 +284,27 @@ public class SnowmanManager : MonoBehaviour
 
         Vector3 snowmanPos = currentViewSnowman.transform.position + Vector3.up;
         Vector3 playerCameraPosition = _camera.transform.position - _camera.transform.forward * 2 + Vector3.up;
-        //Move player back into bounds if out of bounds
-        if (_camera != null)
+
+        //Check if snowman is in player camera bounds,
+        //if it within the bounds or has no defined bounds readjust camera position, if not then go back to old camera position
+        if (playerCamera.GetCameraRoughBounds() == null || playerCamera.GetCameraRoughBounds().bounds.Contains(snowmanPos))
         {
+            //Move player back into bounds if out of bounds
             Vector3 rayDir = (playerCameraPosition - snowmanPos);
             RaycastHit hit;
             if (Physics.Raycast(snowmanPos, rayDir.normalized, out hit, rayDir.magnitude, terrainBoundariesMask))
             {
-                Debug.Log("Broke into wall after leaving camera");
                 playerCameraPosition = hit.point + hit.normal;
             }
+        } else
+        {
+            //Reset camera position to old position
+            playerCameraPosition = playerCamera.transform.position;
         }
 
         snowmanCamera.gameObject.SetActive(false);
+        playerCamera.GetVirtualCamera().LookAt = currentViewSnowman.transform;
         currentViewSnowman = null;
-
         playerCamera.transform.position = playerCameraPosition;
         snowmanCameraActivateEvent?.Invoke(false);
         playerCamera.gameObject.SetActive(true);
