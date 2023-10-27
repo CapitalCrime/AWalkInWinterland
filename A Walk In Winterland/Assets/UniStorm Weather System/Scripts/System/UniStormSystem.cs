@@ -2493,7 +2493,7 @@ namespace UniStorm
                 FogLightFalloffCoroutine = StartCoroutine(FogLightFalloffSequence(10 * TransitionSpeed, CurrentWeatherType.FogLightFalloff));
             }
 
-            FogCoroutine = StartCoroutine(FogFadeSequence(90, CurrentWeatherType.FogDensity));
+            FogCoroutine = StartCoroutine(FogFadeSequence(50, CurrentWeatherType.FogDensity));
 
             //Auroras
             if (CurrentWeatherType.UseAuroras == WeatherType.Yes_No.Yes)
@@ -3259,7 +3259,7 @@ namespace UniStorm
                 t += Time.deltaTime / TransitionTime;
 
                 Color color = currentFogColor;
-                color.a = Mathf.Clamp(Mathf.Lerp(currentFogAlpha, CurrentWeatherType.addExtraFog ? 0.98f : 0, t*3.5f), 0, 0.98f);
+                color.a = Mathf.Clamp(Mathf.Lerp(currentFogAlpha, CurrentWeatherType.addExtraFog ? 0.98f : 0, t*1.1f), 0, 0.98f);
                 fogSphereMaterial.color = color;
 
                 RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, CurrentWeatherType.addExtraFog ? fogCloseDist.min : fogFarDist.min, t);
