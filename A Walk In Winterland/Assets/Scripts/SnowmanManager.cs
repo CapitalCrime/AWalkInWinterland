@@ -266,6 +266,7 @@ public class SnowmanManager : MonoBehaviour
 
     public void SwitchPlayerCamera(CameraControls camera)
     {
+        if (playerCamera == camera) return;
         if (UsingPlayerCamera())
         {
             playerCamera.gameObject.SetActive(false);
