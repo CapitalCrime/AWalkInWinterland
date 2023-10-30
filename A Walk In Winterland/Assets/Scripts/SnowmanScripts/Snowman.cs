@@ -330,14 +330,14 @@ public abstract class Snowman : MonoBehaviour
         UniStorm.UniStormSystem.Instance.OnDayArriveEvent.RemoveListener(ResumeActionTimes);
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         snowmanEnableEvent?.Invoke(true);
         queuedUntilEnabledEvents?.Invoke();
         queuedUntilEnabledEvents = null;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         if (SnowmanManager.instance.CheckIfCurrentViewedSnowman(this))
         {

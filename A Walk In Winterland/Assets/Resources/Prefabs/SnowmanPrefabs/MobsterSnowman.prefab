@@ -288,7 +288,7 @@ MonoBehaviour:
   clickSoundRef:
     Target: {fileID: 0}
     Params: []
-  thirdPersonCam: {fileID: 8654426770502446933}
+  thirdPersonCam: {fileID: 0}
   description: {fileID: 11400000, guid: 68fe463be9a560548b11afc739e43c0f, type: 2}
   cannonFirePoint: {fileID: 3198945840953395774}
   snowballPrefab: {fileID: 442976077389416294, guid: a0196f390451f384185f40e72c50116e,
@@ -493,18 +493,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2877467644284370499}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8654426770502446933 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6914260011402268950, guid: 599484a0901a36640b2986f660e57c67,
-    type: 3}
-  m_PrefabInstance: {fileID: 2877467644284370499}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3034475266499292956
 PrefabInstance:
   m_ObjectHideFlags: 0

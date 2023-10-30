@@ -112,8 +112,8 @@ public class SnowmanManager : MonoBehaviour
     public void AddSnowman(Snowman snowman)
     {
         snowmen.Add(snowman);
-        Snowman randomSnowmanByDescription = randomUnlockSnowmen.Find(x => x.description == snowman.description);
-        randomUnlockSnowmen.Remove(randomSnowmanByDescription);
+        Snowman snowmanDescription = randomUnlockSnowmen.Find(x => x.description == snowman.description);
+        randomUnlockSnowmen.Remove(snowmanDescription);
     }
 
     public Snowman GetRandomSnowmanUnlock()
@@ -142,9 +142,26 @@ public class SnowmanManager : MonoBehaviour
         }
     }
 
+    public List<Snowman> GetSnowmanList()
+    {
+        return snowmen;
+    }
+
+    public Snowman FindRandomSpawnedSnowman()
+    {
+        int randomIndex = Random.Range(0, snowmen.Count);
+        if(randomIndex < snowmen.Count)
+        {
+            return snowmen[index];
+        } else
+        {
+            return null;
+        }
+    }
+
     public Snowman GetCurrentSnowman()
     {
-        if(snowmen.Count != 0 && index < snowmen.Count)
+        if(index < snowmen.Count)
         {
             return snowmen[index];
         } else
