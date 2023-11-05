@@ -241,7 +241,7 @@ namespace UniStorm
         MinMax fogFarDist;
         MinMax fogFarDistDay = new MinMax(0, 3500);
         MinMax fogFarDistNight = new MinMax(2000, 10000);
-        MinMax fogCloseDist = new MinMax(-100, 350);
+        MinMax fogCloseDist = new MinMax(0, 300);
         [SerializeField] UnityEvent<bool> fogEnterEvent;
         float normalExposure = 0.8f;
         float fogExposure = 0.08f;
