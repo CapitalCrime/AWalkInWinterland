@@ -81,36 +81,73 @@ public class Outline : MonoBehaviour {
   private bool needsUpdate;
 
   void Awake() {
+        // Instantiate outline materials
+        outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
+        outlineFillMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineFill"));
 
-    // Cache renderers
-    renderers = GetComponentsInChildren<Renderer>().Where(x => !x.GetComponent<ParticleSystem>()).ToArray();
+        outlineMaskMaterial.name = "OutlineMask (Instance)";
+        outlineFillMaterial.name = "OutlineFill (Instance)";
 
-    // Instantiate outline materials
-    outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
-    outlineFillMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineFill"));
-
-    outlineMaskMaterial.name = "OutlineMask (Instance)";
-    outlineFillMaterial.name = "OutlineFill (Instance)";
-
-    // Retrieve or generate smooth normals
-    LoadSmoothNormals();
-
-    // Apply material properties immediately
-    needsUpdate = true;
+        GenerateOutline();
   }
 
   void OnEnable() {
-    foreach (var renderer in renderers) {
-
-      // Append outline shaders
-      var materials = renderer.sharedMaterials.ToList();
-
-      materials.Add(outlineMaskMaterial);
-      materials.Add(outlineFillMaterial);
-
-      renderer.materials = materials.ToArray();
-    }
+        AddOutlineMaterials();
   }
+
+    void GenerateOutline()
+    {
+        // Cache renderers
+        renderers = GetComponentsInChildren<Renderer>().Where(x => !x.GetComponent<ParticleSystem>()).ToArray();
+
+        // Retrieve or generate smooth normals
+        LoadSmoothNormals();
+
+        // Apply material properties immediately
+        needsUpdate = true;
+    }
+
+    void AddOutlineMaterials()
+    {
+        foreach (var renderer in renderers)
+        {
+            if (renderer == null) continue;
+            // Append outline shaders
+            var materials = renderer.sharedMaterials.ToList();
+
+            materials.Add(outlineMaskMaterial);
+            materials.Add(outlineFillMaterial);
+
+            renderer.materials = materials.ToArray();
+        }
+    }
+
+    void RemoveOutlines()
+    {
+        foreach (var renderer in renderers)
+        {
+            if (renderer == null) continue;
+            // Remove outline shaders
+            var materials = renderer.sharedMaterials.ToList();
+
+            materials.Remove(outlineMaskMaterial);
+            materials.Remove(outlineFillMaterial);
+
+            renderer.materials = materials.ToArray();
+        }
+    }
+
+  public void RecalcultateOutline()
+    {
+        RemoveOutlines();
+        GenerateOutline();
+        Debug.Log("We ran recalculate");
+        Debug.Log("Renderers count: " + renderers.Length);
+        if (enabled)
+        {
+            AddOutlineMaterials();
+        }
+    }
 
   void OnValidate() {
 
@@ -138,16 +175,7 @@ public class Outline : MonoBehaviour {
   }
 
   void OnDisable() {
-    foreach (var renderer in renderers) {
-
-      // Remove outline shaders
-      var materials = renderer.sharedMaterials.ToList();
-
-      materials.Remove(outlineMaskMaterial);
-      materials.Remove(outlineFillMaterial);
-
-      renderer.materials = materials.ToArray();
-    }
+        RemoveOutlines();
   }
 
   void OnDestroy() {

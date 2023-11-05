@@ -75,6 +75,8 @@ public class SpySnowman : Snowman
                 part.SetActive(true);
             }
         }
+
+        GetComponent<Outline>().RecalcultateOutline();
     }
 
     protected override void UniqueAction()
