@@ -135,6 +135,8 @@ public class SnowmanImageManager : MonoBehaviour
             }
         }
 
+        int startIndex = currentIndex;
+        bool allLocked = false;
         //If next snowman is undiscovered, keep scrolling until unlocked one is found
         while (true)
         {
@@ -164,10 +166,19 @@ public class SnowmanImageManager : MonoBehaviour
             {
                 currentIndex--;
             }
+
+            if(currentIndex == startIndex)
+            {
+                allLocked = true;
+                break;
+            }
         }
 
         //After snowman is found, select the index button
-        SelectButton(true);
+        if (!allLocked)
+        {
+            SelectButton(true);
+        }
     }
 
     public void SelectButton(bool value)
@@ -199,7 +210,32 @@ public class SnowmanImageManager : MonoBehaviour
         if (instance == null) return;
         instance.scrollMenu.action.performed += instance.ScrollMenu;
         instance.isOpen = true;
-        instance.SelectButton(instance.isOpen);
+        bool allLocked = false;
+        //If next snowman is undiscovered, keep scrolling until unlocked one is found
+        while (true)
+        {
+            //Handle wrap around and clamp between end points
+            if (instance.currentIndex > instance.buttonDictionary.Count - 1)
+            {
+                instance.currentIndex = 0;
+                allLocked = true;
+                break;
+            }
+
+            //If unlocked snowman is found, break out of while loop
+            if (instance.buttonDictionary.TryGetValue(instance.snowmanDescriptions[(int)instance.currentIndex], out SnowmanImageCreator tempButton))
+            {
+                if (tempButton.getPairedSnowman() != null) break;
+            }
+
+            //If unlocked snowman is not found, increase index to check for next one
+            instance.currentIndex++;
+        }
+
+        if (!allLocked)
+        {
+            instance.SelectButton(instance.isOpen);
+        }
     }
 
     private void OnDisable()

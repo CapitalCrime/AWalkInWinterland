@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class SledScript : MonoBehaviour
@@ -10,15 +11,56 @@ public class SledScript : MonoBehaviour
     float lastHit = 0;
     [SerializeField] LayerMask ignoreLayers;
     [SerializeField] LayerMask groundMask;
+    [SerializeField] Transform sledSeat;
+    public event UnityAction destroyEvent;
+    public Snowman seatedSnowman { get; private set; }
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        rb.isKinematic = true;
     }
+
     // Start is called before the first frame update
     void Start()
     {
         rb.centerOfMass = new Vector3(0, -3f, 0);
         lastHit = Time.time;
+    }
+
+    private void OnDisable()
+    {
+        if (rb == null) return;
+        rb.isKinematic = true;
+    }
+
+    private void OnEnable()
+    {
+        if (rb == null) return;
+        rb.isKinematic = false;
+    }
+
+    public void SeatSnowman(Snowman snowman)
+    {
+        seatedSnowman = snowman;
+        seatedSnowman.SetInteractable(false);
+        seatedSnowman.transform.SetParent(sledSeat);
+        foreach(Collider collider in seatedSnowman.transform.GetComponentsInChildren<Collider>())
+        {
+            collider.enabled = false;
+        }
+        seatedSnowman.transform.localPosition = Vector3.zero;
+    }
+
+    public void UnseatSnowman()
+    {
+        if (seatedSnowman == null || seatedSnowman.gameObject == null) return;
+        seatedSnowman.transform.SetParent(null);
+        seatedSnowman.SetInteractable(true);
+        foreach (Collider collider in seatedSnowman.transform.GetComponentsInChildren<Collider>())
+        {
+            collider.enabled = true;
+        }
+        seatedSnowman = null;
     }
 
     private void FixedUpdate()
@@ -41,11 +83,6 @@ public class SledScript : MonoBehaviour
                 }
             }
         }
-
-        //if (newVel.magnitude < 3 && rb.velocity.y < 0)
-        //{
-        //    newVel = new Vector2(transform.forward.x, rb.velocity.z).normalized * 3;
-        //}else 
         
         if (newVel.magnitude > maxSpeed)
         {
@@ -65,23 +102,10 @@ public class SledScript : MonoBehaviour
         if (rb.velocity.magnitude < 1) return;
         float offCentreDot = Vector3.Dot(transform.right, rb.velocity.normalized);
         Vector3 offCentreCross = Vector3.Cross(transform.forward, rb.velocity.normalized);
-        //if (Mathf.Abs(amountOffCentre) < 0.1f) return;
         if (Mathf.Abs(offCentreCross.y) < 0.1f && offCentreDot > 0) return;
-        //float rotateSmooth = Mathf.Clamp(Mathf.Abs(offCentreDot), 0.3f, 1);
         float rotateSmooth = Mathf.Clamp(Mathf.Abs(offCentreCross.y), 0.3f, 1);
-        //if (amountOffCentre < 0)
-        //{
-        //    transform.RotateAround(transform.position, transform.up, Time.deltaTime * -70 * rotateSmooth);
-        //} else
-        //{
-        //    transform.RotateAround(transform.position, transform.up, Time.deltaTime * 70 * rotateSmooth);
-        //}
 
         Vector3 rotateAxis = transform.up;
-        //if(Physics.Raycast(transform.position, -Vector3.up, out RaycastHit hitInfo, 5, groundMask))
-        //{
-        //    rotateAxis = hitInfo.normal;
-        //}
         
         if (offCentreCross.y < 0)
         {
@@ -96,6 +120,18 @@ public class SledScript : MonoBehaviour
     bool CheckLayerMask(int layer)
     {
         return ignoreLayers == (ignoreLayers | (1 << layer));
+    }
+
+    private void OnApplicationQuit()
+    {
+        seatedSnowman = null;
+        destroyEvent = null;
+    }
+
+    private void OnDestroy()
+    {
+        UnseatSnowman();
+        destroyEvent?.Invoke();
     }
 
     private void OnCollisionEnter(Collision collision)
