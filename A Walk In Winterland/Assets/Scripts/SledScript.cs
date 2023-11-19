@@ -44,7 +44,8 @@ public class SledScript : MonoBehaviour
         seatedSnowman = snowman;
         seatedSnowman.SetInteractable(false);
         seatedSnowman.transform.SetParent(sledSeat);
-        foreach(Collider collider in seatedSnowman.transform.GetComponentsInChildren<Collider>())
+        seatedSnowman.transform.localEulerAngles = Vector3.zero;
+        foreach (Collider collider in seatedSnowman.transform.GetComponentsInChildren<Collider>())
         {
             collider.enabled = false;
         }
@@ -56,6 +57,7 @@ public class SledScript : MonoBehaviour
         if (seatedSnowman == null || seatedSnowman.gameObject == null) return;
         seatedSnowman.transform.SetParent(null);
         seatedSnowman.SetInteractable(true);
+        seatedSnowman.transform.localEulerAngles = Vector3.up * seatedSnowman.transform.eulerAngles.y;
         foreach (Collider collider in seatedSnowman.transform.GetComponentsInChildren<Collider>())
         {
             collider.enabled = true;
