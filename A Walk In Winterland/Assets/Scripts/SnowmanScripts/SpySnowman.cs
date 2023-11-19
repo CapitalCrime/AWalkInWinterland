@@ -20,6 +20,7 @@ public class SpySnowman : Snowman
 
     public Snowman FindRandomSpawnedSnowman(List<Snowman> snowmen)
     {
+        return snowmen.Find(x => x.description.name == "MobsterSnowman");
         int randomIndex = Random.Range(0, snowmen.Count);
         if (randomIndex < snowmen.Count)
         {
@@ -49,19 +50,22 @@ public class SpySnowman : Snowman
             snowmen.Remove(this);
             if (snowmen.Count == 0) return;
             Snowman pickedSnowman = FindRandomSpawnedSnowman(snowmen);
+            Renderer[] renderers = pickedSnowman.GetComponent<Outline>().GetRendererCopyWithoutOutline();
 
             //Take every ACTIVE mesh renderer, set their local positions correctly, and add to snowman disguise holder
-            foreach(MeshRenderer snowmanPart in pickedSnowman.GetComponentsInChildren<MeshRenderer>())
+            foreach(MeshRenderer snowmanPart in renderers) //pickedSnowman.GetComponentsInChildren<MeshRenderer>()
             {
+                if (snowmanPart == null) continue;
                 if (!snowmanPart.gameObject.activeSelf) continue;
 
                 //Accounting for mesh part offset
                 Vector3 localPosition =
                     Vector3.Scale(pickedSnowman.transform.InverseTransformPoint(snowmanPart.transform.position), snowmanPart.transform.lossyScale);
-                GameObject newPart = Instantiate(snowmanPart.gameObject, disguiseHolder);
-                newPart.transform.localPosition = localPosition;
+                //GameObject newPart = Instantiate(snowmanPart.gameObject, disguiseHolder);
+                snowmanPart.transform.parent = disguiseHolder;
+                snowmanPart.transform.localPosition = localPosition;
                 //Accounting for mesh part scaling
-                newPart.transform.localScale = snowmanPart.transform.lossyScale;
+                snowmanPart.transform.localScale = snowmanPart.transform.lossyScale;
             }
         }
         else

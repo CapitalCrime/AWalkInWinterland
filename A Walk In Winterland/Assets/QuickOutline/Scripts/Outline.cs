@@ -137,10 +137,42 @@ public class Outline : MonoBehaviour {
         }
     }
 
+    public Renderer[] GetRendererCopyWithoutOutline()
+    {
+        Renderer[] tempRenderer = new Renderer[renderers.Length];
+        //Copy every renderer object
+        for(int i = 0; i < renderers.Length; i++)
+        {
+            if (renderers[i] == null) continue;
+            tempRenderer[i] = Instantiate(renderers[i].gameObject, transform).GetComponent<Renderer>();
+            tempRenderer[i].transform.localPosition = renderers[i].transform.localPosition;
+            tempRenderer[i].transform.localRotation = renderers[i].transform.localRotation;
+            tempRenderer[i].transform.localScale = renderers[i].transform.localScale;
+        }
+        //If enabled, disable the outline effect on the copies
+        if (enabled)
+        {
+            foreach (var renderer in tempRenderer)
+            {
+                if (renderer == null) continue;
+                // Remove outline shaders
+                var materials = renderer.sharedMaterials.ToList();
+
+                materials.Remove(outlineMaskMaterial);
+                materials.Remove(outlineFillMaterial);
+
+                renderer.materials = materials.ToArray();
+            }
+        }
+
+        return tempRenderer;
+    }
+
   public void RecalcultateOutline()
     {
         RemoveOutlines();
         GenerateOutline();
+        RemoveOutlines();
         Debug.Log("We ran recalculate");
         Debug.Log("Renderers count: " + renderers.Length);
         if (enabled)
