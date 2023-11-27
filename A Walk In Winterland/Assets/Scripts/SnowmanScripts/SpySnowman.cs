@@ -34,9 +34,6 @@ public class SpySnowman : Snowman
 
     void Disguise(bool disguised)
     {
-        //TODO: Create disguise particle effect and trigger it
-        disguiseParticles.gameObject.SetActive(true);
-
         if (disguised)
         {
             //Hide spy parts
@@ -50,6 +47,7 @@ public class SpySnowman : Snowman
             snowmen.Remove(this);
             if (snowmen.Count == 0) return;
             Snowman pickedSnowman = FindRandomSpawnedSnowman(snowmen);
+            if (pickedSnowman == null) return;
             Renderer[] renderers = pickedSnowman.GetComponent<Outline>().GetRendererCopyWithoutOutline();
 
             //Take every ACTIVE mesh renderer, set their local positions correctly, and add to snowman disguise holder
@@ -79,6 +77,9 @@ public class SpySnowman : Snowman
                 part.SetActive(true);
             }
         }
+
+        //TODO: Create disguise particle effect and trigger it
+        disguiseParticles.gameObject.SetActive(true);
 
         GetComponent<Outline>().RecalcultateOutline();
     }
