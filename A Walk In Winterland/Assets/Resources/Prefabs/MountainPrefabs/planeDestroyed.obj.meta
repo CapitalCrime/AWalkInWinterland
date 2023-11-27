@@ -7,6 +7,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: e71e6258f5afaa049a1ce725e72e7534, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plane
+    second: {fileID: 2100000, guid: f1c1661e51a4e4c4cbc98657aaa88f5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: defaultMat
     second: {fileID: 2100000, guid: f1c1661e51a4e4c4cbc98657aaa88f5e, type: 2}
   materials:

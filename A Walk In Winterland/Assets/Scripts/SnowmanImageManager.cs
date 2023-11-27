@@ -106,6 +106,7 @@ public class SnowmanImageManager : MonoBehaviour
     void ScrollMenuDirection()
     {
         if (!isOpen || !gameObject.activeSelf) return;
+        int startIndex = currentIndex;
 
         //Move index horizontally and vertically by input
         int changeAmount = (int)scrollDirection.x * (int)snowmenPerRow + (int)-scrollDirection.y;
@@ -135,7 +136,6 @@ public class SnowmanImageManager : MonoBehaviour
             }
         }
 
-        int startIndex = currentIndex;
         bool allLocked = false;
         //If next snowman is undiscovered, keep scrolling until unlocked one is found
         while (true)
@@ -152,19 +152,61 @@ public class SnowmanImageManager : MonoBehaviour
             currentIndex = Mathf.Clamp(currentIndex, 0, buttonDictionary.Count - 1);
 
             //If unlocked snowman is found, break out of while loop
-            if (buttonDictionary.TryGetValue(snowmanDescriptions[(int)currentIndex], out SnowmanImageCreator tempButton))
-            {
-                if (tempButton.getPairedSnowman() != null) break;
-            }
+            if (snowmanDescriptions[(int)currentIndex].unlocked == true) break;
+            //if (buttonDictionary.TryGetValue(snowmanDescriptions[(int)currentIndex], out SnowmanImageCreator tempButton))
+            //{
+            //    if (tempButton.getPairedSnowman() != null) break;
+            //}
+
+            int column = (startIndex % (int)snowmenPerRow) + 1;
+            int halfwayColumn = Mathf.CeilToInt((int)snowmenPerRow / 2.0f);
 
             //If unlocked snowman is not found, increase index to check for next one
             if (changeAmount > 0)
             {
-                currentIndex++;
+                //If scrolling right, check if any previous snowmen are unlocked, else increase by 1
+                if(scrollDirection.x != 0)
+                {
+                    int foundIndex = CheckAllRightRow(startIndex, column > halfwayColumn ? true : false);
+                    //if (foundIndex == -1)
+                    //{
+                    //    foundIndex = CheckAllCurrentRow(startIndex, true);
+                    //}
+                    if (foundIndex != -1)
+                    {
+                        currentIndex = foundIndex;
+                        break;
+                    }
+
+                    scrollDirection.x = 0;
+                    currentIndex++;
+                }
+                else
+                {
+                    currentIndex++;
+                }
             }
             else
             {
-                currentIndex--;
+                if (scrollDirection.x != 0)
+                {
+                    int foundIndex = CheckAllLeftRow(startIndex, column > halfwayColumn ? true : false);
+                    //if(foundIndex == -1)
+                    //{
+                    //    foundIndex = CheckAllCurrentRow(startIndex, false);
+                    //}
+                    if(foundIndex != -1)
+                    {
+                        currentIndex = foundIndex;
+                        break;
+                    }
+
+                    scrollDirection.x = 0;
+                    currentIndex--;
+                } else
+                {
+                    currentIndex--;
+                }
             }
 
             if(currentIndex == startIndex)
@@ -179,6 +221,101 @@ public class SnowmanImageManager : MonoBehaviour
         {
             SelectButton(true);
         }
+    }
+
+    int FindFirstIndexInBounds(int currentIndex)
+    {
+        if (currentIndex > buttonDictionary.Count - 1)
+        {
+            return ( ( (buttonDictionary.Count - 1) / (int)snowmenPerRow ) - 1 ) * (int)snowmenPerRow;
+        }else if (currentIndex < 0)
+        {
+            return 0;
+        } else
+        {
+            return currentIndex;
+        }
+    }
+
+    int SearchRowForUnlockedSnowman(int startingIndex, bool ascending)
+    {
+        int snowmanFound = -1;
+        int direction = ascending ? -1 : 1;
+        for(int i = 0; i < snowmenPerRow; i++)
+        {
+            int lookIndex = startingIndex + (i * direction);
+            if (lookIndex < 0 || lookIndex > buttonDictionary.Count - 1) break;
+            if (snowmanDescriptions[lookIndex].unlocked == true)
+            {
+                return lookIndex;
+            }
+        }
+        return snowmanFound;
+    }
+
+    int CheckAllLeftRow(int currentIndex, bool ascending)
+    {
+        Debug.Log("Checking Left Row");
+        Debug.Log("Current Index = " + currentIndex);
+        int startingIndex = FindFirstIndexInBounds( ((currentIndex / (int)snowmenPerRow)-1) * (int)snowmenPerRow );
+        Debug.Log("Starting Index = "+startingIndex);
+        if (ascending)
+        {
+            startingIndex += (int)snowmenPerRow - 1;
+            if (startingIndex > buttonDictionary.Count - 1)
+            {
+                startingIndex = buttonDictionary.Count - 1;
+            }
+        }
+        return SearchRowForUnlockedSnowman(startingIndex, ascending);
+    }
+
+    int CheckAllCurrentRow(int currentIndex, bool ascending)
+    {
+        int startingIndex = FindFirstIndexInBounds( (currentIndex / (int)snowmenPerRow) * (int)snowmenPerRow );
+        int endIndex = startingIndex + (int)snowmenPerRow - 1;
+        if(endIndex > buttonDictionary.Count - 1)
+        {
+            startingIndex = buttonDictionary.Count - 1;
+        }
+        if (ascending)
+        {
+            for(int i = endIndex; i > currentIndex; i--)
+            {
+                if (snowmanDescriptions[i].unlocked == true)
+                {
+                    return i;
+                }
+            }
+        } else
+        {
+            for (int i = startingIndex; i < currentIndex; i++)
+            {
+                if (snowmanDescriptions[i].unlocked == true)
+                {
+                    return i;
+                }
+            }
+        }
+        return -1;
+
+    }
+
+    int CheckAllRightRow(int currentIndex, bool ascending)
+    {
+        Debug.Log("Checking Right Row");
+        Debug.Log("Current Index = " + currentIndex);
+        int startingIndex = FindFirstIndexInBounds( ((currentIndex / (int)snowmenPerRow)+1) * (int)snowmenPerRow );
+        Debug.Log("Starting Index = "+ startingIndex);
+        if (ascending)
+        {
+            startingIndex += (int)snowmenPerRow - 1;
+            if(startingIndex > buttonDictionary.Count - 1)
+            {
+                startingIndex = buttonDictionary.Count - 1;
+            }
+        }
+        return SearchRowForUnlockedSnowman(startingIndex, ascending);
     }
 
     public void SelectButton(bool value)

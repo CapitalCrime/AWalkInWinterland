@@ -138,6 +138,11 @@ public abstract class Snowman : MonoBehaviour
         enabled = value;
     }
 
+    public void UnlockSnowman(bool value)
+    {
+        description.unlocked = true;
+    }
+
     private void Awake()
     {
         thirdPersonCam = transform.GetComponentsInChildren<Cinemachine.CinemachineFreeLook>(true)[0];
@@ -145,7 +150,11 @@ public abstract class Snowman : MonoBehaviour
         {
             Debug.LogError("Snowman description missing on snowman: " + transform.name);
         }
-        description.unlocked = true;
+
+        if (description.randomUnlock)
+        {
+            description.unlocked = true;
+        }
 
         if(description.randomWalkTimeSeconds.min == 0 && description.randomWalkTimeSeconds.max == 0)
         {

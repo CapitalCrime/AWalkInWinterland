@@ -29,15 +29,11 @@ public class UIOutlineScript : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     public void OnDeselect(BaseEventData eventData)
     {
-        Debug.Log(image);
-        Debug.Log("Deselected " + gameObject.name);
         image.material = null;
     }
 
     public void OnSelect(BaseEventData eventData)
 	{
-        Debug.Log(image);
-        Debug.Log("Selected " + gameObject.name);
         image.material = outlineMaterial;
 	}
 }

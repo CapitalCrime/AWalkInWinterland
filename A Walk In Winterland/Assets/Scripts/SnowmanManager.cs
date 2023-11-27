@@ -27,7 +27,7 @@ public class SnowmanManager : MonoBehaviour
     [SerializeField] private InputActionReference changeSnowmanCam;
     public Transform dropPoints;
     public LayerMask snowmanMask;
-    float _snowmanDropTime = 0.1f;
+    float _snowmanDropTime = 2.0f;
     public float snowmanDropTime { get => _snowmanDropTime; private set { _snowmanDropTime = value; } }
     public float lastDroppedTime { get; private set; }
 
@@ -53,13 +53,14 @@ public class SnowmanManager : MonoBehaviour
         lastDroppedTime = Time.time;
         Snowman.snowmanCreatedEvent += AddSnowman;
         snowmen = new List<Snowman>();
-        randomUnlockSnowmen = new List<Snowman>(Resources.LoadAll<Snowman>("Prefabs/SnowmanPrefabs"));
-        foreach(Snowman snowman in randomUnlockSnowmen)
+        List<Snowman> allSnowmen = new List<Snowman>(Resources.LoadAll<Snowman>("Prefabs/SnowmanPrefabs"));
+        randomUnlockSnowmen = new List<Snowman>();
+        foreach (Snowman snowman in allSnowmen)
         {
             snowman.description.unlocked = false;
-            if (!snowman.description.randomUnlock)
+            if (snowman.description.randomUnlock == true)
             {
-                randomUnlockSnowmen.Remove(snowman);
+                randomUnlockSnowmen.Add(snowman);
             }
         }
         snowmanCamera.gameObject.SetActive(false);
@@ -350,7 +351,7 @@ public class SnowmanManager : MonoBehaviour
 
     public float TimeSinceDrop()
     {
-        if(randomUnlockSnowmen.Count == 0)
+        if (randomUnlockSnowmen.Count == 0)
         {
             return 0;
         } else
