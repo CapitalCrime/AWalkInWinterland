@@ -238,6 +238,8 @@ namespace UniStorm
         public Color fogDayColor;
         public Color fogNightColor;
         Color currentFogColor;
+        [Range(0,1)]
+        public float fogAlpha = 0.85f;
         MinMax fogFarDist;
         MinMax fogFarDistDay = new MinMax(0, 3500);
         MinMax fogFarDistNight = new MinMax(2000, 10000);
@@ -1109,7 +1111,7 @@ namespace UniStorm
             if (CurrentWeatherType.addExtraFog)
             {
                 Color color = currentFogColor;
-                color.a = 0.98f;
+                color.a = fogAlpha;
                 fogSphereMaterial.color = color;
 
                 RenderSettings.fogEndDistance = fogCloseDist.max;
@@ -3259,7 +3261,7 @@ namespace UniStorm
                 t += Time.deltaTime / TransitionTime;
 
                 Color color = currentFogColor;
-                color.a = Mathf.Clamp(Mathf.Lerp(currentFogAlpha, CurrentWeatherType.addExtraFog ? 0.98f : 0, t*1.1f), 0, 0.98f);
+                color.a = Mathf.Clamp(Mathf.Lerp(currentFogAlpha, CurrentWeatherType.addExtraFog ? fogAlpha : 0, t*1.1f), 0, fogAlpha);
                 fogSphereMaterial.color = color;
 
                 RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, CurrentWeatherType.addExtraFog ? fogCloseDist.min : fogFarDist.min, t);

@@ -213,6 +213,7 @@ namespace UniStorm.Utility
         //Fog
         SerializedProperty FogSphereMaterial;
         SerializedProperty FogDayColor;
+        SerializedProperty FogAlpha;
         SerializedProperty FogNightColor;
 
         public float secs = 2f;
@@ -610,6 +611,7 @@ namespace UniStorm.Utility
 
             FogSphereMaterial = serializedObject.FindProperty("fogSphereMaterial");
             FogDayColor = serializedObject.FindProperty("fogDayColor");
+            FogAlpha = serializedObject.FindProperty("fogAlpha");
             FogNightColor = serializedObject.FindProperty("fogNightColor");
 
             //Lightning Fire Tags
@@ -1474,6 +1476,7 @@ namespace UniStorm.Utility
 
                 EditorGUILayout.PropertyField(FogSphereMaterial);
                 EditorGUILayout.PropertyField(FogDayColor);
+                EditorGUILayout.PropertyField(FogAlpha);
                 EditorGUILayout.PropertyField(FogNightColor);
 
                 if (FogFoldoutProp.boolValue)

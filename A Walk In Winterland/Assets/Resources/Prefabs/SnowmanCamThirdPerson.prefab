@@ -537,7 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrainBoundariesMask:
     serializedVersion: 2
-    m_Bits: 563
+    m_Bits: 25139
   rigSettings:
   - {x: 0, y: 1.25, z: 0}
   - {x: 0, y: 0.9, z: 0}
@@ -584,7 +584,7 @@ MonoBehaviour:
     Value: 0
     m_SpeedMode: 0
     m_MaxSpeed: 4
-    m_AccelTime: 0.2
+    m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
-  m_BindingMode: 5
+  m_BindingMode: 1
   m_SplineCurvature: 0.2
   m_Orbits:
   - m_Height: 4

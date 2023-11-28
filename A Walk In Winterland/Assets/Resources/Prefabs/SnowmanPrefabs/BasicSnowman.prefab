@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1318432796350280617}
-  - component: {fileID: 509970245911127743}
   - component: {fileID: 7723188517299077758}
   m_Layer: 0
   m_Name: SnowmanCamFirstPerson
@@ -34,22 +33,6 @@ Transform:
   m_Father: {fileID: 7231033878098494957}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &509970245911127743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7205295731891822976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerIndex: -1
-  AutoEnableInputs: 0
-  XYAxis: {fileID: 5336214452558322820, guid: 27a9f173577cf414bb08e08b8e9050df, type: 3}
-  ZAxis: {fileID: 0}
 --- !u!114 &7723188517299077758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +156,7 @@ MonoBehaviour:
   clickSoundRef:
     Target: {fileID: 0}
     Params: []
-  thirdPersonCam: {fileID: 7340755802377999523}
+  thirdPersonCam: {fileID: 0}
   description: {fileID: 11400000, guid: 6df2befba2a8506498b838f7c6f0e000, type: 2}
 --- !u!114 &7193218912654008845
 MonoBehaviour:
@@ -322,18 +305,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4191716945909958069}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7340755802377999523 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6914260011402268950, guid: 599484a0901a36640b2986f660e57c67,
-    type: 3}
-  m_PrefabInstance: {fileID: 4191716945909958069}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7971198568108482272
 PrefabInstance:
   m_ObjectHideFlags: 0

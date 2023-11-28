@@ -27,7 +27,7 @@ public class SnowmanManager : MonoBehaviour
     [SerializeField] private InputActionReference changeSnowmanCam;
     public Transform dropPoints;
     public LayerMask snowmanMask;
-    float _snowmanDropTime = 2.0f;
+    [SerializeField] float _snowmanDropTime = 2.0f;
     public float snowmanDropTime { get => _snowmanDropTime; private set { _snowmanDropTime = value; } }
     public float lastDroppedTime { get; private set; }
 
