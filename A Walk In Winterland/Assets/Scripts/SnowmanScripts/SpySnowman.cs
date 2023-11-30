@@ -20,7 +20,6 @@ public class SpySnowman : Snowman
 
     public Snowman FindRandomSpawnedSnowman(List<Snowman> snowmen)
     {
-        return snowmen.Find(x => x.description.name == "MobsterSnowman");
         int randomIndex = Random.Range(0, snowmen.Count);
         if (randomIndex < snowmen.Count)
         {
