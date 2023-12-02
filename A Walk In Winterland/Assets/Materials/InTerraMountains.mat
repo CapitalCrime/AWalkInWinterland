@@ -23,9 +23,11 @@ Material:
   m_Name: InTerraMountains
   m_Shader: {fileID: 4800000, guid: 3e3de67027c68e34a96553bba38745c1, type: 3}
   m_ValidKeywords:
+  - _LAYERS_TWO
   - _TERRAIN_BLEND_HEIGHT
   - _TERRAIN_DISTANCEBLEND
   - _TERRAIN_MASK_MAPS
+  - _TERRAIN_TRIPLANAR_ONE
   m_InvalidKeywords:
   - _TERRAIN_INSTANCED_PERPIXEL_NORMAL
   m_LightmapFlags: 4
@@ -176,7 +178,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Distance_HeightTransition: 12.6
+    - _Distance_HeightTransition: 19.9
     - _DstBlend: 0
     - _EnableHeightBlend: 1
     - _EnableInstancedPerPixelNormal: 1
@@ -186,7 +188,7 @@ Material:
     - _GlossyReflections: 0
     - _HT_cover: 0.6
     - _HT_distance_scale: 0.5
-    - _HeightTransition: 14.5
+    - _HeightTransition: 30
     - _Metallic: 0
     - _Metallic0: 0
     - _Metallic1: 0
@@ -210,8 +212,8 @@ Material:
     - _Surface: 0
     - _TerrainColorTintStrenght: 0
     - _TerrainNormalTintStrenght: 0
-    - _TriplanarOneToAllSteep: 0
-    - _TriplanarSharpness: 9
+    - _TriplanarOneToAllSteep: 1
+    - _TriplanarSharpness: 8.52
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
