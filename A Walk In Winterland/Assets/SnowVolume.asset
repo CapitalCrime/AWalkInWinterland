@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   color:
     m_OverrideState: 1
     m_Value: {r: 0.827044, g: 1, b: 0.9721329, a: 1}
@@ -92,7 +92,7 @@ MonoBehaviour:
     m_Value: 0.3
   clamp:
     m_OverrideState: 1
-    m_Value: 0.03
+    m_Value: 0.02
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

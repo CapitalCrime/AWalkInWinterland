@@ -34,8 +34,6 @@ public class SkiChairSeatScript : MonoBehaviour
         currentPointIndex = skiliftData.GetValidIndex(startPointIndex);
         stopPoint = skiliftData.GetPointByIndex(currentPointIndex);
         skiliftData.signalMove += MoveChair;
-        Debug.Log(transform.name + " distance is " + pathFollower.GetDistanceByPoint(stopPoint));
-        Debug.Log("Total length = " + pathFollower.GetTotalLength());
     }
 
     private void Start()
@@ -59,8 +57,6 @@ public class SkiChairSeatScript : MonoBehaviour
             {
                 targetDistance = pathFollower.GetDistanceByPoint(stopPoint) - pathFollower.GetTotalLength();
             }
-            Debug.Log(transform.name+" current distance travelled "+pathFollower.GetDistanceTravelled());
-            Debug.Log(transform.name + " target point distance " + pathFollower.GetDistanceByPoint(stopPoint));
         }
     }
 
@@ -120,7 +116,6 @@ public class SkiChairSeatScript : MonoBehaviour
     {
         if(passengersOnboard < seats.Count && other.TryGetComponent(out Snowman snowman))
         {
-            Debug.Log("Snowman hit the chair!");
             int nullIndex = -1;
             for(int i = 0; i<passengers.Length; i++)
             {

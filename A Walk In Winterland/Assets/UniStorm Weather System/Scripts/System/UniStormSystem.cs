@@ -239,11 +239,11 @@ namespace UniStorm
         public Color fogNightColor;
         Color currentFogColor;
         [Range(0,1)]
-        public float fogAlpha = 0.85f;
+        public float fogAlpha = 1;
         MinMax fogFarDist;
         MinMax fogFarDistDay = new MinMax(0, 3500);
         MinMax fogFarDistNight = new MinMax(2000, 10000);
-        MinMax fogCloseDist = new MinMax(0, 300);
+        MinMax fogCloseDist = new MinMax(-600, 1100);
         [SerializeField] UnityEvent<bool> fogEnterEvent;
         float normalExposure = 0.8f;
         float fogExposure = 0.08f;
