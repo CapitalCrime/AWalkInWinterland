@@ -232,7 +232,10 @@ namespace UniStorm
         public int LightningDetectionDistance = 20;
         public int m_CloudSeed;
         public Color CurrentFogColor;
-        public enum FogTypeEnum { UnistormFog, UnityFog };
+        public enum FogTypeEnum { UnistormFog, UnityFog, VolumetricFog2 };
+        public VolumetricFogAndMist2.VolumetricFogProfile volumeProfile;
+        public float volumeFogDistance;
+        public float volumeFogVolumetricDensity;
         public FogTypeEnum FogType = FogTypeEnum.UnistormFog;
         public Material fogSphereMaterial;
         public Color fogDayColor;
@@ -1108,19 +1111,36 @@ namespace UniStorm
             RenderSettings.fogMode = UnityEngine.FogMode.Linear;
             UpdateFarFogDist();
 
-            if (CurrentWeatherType.addExtraFog)
+            if(FogType == FogTypeEnum.UnityFog)
             {
-                Color color = currentFogColor;
-                color.a = fogAlpha;
-                fogSphereMaterial.color = color;
+                if (CurrentWeatherType.addExtraFog)
+                {
+                    Color color = currentFogColor;
+                    color.a = fogAlpha;
+                    fogSphereMaterial.color = color;
 
-                RenderSettings.fogEndDistance = fogCloseDist.max;
-                RenderSettings.fogStartDistance = fogCloseDist.min;
-                fogEnterEvent?.Invoke(true);
-            } else
+                    RenderSettings.fogEndDistance = fogCloseDist.max;
+                    RenderSettings.fogStartDistance = fogCloseDist.min;
+                    fogEnterEvent?.Invoke(true);
+                }
+                else
+                {
+                    RenderSettings.fogEndDistance = fogFarDist.max;
+                    RenderSettings.fogStartDistance = fogFarDist.min;
+                }
+            }
+
+            if(FogType == FogTypeEnum.VolumetricFog2)
             {
-                RenderSettings.fogEndDistance = fogFarDist.max;
-                RenderSettings.fogStartDistance = fogFarDist.min;
+                if (CurrentWeatherType.addExtraFog)
+                {
+                    volumeProfile.distantFogDistanceDensity = 0.0015f;
+                    volumeProfile.density = volumeFogVolumetricDensity;
+                } else
+                {
+                    volumeProfile.distantFogDistanceDensity = 0;
+                    volumeProfile.density = 0;
+                }
             }
 
             if (FogType == FogTypeEnum.UnistormFog)
@@ -1778,20 +1798,34 @@ namespace UniStorm
                 t = Mathf.Clamp(1-normalizeFloat(timeOfDay, dayTime.min, dayTime.max), 0, 1);
             }
 
-            fogFarDist.min = Mathf.Lerp(fogFarDistDay.min, fogFarDistNight.min, t);
-            fogFarDist.max = Mathf.Lerp(fogFarDistDay.max, fogFarDistNight.max, t);
-            currentFogColor = Color.Lerp(fogDayColor, fogNightColor, t);
-            RenderSettings.fogColor = currentFogColor;
+            if(FogType == FogTypeEnum.UnityFog)
+            {
+                fogFarDist.min = Mathf.Lerp(fogFarDistDay.min, fogFarDistNight.min, t);
+                fogFarDist.max = Mathf.Lerp(fogFarDistDay.max, fogFarDistNight.max, t);
+                currentFogColor = Color.Lerp(fogDayColor, fogNightColor, t);
+                RenderSettings.fogColor = currentFogColor;
+            }
 
             if (!fogFading && CurrentWeatherType.addExtraFog == false)
             {
-                Color color = currentFogColor;
-                color.a = 0;
-                fogSphereMaterial.color = color;
+                switch (FogType)
+                {
+                    case FogTypeEnum.UnityFog:
+                        Color color = currentFogColor;
+                        color.a = 0;
+                        fogSphereMaterial.color = color;
 
+                        RenderSettings.fogStartDistance = fogFarDist.min;
+                        RenderSettings.fogEndDistance = fogFarDist.max;
+                        break;
+                    case FogTypeEnum.VolumetricFog2:
+                        volumeProfile.distantFogDistanceDensity = 0;
+                        volumeProfile.density = 0;
+                        break;
+                    default:
+                        break;
+                }
                 fogEnterEvent?.Invoke(false);
-                RenderSettings.fogStartDistance = fogFarDist.min;
-                RenderSettings.fogEndDistance = fogFarDist.max;
             }
         }
 
@@ -3255,17 +3289,31 @@ namespace UniStorm
 
             if(CurrentWeatherType.addExtraFog) { fogEnterEvent?.Invoke(true); }
 
+            float currentDensity = volumeProfile.distantFogDistanceDensity;
+            float currentVolumetricDensity = volumeProfile.density;
+
             while (t < 1)
             {
                 Debug.Log("Is the fog moving?");
                 t += Time.deltaTime / TransitionTime;
 
-                Color color = currentFogColor;
-                color.a = Mathf.Clamp(Mathf.Lerp(currentFogAlpha, CurrentWeatherType.addExtraFog ? fogAlpha : 0, t*1.1f), 0, fogAlpha);
-                fogSphereMaterial.color = color;
+                switch (FogType)
+                {
+                    case FogTypeEnum.UnityFog:
+                        Color color = currentFogColor;
+                        color.a = Mathf.Clamp(Mathf.Lerp(currentFogAlpha, CurrentWeatherType.addExtraFog ? fogAlpha : 0, t * 1.1f), 0, fogAlpha);
+                        fogSphereMaterial.color = color;
 
-                RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, CurrentWeatherType.addExtraFog ? fogCloseDist.min : fogFarDist.min, t);
-                RenderSettings.fogEndDistance = Mathf.Lerp(currentDepth.max, CurrentWeatherType.addExtraFog ? fogCloseDist.max : fogFarDist.max, t);
+                        RenderSettings.fogStartDistance = Mathf.Lerp(currentDepth.min, CurrentWeatherType.addExtraFog ? fogCloseDist.min : fogFarDist.min, t);
+                        RenderSettings.fogEndDistance = Mathf.Lerp(currentDepth.max, CurrentWeatherType.addExtraFog ? fogCloseDist.max : fogFarDist.max, t);
+                        break;
+                    case FogTypeEnum.VolumetricFog2:
+                        volumeProfile.distantFogDistanceDensity = Mathf.Clamp(Mathf.Lerp(currentDensity, CurrentWeatherType.addExtraFog ? volumeFogDistance : 0, t * 1.1f), 0, volumeFogDistance);
+                        volumeProfile.density = Mathf.Clamp(Mathf.Lerp(currentVolumetricDensity, CurrentWeatherType.addExtraFog ? volumeFogVolumetricDensity : 0, t * 1.1f), 0, volumeFogVolumetricDensity);
+                        break;
+                    default:
+                        break;
+                }
 
                 yield return null;
             }

@@ -215,6 +215,9 @@ namespace UniStorm.Utility
         SerializedProperty FogDayColor;
         SerializedProperty FogAlpha;
         SerializedProperty FogNightColor;
+        SerializedProperty VolumeProfile;
+        SerializedProperty VolumeFogDistance;
+        SerializedProperty VolumeFogVolumetricDensity;
 
         public float secs = 2f;
         public float startVal = 0f;
@@ -613,6 +616,10 @@ namespace UniStorm.Utility
             FogDayColor = serializedObject.FindProperty("fogDayColor");
             FogAlpha = serializedObject.FindProperty("fogAlpha");
             FogNightColor = serializedObject.FindProperty("fogNightColor");
+
+            VolumeProfile = serializedObject.FindProperty("volumeProfile");
+            VolumeFogDistance = serializedObject.FindProperty("volumeFogDistance");
+            VolumeFogVolumetricDensity = serializedObject.FindProperty("volumeFogVolumetricDensity");
 
             //Lightning Fire Tags
             LightningFireTagsList = new ReorderableList(serializedObject, serializedObject.FindProperty("LightningFireTags"), true, true, true, true);
@@ -1518,6 +1525,12 @@ namespace UniStorm.Utility
 
                         EditorGUILayout.PropertyField(UseDitheringProp,
                          new GUIContent("Use Dithering", "Applies Dithering to UniStorm's fog, clouds, and sky to greatly reduce banding."));
+                    }
+                    else if(self.FogType == UniStormSystem.FogTypeEnum.VolumetricFog2)
+                    {
+                        EditorGUILayout.PropertyField(VolumeProfile);
+                        EditorGUILayout.PropertyField(VolumeFogDistance);
+                        EditorGUILayout.PropertyField(VolumeFogVolumetricDensity);
                     }
                     EditorGUILayout.Space();
                     EditorGUILayout.EndVertical();
