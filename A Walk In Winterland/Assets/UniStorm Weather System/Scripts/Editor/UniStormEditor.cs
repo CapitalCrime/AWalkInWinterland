@@ -617,7 +617,7 @@ namespace UniStorm.Utility
             FogAlpha = serializedObject.FindProperty("fogAlpha");
             FogNightColor = serializedObject.FindProperty("fogNightColor");
 
-            VolumeProfile = serializedObject.FindProperty("volumeProfile");
+            VolumeProfile = serializedObject.FindProperty("volume");
             VolumeFogDistance = serializedObject.FindProperty("volumeFogDistance");
             VolumeFogVolumetricDensity = serializedObject.FindProperty("volumeFogVolumetricDensity");
 
