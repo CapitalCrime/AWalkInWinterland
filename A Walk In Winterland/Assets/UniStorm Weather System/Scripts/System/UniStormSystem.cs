@@ -234,7 +234,7 @@ namespace UniStorm
         public Color CurrentFogColor;
         public enum FogTypeEnum { UnistormFog, UnityFog, VolumetricFog2 };
         public VolumetricFogAndMist2.VolumetricFog volume;
-        public float volumeFogRestingDistance = 0.00015f;
+        public float volumeFogRestingDistance = 0.0003f;
         public float volumeFogDistance;
         public float volumeFogVolumetricDensity;
         public FogTypeEnum FogType = FogTypeEnum.UnistormFog;

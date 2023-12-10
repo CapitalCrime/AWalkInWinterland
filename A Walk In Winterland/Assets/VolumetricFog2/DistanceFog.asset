@@ -29,7 +29,7 @@ MonoBehaviour:
   detailTexture: {fileID: 11700000, guid: 950add8d241c6479bbab1f10e1035d60, type: 2}
   detailScale: 35.3
   detailStrength: 1
-  detailOffset: 0.08
+  detailOffset: -0.19
   density: 0.33
   shape: 0
   border: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
   terrainFogHeight: 15
   terrainFogMinAltitude: 0
   terrainFogMaxAltitude: 200
-  albedo: {r: 0.22, g: 0.22, b: 0.22, a: 0.5}
+  albedo: {r: 0.22, g: 0.22, b: 0.22, a: 0.85}
   enableDepthGradient: 1
   depthGradient:
     serializedVersion: 2
@@ -83,7 +83,7 @@ MonoBehaviour:
   enableHeightGradient: 1
   heightGradient:
     serializedVersion: 2
-    key0: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
+    key0: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 0.44705883}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 1, g: 1, b: 1, a: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
     ctime5: 0
     ctime6: 0
     ctime7: 0
-    atime0: 0
+    atime0: 19661
     atime1: 65535
     atime2: 0
     atime3: 0
@@ -111,10 +111,10 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   brightness: 1
-  deepObscurance: 0
-  specularColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
-  specularThreshold: 0
-  specularIntensity: 0.7
+  deepObscurance: 0.6
+  specularColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
+  specularThreshold: 0.618
+  specularIntensity: 0.79
   turbulence: 0.17
   windDirection: {x: 0.002, y: 0, z: 0.002}
   useCustomDetailNoiseWindDirection: 1
@@ -133,9 +133,9 @@ MonoBehaviour:
   cookie: 0
   distantFog: 1
   distantFogStartDistance: 692.5
-  distantFogDistanceDensity: 0.0015
-  distantFogMaxHeight: 317.83
+  distantFogDistanceDensity: 0.0003
+  distantFogMaxHeight: 440
   distantFogHeightDensity: 56
-  distantFogColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
+  distantFogColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   distantFogDiffusionIntensity: 0.02
   distantFogRenderQueue: 2999
