@@ -234,6 +234,7 @@ namespace UniStorm
         public Color CurrentFogColor;
         public enum FogTypeEnum { UnistormFog, UnityFog, VolumetricFog2 };
         public VolumetricFogAndMist2.VolumetricFog volume;
+        public float volumeFogRestingDistance = 0.00015f;
         public float volumeFogDistance;
         public float volumeFogVolumetricDensity;
         public FogTypeEnum FogType = FogTypeEnum.UnistormFog;
@@ -1134,14 +1135,12 @@ namespace UniStorm
             {
                 if (CurrentWeatherType.addExtraFog)
                 {
-                    volume.profile.distantFogDistanceDensity = 0.0015f;
-                    volume.profile.density = volumeFogVolumetricDensity;
-                    volume.gameObject.SetActive(true);
+                    volume.settings.distantFogDistanceDensity = 0.0015f;
+                    volume.settings.density = volumeFogVolumetricDensity;
                 } else
                 {
-                    volume.profile.distantFogDistanceDensity = 0;
-                    volume.profile.density = 0;
-                    volume.gameObject.SetActive(false);
+                    volume.settings.distantFogDistanceDensity = volumeFogRestingDistance;
+                    volume.settings.density = 0;
                 }
             }
 
@@ -1821,9 +1820,8 @@ namespace UniStorm
                         RenderSettings.fogEndDistance = fogFarDist.max;
                         break;
                     case FogTypeEnum.VolumetricFog2:
-                        volume.profile.distantFogDistanceDensity = 0;
-                        volume.profile.density = 0;
-                        volume.gameObject.SetActive(false);
+                        volume.settings.distantFogDistanceDensity = volumeFogRestingDistance;
+                        volume.settings.density = 0;
                         break;
                     default:
                         break;
@@ -3292,10 +3290,8 @@ namespace UniStorm
 
             if(CurrentWeatherType.addExtraFog) { fogEnterEvent?.Invoke(true); }
 
-            float currentDensity = volume.profile.distantFogDistanceDensity;
-            float currentVolumetricDensity = volume.profile.density;
-
-            volume.gameObject.SetActive(true);
+            float currentDensity = volume.settings.distantFogDistanceDensity;
+            float currentVolumetricDensity = volume.settings.density;
 
             while (t < 1)
             {
@@ -3313,8 +3309,8 @@ namespace UniStorm
                         RenderSettings.fogEndDistance = Mathf.Lerp(currentDepth.max, CurrentWeatherType.addExtraFog ? fogCloseDist.max : fogFarDist.max, t);
                         break;
                     case FogTypeEnum.VolumetricFog2:
-                        volume.profile.distantFogDistanceDensity = Mathf.Clamp(Mathf.Lerp(currentDensity, CurrentWeatherType.addExtraFog ? volumeFogDistance : 0, t * 1.1f), 0, volumeFogDistance);
-                        volume.profile.density = Mathf.Clamp(Mathf.Lerp(currentVolumetricDensity, CurrentWeatherType.addExtraFog ? volumeFogVolumetricDensity : 0, t * 1.1f), 0, volumeFogVolumetricDensity);
+                        volume.settings.distantFogDistanceDensity = Mathf.Clamp(Mathf.Lerp(currentDensity, CurrentWeatherType.addExtraFog ? volumeFogDistance : volumeFogRestingDistance, t * 1.1f), 0, volumeFogDistance);
+                        volume.settings.density = Mathf.Clamp(Mathf.Lerp(currentVolumetricDensity, CurrentWeatherType.addExtraFog ? volumeFogVolumetricDensity : 0, t * 1.1f), 0, volumeFogVolumetricDensity);
                         break;
                     default:
                         break;
@@ -3919,6 +3915,12 @@ namespace UniStorm
                 Color color = fogSphereMaterial.color;
                 color.a = 0;
                 fogSphereMaterial.color = color;
+            }
+
+            if(FogType == FogTypeEnum.VolumetricFog2)
+            {
+                volume.settings.distantFogDistanceDensity = volumeFogRestingDistance;
+                volume.settings.density = 0;
             }
         }
     }

@@ -22,24 +22,24 @@ MonoBehaviour:
   constantDensity: 0
   noiseTexture: {fileID: 2800000, guid: 9c79340e1a1054275ba04070a27de306, type: 3}
   noiseTextureOptimizedSize: 256
-  noiseStrength: 0.23
-  noiseScale: 220
-  noiseFinalMultiplier: 1
+  noiseStrength: 1.02
+  noiseScale: 116.5
+  noiseFinalMultiplier: 0.68
   useDetailNoise: 1
   detailTexture: {fileID: 11700000, guid: 950add8d241c6479bbab1f10e1035d60, type: 2}
-  detailScale: 115.3
-  detailStrength: 0.848
-  detailOffset: -1.2
-  density: 1
+  detailScale: 35.3
+  detailStrength: 1
+  detailOffset: 0.08
+  density: 0.33
   shape: 0
-  border: 0.377
-  customHeight: 1
+  border: 1
+  customHeight: 0
   height: 667
-  verticalOffset: -28.1
-  distance: 220
-  distanceFallOff: 0.9
-  maxDistance: 450
-  maxDistanceFallOff: 0.5
+  verticalOffset: 0
+  distance: 150
+  distanceFallOff: 0.91
+  maxDistance: 1100
+  maxDistanceFallOff: 0.262
   terrainFit: 0
   terrainFitResolution: 512
   terrainLayerMask:
@@ -48,11 +48,11 @@ MonoBehaviour:
   terrainFogHeight: 15
   terrainFogMinAltitude: 0
   terrainFogMaxAltitude: 200
-  albedo: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0.9}
+  albedo: {r: 0.22, g: 0.22, b: 0.22, a: 0.5}
   enableDepthGradient: 1
   depthGradient:
     serializedVersion: 2
-    key0: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0}
+    key0: {r: 1, g: 1, b: 1, a: 0}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 1, g: 0.3726415, b: 0.3726415, a: 0}
     key3: {r: 1, g: 0.3726415, b: 0.3726415, a: 0}
@@ -80,10 +80,10 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   depthGradientMaxDistance: 30
-  enableHeightGradient: 0
+  enableHeightGradient: 1
   heightGradient:
     serializedVersion: 2
-    key0: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+    key0: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 1, g: 1, b: 1, a: 0}
     key3: {r: 1, g: 1, b: 1, a: 0}
@@ -92,7 +92,7 @@ MonoBehaviour:
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 193
-    ctime1: 8096
+    ctime1: 65535
     ctime2: 65535
     ctime3: 65535
     ctime4: 0
@@ -110,32 +110,32 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  brightness: 2
-  deepObscurance: 0.5
-  specularColor: {r: 1, g: 1, b: 1, a: 1}
-  specularThreshold: 0.52
-  specularIntensity: 0.43
-  turbulence: 0.3
-  windDirection: {x: 0.005, y: 0, z: 0.005}
+  brightness: 1
+  deepObscurance: 0
+  specularColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+  specularThreshold: 0
+  specularIntensity: 0.7
+  turbulence: 0.17
+  windDirection: {x: 0.002, y: 0, z: 0.002}
   useCustomDetailNoiseWindDirection: 1
-  detailNoiseWindDirection: {x: 0.0002, y: 0.0002, z: 0.0002}
+  detailNoiseWindDirection: {x: 0.0008, y: 0.0005, z: 0.0008}
   dayNightCycle: 1
   sunDirection: {x: 45, y: 45, z: 0}
   sunColor: {r: 1, g: 1, b: 1, a: 1}
   sunIntensity: 1
   ambientLightMultiplier: 5
-  lightDiffusionPower: 32
-  lightDiffusionIntensity: 0.4
+  lightDiffusionPower: 26.6
+  lightDiffusionIntensity: 0.666
   receiveShadows: 0
   shadowIntensity: 0.5
   shadowCancellation: 0
   shadowMaxDistance: 250
   cookie: 0
   distantFog: 1
-  distantFogStartDistance: 0
-  distantFogDistanceDensity: 0.00015
-  distantFogMaxHeight: 147.8
-  distantFogHeightDensity: 23.9
-  distantFogColor: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
-  distantFogDiffusionIntensity: 0.07
+  distantFogStartDistance: 692.5
+  distantFogDistanceDensity: 0.0015
+  distantFogMaxHeight: 317.83
+  distantFogHeightDensity: 56
+  distantFogColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
+  distantFogDiffusionIntensity: 0.02
   distantFogRenderQueue: 2999
