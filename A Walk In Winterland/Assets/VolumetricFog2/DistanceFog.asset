@@ -36,8 +36,8 @@ MonoBehaviour:
   customHeight: 0
   height: 667
   verticalOffset: 0
-  distance: 150
-  distanceFallOff: 0.91
+  distance: 120
+  distanceFallOff: 0.93
   maxDistance: 1100
   maxDistanceFallOff: 0.262
   terrainFit: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   terrainFogHeight: 15
   terrainFogMinAltitude: 0
   terrainFogMaxAltitude: 200
-  albedo: {r: 0.22, g: 0.22, b: 0.22, a: 0.85}
+  albedo: {r: 0.22, g: 0.22, b: 0.22, a: 0.6}
   enableDepthGradient: 1
   depthGradient:
     serializedVersion: 2
@@ -110,11 +110,11 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  brightness: 1
+  brightness: 1.5
   deepObscurance: 0.6
-  specularColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}
-  specularThreshold: 0.618
-  specularIntensity: 0.79
+  specularColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+  specularThreshold: 0.5
+  specularIntensity: 0.8
   turbulence: 0.17
   windDirection: {x: 0.002, y: 0, z: 0.002}
   useCustomDetailNoiseWindDirection: 1
@@ -132,7 +132,7 @@ MonoBehaviour:
   shadowMaxDistance: 250
   cookie: 0
   distantFog: 1
-  distantFogStartDistance: 692.5
+  distantFogStartDistance: 950
   distantFogDistanceDensity: 0.0003
   distantFogMaxHeight: 440
   distantFogHeightDensity: 56
