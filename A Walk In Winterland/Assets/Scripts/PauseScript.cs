@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PauseScript : MonoBehaviour
 {
@@ -10,7 +12,9 @@ public class PauseScript : MonoBehaviour
     private PlayerInput playerInput;
     private InputActionMap nonMenuMap;
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] VolumeProfile profile;
     public UnityEvent<bool> OnFullscreen;
+    public UnityEvent OnPause;
     public UnityEvent OnUnpause;
     static bool paused = false;
     public static bool snowmanIndexOpen = false;
@@ -62,6 +66,7 @@ public class PauseScript : MonoBehaviour
             }
             SnowmanManager.instance.GetCurrentMap().Disable();
             nonMenuMap.Disable();
+            OnPause?.Invoke();
         } else
         {
             Time.timeScale = 1;

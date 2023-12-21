@@ -10,7 +10,9 @@ public class DOFAdjuster : MonoBehaviour
     public float adjustSpeed = 8;
     [SerializeField] LayerMask hitMask;
     float hitDistance = 0;
+    float maxDistance = 1000;
     DepthOfField dof;
+    float beforePauseDistance = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,20 +36,36 @@ public class DOFAdjuster : MonoBehaviour
         Ray cameraRay = new Ray(transform.position, transform.forward);
         RaycastHit hitInfo;
         Debug.DrawRay(transform.position, transform.forward * 5, Color.red);
-        if(Physics.Raycast(cameraRay, out hitInfo, 1000, hitMask))
+        if(Physics.Raycast(cameraRay, out hitInfo, maxDistance, hitMask))
         {
             hitDistance = hitInfo.distance+0.5f;
         } else
         {
-            hitDistance = Mathf.Clamp(hitDistance + 0.5f, 5, 1000);
+            hitDistance = Mathf.Clamp(hitDistance + 0.5f, 5, maxDistance);
         }
 
         AdjustDOFDistance();
     }
 
+    public void SetPauseDistance()
+    {
+        dof.active = false;
+    }
+
+    public void ResetPlayDistance()
+    {
+        dof.active = true;
+    }
+
     void AdjustDOFDistance()
     {
         float difference = dof.focusDistance.value - hitDistance;
-        dof.focusDistance.value = Mathf.Clamp(Mathf.Lerp(dof.focusDistance.value, hitDistance, Time.deltaTime * adjustSpeed * (100/Mathf.Abs(difference))), 1, 1000);
+        dof.focusDistance.value = Mathf.Clamp(Mathf.Lerp(dof.focusDistance.value, hitDistance, Time.deltaTime * adjustSpeed * (100/Mathf.Abs(difference))), 0.5f, maxDistance);
+    }
+
+    private void OnDestroy()
+    {
+        dof.focusDistance.value = 100;
+        dof.active = true;
     }
 }

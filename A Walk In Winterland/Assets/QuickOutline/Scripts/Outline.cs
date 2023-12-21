@@ -137,17 +137,19 @@ public class Outline : MonoBehaviour {
         }
     }
 
-    public Renderer[] GetRendererCopyWithoutOutline()
+    public List<Renderer> GetRendererCopyWithoutOutline()
     {
-        Renderer[] tempRenderer = new Renderer[renderers.Length];
+        List<Renderer> tempRenderer = new List<Renderer>();
         //Copy every renderer object
         for(int i = 0; i < renderers.Length; i++)
         {
             if (renderers[i] == null) continue;
-            tempRenderer[i] = Instantiate(renderers[i].gameObject, transform).GetComponent<Renderer>();
-            tempRenderer[i].transform.localPosition = renderers[i].transform.localPosition;
-            tempRenderer[i].transform.localRotation = renderers[i].transform.localRotation;
-            tempRenderer[i].transform.localScale = renderers[i].transform.localScale;
+            Renderer tempObj = Instantiate(renderers[i].gameObject, renderers[i].transform.parent).GetComponent<Renderer>();
+            tempObj.transform.localPosition = renderers[i].transform.localPosition;
+            tempObj.transform.localRotation = renderers[i].transform.localRotation;
+            tempObj.transform.localScale = renderers[i].transform.localScale;
+            tempObj.transform.parent = null;
+            tempRenderer.Add(tempObj);
         }
         //If enabled, disable the outline effect on the copies
         if (enabled)

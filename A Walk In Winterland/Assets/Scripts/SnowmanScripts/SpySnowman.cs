@@ -21,6 +21,10 @@ public class SpySnowman : Snowman
     public Snowman FindRandomSpawnedSnowman(List<Snowman> snowmen)
     {
         int randomIndex = Random.Range(0, snowmen.Count);
+        while (!snowmen[randomIndex].enabled)
+        {
+            randomIndex = Random.Range(0, snowmen.Count);
+        }
         if (randomIndex < snowmen.Count)
         {
             return snowmen[randomIndex];
@@ -47,20 +51,21 @@ public class SpySnowman : Snowman
             if (snowmen.Count == 0) return;
             Snowman pickedSnowman = FindRandomSpawnedSnowman(snowmen);
             if (pickedSnowman == null) return;
-            Renderer[] renderers = pickedSnowman.GetComponent<Outline>().GetRendererCopyWithoutOutline();
+            List<Renderer> renderers = pickedSnowman.GetComponent<Outline>().GetRendererCopyWithoutOutline();
 
             //Take every ACTIVE mesh renderer, set their local positions correctly, and add to snowman disguise holder
             foreach(MeshRenderer snowmanPart in renderers) //pickedSnowman.GetComponentsInChildren<MeshRenderer>()
             {
-                if (snowmanPart == null) continue;
                 if (!snowmanPart.gameObject.activeSelf) continue;
 
                 //Accounting for mesh part offset
                 Vector3 localPosition =
                     Vector3.Scale(pickedSnowman.transform.InverseTransformPoint(snowmanPart.transform.position), snowmanPart.transform.lossyScale);
+                Quaternion localRotation = Quaternion.Inverse(pickedSnowman.transform.rotation) * snowmanPart.transform.rotation;
                 //GameObject newPart = Instantiate(snowmanPart.gameObject, disguiseHolder);
                 snowmanPart.transform.parent = disguiseHolder;
                 snowmanPart.transform.localPosition = localPosition;
+                snowmanPart.transform.localRotation = localRotation;
                 //Accounting for mesh part scaling
                 snowmanPart.transform.localScale = snowmanPart.transform.lossyScale;
             }
@@ -115,6 +120,7 @@ public class SpySnowman : Snowman
         disguiseHolder = new GameObject().transform;
         disguiseHolder.parent = transform;
         disguiseHolder.localPosition = Vector3.zero;
+        disguiseHolder.localRotation = Quaternion.identity;
         disguiseHolder.name = "DisguiseHolder";
     }
 }

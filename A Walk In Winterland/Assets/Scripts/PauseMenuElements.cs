@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class PauseMenuElements : MonoBehaviour
 {
     public List<GameObject> menuTabs;
-    public GameObject menuButtonsHolder;
+    [SerializeField] GameObject menuTabHolder;
     void Start()
     {
         DeactivateAllTabs();
@@ -18,6 +18,6 @@ public class PauseMenuElements : MonoBehaviour
         {
             tab.SetActive(false);
         }
-        menuButtonsHolder.SetActive(true);
+        menuTabHolder.SetActive(true);
     }
 }
