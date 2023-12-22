@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using System.Runtime.InteropServices;
 
 public class CameraControls : MonoBehaviour
 {
+    public static CameraControls current;
     [SerializeField] private InputActionReference movement;
     [SerializeField] private InputActionReference fasterCamAction;
     [SerializeField] private Camera _camera;
@@ -13,6 +15,7 @@ public class CameraControls : MonoBehaviour
     [SerializeField] private SnowmanCamera snowmanCamera;
     [SerializeField] private Cinemachine.CinemachineInputProvider provider;
     [SerializeField] Texture2D gamepadCursor;
+    Cinemachine.CinemachinePOV virtualCamera;
     public LayerMask snowmanMask;
     Outline currentOutline;
     Rigidbody rb;
@@ -35,6 +38,7 @@ public class CameraControls : MonoBehaviour
 
     private void Start()
     {
+        virtualCamera = GetComponentInChildren<Cinemachine.CinemachinePOV>();
     }
 
     void CheckForController(ControllerType controller)
@@ -42,15 +46,12 @@ public class CameraControls : MonoBehaviour
         switch (controller)
         {
             case ControllerType.Controller:
-                provider.XYAxis.action.started -= MousePressed;
-                provider.XYAxis.action.canceled -= MouseReleased;
+                mouseLocked = false;
                 Cursor.SetCursor(gamepadCursor, Vector2.one*50, CursorMode.Auto);
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = true;
                 break;
             case ControllerType.Keyboard:
-                provider.XYAxis.action.started += MousePressed;
-                provider.XYAxis.action.canceled += MouseReleased;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 break;
@@ -69,6 +70,17 @@ public class CameraControls : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (mouseLocked)
+        {
+            if (PlayerData.lockMouse)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Mouse.current.WarpCursorPosition(mouseLockPosition);
+            } else
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+        }
         rb.velocity = _camera.transform.rotation * movementAxis * Time.fixedDeltaTime * (fasterCam ? 30 : 10) * 60;
         //rb.MovePosition(rb.position + _camera.transform.rotation * movementAxis * Time.fixedDeltaTime * (fasterCam ? 30 : 10));
 
@@ -79,13 +91,42 @@ public class CameraControls : MonoBehaviour
         //transform.position = pos;
     }
 
+    private void OnEnable()
+    {
+        if (!Mouse.current.rightButton.isPressed)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            mouseLocked = false;
+        }
+    }
+
     Vector3 movementAxis;
     bool fasterCam = false;
+    static Vector2 mouseLockPosition;
+    static bool mouseLocked = false;
     private void Update()
     {
+        if(PlayerData.controller == ControllerType.Keyboard)
+        {
+            if(virtualCamera != null)
+            {
+                if(Mouse.current.rightButton.wasPressedThisFrame)
+                {
+                    mouseLockPosition = Mouse.current.position.ReadValue();
+                    mouseLocked = true;
+                }
+                if(Mouse.current.rightButton.wasReleasedThisFrame)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                    mouseLocked = false;
+                }
+            }
+        }
+
         if(PlayerData.controller == ControllerType.Controller)
         {
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
         movementAxis = movement.action.ReadValue<Vector3>();
         fasterCam = fasterCamAction.action.ReadValue<float>() > 0.5f;

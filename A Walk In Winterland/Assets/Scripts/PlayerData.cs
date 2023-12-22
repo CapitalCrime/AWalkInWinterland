@@ -40,6 +40,7 @@ public static class PlayerData
     public static float ambienceVolume = 1;
     public static float sfxVolume = 1;
     public static ControllerType controller { get; private set; }
+    public static bool lockMouse = false;
 
     public static UnityEvent<float> setPlayerCameraSpeedEvent = new UnityEvent<float>();
     public static UnityEvent<float> setSnowmanCameraSpeedEvent = new UnityEvent<float>();
