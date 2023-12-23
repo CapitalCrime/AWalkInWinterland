@@ -332,7 +332,18 @@ public class SnowmanImageManager : MonoBehaviour
         }
     }
 
-    public static void DisableButtons()
+    public static void ButtonToggle(bool opening)
+    {
+        if (opening)
+        {
+            EnableButtons();
+        } else
+        {
+            DisableButtons();
+        }
+    }
+
+    static void DisableButtons()
     {
         if (instance == null) return;
         instance.scrollMenu.action.performed -= instance.ScrollMenu;
@@ -342,7 +353,7 @@ public class SnowmanImageManager : MonoBehaviour
         triggerOnClose?.Invoke();
     }
 
-    public static void EnableButtons()
+    static void EnableButtons()
     {
         if (instance == null) return;
         instance.scrollMenu.action.performed += instance.ScrollMenu;

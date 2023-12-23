@@ -49,12 +49,14 @@ public class DOFAdjuster : MonoBehaviour
 
     public void SetPauseDistance()
     {
+        beforePauseDistance = dof.focusDistance.value;
         dof.active = false;
     }
 
     public void ResetPlayDistance()
     {
         dof.active = true;
+        dof.focusDistance.value = beforePauseDistance;
     }
 
     void AdjustDOFDistance()

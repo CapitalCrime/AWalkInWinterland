@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static event UnityAction<ControllerType> OnControllerChange;
     public int startingQuality = 1;
+    public static event UnityAction<bool> snowmanIndexOpen;
 
     private void Awake()
     {
@@ -21,6 +22,11 @@ public class GameManager : MonoBehaviour
         CheckController();
         QualitySettings.SetQualityLevel(startingQuality);
         InputSystem.onDeviceChange += HandleDeviceChange;
+    }
+
+    public static void IndexOpen(bool value)
+    {
+        snowmanIndexOpen?.Invoke(value);
     }
 
     void EnableGamepad()

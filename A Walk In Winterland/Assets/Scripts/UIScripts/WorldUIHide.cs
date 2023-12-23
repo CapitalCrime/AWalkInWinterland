@@ -11,7 +11,13 @@ public class WorldUIHide : MonoBehaviour
     Camera mainCamera;
     Image[] images;
     Button button;
-    Vector3 gizmoPosition;
+    bool showButton = false;
+
+    private void Awake()
+    {
+        GameManager.snowmanIndexOpen += SetAlwaysShow;
+    }
+
     private void Start()
     {
         mainCamera = Camera.main;
@@ -30,26 +36,24 @@ public class WorldUIHide : MonoBehaviour
         return mousePos;
     }
 
-    void EnableImages(bool value)
+    public void SetAlwaysShow(bool value)
     {
-        if (value)
+        showButton = value;
+    }
+
+    void EnableImages(bool value, float setAlpha = -1)
+    {
+        if (images[0].enabled != value)
         {
-            if (!images[0].enabled)
+            if (button != null) { button.enabled = value; }
+            foreach (Image image in images)
             {
-                if (button != null) { button.enabled = true; }
-                foreach (Image image in images)
+                image.enabled = value;
+                if(setAlpha != -1)
                 {
-                    image.enabled = true;
-                }
-            }
-        } else
-        {
-            if (images[0].enabled)
-            {
-                if (button != null) { button.enabled = false; }
-                foreach (Image image in images)
-                {
-                    image.enabled = false;
+                    Color color = image.color;
+                    color.a = setAlpha;
+                    image.color = color;
                 }
             }
         }
@@ -67,21 +71,34 @@ public class WorldUIHide : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Dot((transform.position - mainCamera.transform.position).normalized, transform.forward) < 0)
+        if (PauseScript.isPaused())
         {
             EnableImages(false);
-        } else
+            return;
+        }
+        if (Vector3.Dot((transform.position - transform.forward*15 - mainCamera.transform.position).normalized, transform.forward) < 0)
         {
-            Vector3 mousePos = GetMousePos(mainCamera.farClipPlane);
-            Vector3 mouseDirection = (mainCamera.ScreenToWorldPoint(mousePos) - mainCamera.transform.position).normalized;
-            float distance = Vector3.Cross(mouseDirection, transform.position - mainCamera.transform.position).magnitude;
-            if (distance > 20)
+            EnableImages(false);
+        }
+        else
+        {
+            if (!showButton)
             {
-                EnableImages(false);
+                Vector3 mousePos = GetMousePos(mainCamera.farClipPlane);
+                Vector3 mouseDirection = (mainCamera.ScreenToWorldPoint(mousePos) - mainCamera.transform.position).normalized;
+                float distance = Vector3.Cross(mouseDirection, transform.position - mainCamera.transform.position).magnitude;
+                if (distance > 20)
+                {
+                    EnableImages(false);
+                }
+                else
+                {
+                    EnableImages(true);
+                    FadeImages(distance, minDistance, maxDistance);
+                }
             } else
             {
-                EnableImages(true);
-                FadeImages(distance, minDistance, maxDistance);
+                EnableImages(true, maxAlpha);
             }
         }
     }

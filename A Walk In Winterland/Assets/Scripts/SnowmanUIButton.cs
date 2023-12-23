@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class SnowmanUIButton : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class SnowmanUIButton : MonoBehaviour
     private InputActionMap nonMenuMap;
     [SerializeField] private InputActionReference openIndex;
     [HideInInspector] public bool opening = false;
+    [SerializeField] UnityEvent<bool> openAction;
 
     private void Start()
     {
         nonMenuMap = InputManager.instance.playerInputs.actions.FindActionMap("NonMenu");
-        openIndex.action.performed += OpenAction;
         GameManager.OnControllerChange += OnControllerChange;
+        PauseScript.RemoveListenerPause(InstantClose);
+        PauseScript.AddListenerPause(InstantClose);
     }
 
     void OnControllerChange(ControllerType controllerType)
@@ -51,23 +54,50 @@ public class SnowmanUIButton : MonoBehaviour
         MoveImageHolder();
     }
 
+    void InstantClose()
+    {
+        opening = false;
+        LeanTween.cancel(imageHolder);
+        imageHolder.anchoredPosition = new Vector2(0, imageHolder.anchoredPosition.y);
+        GameManager.IndexOpen(false);
+    }
+
+    void ImageHolderActions(bool open)
+    {
+        if (open)
+        {
+            LeanTween.moveX(imageHolder, -415, 0.5f).setIgnoreTimeScale(true);
+            EnableNonMenuMap(false);
+        }
+        else
+        {
+            LeanTween.moveX(imageHolder, 0, 0.5f).setIgnoreTimeScale(true);
+            EnableNonMenuMap(true);
+        }
+        GameManager.IndexOpen(open);
+    }
+
     public void MoveImageHolder()
     {
         LeanTween.cancel(imageHolder);
         opening = !opening;
-        if(opening)
-        {
-            LeanTween.moveX(imageHolder, -415, 0.5f).setIgnoreTimeScale(true);
-            EnableNonMenuMap(false);
-            PauseScript.snowmanIndexOpen = true;
-            SnowmanImageManager.EnableButtons();
-        } else
-        {
-            LeanTween.moveX(imageHolder, 0, 0.5f).setIgnoreTimeScale(true);
-            SnowmanImageManager.DisableButtons();
-            PauseScript.snowmanIndexOpen = false;
-            EnableNonMenuMap(true);
-        }
+        ImageHolderActions(opening);
+    }
+
+    private void OnEnable()
+    {
+        GameManager.snowmanIndexOpen += SnowmanImageManager.ButtonToggle;
+        openIndex.action.performed += OpenAction;
+        PauseScript.AddListenerPause(InstantClose);
+    }
+
+    private void OnDisable()
+    {
+        opening = false;
+        GameManager.snowmanIndexOpen -= SnowmanImageManager.ButtonToggle;
+        openIndex.action.performed -= OpenAction;
+        PauseScript.RemoveListenerPause(InstantClose);
+        ImageHolderActions(opening);
     }
 
     private void Update()

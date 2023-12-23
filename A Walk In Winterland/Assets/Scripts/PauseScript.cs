@@ -8,6 +8,7 @@ using UnityEngine.Rendering.Universal;
 
 public class PauseScript : MonoBehaviour
 {
+    static PauseScript instance;
     [SerializeField] private InputActionReference pauseAction;
     private PlayerInput playerInput;
     private InputActionMap nonMenuMap;
@@ -22,11 +23,29 @@ public class PauseScript : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         fullscreen = Screen.fullScreen;
         playerInput = InputManager.instance.playerInputs;
         nonMenuMap = playerInput.actions.FindActionMap("NonMenu");
         pauseAction.action.performed += PauseGame;
         pauseAction.action.actionMap.Enable();
+        GameManager.snowmanIndexOpen += SetSnowmanIndexOpen;
+    }
+
+    public static void AddListenerPause(UnityAction action)
+    {
+        if (instance == null) return;
+        instance.OnPause.AddListener(action);
+    }
+
+    public static void RemoveListenerPause(UnityAction action)
+    {
+        if (instance == null) return;
+        instance.OnPause.RemoveListener(action);
+    }
+
+    void SetSnowmanIndexOpen(bool value){
+        snowmanIndexOpen = value;
     }
 
     public static bool isPaused()
