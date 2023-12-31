@@ -59,6 +59,7 @@ public class YetiHand : MonoBehaviour
     {
         heldSnowman.transform.SetParent(null, true);
         heldSnowman.SetInteractable(false);
+        heldSnowman.cameraEnabled = true;
         heldSnowman.transform.eulerAngles = Vector3.zero;
         LeanTween.move(heldSnowman.gameObject, heldSnowman.transform.position - transform.forward * minThrowDistance, 0.33f).setOnComplete(() =>
         {
@@ -129,6 +130,7 @@ public class YetiHand : MonoBehaviour
         if (heldSnowman == null) return;
 
         heldSnowman.transform.SetParent(yetiHandGrabPoint);
+        heldSnowman.cameraEnabled = false;
         heldSnowman.transform.localPosition = Vector3.zero;
     }
 

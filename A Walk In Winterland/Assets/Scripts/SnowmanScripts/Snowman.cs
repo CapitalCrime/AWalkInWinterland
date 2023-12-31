@@ -13,7 +13,8 @@ public abstract class Snowman : MonoBehaviour
     [HideInInspector] protected event UnityAction snowmanViewedEvent;
     [HideInInspector] protected event UnityAction snowmanFPSEvent;
     [HideInInspector] protected event UnityAction snowmanLeaveFPSEvent;
-    [HideInInspector] public UnityAction<bool> snowmanEnableEvent;
+    [HideInInspector] public UnityAction<bool> snowmanEnableCameraEvent;
+    [HideInInspector] public UnityAction<bool> snowmanRacingEvent;
     [SerializeField] Cinemachine.CinemachineVirtualCamera fpsCam;
     [SerializeField] private FMODUnity.EmitterRef clickSoundRef;
     public Cinemachine.CinemachineFreeLook thirdPersonCam;
@@ -28,6 +29,20 @@ public abstract class Snowman : MonoBehaviour
     bool uniqueActionsEnabled = true;
     bool walkingEnabled = true;
     bool walkingStartEnabled = true;
+    bool _cameraEnabled = true;
+    public bool cameraEnabled {
+        get {
+            return (_cameraEnabled && gameObject.activeSelf); 
+        } 
+        set {
+            _cameraEnabled = value;
+            snowmanEnableCameraEvent?.Invoke(value);
+            if (_cameraEnabled == false && SnowmanManager.instance.CheckIfCurrentViewedSnowman(this))
+            {
+                SnowmanManager.instance.ActivatePlayerCamera();
+            }
+        } 
+    }
     protected MinMax walkSpeeds = new MinMax(250, 400);
     event UnityAction queuedUntilEnabledEvents;
     protected abstract void NightArriveAction();
@@ -341,18 +356,14 @@ public abstract class Snowman : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        snowmanEnableEvent?.Invoke(true);
+        snowmanEnableCameraEvent?.Invoke(cameraEnabled);
         queuedUntilEnabledEvents?.Invoke();
         queuedUntilEnabledEvents = null;
     }
 
     protected virtual void OnDisable()
     {
-        if (SnowmanManager.instance.CheckIfCurrentViewedSnowman(this))
-        {
-            SnowmanManager.instance.ActivatePlayerCamera();
-        }
-        snowmanEnableEvent?.Invoke(false);
+        snowmanEnableCameraEvent?.Invoke(cameraEnabled);
     }
 
     protected virtual void OnDestroy()

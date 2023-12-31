@@ -211,7 +211,7 @@ public class SnowmanManager : MonoBehaviour
         Debug.DrawLine(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos));
         if (Physics.Raycast(_camera.transform.position, _camera.ScreenToWorldPoint(mousePos) - _camera.transform.position, out info, _camera.farClipPlane, snowmanMask))
         {
-            if (!info.transform.GetComponent<Snowman>() || !info.transform.GetComponent<Snowman>().enabled)
+            if (!info.transform.GetComponent<Snowman>() || info.transform.GetComponent<Snowman>().cameraEnabled == false)
             {
                 return;
             }
@@ -265,7 +265,7 @@ public class SnowmanManager : MonoBehaviour
 
     public void ActivateSnowmanCamera(Snowman snowman)
     {
-        if (snowman == null || !snowman.enabled) return;
+        if (snowman == null || snowman.cameraEnabled == false) return;
         if (snowman == currentViewSnowman) { ActivatePlayerCamera(); return; }
 
         index = GetSnowmanIndex(snowman);

@@ -100,6 +100,11 @@ public class SnowmanUIButton : MonoBehaviour
         ImageHolderActions(opening);
     }
 
+    private void OnApplicationQuit()
+    {
+        LeanTween.cancel(imageHolder);
+    }
+
     private void Update()
     {
         

@@ -41,12 +41,16 @@ public class SledRaceStarter : MonoBehaviour
 
     void ResetSleds()
     {
+        int i = 0;
         foreach (SledScript sled in sledStorage)
         {
             if (sled == null) continue;
             SledScript newSled = Instantiate(sled);
             newSled.gameObject.SetActive(true);
+            sleds[i] = newSled;
+            i++;
         }
+        snowmen = new List<Snowman>();
         raceActive = false;
     }
 

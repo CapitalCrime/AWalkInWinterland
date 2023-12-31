@@ -175,8 +175,6 @@ public class Outline : MonoBehaviour {
         RemoveOutlines();
         GenerateOutline();
         RemoveOutlines();
-        Debug.Log("We ran recalculate");
-        Debug.Log("Renderers count: " + renderers.Length);
         if (enabled)
         {
             AddOutlineMaterials();

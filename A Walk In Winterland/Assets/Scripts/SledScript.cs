@@ -50,11 +50,13 @@ public class SledScript : MonoBehaviour
             collider.enabled = false;
         }
         seatedSnowman.transform.localPosition = Vector3.zero;
+        seatedSnowman.snowmanRacingEvent?.Invoke(true);
     }
 
     public void UnseatSnowman()
     {
         if (seatedSnowman == null || seatedSnowman.gameObject == null) return;
+        seatedSnowman.snowmanRacingEvent?.Invoke(false);
         seatedSnowman.transform.SetParent(null);
         seatedSnowman.SetInteractable(true);
         seatedSnowman.transform.localEulerAngles = Vector3.up * seatedSnowman.transform.eulerAngles.y;
