@@ -47,7 +47,7 @@ public class SledScript : MonoBehaviour
         seatedSnowman.transform.localEulerAngles = Vector3.zero;
         foreach (Collider collider in seatedSnowman.transform.GetComponentsInChildren<Collider>())
         {
-            collider.enabled = false;
+            collider.isTrigger = true;
         }
         seatedSnowman.transform.localPosition = Vector3.zero;
         seatedSnowman.snowmanRacingEvent?.Invoke(true);
@@ -62,7 +62,7 @@ public class SledScript : MonoBehaviour
         seatedSnowman.transform.localEulerAngles = Vector3.up * seatedSnowman.transform.eulerAngles.y;
         foreach (Collider collider in seatedSnowman.transform.GetComponentsInChildren<Collider>())
         {
-            collider.enabled = true;
+            collider.isTrigger = false;
         }
         seatedSnowman = null;
     }
