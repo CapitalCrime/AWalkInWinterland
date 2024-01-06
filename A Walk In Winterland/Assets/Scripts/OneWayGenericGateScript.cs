@@ -7,6 +7,7 @@ public class OneWayGenericGateScript : MonoBehaviour
     [SerializeField] Vector3 openDirection = Vector3.forward;
     [SerializeField] Vector3 physicsColliderSize;
     [SerializeField] Animation openAnimation;
+    [SerializeField] LayerMask NotLetThrough;
     BoxCollider objectCollider;
     BoxCollider physicsCollider;
     // Start is called before the first frame update
@@ -21,8 +22,14 @@ public class OneWayGenericGateScript : MonoBehaviour
         physicsCollider.isTrigger = true;
     }
 
+    bool IsInLayerMask(int layer)
+    {
+        return ((1 << layer) & NotLetThrough) != 0;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        if (IsInLayerMask(other.gameObject.layer)) return;
         if (Physics.ComputePenetration(physicsCollider, transform.position, transform.rotation,
             other, other.transform.position, other.transform.rotation,
             out Vector3 direction, out float depth))

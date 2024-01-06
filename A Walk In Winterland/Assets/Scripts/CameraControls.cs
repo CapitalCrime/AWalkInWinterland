@@ -12,7 +12,6 @@ public class CameraControls : MonoBehaviour
     [SerializeField] private InputActionReference fasterCamAction;
     [SerializeField] private Camera _camera;
     [SerializeField] private Collider roughCameraBounds;
-    [SerializeField] private SnowmanCamera snowmanCamera;
     [SerializeField] private Cinemachine.CinemachineInputProvider provider;
     [SerializeField] Texture2D gamepadCursor;
     Cinemachine.CinemachinePOV virtualCamera;

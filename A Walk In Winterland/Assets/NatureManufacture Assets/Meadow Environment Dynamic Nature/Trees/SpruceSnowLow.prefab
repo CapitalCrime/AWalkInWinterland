@@ -94,10 +94,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 107416425900312830, guid: 99d2eaeb7e3cad54fa5cc304ae643db5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 99d2eaeb7e3cad54fa5cc304ae643db5,
         type: 3}
       propertyPath: m_Name
       value: SpruceLow
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 99d2eaeb7e3cad54fa5cc304ae643db5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4018364199803164432, guid: 99d2eaeb7e3cad54fa5cc304ae643db5,
         type: 3}
@@ -109,6 +119,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c6d479714aa70f14d854fb3067a23fce, type: 2}
+    - target: {fileID: 4841920939393509066, guid: 99d2eaeb7e3cad54fa5cc304ae643db5,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5000839531267840655, guid: 99d2eaeb7e3cad54fa5cc304ae643db5,
         type: 3}
       propertyPath: m_CastShadows

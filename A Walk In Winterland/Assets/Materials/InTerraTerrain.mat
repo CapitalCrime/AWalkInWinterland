@@ -24,6 +24,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 3e3de67027c68e34a96553bba38745c1, type: 3}
   m_ValidKeywords:
   - _TERRAIN_BLEND_HEIGHT
+  - _TERRAIN_DISTANCEBLEND
   - _TERRAIN_MASK_MAPS
   - _TERRAIN_TRIPLANAR
   m_InvalidKeywords:
@@ -184,7 +185,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HT_cover: 0
+    - _HT_cover: 0.7
     - _HT_distance_scale: 0.5
     - _HeightTransition: 14.3
     - _Metallic: 0
@@ -218,7 +219,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HT_distance: {r: 17.999998, g: 25, b: 0, a: 25}
+    - _HT_distance: {r: 201.3333, g: 400, b: 0, a: 400}
     - _MipMapFade: {r: 23.00002, g: 35, b: 0, a: 35}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _TerrainNormalTintDistance: {r: 3, g: 10, b: 0, a: 25}

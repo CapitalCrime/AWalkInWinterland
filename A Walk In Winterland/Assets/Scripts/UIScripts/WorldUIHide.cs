@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class WorldUIHide : MonoBehaviour
 {
     [SerializeField] float maxAlpha = 1;
-    float maxDistance = 20;
+    float maxDistance = 35;
     float minDistance = 8;
     Camera mainCamera;
     Image[] images;
@@ -87,7 +87,7 @@ public class WorldUIHide : MonoBehaviour
                 Vector3 mousePos = GetMousePos(mainCamera.farClipPlane);
                 Vector3 mouseDirection = (mainCamera.ScreenToWorldPoint(mousePos) - mainCamera.transform.position).normalized;
                 float distance = Vector3.Cross(mouseDirection, transform.position - mainCamera.transform.position).magnitude;
-                if (distance > 20)
+                if (distance > maxDistance)
                 {
                     EnableImages(false);
                 }

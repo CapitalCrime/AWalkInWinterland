@@ -23,7 +23,7 @@ public class SledScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.centerOfMass = new Vector3(0, -3f, 0);
+        rb.centerOfMass = new Vector3(0, -4f, 0);
         lastHit = Time.time;
     }
 
@@ -71,9 +71,9 @@ public class SledScript : MonoBehaviour
     {
         Vector2 newVel = new Vector2(rb.velocity.x, rb.velocity.z);
 
-        if (Physics.Raycast(transform.position + transform.forward, -Vector3.up, out RaycastHit hitInfoFront, 5, groundMask))
+        if (Physics.Raycast(transform.position + transform.forward + Vector3.up, -Vector3.up, out RaycastHit hitInfoFront, 5, groundMask))
         {
-            if (Physics.Raycast(transform.position - transform.forward, -Vector3.up, out RaycastHit hitInfoBack, 5, groundMask))
+            if (Physics.Raycast(transform.position - transform.forward + Vector3.up, -Vector3.up, out RaycastHit hitInfoBack, 5, groundMask))
             {
                 if (hitInfoBack.point.y < hitInfoFront.point.y)
                 {
@@ -107,17 +107,17 @@ public class SledScript : MonoBehaviour
         float offCentreDot = Vector3.Dot(transform.right, rb.velocity.normalized);
         Vector3 offCentreCross = Vector3.Cross(transform.forward, rb.velocity.normalized);
         if (Mathf.Abs(offCentreCross.y) < 0.1f && offCentreDot > 0) return;
-        float rotateSmooth = Mathf.Clamp(Mathf.Abs(offCentreCross.y), 0.3f, 1);
+        float rotateSmooth = Mathf.Clamp(Mathf.Abs(offCentreCross.y), 0.1f, 1);
 
         Vector3 rotateAxis = transform.up;
         
-        if (offCentreCross.y < 0)
+        if (offCentreCross.y < 0.1f)
         {
-            transform.RotateAround(transform.position, rotateAxis, Time.fixedDeltaTime * -200 * rotateSmooth);
+            transform.RotateAround(transform.position, rotateAxis, Time.deltaTime * -200 * rotateSmooth);
         }
-        else
+        else if(offCentreCross.y > -0.1f)
         {
-            transform.RotateAround(transform.position, rotateAxis, Time.fixedDeltaTime * 200 * rotateSmooth);
+            transform.RotateAround(transform.position, rotateAxis, Time.deltaTime * 200 * rotateSmooth);
         }
     }
 

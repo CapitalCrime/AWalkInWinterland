@@ -322,6 +322,13 @@ public class SnowmanManager : MonoBehaviour
             //Reset camera position to old position
             playerCamera.GetVirtualCamera().m_Transitions.m_InheritPosition = false;
             playerCameraPosition = playerCamera.transform.position;
+
+            Vector3 rayDir = (snowmanPos - playerCameraPosition);
+            RaycastHit hit;
+            if (Physics.Raycast(playerCameraPosition, rayDir.normalized, out hit, rayDir.magnitude, terrainBoundariesMask))
+            {
+                playerCameraPosition = hit.point + hit.normal;
+            }
         }
 
         snowmanCamera.gameObject.SetActive(false);
