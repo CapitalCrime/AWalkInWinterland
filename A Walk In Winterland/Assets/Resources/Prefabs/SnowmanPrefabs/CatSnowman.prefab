@@ -318,7 +318,7 @@ MonoBehaviour:
   clickSoundRef:
     Target: {fileID: 6671950180918364212}
     Params: []
-  thirdPersonCam: {fileID: 3162761022738381191}
+  thirdPersonCam: {fileID: 0}
   description: {fileID: 11400000, guid: 39d9240378aa02d439a7d3124b875d71, type: 2}
   purrSoundRef:
     Target: {fileID: 6366528363623497080}
@@ -667,15 +667,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8363185317587953809}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3162761022738381191 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6914260011402268950, guid: 599484a0901a36640b2986f660e57c67,
-    type: 3}
-  m_PrefabInstance: {fileID: 8363185317587953809}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
