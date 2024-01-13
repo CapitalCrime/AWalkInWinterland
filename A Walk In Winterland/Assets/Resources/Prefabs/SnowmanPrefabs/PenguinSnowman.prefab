@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 3523945909920072047}
   - component: {fileID: 7193218912654008845}
   - component: {fileID: 1409390778940448550}
+  - component: {fileID: 3730814144914788913}
   m_Layer: 6
   m_Name: PenguinSnowman
   m_TagString: Snowman
@@ -226,7 +227,7 @@ MonoBehaviour:
   clickSoundRef:
     Target: {fileID: 0}
     Params: []
-  thirdPersonCam: {fileID: 596505394425302826}
+  thirdPersonCam: {fileID: 0}
   description: {fileID: 11400000, guid: 15bab622eb53bd641879b9c55c11b27a, type: 2}
   penguinAnimation: {fileID: 1409390778940448550}
 --- !u!114 &7193218912654008845
@@ -263,6 +264,33 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!205 &3730814144914788913
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003489915558960983}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0.6128555, z: -0.003471017}
+  m_Size: 2.919627
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.008
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 7733205267470987571}
+    - renderer: {fileID: 499469466509126869}
+    - renderer: {fileID: 4234214119497586472}
+  - screenRelativeHeight: 0.008
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.008
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &8484104300149842351
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +404,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc953c1871009f47bc3c6574ead6e9a, type: 3}
+--- !u!23 &499469466509126869 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7635826562936255635, guid: 0dc953c1871009f47bc3c6574ead6e9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1217767298176083896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1687963218563170387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0dc953c1871009f47bc3c6574ead6e9a,
@@ -454,6 +488,12 @@ PrefabInstance:
 --- !u!4 &3116581107271007150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 411b7d45589df174cbac9d97b0988bb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3227651002017094725}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4234214119497586472 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7635826562936255635, guid: 411b7d45589df174cbac9d97b0988bb0,
     type: 3}
   m_PrefabInstance: {fileID: 3227651002017094725}
   m_PrefabAsset: {fileID: 0}
@@ -601,18 +641,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599484a0901a36640b2986f660e57c67, type: 3}
---- !u!114 &596505394425302826 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6914260011402268950, guid: 599484a0901a36640b2986f660e57c67,
-    type: 3}
-  m_PrefabInstance: {fileID: 6319487774961507900}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 319d2fe34a804e245819465c9505ea59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &596505394425302827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6914260011402268951, guid: 599484a0901a36640b2986f660e57c67,
@@ -693,6 +721,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6716244ba7084e34c918b1b90cfb26f7, type: 3}
+--- !u!23 &7733205267470987571 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7635826562936255635, guid: 6716244ba7084e34c918b1b90cfb26f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 9032467154736839262}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8850554547916348853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6716244ba7084e34c918b1b90cfb26f7,

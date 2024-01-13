@@ -116,6 +116,7 @@ public class SkiChairSeatScript : MonoBehaviour
     {
         if(passengersOnboard < seats.Count && other.TryGetComponent(out Snowman snowman))
         {
+            if (snowman.enabled == false) return;
             int nullIndex = -1;
             for(int i = 0; i<passengers.Length; i++)
             {

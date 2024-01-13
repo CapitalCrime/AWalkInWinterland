@@ -30,6 +30,8 @@ public abstract class Snowman : MonoBehaviour
     bool walkingEnabled = true;
     bool walkingStartEnabled = true;
     bool _cameraEnabled = true;
+    Vector3 influenceDestination = Vector3.zero;
+    float lastInfluenceTime;
     public bool cameraEnabled {
         get {
             return (_cameraEnabled && gameObject.activeSelf); 
@@ -96,6 +98,12 @@ public abstract class Snowman : MonoBehaviour
             queuedUntilEnabledEvents += QueuedNightActionCheck;
             queuedUntilEnabledEvents -= QueuedDayActionCheck;
         }
+    }
+
+    public void SetInfluenceDestination(Vector3 val)
+    {
+        if (Time.time - lastInfluenceTime < 10) return;
+        influenceDestination = val;
     }
 
     public Cinemachine.CinemachineVirtualCamera GetSnowmanFPSCam()
@@ -181,6 +189,7 @@ public abstract class Snowman : MonoBehaviour
         SetUniqueActionActivationTime();
         lastWalkedSeconds = Time.time;
         lastActivedUniqueActionSeconds = Time.time;
+        lastInfluenceTime = Time.time;
         snowmanRigidbody = GetComponent<Rigidbody>();
 
         walkingStartEnabled = walkingEnabled;
@@ -214,6 +223,7 @@ public abstract class Snowman : MonoBehaviour
     public void AddForce(Vector3 amount)
     {
         snowmanRigidbody.AddForce(amount, ForceMode.Acceleration);
+        influenceDestination = Vector3.zero;
     }
 
     public void OnViewFPSEvent()
@@ -256,13 +266,11 @@ public abstract class Snowman : MonoBehaviour
     protected void PauseWalkTime()
     {
         walkPauseSeconds = Time.time - lastWalkedSeconds;
-        Debug.Log("Walk pause time: " + walkPauseSeconds);
     }
 
     protected void ResumeWalkTime()
     {
         lastWalkedSeconds = Time.time - walkPauseSeconds;
-        Debug.Log("Walk resume time: " + (Time.time- lastWalkedSeconds));
     }
 
     protected void PauseActionTimes()
@@ -299,7 +307,18 @@ public abstract class Snowman : MonoBehaviour
         {
             SetWalkActivationTime();
             lastWalkedSeconds = Time.time;
-            PushRandomDirection();
+            if(influenceDestination == Vector3.zero)
+            {
+                PushRandomDirection();
+            }
+            else
+            {
+                Vector3 direction = influenceDestination - transform.position;
+                direction.y = 0;
+                float force = direction.magnitude / Time.fixedDeltaTime * snowmanRigidbody.mass;
+                MoveInDirection(direction.normalized * force);
+                lastInfluenceTime = Time.time;
+            }
         }
     }
 

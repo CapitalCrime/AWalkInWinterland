@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 7193218912654008835}
   - component: {fileID: 7193218912654008832}
   - component: {fileID: 7193218912654008845}
+  - component: {fileID: 8362245569576917256}
   m_Layer: 6
   m_Name: PumpkinSnowman
   m_TagString: Snowman
@@ -213,6 +214,34 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!205 &8362245569576917256
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003489915558960983}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0.6128555, z: -0.003471017}
+  m_Size: 2.919627
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.054994255
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 0}
+    - renderer: {fileID: 0}
+  - screenRelativeHeight: 0.008
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 0}
+    - renderer: {fileID: 0}
+  - screenRelativeHeight: 0.008
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &8484104300149842351
 GameObject:
   m_ObjectHideFlags: 0

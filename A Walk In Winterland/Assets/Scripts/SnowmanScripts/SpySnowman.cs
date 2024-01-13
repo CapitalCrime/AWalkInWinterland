@@ -54,7 +54,7 @@ public class SpySnowman : Snowman
             List<Renderer> renderers = pickedSnowman.GetComponent<Outline>().GetRendererCopyWithoutOutline();
 
             //Take every ACTIVE mesh renderer, set their local positions correctly, and add to snowman disguise holder
-            foreach(MeshRenderer snowmanPart in renderers) //pickedSnowman.GetComponentsInChildren<MeshRenderer>()
+            foreach(Renderer snowmanPart in renderers) //pickedSnowman.GetComponentsInChildren<MeshRenderer>()
             {
                 if (!snowmanPart.gameObject.activeSelf) continue;
 

@@ -139,7 +139,13 @@ public class Outline : MonoBehaviour {
 
     public List<Renderer> GetRendererCopyWithoutOutline()
     {
+        LODGroup thisLOD = GetComponent<LODGroup>();
         List<Renderer> tempRenderer = new List<Renderer>();
+
+        if(thisLOD != null)
+        {
+            thisLOD.ForceLOD(0);
+        }
         //Copy every renderer object
         for(int i = 0; i < renderers.Length; i++)
         {
@@ -165,6 +171,10 @@ public class Outline : MonoBehaviour {
 
                 renderer.materials = materials.ToArray();
             }
+        }
+        if (thisLOD != null)
+        {
+            thisLOD.ForceLOD(-1);
         }
 
         return tempRenderer;
