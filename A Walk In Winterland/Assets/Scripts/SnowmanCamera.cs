@@ -143,7 +143,7 @@ public class SnowmanCamera : MonoBehaviour
                 }
                 Vector3 pos = hits[hits.Length - 1].point;
                 Vector3 cameraPosition = pos - rayDir.normalized * 2;
-                cameraOffset.m_Offset.z += (SnowmanManager.instance.mainCamera.transform.position - cameraPosition).magnitude*Time.deltaTime*9 + Time.deltaTime*2;
+                cameraOffset.m_Offset.z += (SnowmanManager.instance.mainCamera.transform.position - cameraPosition).magnitude*Time.deltaTime*8 + Time.deltaTime*2;
                 cameraOffset.m_Offset.z = Mathf.Clamp(cameraOffset.m_Offset.z, realOffsetZoom, 6.5f);
             } else if(!Physics.Raycast(SnowmanManager.instance.mainCamera.transform.position, -SnowmanManager.instance.mainCamera.transform.forward, 1, terrainBoundariesMask))
             {
@@ -198,8 +198,6 @@ public class SnowmanCamera : MonoBehaviour
             realOffsetZoom = Mathf.Clamp(realOffsetZoom + zoomAmount / 2, -10, 5);
             //cameraOffset.m_Offset.z = realOffsetZoom;
         }
-        Debug.Log("Snowman camera zoom: " + realOffsetZoom);
-        Debug.Log("Actual distance: " + (Camera.main.transform.position - currentThirdPersonCam.LookAt.position).magnitude);
         if (cycleSnowmanView.action.WasPerformedThisFrame() && !SnowmanManager.instance.UsingPlayerCamera())
         {
             SwapCam();
