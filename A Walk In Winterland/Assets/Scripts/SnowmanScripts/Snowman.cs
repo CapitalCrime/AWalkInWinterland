@@ -315,7 +315,7 @@ public abstract class Snowman : MonoBehaviour
             {
                 Vector3 direction = influenceDestination - transform.position;
                 direction.y = 0;
-                float force = direction.magnitude / Time.fixedDeltaTime * snowmanRigidbody.mass;
+                float force = direction.magnitude / (Time.fixedDeltaTime * snowmanRigidbody.mass);
                 MoveInDirection(direction.normalized * force);
                 lastInfluenceTime = Time.time;
             }

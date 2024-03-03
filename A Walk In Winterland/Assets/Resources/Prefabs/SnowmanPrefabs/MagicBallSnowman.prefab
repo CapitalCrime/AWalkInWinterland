@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0.233}
-  m_SizeDelta: {x: 0.75, y: 0.75}
+  m_SizeDelta: {x: 0.6, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2766619793514743769
 Canvas:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
+  m_fontSize: 0.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -350,9 +350,9 @@ GameObject:
   - component: {fileID: 7231033878098494957}
   - component: {fileID: 7193218912654008833}
   - component: {fileID: 7193218912654008835}
-  - component: {fileID: 7193218912654008832}
   - component: {fileID: 7193218912654008845}
   - component: {fileID: 3843094535066947107}
+  - component: {fileID: 7127451855971743717}
   m_Layer: 6
   m_Name: MagicBallSnowman
   m_TagString: Snowman
@@ -412,24 +412,6 @@ CapsuleCollider:
   m_Height: 2.03
   m_Direction: 1
   m_Center: {x: 0, y: 0.6, z: 0}
---- !u!114 &7193218912654008832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8003489915558960983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1107008a8ac03d243b52689a2814d6dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsCam: {fileID: 7723188517299077758}
-  clickSoundRef:
-    Target: {fileID: 0}
-    Params: []
-  thirdPersonCam: {fileID: 0}
-  description: {fileID: 11400000, guid: d6635f1045b6100428478d48c5e65303, type: 2}
 --- !u!114 &7193218912654008845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,6 +459,42 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &7127451855971743717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003489915558960983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1616d80a6ee0f4495dbdc5fb6b085c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCam: {fileID: 7723188517299077758}
+  clickSoundRef:
+    Target: {fileID: 0}
+    Params: []
+  thirdPersonCam: {fileID: 0}
+  description: {fileID: 11400000, guid: d6635f1045b6100428478d48c5e65303, type: 2}
+  text: {fileID: 6786844882534912246}
+  fortunes:
+  - It is certain
+  - Without a doubt
+  - Yes definitely
+  - As I see it, yes
+  - Most likely
+  - Outlook good
+  - Signs point to yes
+  - Absolutely
+  - Better not tell you now
+  - Ask again later
+  - Cannot predict now
+  - Reply hazy, try again
+  - "Don\u2019t count on it"
+  - My sources say no
+  - Very doubtful
+  - No
 --- !u!1 &8484104300149842351
 GameObject:
   m_ObjectHideFlags: 0
