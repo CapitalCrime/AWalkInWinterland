@@ -22,6 +22,24 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   ignoreReflectionProbes: 1
+--- !u!114 &-958997096402483748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b4ec73907ff472f811959d3cd1919c, type: 3}
+  m_Name: DepthRenderPrePassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  cameraLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  ignoreReflectionProbes: 1
+  useOptimizedDepthOnlyShader: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,8 +56,9 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
       type: 3}
   m_RendererFeatures:
+  - {fileID: -958997096402483748}
   - {fileID: -2317691121255917534}
-  m_RendererFeatureMap: 22d8767234e8d5df
+  m_RendererFeatureMap: dc854cc838f5b0f222d8767234e8d5df
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
