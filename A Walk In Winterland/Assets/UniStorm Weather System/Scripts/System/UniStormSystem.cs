@@ -234,6 +234,8 @@ namespace UniStorm
         public Color CurrentFogColor;
         public enum FogTypeEnum { UnistormFog, UnityFog, VolumetricFog2 };
         public VolumetricFogAndMist2.VolumetricFog volume;
+        public VolumetricFogAndMist2.VolumetricFog sunRayVolume;
+        [Range(0,1)] public float sunRayStrength = 0.2f;
         public float volumeFogRestingDistance = 0.0003f;
         public float volumeFogDistance;
         public float volumeFogVolumetricDensity;
@@ -2778,6 +2780,12 @@ namespace UniStorm
             RenderSettings.ambientEquatorColor = AmbientEquatorLightColor.Evaluate(m_TimeFloat);
             RenderSettings.ambientGroundColor = AmbientGroundLightColor.Evaluate(m_TimeFloat);
             RenderSettings.reflectionIntensity = EnvironmentReflections.Evaluate(m_TimeFloat * 24);
+
+            if(FogType == FogTypeEnum.VolumetricFog2 && sunRayVolume != null)
+            {
+                sunRayVolume.settings.albedo = SunColor.Evaluate(m_TimeFloat);
+                sunRayVolume.settings.albedo.a = sunRayStrength;
+            }
 
             SunObjectMaterial.SetVector("_uWorldSpaceCameraPos", PlayerCamera.transform.position);
             SunObjectMaterial.SetColor("_SunColor", SunSpotColor.Evaluate(m_TimeFloat));

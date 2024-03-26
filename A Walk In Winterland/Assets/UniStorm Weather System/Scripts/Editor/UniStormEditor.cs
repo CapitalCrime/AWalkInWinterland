@@ -216,6 +216,8 @@ namespace UniStorm.Utility
         SerializedProperty FogAlpha;
         SerializedProperty FogNightColor;
         SerializedProperty VolumeProfile;
+        SerializedProperty SunRayVolumeProfile;
+        SerializedProperty SunRayStrength;
         SerializedProperty VolumeFogDistance;
         SerializedProperty VolumeFogVolumetricDensity;
 
@@ -618,6 +620,8 @@ namespace UniStorm.Utility
             FogNightColor = serializedObject.FindProperty("fogNightColor");
 
             VolumeProfile = serializedObject.FindProperty("volume");
+            SunRayVolumeProfile = serializedObject.FindProperty("sunRayVolume");
+            SunRayStrength = serializedObject.FindProperty("sunRayStrength");
             VolumeFogDistance = serializedObject.FindProperty("volumeFogDistance");
             VolumeFogVolumetricDensity = serializedObject.FindProperty("volumeFogVolumetricDensity");
 
@@ -1529,6 +1533,8 @@ namespace UniStorm.Utility
                     else if(self.FogType == UniStormSystem.FogTypeEnum.VolumetricFog2)
                     {
                         EditorGUILayout.PropertyField(VolumeProfile);
+                        EditorGUILayout.PropertyField(SunRayVolumeProfile);
+                        EditorGUILayout.PropertyField(SunRayStrength);
                         EditorGUILayout.PropertyField(VolumeFogDistance);
                         EditorGUILayout.PropertyField(VolumeFogVolumetricDensity);
                     }
