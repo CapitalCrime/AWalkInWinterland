@@ -30,14 +30,14 @@ MonoBehaviour:
   detailScale: 0.35
   detailStrength: 0.5
   detailOffset: -0.5
-  density: 0.4
+  density: 0.3
   shape: 0
   border: 0
   customHeight: 0
   height: 0
   verticalOffset: 0
-  distance: 0
-  distanceFallOff: 0.9
+  distance: 6
+  distanceFallOff: 0.95
   maxDistance: 10000
   maxDistanceFallOff: 0
   terrainFit: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   terrainFogHeight: 25
   terrainFogMinAltitude: 0
   terrainFogMaxAltitude: 150
-  albedo: {r: 0.5568628, g: 0.5529412, b: 0.5372549, a: 0.2}
+  albedo: {r: 0.5568628, g: 0.5529412, b: 0.5372549, a: 0.3}
   enableDepthGradient: 0
   depthGradient:
     serializedVersion: 2
@@ -110,7 +110,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  brightness: 1
+  brightness: 1.5
   deepObscurance: 0
   specularColor: {r: 1, g: 1, b: 0.8, a: 1}
   specularThreshold: 0
@@ -123,12 +123,12 @@ MonoBehaviour:
   sunDirection: {x: 0, y: 1, z: 0}
   sunColor: {r: 0, g: 0.9568, b: 0.8392, a: 1}
   sunIntensity: 1
-  ambientLightMultiplier: 1
+  ambientLightMultiplier: 0.5
   lightDiffusionPower: 1
   lightDiffusionIntensity: 0.3
   receiveShadows: 1
   shadowIntensity: 1
-  shadowCancellation: 1
+  shadowCancellation: 0.8
   shadowMaxDistance: 250
   cookie: 0
   distantFog: 0

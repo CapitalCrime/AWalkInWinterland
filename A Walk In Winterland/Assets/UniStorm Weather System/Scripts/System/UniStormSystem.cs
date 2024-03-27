@@ -1137,7 +1137,7 @@ namespace UniStorm
             {
                 if (CurrentWeatherType.addExtraFog)
                 {
-                    volume.settings.distantFogDistanceDensity = 0.0015f;
+                    volume.settings.distantFogDistanceDensity = volumeFogDistance;
                     volume.settings.density = volumeFogVolumetricDensity;
                 } else
                 {
