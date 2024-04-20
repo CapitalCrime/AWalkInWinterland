@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612e70f49e5124da0a95111a57250300, type: 3}
   m_Name: SunRays
   m_EditorClassIdentifier: 
-  raymarchQuality: 6
-  raymarchMinStep: 0.1
+  raymarchQuality: 5
+  raymarchMinStep: 0.15
   jittering: 0.1
   dithering: 2
   renderQueue: 3100
@@ -30,9 +30,9 @@ MonoBehaviour:
   detailScale: 0.35
   detailStrength: 0.5
   detailOffset: -0.5
-  density: 0.3
+  density: 0.02
   shape: 0
-  border: 0
+  border: 0.5
   customHeight: 0
   height: 0
   verticalOffset: 0
@@ -124,12 +124,12 @@ MonoBehaviour:
   sunColor: {r: 0, g: 0.9568, b: 0.8392, a: 1}
   sunIntensity: 1
   ambientLightMultiplier: 0.5
-  lightDiffusionPower: 1
+  lightDiffusionPower: 10
   lightDiffusionIntensity: 0.3
   receiveShadows: 1
   shadowIntensity: 1
-  shadowCancellation: 0.8
-  shadowMaxDistance: 250
+  shadowCancellation: 0.5
+  shadowMaxDistance: 70
   cookie: 0
   distantFog: 0
   distantFogStartDistance: 1000

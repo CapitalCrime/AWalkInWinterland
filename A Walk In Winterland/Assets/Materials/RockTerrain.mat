@@ -10,13 +10,15 @@ Material:
   m_Name: RockTerrain
   m_Shader: {fileID: -6465566751694194690, guid: 3fa99825b61b37f4d8f1edd646ac8ee3,
     type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -95,6 +97,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Normal3:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 2800000, guid: 30b51375156b10e4780537d5793a26c9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -202,7 +208,7 @@ Material:
     - _LayerIndex1: 0
     - _LayerIndex2: 0
     - _LayerNumber: 0
-    - _Metallic: 0
+    - _Metallic: 0.38
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -235,10 +241,10 @@ Material:
     - _Surface: 0
     - _TerrainColorTintStrenght: 0
     - _TerrainNormalTintStrenght: 0
-    - _Tiling: 0.04
+    - _Tiling: 0.05
     - _TriplanarOneToAllSteep: 0
     - _TriplanarSharpness: 9
-    - _WorkflowMode: 1
+    - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
@@ -271,8 +277,10 @@ Material:
     - _MipMapFade: {r: 3, g: 15, b: 0, a: 35}
     - _NormIntersect: {r: 0, g: 0.6, b: 0, a: 1}
     - _NormalScale: {r: 0, g: 0, b: 0, a: 0}
-    - _Offset: {r: -49.87, g: -7.5, b: 0, a: 0}
+    - _Occlusion_Remap: {r: 0.4, g: 1, b: 0, a: 0}
+    - _Offset: {r: -49.87, g: -6.8, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Specular: {r: 0.3, g: 0.3, b: 0.3, a: 0}
     - _SplatUV0: {r: 1, g: 1, b: 0, a: 0}
     - _SplatUV1: {r: 1, g: 1, b: 0, a: 0}
     - _SplatUV2: {r: 1, g: 1, b: 0, a: 0}

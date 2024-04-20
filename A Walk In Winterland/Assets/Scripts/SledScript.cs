@@ -23,7 +23,7 @@ public class SledScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.centerOfMass = new Vector3(0, -4f, 0);
+        rb.centerOfMass = new Vector3(0, -6f, 1);
         lastHit = Time.time;
     }
 

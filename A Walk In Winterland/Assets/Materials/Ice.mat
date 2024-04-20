@@ -10,14 +10,18 @@ Material:
   m_Name: Ice
   m_Shader: {fileID: -6465566751694194690, guid: 5f9e09de50b3d84468145911997a0267,
     type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3003
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    RenderType: Transparent
+  disabledShaderPasses:
+  - SHADOWCASTER
+  - DepthOnly
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -98,6 +102,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 2
+    - _CastShadows: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _ColorMask: 15
@@ -129,10 +134,12 @@ Material:
     - _StencilReadMask: 255
     - _StencilWriteMask: 255
     - _Surface: 1
-    - _Transparency: 0.75
+    - _Transparency: 0.7
     - _UseUIAlphaClip: 0
-    - _WorkflowMode: 0
+    - _WorkflowMode: 1
+    - _ZTest: 4
     - _ZWrite: 0
+    - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 0.8036134, g: 0.95283014, b: 0.94721204, a: 0.7490196}
     - _Color: {r: 0.8036134, g: 0.95283014, b: 0.94721204, a: 0.7490196}

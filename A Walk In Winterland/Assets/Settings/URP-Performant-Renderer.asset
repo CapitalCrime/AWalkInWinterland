@@ -17,11 +17,29 @@ MonoBehaviour:
   renderPassEvent: 500
   fogLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   cameraLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   ignoreReflectionProbes: 1
+--- !u!114 &-1585683657547135787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b4ec73907ff472f811959d3cd1919c, type: 3}
+  m_Name: DepthRenderPrePassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  cameraLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  ignoreReflectionProbes: 1
+  useOptimizedDepthOnlyShader: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,8 +56,9 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
       type: 3}
   m_RendererFeatures:
+  - {fileID: -1585683657547135787}
   - {fileID: -7626079671346910502}
-  m_RendererFeatureMap: da2a8a90f1b82a96
+  m_RendererFeatureMap: d5c4c2611d85fee9da2a8a90f1b82a96
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -64,7 +83,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0

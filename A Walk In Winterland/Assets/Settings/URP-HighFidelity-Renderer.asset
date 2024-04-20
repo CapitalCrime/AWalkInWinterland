@@ -20,9 +20,9 @@ MonoBehaviour:
     m_Bits: 4294967295
   cameraLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   ignoreReflectionProbes: 1
---- !u!114 &-958997096402483748
+--- !u!114 &-1039223439652386194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,7 +37,7 @@ MonoBehaviour:
   m_Active: 1
   cameraLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   ignoreReflectionProbes: 1
   useOptimizedDepthOnlyShader: 1
 --- !u!114 &11400000
@@ -56,9 +56,9 @@ MonoBehaviour:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
       type: 3}
   m_RendererFeatures:
-  - {fileID: -958997096402483748}
+  - {fileID: -1039223439652386194}
   - {fileID: -2317691121255917534}
-  m_RendererFeatureMap: dc854cc838f5b0f222d8767234e8d5df
+  m_RendererFeatureMap: 6e8a42a5c9ef93f122d8767234e8d5df
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
