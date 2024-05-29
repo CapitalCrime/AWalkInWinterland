@@ -235,7 +235,7 @@ namespace UniStorm
         public enum FogTypeEnum { UnistormFog, UnityFog, VolumetricFog2 };
         public VolumetricFogAndMist2.VolumetricFog volume;
         public VolumetricFogAndMist2.VolumetricFog sunRayVolume;
-        [Range(0,1)] public float sunRayStrength = 0.2f;
+        public AnimationCurve sunRayStrength;
         public float volumeFogRestingDistance = 0.0003f;
         public float volumeFogDistance;
         public float volumeFogVolumetricDensity;
@@ -2783,8 +2783,8 @@ namespace UniStorm
 
             if(FogType == FogTypeEnum.VolumetricFog2 && sunRayVolume != null)
             {
-                sunRayVolume.settings.albedo = SunColor.Evaluate(m_TimeFloat);
-                sunRayVolume.settings.albedo.a = sunRayStrength;
+                sunRayVolume.profile.albedo = SunColor.Evaluate(m_TimeFloat);
+                sunRayVolume.profile.albedo.a = sunRayStrength.Evaluate(m_TimeFloat);
             }
 
             SunObjectMaterial.SetVector("_uWorldSpaceCameraPos", PlayerCamera.transform.position);
