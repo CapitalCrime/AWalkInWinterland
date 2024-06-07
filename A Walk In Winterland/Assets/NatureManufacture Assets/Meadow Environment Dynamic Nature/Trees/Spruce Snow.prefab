@@ -125,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5477401418606989252}
   - component: {fileID: 5581210482530907233}
+  - component: {fileID: 7864723717030095691}
   m_Layer: 0
   m_Name: Spruce Snow
   m_TagString: Untagged
@@ -146,6 +147,7 @@ Transform:
   m_Children:
   - {fileID: 3137425031664517952}
   - {fileID: 2644042596694217063}
+  - {fileID: 2686382293106428939}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -163,15 +165,35 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.1
+  - screenRelativeHeight: 0.12
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 310631981139776604}
-  - screenRelativeHeight: 0.01
+    - renderer: {fileID: 6263772798545325769}
+  - screenRelativeHeight: 0.06
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1126776752788034271}
+    - renderer: {fileID: 6263772798545325769}
+  - screenRelativeHeight: 0.0069999998
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3802536967289053325}
   m_Enabled: 1
+--- !u!136 &7864723717030095691
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136482081969935742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.0062735
+  m_Height: 11.525892
+  m_Direction: 1
+  m_Center: {x: -0.15754852, y: 5.4018936, z: 0.20740351}
 --- !u!1 &5363301012071032439
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,3 +393,84 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &2507743078555544544
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5477401418606989252}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 05b6e74508112f94d81445f3b56b044b,
+        type: 3}
+      propertyPath: m_Name
+      value: SpruceLow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05b6e74508112f94d81445f3b56b044b, type: 3}
+--- !u!4 &2686382293106428939 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 05b6e74508112f94d81445f3b56b044b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2507743078555544544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &3802536967289053325 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7635826562936255635, guid: 05b6e74508112f94d81445f3b56b044b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2507743078555544544}
+  m_PrefabAsset: {fileID: 0}

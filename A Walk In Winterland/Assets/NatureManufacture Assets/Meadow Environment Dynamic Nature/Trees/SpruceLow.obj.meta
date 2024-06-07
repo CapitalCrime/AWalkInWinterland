@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99d2eaeb7e3cad54fa5cc304ae643db5
+guid: 05b6e74508112f94d81445f3b56b044b
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Spruce.001_Spruce.002_SpruceBranchMat
-    second: {fileID: 2100000, guid: 0b4635207508e8f4d90b2c3730c46011, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Spruce.001_Spruce.002_SpruceTrunkMat
-    second: {fileID: 2100000, guid: dafd62dca22df454f9e68827cd719a2c, type: 2}
+      name: defaultMat
+    second: {fileID: 2100000, guid: 963ed26c90fad804e81ef8337bb4a353, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
