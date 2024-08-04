@@ -10,6 +10,7 @@ namespace KWS
         public ModelSourceEnum VolumeSource = ModelSourceEnum.Mesh;
         public MeshCollider    OverrideVolumeCollider;
         public Transform       OverrideCenterOfMass;
+        public Renderer OverrideMesh;
 
         [Range(100, 1000)]
         public float Density = 450;
@@ -68,7 +69,7 @@ namespace KWS
             var originalPosition = transform.position;
             transform.rotation = Quaternion.identity;
             transform.position = Vector3.zero;
-            var bounds = _collider.bounds;
+            var bounds = GetCurrentBounds();// _collider.bounds;
             bounceMaxSize = Mathf.Max(bounds.size.x, bounds.size.y, bounds.size.z);
 
             isMeshCollider = GetComponent<MeshCollider>() != null;
@@ -106,7 +107,7 @@ namespace KWS
         Bounds GetCurrentBounds()
         {
             Bounds bounds = new Bounds();
-            if (VolumeSource == ModelSourceEnum.Mesh) bounds = GetComponent<Renderer>().bounds;
+            if (VolumeSource == ModelSourceEnum.Mesh) bounds = OverrideMesh ? OverrideMesh.bounds : GetComponent<Renderer>().bounds;
             else if (VolumeSource == ModelSourceEnum.Collider)
             {
                 var meshCollider = OverrideVolumeCollider ? OverrideVolumeCollider : GetComponent<MeshCollider>();

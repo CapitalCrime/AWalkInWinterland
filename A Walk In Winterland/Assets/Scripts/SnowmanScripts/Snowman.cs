@@ -20,6 +20,7 @@ public abstract class Snowman : MonoBehaviour
     public Cinemachine.CinemachineFreeLook thirdPersonCam;
     public SnowmanDescription description;
     protected Rigidbody snowmanRigidbody;
+    protected Collider snowmanCollider;
     float uniqueActionSeconds;
     float walkSeconds;
     float lastActivedUniqueActionSeconds;
@@ -133,7 +134,7 @@ public abstract class Snowman : MonoBehaviour
         }
     }
 
-    public void SetInteractable(bool value)
+    public void SetInteractable(bool value, bool colliderBecomeTrigger = false)
     {
         SetSnowmanEnabled(value);
 
@@ -142,6 +143,7 @@ public abstract class Snowman : MonoBehaviour
             snowmanRigidbody.angularVelocity = Vector3.zero;
             snowmanRigidbody.velocity = Vector3.zero;
         }
+        snowmanCollider.isTrigger = colliderBecomeTrigger;
         snowmanRigidbody.isKinematic = !value;
     }
 
@@ -191,6 +193,7 @@ public abstract class Snowman : MonoBehaviour
         lastActivedUniqueActionSeconds = Time.time;
         lastInfluenceTime = Time.time;
         snowmanRigidbody = GetComponent<Rigidbody>();
+        snowmanCollider = GetComponent<Collider>();
 
         walkingStartEnabled = walkingEnabled;
     }

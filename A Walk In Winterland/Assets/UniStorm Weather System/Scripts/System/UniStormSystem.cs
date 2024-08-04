@@ -1432,7 +1432,7 @@ namespace UniStorm
                     if (emitter.gameObject.name == CurrentWeatherType.WeatherTypeName + " (UniStorm)")
                     {
                         Debug.Log("Emitter found!");
-                        if(emitter.EventReference.Path != "" || emitter.EventInstance.isValid())
+                        if(!emitter.EventReference.IsNull || emitter.EventInstance.isValid())
                         {
                             Debug.Log("Emitter play");
                             emitter.Play();
