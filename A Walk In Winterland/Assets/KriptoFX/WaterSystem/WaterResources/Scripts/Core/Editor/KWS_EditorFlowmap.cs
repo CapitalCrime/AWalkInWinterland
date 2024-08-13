@@ -139,6 +139,7 @@ namespace KWS
 #if UNITY_EDITOR
             var pathToSceneFolder = KW_Extensions.GetPathToSceneInstanceFolder();
             var pathToFile        = Path.Combine(pathToSceneFolder, KWS_Settings.DataPaths.FlowmapTexture);
+
             _flowmapRT.SaveRenderTexture(pathToFile, useAutomaticCompressionFormat: true, KW_Extensions.UsedChannels._RG, isHDR: false, mipChain: false);
 
             var data = _waterInstance.Settings.FlowingScriptableData;
@@ -147,6 +148,22 @@ namespace KWS
             data.AreaSize                                 = areaSize;
             data.AreaPosition                             = areaPos;
             data.FlowmapResolution                        = resolution;
+
+            //Texture2D tex = new Texture2D(data.FlowmapTexture.width, data.FlowmapTexture.height, TextureFormat.RGBA32, false);
+
+            //// Read screen contents into the texture
+            //tex.SetPixels(data.FlowmapTexture.GetPixels());
+            //tex.Apply();
+
+            //byte[] bytes = ImageConversion.EncodeToPNG(tex);
+
+            //File.WriteAllBytes(pathToFile + ".png", bytes);
+            //UnityEditor.TextureImporter ti = (UnityEditor.TextureImporter)AssetImporter.GetAtPath(pathToFile + ".png");
+            //ti.isReadable = true;
+            //ti.SaveAndReimport();
+            //data.ImageTexture = UnityEditor.AssetDatabase.LoadAssetAtPath<Texture2D>(pathToFile + ".png");
+
+
             _waterInstance.Settings.FlowingScriptableData = data.SaveScriptableData(_waterInstanceID, null, "FlowProfile");
 #else
             Debug.LogError("You can't save waves data in runtime");

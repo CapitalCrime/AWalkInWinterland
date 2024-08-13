@@ -76,7 +76,8 @@ MonoBehaviour:
   VoxelsLimit: 16
   AngularDrag: 0.25
   Drag: 0.25
-  NormalForce: 0.35
+  MaxFlowSpeed: 1
+  NormalForce: 1
   DebugForces: 0
 --- !u!114 &3956546120701670575
 MonoBehaviour:

@@ -3303,7 +3303,6 @@ namespace UniStorm
 
             while (t < 1)
             {
-                Debug.Log("Is the fog moving?");
                 t += Time.deltaTime / TransitionTime;
 
                 switch (FogType)

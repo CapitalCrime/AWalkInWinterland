@@ -13,7 +13,6 @@ namespace KWS
 
         [SerializeField] public Texture2D FlowmapTexture;
 
-
         [SerializeField] public Texture2D FluidsMaskTexture;
         [SerializeField] public Texture2D FluidsPrebakedTexture;
     }

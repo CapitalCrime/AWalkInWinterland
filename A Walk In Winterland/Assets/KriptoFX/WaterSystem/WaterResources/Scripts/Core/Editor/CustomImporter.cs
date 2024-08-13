@@ -75,7 +75,6 @@ namespace KWS
                 bw.Write(bytes);
 
 
-                
             }
 
             AssetDatabase.SaveAssets();

@@ -902,6 +902,7 @@ namespace KWS
             );
 
             float distanceSquared = (center - closestPointInAABB).sqrMagnitude;
+
             return distanceSquared < (radius * radius);
         }
 

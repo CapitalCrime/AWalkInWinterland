@@ -421,6 +421,21 @@ namespace KWS
             }
         }
 
+        Texture2D flowMap;
+
+        public Vector3 GetFlowDirectionAtPosition(Vector3 position)
+        {
+            if (!UseFlowMap || FlowingScriptableData == null)
+            {
+                return Vector3.zero;
+            }
+
+            //FlowingScriptableData.FlowmapTexture;
+            Vector2 uv = new Vector2((position.x - FlowingScriptableData.AreaPosition.x) / FlowingScriptableData.AreaSize + 0.5f, (position.z - FlowingScriptableData.AreaPosition.z) / FlowingScriptableData.AreaSize + 0.5f) * FlowingScriptableData.FlowmapResolution;
+            Color pixelColour = (FlowingScriptableData.FlowmapTexture.GetPixel((int)uv.x, (int)uv.y)+new Color(- 0.5f, -0.5f,0))* (FlowMapSpeed /10.0f);
+            return new Vector3(pixelColour.r, 0, pixelColour.g);
+        }
+
         public bool CanUseAquariumMode => UseAquariumMode && (WaterMeshType == WaterMeshTypeEnum.FiniteBox || WaterMeshType == WaterMeshTypeEnum.CustomMesh);
 
     }

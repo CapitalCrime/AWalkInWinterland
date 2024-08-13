@@ -127,6 +127,18 @@ namespace KWS
             }
         }
 
+        public static Vector3 GetWaterSurfaceFlow(Vector3 position)
+        {
+            foreach (var instance in WaterSharedResources.WaterInstances)
+            {
+                if (!instance.IsWaterVisible && UseNetworkBuoyancy == false) continue;
+                if (!instance.WorldSpaceBounds.Contains(position)) continue;
+
+                return instance.Settings.GetFlowDirectionAtPosition(position);
+            }
+            return Vector3.zero;
+        }
+
         /// <summary>
         /// Returns the height of the first found water
         /// </summary>

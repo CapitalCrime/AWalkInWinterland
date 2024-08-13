@@ -13,6 +13,7 @@ public class SnowmanBuoyScript : MonoBehaviour
             buoy = Resources.Load<GameObject>("Buoy");
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent(out Snowman snowman) && !snowman.GetComponent<HasBuoy>())

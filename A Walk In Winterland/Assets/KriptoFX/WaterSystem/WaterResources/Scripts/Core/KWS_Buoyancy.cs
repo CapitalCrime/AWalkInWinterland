@@ -26,6 +26,7 @@ namespace KWS
         public int VoxelsLimit = 16;
         public float AngularDrag = 0.25f;
         public float Drag = 0.25f;
+        public float MaxFlowSpeed = 10;
         [Range(0, 1)]
         public float NormalForce = 0.35f;
         public bool DebugForces = false;
@@ -36,6 +37,7 @@ namespace KWS
         private Vector3         localArchimedesForce;
         private List<Vector3>   voxels;
         private Vector3[]         _voxelsWorldPos;
+        float squaredMaxFlowSpeed = 0;
 
         private Vector3[] _waterWorldPos;
         private Vector3[] _waterWorldNormals;
@@ -63,6 +65,7 @@ namespace KWS
             _rigidBody = GetComponent<Rigidbody>();
             _collider = GetComponent<Collider>();
 
+            squaredMaxFlowSpeed = MaxFlowSpeed * MaxFlowSpeed;
 
             // Store original rotation and position
             var originalRotation = transform.rotation;
@@ -261,6 +264,10 @@ namespace KWS
 
             WaterSystem.GetWaterSurfaceDataArray(_waterWorldPos, _waterWorldNormals);
 
+            var waterFlow = WaterSystem.GetWaterSurfaceFlow(_voxelsWorldPos[0]);
+
+            Vector3 flowSpeed = Vector3.zero;
+
             for (int i = 0; i < _voxelsWorldPos.Length; i++)
             {
                 var wp                = _voxelsWorldPos[i];
@@ -286,13 +293,26 @@ namespace KWS
                 localArchimedesForce = new Vector3(0, archimedesForceMagnitude, 0) / voxels.Count;
 
                 var force = localDampingForce + Mathf.Sqrt(k) * localArchimedesForce;
-                
+
+                flowSpeed.x += waterFlow.x / _rigidBody.mass;
+                flowSpeed.z += waterFlow.z / _rigidBody.mass;
+                if (flowSpeed.sqrMagnitude > squaredMaxFlowSpeed)
+                {
+                    flowSpeed = flowSpeed.normalized * MaxFlowSpeed;
+                }
+
                 force.x += waterNormal.x * NormalForce * _rigidBody.mass;
                 force.z += waterNormal.z * NormalForce * _rigidBody.mass;
-               
+
+                Vector3 sidewaysSpeed = new Vector3(_rigidBody.velocity.x, 0, _rigidBody.velocity.z);
+
+                if (sidewaysSpeed.sqrMagnitude < squaredMaxFlowSpeed || Vector3.Dot(sidewaysSpeed, flowSpeed) < 0.38f)
+                {
+                    force += flowSpeed;
+                }
+
                 _rigidBody.AddForceAtPosition(force, wp);
                 if (DebugForces) debugForces.Add(new[] { wp, force }); // For drawing force gizmos
-
             }
         }
 

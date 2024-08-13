@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec75ce71e21e40849beed5184a1b355f, type: 3}
+  m_Name: SplineProfile.SampleScene.JCMYK
+  m_EditorClassIdentifier: 
+  Splines:
+  - InitialSplinePosition: {x: 197, y: 13.89, z: 28.3}
+    ID: 0
+    SplinePoints:
+    - ID: 0
+      WorldPosition: {x: 104.259155, y: 13.544302, z: 26.75338}
+      Width: 24.720488
+    - ID: 1
+      WorldPosition: {x: 123.38604, y: 13.490345, z: 26.828133}
+      Width: 36.223156
+    - ID: 2
+      WorldPosition: {x: 144.9169, y: 13.478111, z: 26.847185}
+      Width: 25.420008
+    - ID: 3
+      WorldPosition: {x: 168.9448, y: 13.668213, z: 26.677532}
+      Width: 27.036148
+    - ID: 4
+      WorldPosition: {x: 184.76968, y: 13.485095, z: 26.731682}
+      Width: 6.990909
+    - ID: 5
+      WorldPosition: {x: 210.27419, y: 13.262001, z: 26.731651}
+      Width: 10
+    - ID: 6
+      WorldPosition: {x: 240.85603, y: 13.451876, z: 26.772806}
+      Width: 10
+    - ID: 7
+      WorldPosition: {x: 262.01978, y: 13.605366, z: 26.993923}
+      Width: 10
+    - ID: 8
+      WorldPosition: {x: 287.58838, y: 13.405266, z: 27.212173}
+      Width: 1.6599151
+    VertexCountBetweenPoints: 15
+    Depth: 6

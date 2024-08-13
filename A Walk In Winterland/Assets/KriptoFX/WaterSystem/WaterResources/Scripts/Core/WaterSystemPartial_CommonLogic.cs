@@ -412,6 +412,7 @@ namespace KWS
             if (Settings.WaterMeshType == WaterMeshTypeEnum.River)
             {
                 worldPosition.y = WaterPivotWorldPosition.y;
+
                 return SplineMeshComponent.GetSplineSurfaceHeight(this, worldPosition);
             }
             else
