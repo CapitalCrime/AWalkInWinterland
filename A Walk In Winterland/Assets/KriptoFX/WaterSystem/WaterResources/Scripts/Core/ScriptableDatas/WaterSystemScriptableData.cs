@@ -432,7 +432,7 @@ namespace KWS
 
             //FlowingScriptableData.FlowmapTexture;
             Vector2 uv = new Vector2((position.x - FlowingScriptableData.AreaPosition.x) / FlowingScriptableData.AreaSize + 0.5f, (position.z - FlowingScriptableData.AreaPosition.z) / FlowingScriptableData.AreaSize + 0.5f) * FlowingScriptableData.FlowmapResolution;
-            Color pixelColour = (FlowingScriptableData.FlowmapTexture.GetPixel((int)uv.x, (int)uv.y)+new Color(- 0.5f, -0.5f,0))* (FlowMapSpeed /10.0f);
+            Color pixelColour = (FlowingScriptableData.FlowmapTexture.GetPixel((int)uv.x, (int)uv.y)+new Color(- 0.5f, -0.5f,0))* (FlowMapSpeed / 5.0f);
             return new Vector3(pixelColour.r, 0, pixelColour.g);
         }
 

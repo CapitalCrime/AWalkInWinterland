@@ -8,6 +8,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Outline))]
 public abstract class Snowman : MonoBehaviour
 {
+    public static Vector3 maxSnowmanBounds = Vector3.positiveInfinity;
     public delegate void SnowmanDelegate(Snowman snowman);
     [HideInInspector] public static event SnowmanDelegate snowmanCreatedEvent;
     [HideInInspector] protected event UnityAction snowmanViewedEvent;
@@ -334,9 +335,21 @@ public abstract class Snowman : MonoBehaviour
         WalkCheck();
     }
 
+    void SnowmanInBoundsCheck()
+    {
+        if(Mathf.Abs(transform.position.x) > maxSnowmanBounds.x 
+            || Mathf.Abs(transform.position.y) > maxSnowmanBounds.y 
+            || Mathf.Abs(transform.position.z) > maxSnowmanBounds.z)
+        {
+            snowmanRigidbody.velocity = Vector3.zero;
+            transform.position = SnowmanManager.instance.GetRandomDropPoint();
+        }
+    }
+
     protected virtual void Update()
     {
         PerformActions();
+        SnowmanInBoundsCheck();
     }
 
     void EnableSounds()

@@ -83,15 +83,15 @@ Material:
     - _VisibleDistance: -39.6
     - _WetnessStrength: 0
     - _WorldPosGlobal: 0
-    - _uAttenuation: 0.5265326
+    - _uAttenuation: 1.500779
     - _uCloudAlpha: 1
     - _uCloudHeight: 1
     - _uCloudsBackwardScatteringG: -0.2
-    - _uCloudsBaseEdgeSoftness: 0.035
+    - _uCloudsBaseEdgeSoftness: 0.025
     - _uCloudsBaseScale: 1.72
     - _uCloudsBottom: 500
-    - _uCloudsBottomSoftness: 0.65
-    - _uCloudsCoverage: 0.536
+    - _uCloudsBottomSoftness: 0.4
+    - _uCloudsCoverage: 0.476
     - _uCloudsCoverageBias: 0.02
     - _uCloudsDensity: 1
     - _uCloudsDetailScale: 1000
@@ -137,15 +137,15 @@ Material:
     - _SunDir: {r: 0.2784009, g: 0.9581905, b: 0.0660601, a: 0}
     - _SunVector: {r: 0.34202018, g: 0.5476178, b: -0.763634, a: 0}
     - _uCloudColor: {r: 1, g: 1, b: 1, a: 1}
-    - _uCloudsAmbientColorBottom: {r: 0.33224937, g: 0.3389645, b: 0.35939074, a: 1}
-    - _uCloudsAmbientColorTop: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
+    - _uCloudsAmbientColorBottom: {r: 0.51548594, g: 0.5547249, b: 0.6037736, a: 1}
+    - _uCloudsAmbientColorTop: {r: 0.7549395, g: 0.79037845, b: 0.8207547, a: 1}
     - _uCloudsColor: {r: 0.84313726, g: 0.84313726, b: 0.84313726, a: 1}
     - _uCloudsHorizonColor: {r: 0, g: 0, b: 0, a: 1}
-    - _uFogColor: {r: 0.31899944, g: 0.3521628, b: 0.39361706, a: 0.025}
+    - _uFogColor: {r: 0.44588825, g: 0.49321982, b: 0.5660378, a: 0.0014}
     - _uHorizonColor: {r: 1, g: 1, b: 1, a: 1}
     - _uLightningColor: {r: 0.7647059, g: 0.8352941, b: 0.8862745, a: 1}
     - _uMoonColor: {r: 0.33023313, g: 0.36793935, b: 0.38679242, a: 1}
-    - _uMoonDir: {r: -0.19080901, g: 0.3609883, b: -0.9128414, a: 0}
-    - _uSunColor: {r: 0.59619963, g: 0.61398816, b: 0.6368083, a: 1}
-    - _uSunDir: {r: -0.34202018, g: -0.34556705, b: 0.8738453, a: 0}
+    - _uMoonDir: {r: -0.19080898, g: 0.9661967, b: -0.17336631, a: 0}
+    - _uSunColor: {r: 0.5566038, g: 0.5529281, b: 0.53822535, a: 1}
+    - _uSunDir: {r: -0.3420202, g: -0.9249215, b: 0.1659599, a: 0}
   m_BuildTextureStacks: []

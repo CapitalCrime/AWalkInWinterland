@@ -543,12 +543,12 @@ PrefabInstance:
     - target: {fileID: 198882807848139052, guid: 516fd25c12e04ba46bce3ce4bab8f8e1,
         type: 3}
       propertyPath: VelocityModule.y.scalar
-      value: -6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198882807848139052, guid: 516fd25c12e04ba46bce3ce4bab8f8e1,
         type: 3}
       propertyPath: VelocityModule.z.scalar
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 198882807848139052, guid: 516fd25c12e04ba46bce3ce4bab8f8e1,
         type: 3}
@@ -564,6 +564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: NoiseModule.strength.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198882807848139052, guid: 516fd25c12e04ba46bce3ce4bab8f8e1,
+        type: 3}
+      propertyPath: VelocityModule.inWorldSpace
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198882807848139052, guid: 516fd25c12e04ba46bce3ce4bab8f8e1,
         type: 3}

@@ -65,7 +65,7 @@ namespace KWS
             _rigidBody = GetComponent<Rigidbody>();
             _collider = GetComponent<Collider>();
 
-            squaredMaxFlowSpeed = MaxFlowSpeed * MaxFlowSpeed;
+            //squaredMaxFlowSpeed = MaxFlowSpeed * MaxFlowSpeed;
 
             // Store original rotation and position
             var originalRotation = transform.rotation;
@@ -264,15 +264,16 @@ namespace KWS
 
             WaterSystem.GetWaterSurfaceDataArray(_waterWorldPos, _waterWorldNormals);
 
-            var waterFlow = WaterSystem.GetWaterSurfaceFlow(_voxelsWorldPos[0]);
+            squaredMaxFlowSpeed = MaxFlowSpeed * MaxFlowSpeed;
 
-            Vector3 flowSpeed = Vector3.zero;
+            float floatSpeed = Time.fixedDeltaTime * 150;
 
             for (int i = 0; i < _voxelsWorldPos.Length; i++)
             {
                 var wp                = _voxelsWorldPos[i];
                 var waterPos          = _waterWorldPos[i];
                 var waterNormal       = _waterWorldNormals[i];
+                var waterFlow = WaterSystem.GetWaterSurfaceFlow(_voxelsWorldPos[i]);
 
                 var velocity          = _rigidBody.GetPointVelocity(wp);
                 var localDampingForce = -velocity * DAMPFER * _rigidBody.mass;
@@ -293,26 +294,32 @@ namespace KWS
                 localArchimedesForce = new Vector3(0, archimedesForceMagnitude, 0) / voxels.Count;
 
                 var force = localDampingForce + Mathf.Sqrt(k) * localArchimedesForce;
+                Vector3 flowSpeed = Vector3.zero;
 
-                flowSpeed.x += waterFlow.x / _rigidBody.mass;
-                flowSpeed.z += waterFlow.z / _rigidBody.mass;
-                if (flowSpeed.sqrMagnitude > squaredMaxFlowSpeed)
+                flowSpeed.x += (waterFlow.x * floatSpeed) / (_rigidBody.mass * _voxelsWorldPos.Length);
+                flowSpeed.z += (waterFlow.z * floatSpeed) / (_rigidBody.mass * _voxelsWorldPos.Length);
+                if (flowSpeed.sqrMagnitude > (squaredMaxFlowSpeed * floatSpeed))
                 {
-                    flowSpeed = flowSpeed.normalized * MaxFlowSpeed;
+                    flowSpeed = flowSpeed.normalized * MaxFlowSpeed * floatSpeed;
                 }
 
                 force.x += waterNormal.x * NormalForce * _rigidBody.mass;
                 force.z += waterNormal.z * NormalForce * _rigidBody.mass;
 
-                Vector3 sidewaysSpeed = new Vector3(_rigidBody.velocity.x, 0, _rigidBody.velocity.z);
+                force += flowSpeed;
 
-                if (sidewaysSpeed.sqrMagnitude < squaredMaxFlowSpeed || Vector3.Dot(sidewaysSpeed, flowSpeed) < 0.38f)
-                {
-                    force += flowSpeed;
-                }
+                //Vector3 sidewaysSpeed = new Vector3(_rigidBody.velocity.x, 0, _rigidBody.velocity.z);
+
+                //if (sidewaysSpeed.sqrMagnitude < squaredMaxFlowSpeed 
+                //    //|| Vector3.Dot(sidewaysSpeed, flowSpeed) < 0.38f
+                //    )
+                //{
+                //    force += flowSpeed;
+                //}
 
                 _rigidBody.AddForceAtPosition(force, wp);
                 if (DebugForces) debugForces.Add(new[] { wp, force }); // For drawing force gizmos
+                if (DebugForces) debugForces.Add(new[] { wp, flowSpeed });
             }
         }
 

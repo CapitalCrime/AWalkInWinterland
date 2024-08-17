@@ -68,7 +68,7 @@ MonoBehaviour:
   OverrideVolumeCollider: {fileID: 0}
   OverrideCenterOfMass: {fileID: 3956546120979312722}
   OverrideMesh: {fileID: 2369000646501472853}
-  Density: 450
+  Density: 250
   SlicesPerAxisX: 2
   SlicesPerAxisY: 2
   SlicesPerAxisZ: 2
@@ -76,8 +76,8 @@ MonoBehaviour:
   VoxelsLimit: 16
   AngularDrag: 0.25
   Drag: 0.25
-  MaxFlowSpeed: 1
-  NormalForce: 1
+  MaxFlowSpeed: 0.02
+  NormalForce: 0.5
   DebugForces: 0
 --- !u!114 &3956546120701670575
 MonoBehaviour:
@@ -135,7 +135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3956546120979312725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

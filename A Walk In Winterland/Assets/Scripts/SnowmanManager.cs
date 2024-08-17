@@ -29,6 +29,7 @@ public class SnowmanManager : MonoBehaviour
     public LayerMask snowmanMask;
     [SerializeField] float _snowmanDropTime = 2.0f;
     public float snowmanDropTime { get => _snowmanDropTime; private set { _snowmanDropTime = value; } }
+    public Vector3 maxMapBounds;
     public float lastDroppedTime { get; private set; }
 
     public static SnowmanManager instance;
@@ -52,6 +53,7 @@ public class SnowmanManager : MonoBehaviour
 
         lastDroppedTime = Time.time;
         Snowman.snowmanCreatedEvent += AddSnowman;
+        Snowman.maxSnowmanBounds = maxMapBounds;
         snowmen = new List<Snowman>();
         List<Snowman> allSnowmen = new List<Snowman>(Resources.LoadAll<Snowman>("Prefabs/SnowmanPrefabs"));
         randomUnlockSnowmen = new List<Snowman>();
@@ -367,12 +369,17 @@ public class SnowmanManager : MonoBehaviour
         }
     }
 
+    public Vector3 GetRandomDropPoint()
+    {
+        Vector3 randomOffset = new Vector3((Random.value * 2) - 1, 0, (Random.value * 2) - 1);
+        return dropPoints.GetChild(Random.Range(0, dropPoints.childCount)).position + randomOffset;
+    }
+
     void CheckForSnowmanDrop()
     {
         if(TimeSinceDrop() > snowmanDropTime)
         {
-            Vector3 randomOffset = new Vector3((Random.value * 2) - 1, 0, (Random.value * 2) - 1);
-            Instantiate(GetRandomSnowmanUnlock(), dropPoints.GetChild(Random.Range(0, dropPoints.childCount)).position + randomOffset, Quaternion.identity);
+            Instantiate(GetRandomSnowmanUnlock(), GetRandomDropPoint(), Quaternion.identity);
             if(randomUnlockSnowmen.Count == 0)
             {
                 lastDroppedTime = 0;
