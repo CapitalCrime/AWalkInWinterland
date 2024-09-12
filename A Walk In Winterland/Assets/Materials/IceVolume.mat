@@ -126,7 +126,11 @@ Material:
     - _QueueOffset: 3
     - _ReceiveShadows: 1
     - _RefractionBrightness: 9
-    - _RefractionStrength: 0.149
+    - _RefractionDistanceMax: 100
+    - _RefractionDistanceMin: 25
+    - _RefractionEndFadeAway: 100
+    - _RefractionStartFadeAway: 25
+    - _RefractionStrength: 0.1
     - _Smoothness: 0.8
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

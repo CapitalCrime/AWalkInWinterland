@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3956546120701670573}
   - component: {fileID: 3956546120701670575}
   - component: {fileID: 6850538992392252142}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Buoy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ MonoBehaviour:
   SlicesPerAxisZ: 2
   isConcave: 0
   VoxelsLimit: 16
-  AngularDrag: 0.25
+  AngularDrag: 0.5
   Drag: 0.25
   MaxFlowSpeed: 0.02
   NormalForce: 0.5
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3956546120979312722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,6 +223,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LifeBuoy
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d481daab22f034478906d582c7be810,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 9d481daab22f034478906d582c7be810,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d481daab22f034478906d582c7be810, type: 3}
