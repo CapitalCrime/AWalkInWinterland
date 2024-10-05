@@ -29,6 +29,7 @@ public class MagicBallSnowman : Snowman
     {
         LeanTween.cancel(text.gameObject);
         LTSeq seq = LeanTween.sequence();
+        text.transform.localRotation = Quaternion.identity;
 
         seq.append(LeanTween.scale(text.gameObject, Vector3.zero, 1).setOnComplete(() =>
         {

@@ -13,7 +13,6 @@ public class Snowball : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Snowball hit: " + other.name);
         if (other.isTrigger == true) return;
         if(other.CompareTag("Snowman"))
         {
