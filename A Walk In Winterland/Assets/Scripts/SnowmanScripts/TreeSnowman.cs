@@ -52,11 +52,17 @@ public class TreeSnowman : Snowman
     protected override void Start()
     {
         base.Start();
+        growthStage = Mathf.Clamp(growthStage, 0, 1);
         growthParticles.gameObject.SetActive(false);
         growthLightIntensityBase = growthParticleLight.intensity;
         growthParticleLight.intensity = 0;
         ParticleSystem.MainModule main = growthParticles.main;
         main.startLifetime = growthTime;
         treeNose.transform.localScale = Vector3.one * growthStage;
+        if (growthStage >= 0.85f && treeNoseLeaves.activeSelf == false)
+        {
+            treeNoseLeaves.transform.localScale = Vector3.one;
+            treeNoseLeaves.SetActive(true);
+        }
     }
 }
